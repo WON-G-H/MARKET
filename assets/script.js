@@ -1,5 +1,18 @@
 (function(){
-const data=window.RESEARCH_DATA,content=document.getElementById('content'),nav=[...document.querySelectorAll('.nav-item')];
+const ledger=window.MARKET_LEDGER||{};
+const flatten=o=>Object.values(o||{}).flat();
+const data={
+ dashboard:ledger.core?.dashboard,
+ daily:flatten(ledger.daily).sort((a,b)=>a.date.localeCompare(b.date)),
+ dailyAddenda:ledger.dailyAddenda||{},
+ weekly:flatten(ledger.weekly),
+ macro:ledger.macro?.current||[],
+ korea:ledger.korea?.current,
+ ideas:ledger.ideas?.items||[],
+ calendar:{today:ledger.core?.dashboardDate||new Date().toISOString().slice(0,10),events:flatten(ledger.calendar)},
+ decisions:ledger.portfolio?.decisions||[]
+};
+const content=document.getElementById('content'),nav=[...document.querySelectorAll('.nav-item')];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const tags=a=>`<div class="tags">${a.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`;
 const head=(label,title,desc,chip='')=>`<div class="page-head"><div><div class="eyebrow">${esc(label)}</div><h1>${esc(title)}</h1><p>${esc(desc)}</p></div>${chip?`<span class="date-chip">${esc(chip)}</span>`:''}</div>`;
