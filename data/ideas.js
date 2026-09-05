@@ -4,8 +4,9 @@ window.MARKET_LEDGER.ideas={
   "items": [
     {
       "id": "bad-rate-rise",
-      "status": "관찰",
-      "tone": "blue",
+      "adoption": "본문 반영",
+      "status": "검증 중",
+      "tone": "yellow",
       "date": "2026-09-04",
       "updated": "2026-09-04",
       "title": "Bad Rate Rise: 일본 금리 상승은 성장인가 통화 신뢰 훼손인가",
@@ -53,6 +54,7 @@ window.MARKET_LEDGER.ideas={
     },
     {
       "id": "diesel-inflation",
+      "adoption": "본문 반영",
       "status": "검증 중",
       "tone": "yellow",
       "date": "2026-09-03",
@@ -110,6 +112,7 @@ window.MARKET_LEDGER.ideas={
     },
     {
       "id": "ai-roi",
+      "adoption": "본문 반영",
       "status": "검증 중",
       "tone": "yellow",
       "date": "2026-09-02",
@@ -180,6 +183,7 @@ window.MARKET_LEDGER.ideas={
     },
     {
       "id": "theme-flow",
+      "adoption": "관찰 유지",
       "status": "검증 중",
       "tone": "yellow",
       "date": "2026-09-01",
@@ -223,6 +227,7 @@ window.MARKET_LEDGER.ideas={
     },
     {
       "id": "debasement-transfer",
+      "adoption": "관찰 유지",
       "status": "검증 중",
       "tone": "yellow",
       "date": "2026-09-02",
@@ -270,6 +275,7 @@ window.MARKET_LEDGER.ideas={
     },
     {
       "id": "krw-breadth",
+      "adoption": "본문 반영",
       "status": "검증 중",
       "tone": "yellow",
       "date": "2026-09-02",
@@ -321,6 +327,7 @@ window.MARKET_LEDGER.ideas={
     },
     {
       "id": "physical-ai-picks",
+      "adoption": "관찰 유지",
       "status": "검증 중",
       "tone": "yellow",
       "date": "2026-09-02",
@@ -370,6 +377,7 @@ window.MARKET_LEDGER.ideas={
     },
     {
       "id": "glp1-apparel",
+      "adoption": "관찰 유지",
       "status": "검증 중",
       "tone": "yellow",
       "date": "2026-09-02",
@@ -417,7 +425,7 @@ window.MARKET_LEDGER.ideas={
   ],
   "updatedAt": "2026-09-04",
   "statusValues": [
-    "채택",
+    "검증 완료",
     "검증 중",
     "폐기"
   ],

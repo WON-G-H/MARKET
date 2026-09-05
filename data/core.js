@@ -4,7 +4,7 @@ window.MARKET_LEDGER.core={
   "schemaVersion": 1,
   "siteName": "Market Ledger",
   "dashboardDate": "2026-09-04",
-  "lastUpdatedAt": "2026-09-04 22:10 KST",
+  "lastUpdatedAt": "2026-09-05",
   "dashboard": {
     "week": "2026 W36 · 2026.09.04",
     "regime": "위험선호 회복 · 공급측 물가 경계",

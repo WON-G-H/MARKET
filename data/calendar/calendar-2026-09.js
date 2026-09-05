@@ -176,13 +176,15 @@ window.MARKET_LEDGER.calendar["2026-09"]=[
     "surprise": "예상 상회",
     "source": "ISM·시장 브리핑",
     "sourceUrl": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
-    "why": "서비스 경기와 가격·고용의 조합이 연준 경로와 장기금리를 좌우한다.",
+    "why": "활동과 신규주문은 강하지만 고용은 수축하고 가격은 가속한 조합이 연준 경로와 장기금리를 좌우한다.",
     "path": "ISM 서비스 → 성장·물가 → 미국 금리·DXY → 원화·외국인 → 한국 성장주",
     "checkpoints": [
-      "Business Activity",
-      "New Orders",
-      "Employment",
-      "Prices"
+      "Business Activity 61.7 · 전월 대비 +2.6p",
+      "New Orders 60.9 · 전월 대비 +3.7p",
+      "Employment 47.8 · 2개월 연속 수축",
+      "Prices 72.6 · 전월 대비 +2.3p · 111개월 연속 상승",
+      "Inventories 56.7 · Backlog 55.6",
+      "New Export Orders·Imports 56.3"
     ],
     "reaction": "견조한 서비스와 완화된 노동비용이 미국 주식의 광범위한 상승을 지원했다.",
     "linkedDaily": "2026-09-04"
@@ -195,23 +197,25 @@ window.MARKET_LEDGER.calendar["2026-09"]=[
     "importance": 3,
     "country": "미국",
     "kst": "2026-09-04 21:30",
-    "status": "예정",
-    "previous": "확인 필요",
+    "status": "발표 완료",
+    "previous": "7월 신규고용 최초 -2.3만명 → 수정 +2.1만명 / 실업률 4.1% / 임금 MoM +0.2%·YoY +3.2%",
     "consensus": "신규고용 +5.5만명 / 실업률 4.1%",
-    "actual": "—",
-    "surprise": "—",
+    "actual": "신규고용 +16.2만명 / 실업률 4.1% / 임금 MoM +0.3%·YoY +3.1%",
+    "surprise": "고용·임금 예상 상회",
     "source": "U.S. BLS",
-    "sourceUrl": "https://www.bls.gov/schedule/2026/09_sched.htm",
-    "why": "오늘 밤 발표되므로 9월 4일 한국장 보고서에서는 제외하고 9월 7일 선행변수로 연결한다.",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+    "why": "한국장 마감 후 발표된 강한 고용과 임금이 연준 인상확률·미국 금리·달러를 통해 9월 7일 한국시장에 전달될 수 있다.",
     "path": "NFP·실업률·임금 → Fed 기대 → 미국 2Y·10Y → DXY → USD/KRW → 외국인 → 한국 대형주",
     "checkpoints": [
-      "신규고용",
-      "실업률",
-      "평균시간당임금",
-      "노동참여율",
-      "이전 두 달 수정"
+      "비농업 신규고용 +16.2만명 · 예상 +5.5만명",
+      "민간 비농업고용 +12.7만명 · 예상 +4.5만명",
+      "실업률 4.1% · 예상 및 이전과 동일",
+      "평균시간당임금 MoM +0.3% · YoY +3.1%",
+      "경제활동참가율 61.6%",
+      "U6 실업률 7.7% · 이전 7.9%",
+      "이전 두 달 수정치와 발표 후 금리·달러 반응"
     ],
-    "reaction": "발표 후 업데이트",
+    "reaction": "고용 발표 후 09:02 ET 스냅샷에서 9월 25bp 인상확률이 전일 49.4%에서 60.3%로 10.9%p 상승했다. 종가 기준 미국 2년물은 4.374%(+3.4bp), 10년물은 4.784%(+1.6bp), DXY는 99.159(+0.17%)로 상승했고 금은 4,477.2(-0.95%), S&P500은 7,718.60(-0.38%)로 하락했다. 강한 고용·임금과 6~7월 합계 +5.5만명 상향 수정이 Waller 발언 뒤 축소됐던 인상 프리미엄을 복원한 반응으로 판단한다.",
     "linkedDaily": "2026-09-07"
   },
   {
