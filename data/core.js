@@ -1,4 +1,4 @@
-/* Market Ledger data module · generated from the verified latest state on 2026-09-04. */
+/* Market Ledger data module · dashboard metrics refreshed on 2026-09-05. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.core={
   "schemaVersion": 1,
@@ -13,71 +13,71 @@ window.MARKET_LEDGER.core={
     "primaryMetrics": [
       {
         "label": "VIX",
-        "current": "14.32",
-        "previous": "15.20",
-        "change": "▼ 0.88",
-        "changePct": "-5.79%",
+        "current": "14.07",
+        "previous": "14.32",
+        "change": "▼ 0.25",
+        "changePct": "-1.75%",
         "unit": "index",
-        "asOf": "2026-09-03 미국 종가",
-        "source": "Cboe 시세·YCharts",
-        "sourceUrl": "https://ycharts.com/indicators/vix_close",
+        "asOf": "2026-09-04 미국 종가",
+        "source": "Cboe VIX 시세·Investing.com",
+        "sourceUrl": "https://ca.investing.com/indices/volatility-s-p-500-historical-data?cid=1096487",
         "direction": "down",
-        "note": "미국 종가 기준 최신 검증값",
-        "numericCurrent": 14.32,
-        "numericPrevious": 15.2,
+        "note": "9/4 종가 확인 · Cboe 공식 시계열은 9/8 갱신 예정",
+        "numericCurrent": 14.07,
+        "numericPrevious": 14.32,
         "sourceMeta": {
-          "name": "Cboe 시세·YCharts",
-          "url": "https://ycharts.com/indicators/vix_close",
+          "name": "Cboe VIX 시세·Investing.com",
+          "url": "https://ca.investing.com/indices/volatility-s-p-500-historical-data?cid=1096487",
           "type": "market-data",
-          "accessedAt": "2026-09-04"
+          "accessedAt": "2026-09-05"
         },
         "verified": true,
-        "verificationNote": "미국 종가 기준 최신 검증값"
+        "verificationNote": "9/4 종가는 금융정보 제공처에서 확인. Cboe/FRED 공식 일별 시계열의 다음 갱신일은 9/8."
       },
       {
         "label": "VKOSPI",
-        "current": "44.03",
-        "previous": "46.05",
-        "change": "▼ 2.02",
-        "changePct": "-4.39%",
+        "current": "39.33",
+        "previous": "42.42",
+        "change": "▼ 3.09",
+        "changePct": "-7.28%",
         "unit": "index",
-        "asOf": "2026-09-01 종가",
-        "source": "국내 시장정보 서비스(KRX 시세 기반)",
-        "sourceUrl": "https://portfolio.ezinit.com/community/market_report/2496",
+        "asOf": "2026-09-04 종가",
+        "source": "한국거래소 집계·연합뉴스",
+        "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20260904100851008",
         "direction": "down",
-        "note": "9/1 15:59 KST 수집값 · 직전값은 8/31 종가",
-        "numericCurrent": 44.03,
-        "numericPrevious": 46.05,
+        "note": "KRX 종가 · 직전값은 등락폭으로 역산",
+        "numericCurrent": 39.33,
+        "numericPrevious": 42.42,
         "sourceMeta": {
-          "name": "국내 시장정보 서비스(KRX 시세 기반)",
-          "url": "https://portfolio.ezinit.com/community/market_report/2496",
+          "name": "한국거래소 집계·연합뉴스",
+          "url": "https://www.yna.co.kr/amp/view/AKR20260904100851008",
           "type": "market-data",
-          "accessedAt": "2026-09-04"
+          "accessedAt": "2026-09-05"
         },
         "verified": true,
-        "verificationNote": "9/1 15:59 KST 수집값 · 직전값은 8/31 종가"
+        "verificationNote": "KRX 9/4 종가 39.33, 전일 대비 -3.09(-7.28%)."
       },
       {
         "label": "이격도",
-        "current": "KOSPI 102.61 / KOSDAQ 99.07",
-        "previous": "KOSPI 102.82 / KOSDAQ 101.16",
-        "change": "KOSPI ▼ 0.21%p / KOSDAQ ▼ 2.09%p",
-        "changePct": "-0.20% / -2.06%",
+        "current": "KOSPI 99.95 / KOSDAQ 97.99",
+        "previous": "KOSPI 98.62 / KOSDAQ 95.25",
+        "change": "KOSPI ▲ 1.32%p / KOSDAQ ▲ 2.74%p",
+        "changePct": "+1.34% / +2.87%",
         "unit": "20일 이동평균=100",
-        "asOf": "2026-09-01 종가",
-        "source": "KRX 종가 기반 자체 계산",
-        "sourceUrl": "https://www.investing.com/indices/kosdaq-historical-data",
-        "direction": "down",
-        "numericCurrent": 102.61,
-        "numericPrevious": 102.82,
+        "asOf": "2026-09-04 종가",
+        "source": "지수 종가 기반 자체 계산·Investing.com",
+        "sourceUrl": "https://kr.investing.com/indices/kospi-historical-data",
+        "direction": "up",
+        "numericCurrent": 99.95,
+        "numericPrevious": 98.62,
         "sourceMeta": {
-          "name": "KRX 종가 기반 자체 계산",
-          "url": "https://www.investing.com/indices/kosdaq-historical-data",
+          "name": "지수 종가 기반 자체 계산·Investing.com",
+          "url": "https://kr.investing.com/indices/kospi-historical-data",
           "type": "market-data",
-          "accessedAt": "2026-09-04"
+          "accessedAt": "2026-09-05"
         },
         "verified": true,
-        "verificationNote": ""
+        "verificationNote": "KOSPI·KOSDAQ 최근 20거래일 종가의 단순이동평균 대비 9/4 종가 비율. 반올림으로 미세한 차이가 날 수 있음."
       },
       {
         "label": "KOSPI 외국인 현물",
@@ -104,49 +104,49 @@ window.MARKET_LEDGER.core={
       },
       {
         "label": "신용융자잔고",
-        "current": "33.3379",
-        "previous": "33.3290",
-        "change": "▲ 0.0089조원",
-        "changePct": "+0.03%",
+        "current": "33.5420",
+        "previous": "33.4404",
+        "change": "▲ 0.1016조원",
+        "changePct": "+0.30%",
         "unit": "조원",
-        "asOf": "2026-08-28 · 최신 공표값",
-        "source": "금융투자협회 집계·SBS 보도",
-        "sourceUrl": "https://news.sbs.co.kr/amp/news.amp?news_id=N1008730358",
+        "asOf": "2026-09-03 · 최신 공표값",
+        "source": "금융투자협회 FreeSIS",
+        "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
         "direction": "up",
-        "note": "통계 공표 시차 반영 · 89억원 증가",
-        "numericCurrent": 33.3379,
-        "numericPrevious": 33.329,
+        "note": "통계 공표 시차 반영 · 1,015.75억원 증가",
+        "numericCurrent": 33.542016,
+        "numericPrevious": 33.440441,
         "sourceMeta": {
-          "name": "금융투자협회 집계·SBS 보도",
-          "url": "https://news.sbs.co.kr/amp/news.amp?news_id=N1008730358",
+          "name": "금융투자협회 FreeSIS",
+          "url": "https://freesis.kofia.or.kr/stat/main.do",
           "type": "official",
-          "accessedAt": "2026-09-04"
+          "accessedAt": "2026-09-05"
         },
         "verified": true,
-        "verificationNote": "통계 공표 시차 반영 · 89억원 증가"
+        "verificationNote": "금융투자협회 9/3 공표값 33,542,016백만원, 전일 대비 101,575백만원 증가."
       },
       {
         "label": "투자자예탁금",
-        "current": "99.8138",
-        "previous": "96.7091",
-        "change": "▲ 3.1047조원",
-        "changePct": "+3.21%",
+        "current": "97.7615",
+        "previous": "102.2672",
+        "change": "▼ 4.5057조원",
+        "changePct": "-4.41%",
         "unit": "조원",
-        "asOf": "2026-08-28 · 최신 공표값",
-        "source": "금융투자협회 집계·SBS 보도",
-        "sourceUrl": "https://news.sbs.co.kr/amp/news.amp?news_id=N1008730358",
-        "direction": "up",
-        "note": "통계 공표 시차 반영 · 공모주 청약자금 환급 영향",
-        "numericCurrent": 99.8138,
-        "numericPrevious": 96.7091,
+        "asOf": "2026-09-03 · 최신 공표값",
+        "source": "금융투자협회 FreeSIS",
+        "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
+        "direction": "down",
+        "note": "통계 공표 시차 반영 · 4조5,057.40억원 감소",
+        "numericCurrent": 97.761496,
+        "numericPrevious": 102.267236,
         "sourceMeta": {
-          "name": "금융투자협회 집계·SBS 보도",
-          "url": "https://news.sbs.co.kr/amp/news.amp?news_id=N1008730358",
+          "name": "금융투자협회 FreeSIS",
+          "url": "https://freesis.kofia.or.kr/stat/main.do",
           "type": "official",
-          "accessedAt": "2026-09-04"
+          "accessedAt": "2026-09-05"
         },
         "verified": true,
-        "verificationNote": "통계 공표 시차 반영 · 공모주 청약자금 환급 영향"
+        "verificationNote": "금융투자협회 9/3 공표값 97,761,496백만원, 전일 대비 4,505,740백만원 감소. 원인은 별도 확인하지 않음."
       },
       {
         "label": "USD/KRW",

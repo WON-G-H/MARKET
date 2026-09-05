@@ -1,0 +1,38 @@
+const fs = require('node:fs');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const files = [...fs.readFileSync(path.join(root, 'index.html'), 'utf8').matchAll(/<script src="([^"?]+)/g)].map(x => x[1]);
+const nodes = {}, handlers = {};
+function element() { return {innerHTML:'', dataset:{}, classList:{toggle(){},add(){},remove(){},contains(){return false}}, querySelectorAll(){return []}, addEventListener(type,fn){this[type]=fn}}; }
+const context = {window:{scrollTo(){},addEventListener(type,fn){handlers[type]=fn}}, document:{body:element(),getElementById(id){return nodes[id]??=element()},querySelectorAll(){return []}}, localStorage:{getItem(){return null}},location:{hash:'#weekly'}};
+vm.createContext(context);
+for (const file of files) vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
+const ledger=context.window.MARKET_LEDGER;
+const report=ledger.weekly['2026'][0];
+assert(nodes.content.innerHTML.includes('data-week="2026-W36"'));
+assert(!nodes.content.innerHTML.includes('weekly-section-00'));
+context.location.hash='#weekly/2026-W36'; handlers.hashchange();
+for(let i=0;i<=16;i++) assert(nodes.content.innerHTML.includes('weekly-section-'+String(i).padStart(2,'0')));
+assert(nodes.content.innerHTML.includes('직전 가설 기록이 없다'));
+assert(report.nextWeekHypotheses.length>=3 && report.nextWeekHypotheses.length<=5);
+const ids=new Set(report.nextWeekHypotheses.map(h=>h.id));
+report.nextWeekEvents.forEach(e=>e.hypothesisIds.forEach(id=>assert(ids.has(id))));
+report.ideaUpdates.forEach(u=>assert(ledger.ideas.items.some(i=>i.id===u.ideaId&&i.status===u.status)));
+nodes.globalSearch.input({target:{value:'Scenario'}});
+assert(nodes.content.innerHTML.includes('data-week="2026-W36"'));
+nodes.globalSearch.input({target:{value:''}});
+assert(nodes.content.innerHTML.includes('weekly-section-00'));
+// Fixtures exist only in memory: test cross-year links and prior-hypothesis review.
+ledger.weekly['2026'].push({...report,week:'2026-W53'});
+ledger.weekly['2027']=[{...report,week:'2027-W01',hypothesisReview:{items:[{hypothesisId:report.nextWeekHypotheses[0].id,verdict:'부분 적중',evidence:'test evidence',reason:'test reason',missedVariables:'test variable'}]}}];
+context.location.hash='#weekly/2027-W01';
+vm.runInContext(fs.readFileSync(path.join(root,'assets/script.js'),'utf8'),context);
+assert(nodes.content.innerHTML.includes('data-week="2026-W53"'));
+assert(nodes.content.innerHTML.includes('부분 적중'));
+context.location.hash='#weekly/2026-W53';handlers.hashchange();
+assert(nodes.content.innerHTML.includes('data-week="2027-W01"'));
+context.location.hash='#weekly/missing';handlers.hashchange();
+assert(nodes.content.innerHTML.includes('찾을 수 없습니다'));
+console.log('PASS: weekly archive, 17 sections, links, search, deep routes, cross-year navigation and prior hypothesis review');
