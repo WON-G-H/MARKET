@@ -4,7 +4,7 @@ window.MARKET_LEDGER.core={
   "schemaVersion": 1,
   "siteName": "Market Ledger",
   "dashboardDate": "2026-09-07",
-  "lastUpdatedAt": "2026-09-07 23:10 KST",
+  "lastUpdatedAt": "2026-09-07 23:45 KST",
   "dashboard": {
     "week": "2026 W37 · 2026.09.07",
     "regime": "반도체 중심 선별적 위험선호 · 공급측 물가 경계",
@@ -95,25 +95,25 @@ window.MARKET_LEDGER.core={
       },
       {
         "label": "이격도",
-        "current": "KOSPI 99.95 / KOSDAQ 97.99",
-        "previous": "KOSPI 98.62 / KOSDAQ 95.25",
-        "change": "KOSPI ▲ 1.32%p / KOSDAQ ▲ 2.74%p",
-        "changePct": "+1.34% / +2.87%",
+        "current": "KOSPI 103.98 / KOSDAQ 98.89",
+        "previous": "KOSPI 99.95 / KOSDAQ 97.99",
+        "change": "KOSPI ▲ 4.03%p / KOSDAQ ▲ 0.91%p",
+        "changePct": "+4.03% / +0.92%",
         "unit": "20일 이동평균=100",
-        "asOf": "2026-09-04 종가",
+        "asOf": "2026-09-07 종가",
         "source": "지수 종가 기반 자체 계산·Investing.com",
         "sourceUrl": "https://kr.investing.com/indices/kospi-historical-data",
         "direction": "up",
-        "numericCurrent": 99.95,
-        "numericPrevious": 98.62,
+        "numericCurrent": 103.98,
+        "numericPrevious": 99.95,
         "sourceMeta": {
           "name": "지수 종가 기반 자체 계산·Investing.com",
           "url": "https://kr.investing.com/indices/kospi-historical-data",
           "type": "market-data",
-          "accessedAt": "2026-09-05"
+          "accessedAt": "2026-09-07"
         },
         "verified": true,
-        "verificationNote": "KOSPI·KOSDAQ 최근 20거래일 종가의 단순이동평균 대비 9/4 종가 비율. 반올림으로 미세한 차이가 날 수 있음."
+        "verificationNote": "Investing.com의 8/10~9/7 최근 20거래일 종가로 단순이동평균을 계산. KOSPI MA20 6,727.591, KOSDAQ MA20 831.378 기준이며 반올림으로 미세한 차이가 날 수 있음."
       },
       {
         "label": "KOSPI 외국인 현물",
@@ -140,49 +140,49 @@ window.MARKET_LEDGER.core={
       },
       {
         "label": "신용융자잔고",
-        "current": "33.5420",
-        "previous": "33.4404",
-        "change": "▲ 0.1016조원",
-        "changePct": "+0.30%",
+        "current": "33.5958",
+        "previous": "33.5420",
+        "change": "▲ 0.0538조원",
+        "changePct": "+0.16%",
         "unit": "조원",
-        "asOf": "2026-09-03 · 최신 공표값",
+        "asOf": "2026-09-04 · 최신 공표값",
         "source": "금융투자협회 FreeSIS",
         "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
         "direction": "up",
-        "note": "통계 공표 시차 반영 · 1,015.75억원 증가",
-        "numericCurrent": 33.542016,
-        "numericPrevious": 33.440441,
+        "note": "통계 공표 시차 반영 · 537.96억원 증가",
+        "numericCurrent": 33.595812,
+        "numericPrevious": 33.542016,
         "sourceMeta": {
           "name": "금융투자협회 FreeSIS",
           "url": "https://freesis.kofia.or.kr/stat/main.do",
           "type": "official",
-          "accessedAt": "2026-09-05"
+          "accessedAt": "2026-09-07"
         },
         "verified": true,
-        "verificationNote": "금융투자협회 9/3 공표값 33,542,016백만원, 전일 대비 101,575백만원 증가."
+        "verificationNote": "금융투자협회 9/4 공표값 33,595,812백만원, 전일 대비 53,796백만원 증가."
       },
       {
         "label": "투자자예탁금",
-        "current": "97.7615",
-        "previous": "102.2672",
-        "change": "▼ 4.5057조원",
-        "changePct": "-4.41%",
+        "current": "93.5500",
+        "previous": "97.7615",
+        "change": "▼ 4.2115조원",
+        "changePct": "-4.31%",
         "unit": "조원",
-        "asOf": "2026-09-03 · 최신 공표값",
+        "asOf": "2026-09-04 · 최신 공표값",
         "source": "금융투자협회 FreeSIS",
         "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
         "direction": "down",
-        "note": "통계 공표 시차 반영 · 4조5,057.40억원 감소",
-        "numericCurrent": 97.761496,
-        "numericPrevious": 102.267236,
+        "note": "통계 공표 시차 반영 · 4조2,115.15억원 감소",
+        "numericCurrent": 93.549981,
+        "numericPrevious": 97.761496,
         "sourceMeta": {
           "name": "금융투자협회 FreeSIS",
           "url": "https://freesis.kofia.or.kr/stat/main.do",
           "type": "official",
-          "accessedAt": "2026-09-05"
+          "accessedAt": "2026-09-07"
         },
         "verified": true,
-        "verificationNote": "금융투자협회 9/3 공표값 97,761,496백만원, 전일 대비 4,505,740백만원 감소. 원인은 별도 확인하지 않음."
+        "verificationNote": "금융투자협회 9/4 공표값 93,549,981백만원, 전일 대비 4,211,515백만원 감소. 원인은 별도 확인하지 않음."
       },
       {
         "label": "USD/KRW",
