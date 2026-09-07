@@ -1,16 +1,52 @@
-/* Market Ledger data module · dashboard metrics refreshed on 2026-09-05. */
+/* Market Ledger data module · dashboard metrics refreshed on 2026-09-07. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.core={
   "schemaVersion": 1,
   "siteName": "Market Ledger",
-  "dashboardDate": "2026-09-04",
-  "lastUpdatedAt": "2026-09-05",
+  "dashboardDate": "2026-09-07",
+  "lastUpdatedAt": "2026-09-07 23:10 KST",
   "dashboard": {
-    "week": "2026 W36 · 2026.09.04",
-    "regime": "위험선호 회복 · 공급측 물가 경계",
-    "confidence": "높음",
-    "thesis": "미국 생산성 +1.4%와 단위노동비용 +1.2%가 경기 침체 없는 비용 완화를 시사하면서 금리·달러가 하락했고, 원화 강세와 외국인·기관의 양 시장 동반 순매수로 국내 위험선호가 회복됐다. 다만 ISM 서비스 가격 72.6, WTI 91.67달러와 식품가격 상승은 금리 하락의 지속성을 제약한다. 반도체·로봇·전력 인프라는 선별 확대하되 금융·고배당과 현금을 병행한다.",
+    "week": "2026 W37 · 2026.09.07",
+    "regime": "반도체 중심 선별적 위험선호 · 공급측 물가 경계",
+    "confidence": "보통",
+    "thesis": "GPT-6 Astra 출시와 미국 메모리·반도체 강세가 삼성전자·SK하이닉스의 이익 지속 기대를 자극했고, 원화 강세와 외국인·기관의 합산 5조원대 현물 순매수가 KOSPI를 4.61% 끌어올렸다. 그러나 상승 종목 비중은 약 52.5%에 그쳤고 KOSDAQ에서는 외국인·기관이 순매도했다. 따라서 광범위한 유동성 장세보다 대형 반도체와 AI 전력 인프라에 집중된 선별적 위험선호로 판단한다. 미국 10년물 4.784%와 정제제품 공급난이 남아 있어 추격보다 이익 상향과 수급 지속성을 확인한다.",
     "primaryMetrics": [
+      {
+        "label": "KOSPI",
+        "current": "6,995.39",
+        "previous": "6,687.21",
+        "change": "▲ 308.18",
+        "changePct": "+4.61%",
+        "unit": "index",
+        "asOf": "2026-09-07 종가",
+        "source": "한국거래소 집계·연합뉴스",
+        "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20260907128900008",
+        "direction": "up",
+        "note": "상승 478 · 하락 381 · 보합 52",
+        "numericCurrent": 6995.39,
+        "numericPrevious": 6687.21,
+        "sourceMeta": {"name":"한국거래소 집계·연합뉴스","url":"https://www.yna.co.kr/amp/view/AKR20260907128900008","type":"exchange","accessedAt":"2026-09-07"},
+        "verified": true,
+        "verificationNote": "KRX 정규시장 종가와 상승·하락 종목 수 확인."
+      },
+      {
+        "label": "KOSDAQ",
+        "current": "822.19",
+        "previous": "813.50",
+        "change": "▲ 8.69",
+        "changePct": "+1.07%",
+        "unit": "index",
+        "asOf": "2026-09-07 종가",
+        "source": "한국거래소 집계·연합뉴스",
+        "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20260907128900008",
+        "direction": "up",
+        "note": "상승 833 · 하락 807 · 보합 95",
+        "numericCurrent": 822.19,
+        "numericPrevious": 813.50,
+        "sourceMeta": {"name":"한국거래소 집계·연합뉴스","url":"https://www.yna.co.kr/amp/view/AKR20260907128900008","type":"exchange","accessedAt":"2026-09-07"},
+        "verified": true,
+        "verificationNote": "KRX 정규시장 종가와 상승·하락 종목 수 확인."
+      },
       {
         "label": "VIX",
         "current": "14.07",
@@ -22,17 +58,17 @@ window.MARKET_LEDGER.core={
         "source": "Cboe VIX 시세·Investing.com",
         "sourceUrl": "https://ca.investing.com/indices/volatility-s-p-500-historical-data?cid=1096487",
         "direction": "down",
-        "note": "9/4 종가 확인 · Cboe 공식 시계열은 9/8 갱신 예정",
+        "note": "9/7 미국 Labor Day로 신규 현물 종가 없음",
         "numericCurrent": 14.07,
         "numericPrevious": 14.32,
         "sourceMeta": {
           "name": "Cboe VIX 시세·Investing.com",
           "url": "https://ca.investing.com/indices/volatility-s-p-500-historical-data?cid=1096487",
           "type": "market-data",
-          "accessedAt": "2026-09-05"
+          "accessedAt": "2026-09-07"
         },
         "verified": true,
-        "verificationNote": "9/4 종가는 금융정보 제공처에서 확인. Cboe/FRED 공식 일별 시계열의 다음 갱신일은 9/8."
+        "verificationNote": "9/4 종가를 유지. 9/7 미국 현물시장 휴장."
       },
       {
         "label": "VKOSPI",
@@ -41,11 +77,11 @@ window.MARKET_LEDGER.core={
         "change": "▼ 3.09",
         "changePct": "-7.28%",
         "unit": "index",
-        "asOf": "2026-09-04 종가",
+        "asOf": "2026-09-04 종가 · 최신 정확값 미확보",
         "source": "한국거래소 집계·연합뉴스",
         "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20260904100851008",
         "direction": "down",
-        "note": "KRX 종가 · 직전값은 등락폭으로 역산",
+        "note": "9/7 자료는 40선 하회만 확인돼 9/4 정확값을 유지",
         "numericCurrent": 39.33,
         "numericPrevious": 42.42,
         "sourceMeta": {
@@ -81,26 +117,26 @@ window.MARKET_LEDGER.core={
       },
       {
         "label": "KOSPI 외국인 현물",
-        "current": "+4,793",
-        "previous": "-4,234",
-        "change": "▲ 9,027억원",
-        "changePct": "순매도→순매수",
+        "current": "+25,869",
+        "previous": "+4,793",
+        "change": "▲ 21,076억원",
+        "changePct": "순매수 확대",
         "unit": "억원 · 순매수",
-        "asOf": "2026-09-04 종가",
-        "source": "한국거래소 집계·뉴스웨이",
-        "sourceUrl": "https://v.daum.net/v/20260904155904765",
+        "asOf": "2026-09-07 종가",
+        "source": "한국거래소 집계·연합뉴스",
+        "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20260907128900008",
         "direction": "up",
-        "note": "KRX 정규시장 기준",
-        "numericCurrent": 4793,
-        "numericPrevious": -4234,
+        "note": "기관 +26,327억원 · 개인 -68,212억원",
+        "numericCurrent": 25869,
+        "numericPrevious": 4793,
         "sourceMeta": {
-          "name": "한국거래소 집계·뉴스웨이",
-          "url": "https://v.daum.net/v/20260904155904765",
+          "name": "한국거래소 집계·연합뉴스",
+          "url": "https://www.yna.co.kr/amp/view/AKR20260907128900008",
           "type": "exchange",
-          "accessedAt": "2026-09-04"
+          "accessedAt": "2026-09-07"
         },
         "verified": true,
-        "verificationNote": "KRX 정규시장 기준"
+        "verificationNote": "기사별 투자자 집계에 소폭 차이가 있어 연합뉴스의 KRX 인용값을 기준으로 사용."
       },
       {
         "label": "신용융자잔고",
@@ -150,41 +186,33 @@ window.MARKET_LEDGER.core={
       },
       {
         "label": "USD/KRW",
-        "current": "1,350.40",
-        "previous": "1,359.30",
-        "change": "▼ 8.90원",
-        "changePct": "-0.65%",
+        "current": "1,340.50",
+        "previous": "1,350.40",
+        "change": "▼ 9.90원",
+        "changePct": "-0.73%",
         "unit": "원",
-        "asOf": "2026-09-04 15:30 종가",
-        "source": "서울외환시장·뉴시스",
-        "sourceUrl": "https://mobile.newsis.com/view/NISX20260904_0003776930",
+        "asOf": "2026-09-07 15:30 종가",
+        "source": "서울외환시장·연합뉴스",
+        "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20260907128900008",
         "direction": "down",
-        "note": "주간 종가 기준",
-        "numericCurrent": 1350.4,
-        "numericPrevious": 1359.3,
+        "note": "사용자 제공 1,342.8원은 다른 관측시각 스냅샷",
+        "numericCurrent": 1340.5,
+        "numericPrevious": 1350.4,
         "sourceMeta": {
-          "name": "서울외환시장·뉴시스",
-          "url": "https://mobile.newsis.com/view/NISX20260904_0003776930",
+          "name": "서울외환시장·연합뉴스",
+          "url": "https://www.yna.co.kr/amp/view/AKR20260907128900008",
           "type": "market-data",
-          "accessedAt": "2026-09-04"
+          "accessedAt": "2026-09-07"
         },
         "verified": true,
-        "verificationNote": "주간 종가 기준"
+        "verificationNote": "서울외환시장 15:30 종가."
       }
     ],
     "marketBlocks": [
-      {
-        "title": "금리·달러·원자재",
-        "body": "미국 2년물 4.340%, 10년물 4.768%, DXY 98.995로 금융여건은 완화됐다. 그러나 ISM 서비스 가격 72.6, WTI 91.67달러와 식품가격 상승이 공급측 물가 위험을 높인다."
-      },
-      {
-        "title": "국내 수급",
-        "body": "코스피 외국인 +4,793억원·기관 +1조6,691억원, 코스닥 외국인 +2,600억원·기관 +1,601억원으로 전일의 수급 공백이 해소됐다. 원·달러 1,350.40원과 코스닥 +2.95%가 반등의 질을 지지한다."
-      },
-      {
-        "title": "오늘의 운용 판단",
-        "body": "AI 하드웨어와 전력 인프라의 실적 노출은 유지하되 높은 서비스·에너지·식품가격이 장기금리를 다시 올릴 수 있다. 성장 모멘텀과 금융·고배당을 병행하고 외국인 수급이 지속될 때만 위험노출을 늘린다."
-      }
+      {"title":"한국 수급과 시장 폭","body":"외국인 +2조5,869억원, 기관 +2조6,327억원이 KOSPI를 끌어올렸고 원·달러는 1,340.5원으로 하락했다. 그러나 KOSPI 상승 종목 비중은 약 52.5%, KOSDAQ은 약 50.8%에 그쳤고 KOSDAQ 외국인·기관은 순매도해 대형 반도체 집중도가 높았다."},
+      {"title":"AI·반도체와 한국 이익","body":"Astra 출시는 AI 활용 범위 확대의 근거이고 DRAM 공급 제약과 한국 ROE 전망 상향은 반도체 이익 지속성을 지지한다. 다만 모델 벤치마크는 최종 AI ROI가 아니며, 한국시장 전체 재평가는 반도체 제외 이익·ROE와 주주환원 확산이 필요하다."},
+      {"title":"금리·에너지 리스크","body":"8월 미국 고용은 +16.2만명, 실업률 4.1%, 임금 +3.1% YoY로 침체보다 견조한 성장에 가깝다. 미국 10년물은 9/4 4.784%이고, Reuters가 보도한 VLSFO 76% 상승과 중유 부족은 운임·물가로 번질 수 있어 할인율 부담이 해소되지 않았다."},
+      {"title":"오늘의 운용 판단","body":"반도체·전력·데이터센터 공급망은 이익 상향과 외국인 수급이 동반되는 종목을 우선한다. KOSPI 7,000선 자체를 추격 근거로 삼지 않고 KOSDAQ 수급, 상승 종목 비중, 미국 물가와 장기금리, 정제제품 가격을 확인한다."}
     ]
   }
 };
