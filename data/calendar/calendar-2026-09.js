@@ -1,4 +1,4 @@
-/* Market Ledger data module · generated from the verified latest state on 2026-09-04. */
+/* Market Ledger calendar module · refreshed on 2026-09-08. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.calendar=window.MARKET_LEDGER.calendar||{};
 window.MARKET_LEDGER.calendar["2026-09"]=[
@@ -217,6 +217,34 @@ window.MARKET_LEDGER.calendar["2026-09"]=[
     ],
     "reaction": "고용 발표 후 09:02 ET 스냅샷에서 9월 25bp 인상확률이 전일 49.4%에서 60.3%로 10.9%p 상승했다. 종가 기준 미국 2년물은 4.374%(+3.4bp), 10년물은 4.784%(+1.6bp), DXY는 99.159(+0.17%)로 상승했고 금은 4,477.2(-0.95%), S&P500은 7,718.60(-0.38%)로 하락했다. 강한 고용·임금과 6~7월 합계 +5.5만명 상향 수정이 Waller 발언 뒤 축소됐던 인상 프리미엄을 복원한 반응으로 판단한다.",
     "linkedDaily": "2026-09-07"
+  },
+  {
+    "id": "kr-gdp-final-2026-09-08",
+    "date": "2026-09-08",
+    "title": "한국 2분기 국민소득 잠정치",
+    "category": "경기",
+    "importance": 2,
+    "country": "한국",
+    "kst": "2026-09-08 08:00",
+    "status": "발표 완료",
+    "previous": "실질 GDP 속보 +0.6% QoQ / 실질 GDI 속보 +3.6% QoQ",
+    "consensus": "실질 GDP 속보치 유지 여부",
+    "actual": "실질 GDP +0.6% QoQ·+3.7% YoY / 실질 GDI +3.7% QoQ·+15.7% YoY",
+    "surprise": "GDP 속보치 유지 · GDI +0.1%p 상향",
+    "source": "한국은행",
+    "sourceUrl": "https://www.bok.or.kr/portal/stats/statsPublictSchdul/listCldr.do?date=2026-09&menuNo=200775",
+    "why": "반도체 수출과 교역조건 개선이 한국의 생산과 실질 구매력을 얼마나 끌어올렸는지 확인한다.",
+    "path": "GDP·GDI → 기업이익·내수 판단 → 한국 성장 기대 → 원화·외국인 수급 → KOSPI",
+    "checkpoints": [
+      "실질 GDP +0.6% QoQ",
+      "실질 GDI +3.7% QoQ",
+      "명목 GDP +26.4% YoY",
+      "제조업 +1.4% QoQ",
+      "건설업 -1.9% QoQ",
+      "교역조건과 내수 파급"
+    ],
+    "reaction": "성장 지표는 견조했지만 KOSPI는 장중 7,171.52에서 6,954.52로 반락했다. 중동 유가, 원화 약세와 7,000선 매물이 당일 가격을 지배했다.",
+    "linkedDaily": "2026-09-08"
   },
   {
     "id": "treasury-buyback-2026-09-09",

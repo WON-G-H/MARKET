@@ -12,7 +12,10 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "강화",
-      "confidence": "중간",
+      "confidenceScore": 68,
+      "confidenceRationale": "MUFG의 정책금리 경로와 OIS, 엔화·옵션 변동성은 정상화형 충격을 지지하지만 실제 캐리 청산과 개입 효과 분리가 남아 있다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-07",
       "adoption": "본문 반영",
       "source": "Macro Trader 분석·시장자료 · Harvey's Macro Story · MUFG Research · Investing·Bloomberg 표기 차트",
       "currentView": "엔화 강세와 옵션 변동성 상승, BOJ 최종금리 재평가는 정상화형 충격을 강화하지만 실제 엔 캐리 청산 규모는 아직 확인되지 않았다.",
@@ -66,14 +69,11 @@ window.MARKET_LEDGER.ideas={
         "reject": "금리 상승에도 실질금리·엔화·포지셔닝 변화가 없고 주식 조정이 기업이익이나 외부 충격으로 더 잘 설명될 때"
       },
       "nextValidation": [
-        "일본·미국 실질금리",
-        "JGB 10년·30년 금리와 USD/JPY",
-        "금 가격",
-        "미국 기간 프리미엄",
-        "BOJ OIS의 2027년 중반 최종금리와 인상 속도",
-        "CFTC 엔 순포지션·CME 콜/풋·일본 투자자의 해외채권 매매",
-        "저베타·밸류와 모멘텀 상대성과",
-        "9월 FOMC·BOJ 전후 상태전환"
+        "BOJ OIS의 최종금리·인상 속도와 일본 실질금리",
+        "JGB 10년·30년 금리와 USD/JPY의 이벤트 전후 동조",
+        "CFTC 엔 포지션·CME 옵션·일본 투자자의 해외채권 매매",
+        "엔화·금·글로벌 위험자산의 상태전환",
+        "저베타·밸류와 모멘텀 상대성과"
       ],
       "implication": [
         "단기에는 저베타·고배당·금융과 성장 모멘텀을 결합한 바벨로 금리 변동성을 헤지한다.",
@@ -85,7 +85,7 @@ window.MARKET_LEDGER.ideas={
           "information": "9월 글로벌 고금리 국면의 교차자산 가설로 최초 등록.",
           "source": "Macro Trader 분석·시장자료",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
         {
@@ -93,15 +93,7 @@ window.MARKET_LEDGER.ideas={
           "information": "Citi 요약을 바탕으로 Bad Rate Rise와 이후 Debasement 재부상의 2단계 상태전환 가설로 확장했다. 구체적 금리·확률 수치는 공식 검증 전까지 방향성 근거로만 사용한다.",
           "source": "Macro Trader 분석·시장자료",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: Bad Rate Rise: 검증 중. 금요일 미국의 금리·달러 상승과 금 약세는 긴축 기대 재평가에 부합한다. 일본에 같은 원인을 적용하려면 실질금리·기간 프리미엄 자료가 더 필요하다. 검증 중 유지. 다음 확인: 일본·미국 실질금리, JGB 10년·30년 금리와 USD/JPY, 금 가격, 미국 기간 프리미엄, 저베타·밸류와 모멘텀 상대성과, 9월 FOMC·BOJ 전후 상태전환",
-          "source": "Macro Trader 분석·시장자료",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "구조 수정",
           "thesisRevision": "Current Thesis에 반영"
         },
         {
@@ -109,7 +101,7 @@ window.MARKET_LEDGER.ideas={
           "information": "Bloomberg·Nomura·Pictet 표기 차트 묶음을 보강했다. JGB 10년물 3% 부근, 30년물 4.18%, 민간 흡수 JGB 듀레이션 공급 증가와 BOJ 인상 경로는 금리 상승 압력을 지지한다. 다만 실질금리·엔화·금·기간 프리미엄의 동조와 실제 해외채권 자금이동은 확인되지 않아 검증 중을 유지한다.",
           "source": "Macro Trader 분석·시장자료",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "강화",
           "thesisRevision": "Current Thesis에 반영"
         },
         {
@@ -134,7 +126,10 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "강화",
-      "confidence": "중간",
+      "confidenceScore": 72,
+      "confidenceRationale": "Reuters가 인용한 제품별 공급·재고·가격 자료로 실물 공급 압박은 강하게 확인됐지만 운임·기대인플레이션·장기금리 전가는 아직 순차 검증 전이다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-08",
       "adoption": "본문 반영",
       "source": "AWAKE·TNBfolio 시황 브리핑 · Reuters 2026-09-07 · Bloomberg·FreightWaves 인용 · 유가 시세",
       "currentView": "정유사들이 디젤 생산을 우선하면서 선박용 중유까지 부족해지는 제품시장 압박은 강화됐지만, 운임·기대인플레이션·장기금리로의 지속적 전가는 아직 미확인이다.",
@@ -185,12 +180,10 @@ window.MARKET_LEDGER.ideas={
         "reject": "재고와 스프레드가 정상화되고 기대인플레이션·기업 가격 전가가 반응하지 않을 때"
       },
       "nextValidation": [
-        "WTI 90달러 안착 여부",
-        "ULSD·난방유 선물과 크랙스프레드",
-        "미국 distillate 재고",
-        "유럽-아시아 디젤 스프레드",
+        "ULSD·난방유 크랙스프레드와 미국 distillate 재고",
+        "유럽-아시아 디젤·중유 스프레드와 주요 허브 재고",
         "한국 석유제품 수출량·단가",
-        "운송비와 기대인플레이션"
+        "운송비·기업 가격 전가와 기대인플레이션"
       ],
       "implication": [
         "가설이 맞으면 정유·탱커는 상대수혜가 가능하지만 항공·육상운송·건설·소비재는 마진 압박을 받을 수 있다.",
@@ -202,31 +195,7 @@ window.MARKET_LEDGER.ideas={
           "information": "WTI 90달러 돌파, 디젤 가격 급등과 한국산 디젤의 이례적 유럽 수출을 근거로 최초 등록.",
           "source": "AWAKE·TNBfolio 시황 브리핑, Bloomberg·FreightWaves 인용, 유가 시세",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.04",
-          "information": "위험선호 회복 중에도 정유주가 상대강세를 보여 공급측 물가 가설을 유지했다.",
-          "source": "AWAKE·TNBfolio 시황 브리핑, Bloomberg·FreightWaves 인용, 유가 시세",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.04",
-          "information": "공급측 물가 가설을 디젤에서 서비스 투입가격과 식품까지 확장했다. Arab Light OSP 약세는 최종수요 반론으로 함께 추적한다.",
-          "source": "AWAKE·TNBfolio 시황 브리핑, Bloomberg·FreightWaves 인용, 유가 시세",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: 디젤 인플레이션: 검증 중 유지. 서비스 가격과 에너지 압력은 지지 근거지만 기대인플레이션·기업 마진으로의 전가 여부를 추가 확인한다. 검증 중 유지. 다음 확인: WTI 90달러 안착 여부, ULSD·난방유 선물과 크랙스프레드, 미국 distillate 재고, 유럽-아시아 디젤 스프레드, 한국 석유제품 수출량·단가, 운송비와 기대인플레이션",
-          "source": "AWAKE·TNBfolio 시황 브리핑, Bloomberg·FreightWaves 인용, 유가 시세",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
         {
@@ -244,14 +213,17 @@ window.MARKET_LEDGER.ideas={
       "id": "ai-roi",
       "title": "AI CapEx ROI와 장기금리",
       "date": "2026-09-02",
-      "updated": "2026-09-07",
-      "updatedAt": "2026-09-07T22:20:00+09:00",
+      "updated": "2026-09-06",
+      "updatedAt": "2026-09-06T23:00:00+09:00",
       "primaryCategory": "Industry",
       "industryTheme": "AI 인프라",
       "status": "검증 중",
       "outcome": null,
       "direction": "구조 수정",
-      "confidence": "중간",
+      "confidenceScore": 56,
+      "confidenceRationale": "공급망 수요와 평균 ROIC는 강하지만 신규 AI 프로젝트의 한계 ROI·현금회수 자료가 없고 성공 시 금리 상승이라는 경쟁경로도 유효하다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-08",
       "adoption": "본문 반영",
       "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
       "currentView": "AI 공급망 실적은 강하지만, 최종 사용자의 증분 수익과 한계 프로젝트 ROI가 급증한 CapEx를 정당화하는지는 아직 검증되지 않았다.",
@@ -316,9 +288,8 @@ window.MARKET_LEDGER.ideas={
         "CapEx 대비 AI 증분 매출",
         "영업현금흐름과 FCF",
         "감가상각비와 이용률",
-        "금융비용·리스·보증",
-        "계통접속·인허가·완공 지연",
-        "NVIDIA·HBM 주문 증가율"
+        "금융비용·리스·보증을 포함한 한계 프로젝트 자본비용",
+        "계통접속·인허가·완공 지연과 주문 연기·취소"
       ],
       "implication": [
         "가설이 맞으면 장기 듀레이션 AI 성장주와 자금조달 의존 사업자의 밸류에이션이 먼저 압박받을 수 있다.",
@@ -330,7 +301,7 @@ window.MARKET_LEDGER.ideas={
           "information": "가설 최초 등록. 공급망 실적과 최종 ROI를 분리해 추적하기로 결정.",
           "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
         {
@@ -342,35 +313,11 @@ window.MARKET_LEDGER.ideas={
           "thesisRevision": "Current Thesis에 반영"
         },
         {
-          "date": "2026.09.03",
-          "information": "델·브로드컴의 AI 실적은 수요 가설을 지지했지만 유가·디젤 충격이 장기금리 하락을 제한할 수 있어 검증 중을 유지했다.",
-          "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.04",
-          "information": "금리·달러 완화가 반도체·로봇의 할인율 부담을 낮췄지만 WTI 91달러와 최종 AI ROI 검증은 남아 있다.",
-          "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
           "date": "2026.09.04",
           "information": "AI 수요의 강도만큼 은행 신용과 전력망 선투자 의존도도 커지고 있다. 공급망 매출과 투자주체의 현금흐름·ROI를 분리해 추적한다.",
           "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: AI ROI: 검증 중 유지. 강한 공급망 수요와 높은 자본비용·전력망 병목이 병존한다. 주가 반등은 최종 ROI의 검증을 대신하지 못한다. 검증 중 유지. 다음 확인: CapEx 대비 AI 증분 매출, 영업현금흐름과 FCF, 감가상각비와 이용률, 금융비용·리스·보증, 계통접속·인허가·완공 지연, NVIDIA·HBM 주문 증가율",
-          "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "구조 수정",
           "thesisRevision": "Current Thesis에 반영"
         },
         {
@@ -378,25 +325,9 @@ window.MARKET_LEDGER.ideas={
           "information": "BofA의 하이퍼스케일러 평균 ROIC와 Pictet의 글로벌 IT 선행이익 차트를 추가했다. 현재 기업 수익성과 이익 추정치는 가설의 강한 반론이지만, 한계 AI 프로젝트의 ROI·감가상각·현금회수는 별개이므로 검증 중을 유지한다.",
           "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "약화",
           "thesisRevision": "Current Thesis에 반영"
         },
-        {
-          "date": "2026.09.06",
-          "information": "FMKorea 재가공 글의 Axios 원문을 대조했다. 평가이익을 제외해도 이익 증가가 강하다는 반론과 공급망 매출·투자자 비용인식의 시차는 원문에서 확인됐다. 다만 Axios 본문 52.6%와 차트 설명 27.71%의 차이는 FactSet 산식 확인 전까지 미해결 수치로 남긴다.",
-          "source": "Axios·기업공시·9월 글로벌 전략·시장자료",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.07",
-          "information": "OpenAI의 GPT-6 Astra 공식 발표와 KDI 9월 경제동향을 대조했다. 모델 성능·AI 인프라 연관 제조업 개선은 수요측 보조근거지만, 가계소득·소비 파급과 프로젝트별 현금회수는 확인되지 않았다.",
-          "source": "OpenAI GPT-6 Astra launch, 2026-09-03 · KDI 경제동향 2026.9",
-          "impact": "신모델 출시를 곧바로 AI 인프라 ROI 확인으로 해석하지 않고 성능→사용량→매출→FCF의 검증 단계를 명시했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis와 반례에 반영"
-        }
       ],
       "finalView": null
     },
@@ -404,13 +335,16 @@ window.MARKET_LEDGER.ideas={
       "id": "theme-flow",
       "title": "대형주 수급 공백이 소형 테마를 만드는가",
       "date": "2026-09-01",
-      "updated": "2026-09-06",
+      "updated": "2026-09-01",
       "primaryCategory": "Quant / Market Structure",
       "industryTheme": "",
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "낮음",
+      "confidenceScore": 34,
+      "confidenceRationale": "예탁금 감소와 좁은 시장 폭은 방향이 맞지만 원계열·순유동성·지속 표본이 부족하고 대형주 수급 회복이라는 반례가 있다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-08",
       "adoption": "관찰 유지",
       "source": "국내 시황 HTML·커뮤니티 관찰",
       "currentView": "제한된 유동성이 소형 테마 순환을 만들 가능성은 있으나 예탁금 감소만으로 테마 장세의 원인을 확정할 수 없다.",
@@ -454,11 +388,10 @@ window.MARKET_LEDGER.ideas={
         "reject": "예탁금 감소와 무관하게 시장 폭이 넓어지거나 대형주 추세가 회복되고 테마 집중이 사라질 때"
       },
       "nextValidation": [
-        "시장 Breadth",
-        "테마 거래대금",
-        "외국인 선물·프로그램매매",
+        "시장 Breadth와 테마 거래대금의 반복성",
+        "외국인 선물·프로그램매매와 대형주 수급",
         "대형주 대비 중소형주 상대강도",
-        "금융투자협회 투자자예탁금 원계열과 신용융자잔고"
+        "투자자예탁금·신용융자를 합친 순유동성"
       ],
       "implication": [
         "가설이 맞으면 테마 추격보다 거래대금과 후속 확산을 확인해야 한다.",
@@ -470,25 +403,9 @@ window.MARKET_LEDGER.ideas={
           "information": "가설 최초 등록. 2거래일 이상 지속 여부를 관찰하기로 함.",
           "source": "국내 시황 HTML·커뮤니티 관찰",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: 이번 주 새 검증 근거를 추가 확보하지 못했다. 검증 중 유지. 다음 확인: 시장 Breadth, 테마 거래대금, 외국인 선물·프로그램매매, 대형주 대비 중소형주 상대강도",
-          "source": "국내 시황 HTML·커뮤니티 관찰",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.06",
-          "information": "투자자예탁금이 6월 고점 139.69조원에서 8월 27일 99.71조원으로 감소했다는 커뮤니티 차트를 추가했다. 방향은 순환매 가설과 부합하지만 원자료 출처가 없고 예탁금 감소의 성격과 신용잔고 반론이 남아 있어 검증 중을 유지한다.",
-          "source": "국내 시황 HTML·커뮤니티 관찰",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        }
       ],
       "finalView": null
     },
@@ -502,7 +419,9 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "강화",
-      "confidence": "중간",
+      "confidenceScore": 47,
+      "confidenceRationale": "재정 부담과 정치 압력은 확인되지만 금리 억제에서 달러·금·기간 프리미엄으로 이어지는 핵심 가격 전달경로는 아직 관찰되지 않았다.",
+      "lastReviewed": "2026-09-07",
       "adoption": "관찰 유지",
       "source": "Macro Trader 텔레그램 재가공 자료 · Bloomberg 표기 · 작성자 신원 미확인",
       "currentView": "정치적 금리 인하 요구는 재정 우위 위험의 배경이지만 실제 정책 포획과 달러·금으로의 위험 이전은 아직 확인되지 않았다.",
@@ -550,11 +469,10 @@ window.MARKET_LEDGER.ideas={
       },
       "nextValidation": [
         "10~30년물 입찰 수요와 테일",
-        "기간 프리미엄",
-        "외국인 미 국채 보유와 환헤지 비용",
+        "기간 프리미엄과 외국인 미 국채 보유·환헤지 비용",
         "T-bill 비중·TGA·바이백 재원",
-        "달러·금·장기금리의 동시 움직임",
-        "중앙은행 금 매입"
+        "달러·금·실질금리·기대인플레이션의 동시 움직임",
+        "정치 압력 전후 연준 반응함수와 대차대조표"
       ],
       "implication": [
         "장기금리가 하락하는데 달러도 약해지고 금이 오르면 금을 중심으로 한 재정 신뢰 헤지의 설득력이 커진다.",
@@ -566,15 +484,7 @@ window.MARKET_LEDGER.ideas={
           "information": "Macro Trader 자료에서 독립 가설로 등록. 11월 미 재무부 분기 리펀딩을 주요 검증 이벤트로 설정.",
           "source": "Macro Trader 텔레그램 재가공 자료 · Bloomberg 표기 · 작성자 신원 미확인",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: 이번 주 새 검증 근거를 추가 확보하지 못했다. 검증 중 유지. 다음 확인: 10~30년물 입찰 수요와 테일, 기간 프리미엄, 외국인 미 국채 보유와 환헤지 비용, T-bill 비중·TGA·바이백 재원, 달러·금·장기금리의 동시 움직임, 중앙은행 금 매입",
-          "source": "Macro Trader 텔레그램 재가공 자료 · Bloomberg 표기 · 작성자 신원 미확인",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
         {
@@ -585,14 +495,6 @@ window.MARKET_LEDGER.ideas={
           "direction": "강화",
           "thesisRevision": "Current Thesis에 반영"
         },
-        {
-          "date": "2026.09.06",
-          "information": "Axios의 재정 우위 기사와 IMF 총재의 잭슨홀 연설을 대조했다. 재정 압력이 중앙은행에 가해질 수 있다는 경고는 원출처에서 확인됐지만, 법적 독립성과 Warsh의 물가대응 발언은 실제 정책 포획이 아직 확정되지 않았다는 반론이다. 정치 압박과 금리 억제·달러 약세·금 상승 사이의 가격 전달경로를 계속 분리해 본다.",
-          "source": "Macro Trader 텔레그램 재가공 자료 · Bloomberg 표기 · 작성자 신원 미확인",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        }
       ],
       "finalView": null
     },
@@ -600,13 +502,15 @@ window.MARKET_LEDGER.ideas={
       "id": "krw-breadth",
       "title": "원화 강세의 지속성은 수출보다 코스피 시장 폭에 달렸는가",
       "date": "2026-09-02",
-      "updated": "2026-09-05",
+      "updated": "2026-09-02",
       "primaryCategory": "Quant / Market Structure",
       "industryTheme": "",
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "중간",
+      "confidenceScore": 44,
+      "confidenceRationale": "원화와 시장 폭의 엇갈림은 관찰됐으나 외국인 리밸런싱·환전의 직접 자료와 경상수지·금리차 대비 독립 설명력이 부족하다.",
+      "lastReviewed": "2026-09-07",
       "adoption": "본문 반영",
       "source": "Macro Trader 텔레그램 재가공 자료 · Goldman Sachs 표기 · 작성자 신원 미확인",
       "currentView": "원화의 구조적 강세 재료는 남아 있지만 반도체 집중과 외국인 리밸런싱이 환율 효과를 상쇄하는지는 조건부다.",
@@ -654,8 +558,7 @@ window.MARKET_LEDGER.ideas={
         "외국인 코스피 현물·선물 누적수급",
         "KOSPI 시총가중 대비 동일가중 상대강도",
         "반도체 비중과 MSCI 리밸런싱",
-        "경상수지·기술수출·에너지 수입액",
-        "원화와 대만달러·링깃 상대성과"
+        "경상수지·금리차와 포트폴리오 자금 흐름의 상대 설명력"
       ],
       "implication": [
         "원화 롱이나 한국 비중 확대는 수출 증가율뿐 아니라 외국인 매도 둔화와 시장 폭 개선이 함께 확인될 때 신뢰도가 높아진다.",
@@ -667,25 +570,9 @@ window.MARKET_LEDGER.ideas={
           "information": "9월 2일 원화 강세에도 코스피 외국인 대규모 매도가 발생한 사례를 초기 관찰값으로 등록.",
           "source": "Macro Trader 텔레그램 재가공 자료 · Goldman Sachs 표기 · 작성자 신원 미확인",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
-        {
-          "date": "2026.09.03",
-          "information": "원화 강세와 주식시장 Breadth가 재차 엇갈렸다. 기타법인 지수 방어와 외국인 수급을 분리해 추적한다.",
-          "source": "Macro Trader 텔레그램 재가공 자료 · Goldman Sachs 표기 · 작성자 신원 미확인",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: 원화·시장 폭: 금요일은 원화 강세와 양 시장 수급 개선이 일치했으나 수요일은 달랐다. 단일 환율 신호보다 외국인 현물·선물과 업종 확산을 함께 본다. 검증 중 유지. 다음 확인: 외국인 코스피 현물·선물 누적수급, KOSPI 시총가중 대비 동일가중 상대강도, 반도체 비중과 MSCI 리밸런싱, 경상수지·기술수출·에너지 수입액, 원화와 대만달러·링깃 상대성과",
-          "source": "Macro Trader 텔레그램 재가공 자료 · Goldman Sachs 표기 · 작성자 신원 미확인",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        }
       ],
       "finalView": null
     },
@@ -693,13 +580,16 @@ window.MARKET_LEDGER.ideas={
       "id": "physical-ai-picks",
       "title": "Physical AI의 초기 수익은 완제품보다 병목과 배치 현장에 귀속되는가",
       "date": "2026-09-02",
-      "updated": "2026-09-05",
+      "updated": "2026-09-02",
       "primaryCategory": "Industry",
       "industryTheme": "로봇",
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "낮음",
+      "confidenceScore": 39,
+      "confidenceRationale": "구조화된 현장과 병목 부품 우선이라는 메커니즘은 타당하지만 가동률·고장률·회수기간과 양산 매출의 직접 자료가 부족하다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-08",
       "adoption": "관찰 유지",
       "source": "Macro Trader 텔레그램 재가공 자료 · Goldman Sachs 표기 · 작성자 신원 미확인",
       "currentView": "Physical AI의 초기 수익은 범용 휴머노이드보다 구조화된 현장과 병목 부품에서 먼저 나타날 가능성이 높지만 현장 ROI 데이터는 부족하다.",
@@ -746,11 +636,9 @@ window.MARKET_LEDGER.ideas={
       },
       "nextValidation": [
         "현장별 로봇 가동률·고장률·회수기간",
-        "완제품 ASP와 BOM",
-        "액추에이터·감속기·센서 수주",
-        "로봇용 DRAM·NAND·연산모듈 탑재량",
-        "vPLC 매출과 안전인증",
-        "Amazon·Walmart 자동화 원가절감"
+        "완제품 ASP·BOM과 고객 원가절감",
+        "액추에이터·감속기·센서 수주의 양산 매출 전환",
+        "vPLC 매출·현장 통합비용과 안전인증"
       ],
       "implication": [
         "단일 휴머노이드 완제품에 집중하기보다 자동화 도입기업, 연산·메모리, 액추에이터·모션제어와 산업 소프트웨어를 분산 관찰한다.",
@@ -762,17 +650,9 @@ window.MARKET_LEDGER.ideas={
           "information": "Physical AI 장문 자료를 공급망·배치 현장 중심의 독립 가설로 등록.",
           "source": "Macro Trader 텔레그램 재가공 자료 · Goldman Sachs 표기 · 작성자 신원 미확인",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: 이번 주 새 검증 근거를 추가 확보하지 못했다. 검증 중 유지. 다음 확인: 현장별 로봇 가동률·고장률·회수기간, 완제품 ASP와 BOM, 액추에이터·감속기·센서 수주, 로봇용 DRAM·NAND·연산모듈 탑재량, vPLC 매출과 안전인증, Amazon·Walmart 자동화 원가절감",
-          "source": "Macro Trader 텔레그램 재가공 자료 · Goldman Sachs 표기 · 작성자 신원 미확인",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        }
       ],
       "finalView": null
     },
@@ -780,13 +660,15 @@ window.MARKET_LEDGER.ideas={
       "id": "glp1-apparel",
       "title": "GLP-1은 의류 총수요보다 사이즈 재고구조를 먼저 바꾸는가",
       "date": "2026-09-02",
-      "updated": "2026-09-05",
+      "updated": "2026-09-02",
       "primaryCategory": "Industry",
       "industryTheme": "바이오·소비재",
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "낮음",
+      "confidenceScore": 32,
+      "confidenceRationale": "사이즈 구성 변화의 사례는 있으나 GLP-1 보급률과 기업별 SKU·재고회전·실적을 연결하는 독립 정량 근거가 약하다.",
+      "lastReviewed": "2026-09-07",
       "adoption": "관찰 유지",
       "source": "Macro Trader 텔레그램 재가공 자료 · Bloomberg 표기 · 작성자 신원 미확인",
       "currentView": "GLP-1의 의류 영향은 총수요보다 사이즈별 재고회전에서 먼저 나타날 수 있지만 기업별 정량 근거는 아직 약하다.",
@@ -833,8 +715,7 @@ window.MARKET_LEDGER.ideas={
         "국가별 GLP-1 보급률",
         "브랜드별 사이즈 SKU와 판매속도",
         "재고일수·할인율·반품률",
-        "플러스사이즈 고객 이탈",
-        "저가 온라인 의류의 점유율"
+        "플러스사이즈 고객 이탈과 저가 교체수요의 채널 이동"
       ],
       "implication": [
         "의류업종을 일괄 수혜·피해로 나누지 않고 재고 유연성, 온라인 비중, 가격대와 고객구성으로 선별한다.",
@@ -846,17 +727,9 @@ window.MARKET_LEDGER.ideas={
           "information": "GLP-1의 2차 소비효과를 의류 재고구조 가설로 등록.",
           "source": "Macro Trader 텔레그램 재가공 자료 · Bloomberg 표기 · 작성자 신원 미확인",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         },
-        {
-          "date": "2026.09.05",
-          "information": "W36 주간 점검: 이번 주 새 검증 근거를 추가 확보하지 못했다. 검증 중 유지. 다음 확인: 국가별 GLP-1 보급률, 브랜드별 사이즈 SKU와 판매속도, 재고일수·할인율·반품률, 플러스사이즈 고객 이탈, 저가 온라인 의류의 점유율",
-          "source": "Macro Trader 텔레그램 재가공 자료 · Bloomberg 표기 · 작성자 신원 미확인",
-          "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
-          "thesisRevision": "Current Thesis에 반영"
-        }
       ],
       "finalView": null
     },
@@ -870,7 +743,9 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "낮음",
+      "confidenceScore": 42,
+      "confidenceRationale": "장기 생산성·실질임금 괴리는 보이지만 원자료 산식과 교역조건·노동구성·기업저축의 기여를 분해하지 못했다.",
+      "lastReviewed": "2026-09-07",
       "adoption": "관찰 유지",
       "source": "BOJ Research LAB·OECD 표기 차트, 사용자 제공 텔레그램 재가공 자료",
       "currentView": "일본의 문제는 생산성 부족보다 생산성의 과실이 임금과 내수로 전달되지 않는 구조일 가능성이 있지만 원인 분해가 더 필요하다.",
@@ -914,11 +789,10 @@ window.MARKET_LEDGER.ideas={
       },
       "nextValidation": [
         "BOJ Research LAB 원문과 OECD 산식",
-        "명목임금·실질임금·노동생산성",
+        "명목·실질임금과 노동생산성의 동일 정의 비교",
         "노동소득분배율과 기업저축률",
         "정규직·비정규직 및 대기업·중소기업 임금",
-        "서비스업 생산성과 단위노동비용",
-        "가계저축률·소비·서비스물가"
+        "가계소비·서비스물가로의 전달"
       ],
       "implication": [
         "임금 전달이 개선되면 일본 내수·서비스·금융주의 구조적 리레이팅과 BOJ 정상화의 지속성이 높아질 수 있다.",
@@ -930,7 +804,7 @@ window.MARKET_LEDGER.ideas={
           "information": "일본·미국·독일·프랑스의 생산성과 실질임금 비교 차트를 바탕으로 최초 등록했다. 차트 방향은 가설과 부합하지만 원문 산식과 최근 춘투 이후 구조 변화가 확인되지 않아 검증 중으로 둔다.",
           "source": "BOJ Research LAB·OECD 표기 차트, 사용자 제공 텔레그램 재가공 자료",
           "impact": "새 정보와 기존 가설의 정합성을 반영했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "Current Thesis에 반영"
         }
       ],
@@ -947,7 +821,9 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "중간",
+      "confidenceScore": 63,
+      "confidenceRationale": "LETF 거래 기반과 실현변동성 약화에는 복수 근거가 있으나 3537 감마 인과, 소표본 임계값, 시장 폭과 3일 수급 조건은 미확인이다.",
+      "lastReviewed": "2026-09-07",
       "adoption": "관찰 유지",
       "source": "KOSPI_VKOSPI_gamma_regime_report_2026-09-01.pdf · KOSPI_VKOSPI_buyback_momentum_addendum_2026-09-01.pdf (공개자료 기반 연구 보고서, 원출처 독립 재검증 전)",
       "currentView": "외국인·기관 현물 수급은 크게 개선됐지만 시장 폭은 확인선에 못 미쳐, 변동성 정상화가 광범위한 지수 모멘텀으로 전환됐다는 판단은 아직 이르다.",
@@ -1116,9 +992,7 @@ window.MARKET_LEDGER.ideas={
       "nextValidation": [
         "9월 10일 이후 3537의 새 만기·행사가·옵션 계약수량",
         "VKOSPI와 KOSPI 10일 실현변동성의 3~5거래일 유지 여부",
-        "미국 10년·20년 금리의 최근 고점 대비 이탈 폭",
         "단일종목 LETF 거래대금·순자산·순설정",
-        "삼성전자·SK하이닉스 20일 상대강도와 실제 자사주 집행",
         "상승종목 비중·동일가중 KOSPI·외국인 현물 및 KOSPI200 선물 3일 누적 수급",
         "행사가 롤 전후 5분 수익률·선물 체결강도·되돌림 위치의 이벤트 스터디"
       ],
@@ -1132,7 +1006,7 @@ window.MARKET_LEDGER.ideas={
           "information": "감마 레짐 보고서를 검토했다. 보고서는 규제 뒤 LETF 거래대금과 실현변동성 감소를 1단계 근거로 제시하면서도, 3537이 시장 전체 감마를 지배했다는 주장은 규모·동시성·공시 시차 때문에 미확인으로 구분한다.",
           "source": "KOSPI_VKOSPI_gamma_regime_report_2026-09-01.pdf",
           "impact": "변동성 피드백 약화 가설은 강화하지만 3537 단독 인과는 채택하지 않았다.",
-          "direction": "강화",
+          "direction": "등록",
           "thesisRevision": "규제 효과와 공개 콜월 효과를 분리한 Current Thesis로 최초 작성"
         },
         {
@@ -1140,24 +1014,8 @@ window.MARKET_LEDGER.ideas={
           "information": "추가 보고서의 VKOSPI·실현변동성·장기금리·콜월·시장 폭 조건과 바이백 분석을 반영했다. 소표본 확률과 중간선거 계절성은 확정 근거에서 제외했다.",
           "source": "KOSPI_VKOSPI_buyback_momentum_addendum_2026-09-01.pdf",
           "impact": "단일 임계치 가설을 여러 시장 확인 조건으로 제한하고, 바이백을 점화 요인이 아닌 완충재로 분류했다.",
-          "direction": "유지",
+          "direction": "구조 수정",
           "thesisRevision": "Decision Threshold와 반대 근거를 보강"
-        },
-        {
-          "date": "2026.09.06",
-          "information": "외부 보고서 원문 충실도를 다시 검토했다. LETF 피드백 약화, 3537 공개 바운더리, 지수 모멘텀, 바이백 완충 효과를 각각 판정하고 전체 확인 조건, 단계적 전달경로, 세 조건 중 두 가지가 발생하는 재충격 규칙, 공개 바운더리의 개별 반례를 분리했다. n=2~6 및 n=5 통계는 교정된 예측확률이나 매수 신호로 채택하지 않았다.",
-          "source": "KOSPI_VKOSPI_gamma_regime_report_2026-09-01.pdf · KOSPI_VKOSPI_buyback_momentum_addendum_2026-09-01.pdf",
-          "impact": "LETF 거래 기반 약화의 강한 1단계 증거는 유지하되 공개 바운더리와 지수 모멘텀으로 결론이 자동 확장되지 않도록 했다. 재충격 위험 규칙과 전체 가설의 기각 조건도 분리했다.",
-          "direction": "중립",
-          "thesisRevision": "서로 다른 주장과 조건의 관계는 보존하면서 화면에서는 자연어로 읽히도록 수정"
-        },
-        {
-          "date": "2026.09.07",
-          "information": "10:00 장중 스냅샷에서 삼성전자·SK하이닉스와 일부 장비·테스트 종목이 함께 강세를 보였다는 자료가 들어왔다. 상승 종목만 선별된 표본이고 종가·전체 상승종목 비율·외국인 현선물 수급은 확인되지 않았다.",
-          "source": "사용자 제공 2026-09-07 10:00 주요 상승 종목 현황",
-          "impact": "반도체 내부 확산의 초기 단서는 추가됐지만 광범위한 KOSPI 시장 폭과 신규 위험수요의 확인 조건은 충족하지 못했다.",
-          "direction": "중립",
-          "thesisRevision": "변경 없음 — 종가와 시장 전체 수급 확인 전 기존 판단 유지"
         },
         {
           "date": "2026.09.07",
@@ -1180,7 +1038,10 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "낮음",
+      "confidenceScore": 37,
+      "confidenceRationale": "한국계 가공·현지생산 기여의 방향은 설득력 있지만 원 보고서와 HS코드·가격/물량·소유/생산지 분해가 확인되지 않았다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-08",
       "adoption": "관찰 유지",
       "source": "사용자 제공 반도체 공급망 분석 이미지 2장 (원기관 미확인, 해관총서·관세청·UN Comtrade 등 표기)",
       "currentView": "중국 반도체 수출 급증에는 한국계 가공·현지생산이 상당 부분 섞였을 수 있어 중국 자립과 동일시하기 어렵다.",
@@ -1234,8 +1095,7 @@ window.MARKET_LEDGER.ideas={
         "중국 해관총서·한국 관세청·UN Comtrade의 동일 HS코드 교차검증",
         "수출액을 가격·물량·제품 믹스로 분해",
         "가공무역·일반무역 및 한국계 현지법인 기여 분리",
-        "CXMT 고객 인증·양산 수율·ASP와 D램 세대별 출하",
-        "HBM·범용 D램·낸드·시스템반도체의 공급망을 별도 추적"
+        "CXMT 고객 인증·양산 수율·ASP와 D램 세대별 출하"
       ],
       "implication": [
         "중국 반도체 수출 증가율을 한국 메모리의 경쟁 악화로 바로 연결하지 않고 생산단계·기업 소유·품목별 기여를 먼저 분해한다.",
@@ -1247,7 +1107,7 @@ window.MARKET_LEDGER.ideas={
           "information": "중국 반도체 수출 증가분의 한국산 가공·한국계 현지생산 기여와 글로벌 공급망 교역 흐름을 제시한 이미지 2장을 반영했다. 이미지의 원기관과 산식이 확인되지 않아 수치는 검증 필요 주장으로 보존한다.",
           "source": "KakaoTalk_20260903_160704801.jpg · KakaoTalk_20260903_160704801_01.jpg",
           "impact": "중국 수출 증가를 토종 자립과 동일시하지 말아야 한다는 독립 가설을 만들었지만 확신도는 낮게 유지했다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "새 Narrative 최초 작성"
         }
       ],
@@ -1264,7 +1124,10 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "중간",
+      "confidenceScore": 66,
+      "confidenceRationale": "공식 기업자료와 TrendForce가 범용 DRAM 공급 제약·가격 상승을 지지하지만 HBM 우선 배정의 기여도와 완제품 가격 전가는 남아 있다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-08",
       "adoption": "관찰 유지",
       "source": "이데일리 2026-09-06 기사 · 삼성전자 2026년 2분기 실적 발표 · TrendForce 2026-09-07 DRAM 산업 발표",
       "currentView": "범용 D램 공급 부족과 가격 상승은 확인되지만, HBM 우선 배정의 기여도와 소비자 가격 전가는 아직 분리 검증이 필요하다.",
@@ -1318,7 +1181,6 @@ window.MARKET_LEDGER.ideas={
         "삼성전자·SK하이닉스·Micron의 생산 배분, bit growth와 CapEx 발언 비교",
         "HBM용 DRAM 다이와 범용 DRAM의 웨이퍼·공정 전환 관계 정량화",
         "PC·스마트폰 OEM의 BOM, 메모리 사양, 출하 전망과 가격 정책 확인",
-        "국내 소부장 종목을 공정·고객·수주 시점별로 분해하고 실적 연결 여부 확인",
         "중국 범용 DRAM 공급의 고객 인증·양산 수율·가격 추적"
       ],
       "implication": [
@@ -1332,17 +1194,9 @@ window.MARKET_LEDGER.ideas={
           "information": "AI 서버용 고부가 메모리 우선 생산이 범용 D램 공급과 소비자 전자제품 가격을 압박한다는 기사를 삼성전자 공식 실적 발표와 TrendForce의 당일 DRAM 자료에 대조했다.",
           "source": "이데일리 2026-09-06 · Samsung Electronics Q2 2026 Results · TrendForce 2026-09-07",
           "impact": "범용 DRAM 공급 부족과 가격 상승의 방향은 확인했지만 HBM 우선 배정의 기여도와 완제품 가격 전가는 별도 단계로 남겼다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "새 Narrative 최초 작성"
         },
-        {
-          "date": "2026.09.07",
-          "information": "한국장 종가에서 삼성전자와 SK하이닉스가 각각 5.68%, 8.26% 상승했고 반도체 관련 업종과 외국인·기관 현물 수급이 강했다. 이는 메모리 업황 기대의 가격 반응이지만 생산 배분과 소비자가격 전가의 직접 증거는 아니다.",
-          "source": "한국거래소 수치를 인용한 연합뉴스 2026-09-07 마감 종합",
-          "impact": "시장의 선반영 강도가 커졌음을 추가했지만 산업 가설의 운영 데이터 검증 상태는 유지했다.",
-          "direction": "중립",
-          "thesisRevision": "Supporting Evidence에 종가 기준 시장 반응을 반영"
-        }
       ],
       "finalView": null
     },
@@ -1350,17 +1204,21 @@ window.MARKET_LEDGER.ideas={
       "id": "korea-ai-roe-market-rerating",
       "title": "AI 메모리의 ROE 상승은 한국시장 전체 재평가로 확산되는가",
       "date": "2026-09-07",
-      "updated": "2026-09-07",
-      "updatedAt": "2026-09-07T22:22:00+09:00",
+      "updated": "2026-09-08",
+      "updatedAt": "2026-09-08T23:06:07+09:00",
       "primaryCategory": "Strategy",
       "industryTheme": "",
       "status": "검증 중",
       "outcome": null,
-      "direction": "유지",
-      "confidence": "중간",
+      "direction": "강화",
+      "confidenceScore": 66,
+      "previousConfidenceScore": 61,
+      "confidenceRationale": "삼성전자가 2026년 90~110조원 주주환원 예상 규모와 3년 FCF 50% 원칙을 공식화해 AI 이익의 현금 환원 경로가 한 단계 확인됐다. 다만 우선주 매입·소각의 규모와 한국 기업 전반의 확산은 아직 미확정이다.",
+      "lastReviewed": "2026-09-08",
+      "lastChecked": "2026-09-08",
       "adoption": "관찰 유지",
-      "source": "Harvey's Macro Story 2026-09-07 · HSBC Private Bank Mid-Year 2026 · 한국시장 종가자료",
-      "currentView": "AI 메모리가 한국 ROE를 높이는 흐름은 분명하지만, 시장 전체 재평가는 반도체 제외 이익 확산과 정상화 이후 FCF·주주환원까지 확인돼야 한다.",
+      "source": "Harvey's Macro Story 2026-09-07 · HSBC Private Bank Mid-Year 2026 · 한국시장 종가자료 · 삼성전자 2026-08-21 공시·뉴스룸 · Bloomberg 2026-09-08",
+      "currentView": "삼성전자의 대규모 FCF 연계 주주환원 계획은 AI 이익의 주주가치 전환을 강화했다. 다만 우선주 매입은 아직 기대이며, 한국시장 전체 재평가는 비반도체 이익과 환원 확산이 더 필요하다.",
       "originalHypothesis": "AI 메모리 호황이 한국 기업의 이익과 ROE를 높이고 그 수익성의 지속성·현금흐름·주주환원이 확인되면, 한국 증시는 단순한 경기민감 반도체 시장을 넘어 더 높은 정상 이익과 평가배수를 인정받을 수 있다.",
       "currentThesis": [
         "한국 증시의 재평가 논리는 이익이 늘었다는 사실만으로 완성되지 않는다. 핵심은 AI 메모리 수요가 삼성전자와 SK하이닉스의 수익성 수준을 얼마나 높이는지, 그리고 이 변화가 일시적인 가격 사이클인지 과거보다 높은 정상 이익의 바닥을 만드는 구조 변화인지 구분하는 것이다.",
@@ -1369,6 +1227,7 @@ window.MARKET_LEDGER.ideas={
         "메모리 기업 자체의 구조적 재평가도 다음 하강기에서 판정된다. 제품 차별화, 장기 고객관계와 공급 규율이 가격 정상화 뒤에도 과거보다 높은 마진과 ROE를 지키고, 대규모 CapEx를 차감한 FCF가 유지돼야 정상화 이익을 높일 수 있다. 호황기 회계이익만 높고 현금이 증설에 다시 흡수된다면 평가배수 상승의 근거는 약해진다.",
         "가격은 이미 일부 기대를 반영하고 있다. 9월 7일 KOSPI가 4.61% 상승하고 삼성전자와 SK하이닉스가 각각 5.68%, 8.26% 오르면서 메모리 업황 개선이 빠르게 재가격됐다. 앞으로의 투자기회는 주가 수준 자체가 아니라 KOSPI 가격 변화율과 이익 추정치 변화율, 12개월 선행 P/E, 시장이 암묵적으로 가정한 다음 불황의 ROE 바닥을 비교해 판단해야 한다."
         ,"KDI의 9월 진단은 확산 조건의 현재 위치를 보여준다. AI 인프라 투자가 반도체 수출·설비투자뿐 아니라 금속가공·전기장비·기계장비 생산까지 지지했지만, 경기 개선은 가계소득과 소비 전반으로 충분히 번지지 않았다. 공급망 내부의 업종 확산은 나타나도 시장 전체의 이익·수요 확산은 아직 불완전하다는 뜻이다."
+        ,"삼성전자는 8월 21일 2026년 주주환원 잔여 재원을 약 90~110조원으로 예상하고, 3년 누적 FCF의 50%를 환원한다는 기존 원칙에 따라 약 30조원 현금배당과 이후 배당·자사주 매입 및 소각을 검토한다고 공시했다. 이는 AI 메모리 이익이 실제 주주환원으로 연결되는 경로를 강화한다. 다만 별도로 확정된 약 15조원 자사주 매입은 임직원 주식보상 목적의 보통주이며, Bloomberg가 제시한 우선주 매입과 할인 축소는 투자자의 기대이지 확정된 이사회 결정이 아니다. 따라서 삼성전자 수준의 조건부 진전은 인정하되 한국 우선주 전체와 비반도체 기업의 재평가로 확대하지 않는다."
       ],
       "coreMechanism": [
         "AI 메모리 수요·제품 차별화 → 메모리 ASP·마진·ROE 상승 → 한국 지수 이익 수준 상승.",
@@ -1378,7 +1237,8 @@ window.MARKET_LEDGER.ideas={
       ],
       "whatChanged": [
         "AI 메모리의 단기 실적 호조를 한국시장 전체 재평가로 확장할 수 있는 조건을 독립 가설로 등록했다.",
-        "현재 ROE 수준, 다음 하강기의 ROE 바닥, CapEx 차감 후 FCF, 반도체 제외 확산과 주주환원을 서로 다른 검증 단계로 분리했다."
+        "현재 ROE 수준, 다음 하강기의 ROE 바닥, CapEx 차감 후 FCF, 반도체 제외 확산과 주주환원을 서로 다른 검증 단계로 분리했다.",
+        "삼성전자의 FCF 연계 대규모 주주환원 계획으로 메모리 이익의 현금 환원 경로는 강화했지만, 우선주 매입 기대와 시장 전체 확산은 분리했다."
       ],
       "supportingEvidence": [
         "HSBC Private Bank가 Bloomberg 컨센서스를 인용해 한국의 2026년 ROE를 약 22%로 전망하고 2027년에도 개선 흐름을 제시",
@@ -1388,6 +1248,7 @@ window.MARKET_LEDGER.ideas={
         ,"HSBC Private Bank의 9월 2일 차트는 한국의 2026년·2027년 ROE를 약 25~27%로 제시해 5월 전망보다 높은 경로를 표시"
         ,"KDI는 AI 인프라 투자의 효과가 반도체에서 금속가공·전기장비·기계장비 생산으로 이어지고 있다고 평가"
         ,"신한투자증권 9월 7일 마감자료는 외국인 KOSPI 현물 약 2.59조원, 기관 약 2.65조원 순매수와 반도체 주도 급등을 제시"
+        ,"삼성전자 공식 공시는 2026년 주주환원 잔여 재원을 약 90~110조원으로 예상하고 3년 누적 FCF의 50% 환원 원칙, 약 30조원 현금배당 계획과 잔여 재원의 배당·자사주 매입 및 소각 검토를 명시"
       ],
       "counterEvidence": [
         "HSBC의 ROE 22%는 실현치가 아니라 특정 시점의 컨센서스 전망이며 지수 구성과 산식에 민감함",
@@ -1398,13 +1259,15 @@ window.MARKET_LEDGER.ideas={
         "9월 7일 급등처럼 주가가 이익 추정치보다 먼저 오르면 재평가 기대가 이미 가격에 상당 부분 반영될 수 있음"
         ,"KDI가 소비 개선을 완만하다고 평가해 AI 관련 제조업 생산 개선이 가계소득·내수·비반도체 이익으로 아직 충분히 확산되지 않았음"
         ,"HSBC 9월 2일 차트의 한국 ROE 수치는 원문 방법론과 5월 전망과의 산식 차이를 추가 확인해야 함"
+        ,"확정된 약 15조원 자사주 매입은 임직원 보상 목적의 보통주이며, 주주환원 잔여 재원 중 우선주 매입·소각 규모는 아직 확정되지 않음"
+        ,"한국 우선주의 평균 45% 할인과 삼성전자 우선주의 괴리 축소 가능성은 Bloomberg가 인용한 투자자 평가로, 실제 매입과 지속적인 가격발견 개선 전에는 시장 전체 리레이팅 근거가 아님"
       ],
       "unresolved": [
         "KOSPI와 반도체 제외 KOSPI의 12개월 선행 ROE·EPS 변화율",
         "KOSPI 가격 변화율과 이익 추정치 변화율 및 12개월 선행 P/E",
         "메모리 가격 정상화 시 삼성전자·SK하이닉스의 마진·ROE 바닥",
         "유지·성장 CapEx를 차감한 FCF와 순현금 변화",
-        "배당·자사주 매입·소각의 발표 대비 실제 집행",
+        "삼성전자 2027년 1월 이사회에서 확정될 잔여 환원의 배당·보통주·우선주 매입 및 소각 배분과 실제 집행",
         "지배구조 개선이 자본비용과 외국인 장기자금 유입에 미친 효과"
       ],
       "decisionThreshold": {
@@ -1416,9 +1279,8 @@ window.MARKET_LEDGER.ideas={
         "KOSPI 전체·반도체 제외 12개월 선행 ROE와 EPS revision breadth 산출",
         "KOSPI 가격 변화율·이익 추정치 변화율·12개월 선행 P/E 동시 비교",
         "삼성전자·SK하이닉스의 정상화 ASP·마진·CapEx·FCF 민감도 분석",
-        "배당성향과 자사주 매입·소각의 실제 집행 추적",
-        "외국인 수급의 반도체 집중도와 비반도체 업종 확산 확인",
-        "원화 강세에 따른 업종별 환산손익 민감도 분리"
+        "삼성전자 잔여 환원의 배당·보통주·우선주 배분과 매입·소각 집행 및 괴리율 반응 추적",
+        "외국인 수급의 반도체 집중도와 비반도체 업종 확산 확인"
       ],
       "implication": [
         "지수 ROE 상승을 곧바로 한국시장 전체의 구조적 재평가로 사용하지 않고 반도체 기여도와 비반도체 확산을 분리한다.",
@@ -1431,7 +1293,7 @@ window.MARKET_LEDGER.ideas={
           "information": "Harvey's Macro Story의 한국 증시 재평가 해석을 HSBC Private Bank 원문과 9월 7일 시장 반응에 대조했다. HSBC의 한국 ROE 22%는 5월 29일 기준 Bloomberg 컨센서스 전망임을 확인했다.",
           "source": "Harvey's Macro Story 2026-09-07 · HSBC Private Bank Mid-Year 2026 · 한국거래소 수치를 인용한 9월 7일 마감자료",
           "impact": "AI 메모리 이익 개선과 한국시장 전체 재평가 사이에 정상화 FCF·주주환원·반도체 제외 확산·선반영 검토가 필요하다는 독립 가설을 만들었다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "새 Narrative 최초 작성"
         },
         {
@@ -1439,8 +1301,21 @@ window.MARKET_LEDGER.ideas={
           "information": "HSBC 9월 2일 후속 차트가 한국의 2026~2027년 ROE를 약 25~27%로 제시했다. KDI는 AI 관련 수출·설비투자·제조업 개선은 확인했지만 가계소득과 소비로의 파급은 아직 제한적이라고 평가했다.",
           "source": "HSBC Private Bank·Bloomberg, 2026-09-02 차트 · KDI 경제동향 2026.9 · 신한투자증권 2026-09-07 마감자료",
           "impact": "ROE 상향 가능성은 강화됐지만 한국시장 전체 재평가의 핵심인 비반도체 이익·가계소득·소비 확산은 아직 통과하지 못했다.",
-          "direction": "중립",
+          "direction": "강화",
           "thesisRevision": "Current Thesis와 근거·반례에 반영"
+        },
+        {
+          "date": "2026.09.08",
+          "information": "삼성전자는 2026년 주주환원 잔여 재원을 약 90~110조원으로 예상하고 3년 누적 FCF의 50% 환원 원칙을 공식화했다. Bloomberg는 우선주 매입 기대와 한국 우선주의 평균 45% 할인을 조명했지만, 우선주 매입 규모는 아직 확정되지 않았다.",
+          "source": "Samsung Electronics 2026-08-21 shareholder-return disclosure and Global Newsroom · Bloomberg 2026-09-08 (Yahoo Finance 재전재) · TNBfolio 요약",
+          "impact": "AI 메모리 이익이 대규모 현금 환원으로 이어지는 삼성전자 단위의 경로가 확인돼 기존 가설을 강화했다. 우선주 할인 축소와 한국시장 전체 확산은 실행 전 단계로 남겼다.",
+          "direction": "강화",
+          "thesisRevision": "Current Thesis·Supporting Evidence·Counter Evidence와 Next Validation 수정",
+          "scoreChange": {
+            "from": 61,
+            "to": 66,
+            "reason": "FCF 연계 주주환원 규모가 회사 공시로 확인됐으나 우선주 매입과 시장 전반 확산은 미확정"
+          }
         }
       ],
       "finalView": null
@@ -1456,7 +1331,10 @@ window.MARKET_LEDGER.ideas={
       "status": "검증 중",
       "outcome": null,
       "direction": "유지",
-      "confidence": "낮음",
+      "confidenceScore": 45,
+      "confidenceRationale": "BLS와 LinkedIn에서 산업·직무 재배치 신호는 보이지만 AI 투자와 순고용 방어의 인과, 재취업 임금과 소비 지속성은 확인되지 않았다.",
+      "lastReviewed": "2026-09-07",
+      "lastChecked": "2026-09-07",
       "adoption": "관찰 유지",
       "source": "미국 BLS Employment Situation 2026-08 · LinkedIn Economic Graph · 사용자 제공 해석",
       "currentView": "제조업·건설과 AI 전문직의 수요는 늘고 정보업 고용은 줄어 재배치 신호가 보이지만, AI가 순고용을 방어했다는 인과관계는 아직 성립하지 않는다.",
@@ -1503,9 +1381,8 @@ window.MARKET_LEDGER.ideas={
       },
       "nextValidation": [
         "BLS 산업별 고용과 벤치마크 수정",
-        "JOLTS 채용·구인·이직률",
-        "LinkedIn·Indeed AI 직무 공고와 실제 채용",
-        "데이터센터 건설지출과 전력·기계 수주",
+        "JOLTS와 LinkedIn·Indeed의 AI 직무 공고·실제 채용",
+        "AI 투자 강도별 데이터센터 건설·전력·제조 고용",
         "생산성·단위노동비용·실질임금",
         "AI 노출도별 초급·중견 고용과 재취업 임금"
       ],
@@ -1519,15 +1396,15 @@ window.MARKET_LEDGER.ideas={
           "information": "8월 BLS 고용·임금과 LinkedIn Economic Graph 자료를 대조했다. 제조업·건설 및 AI 전문직 성장과 정보업 감소가 병존하지만 AI의 순고용 방어 효과는 아직 인과적으로 확인되지 않았다.",
           "source": "U.S. BLS Employment Situation, 2026-09-04 · LinkedIn Economic Graph Work Change Report 및 2026 AI Labor Market Update · 사용자 제공 해석",
           "impact": "AI발 고용 붕괴와 무조건적 골디락스 사이에서 산업·직무 재배치 여부를 검증하는 새 Narrative를 만들었다.",
-          "direction": "중립",
+          "direction": "등록",
           "thesisRevision": "새 Narrative 최초 작성"
         }
       ],
       "finalView": null
     }
   ],
-  "schemaVersion": 3,
-  "updatedAt": "2026-09-07T22:25:00+09:00",
+  "schemaVersion": 4,
+  "updatedAt": "2026-09-08T23:06:07+09:00",
   "statusValues": [
     "검증 중",
     "종료"
@@ -1543,6 +1420,14 @@ window.MARKET_LEDGER.ideas={
     "약화",
     "구조 수정"
   ],
+  "researchLogDirectionValues": [
+    "등록",
+    "강화",
+    "약화",
+    "구조 수정",
+    "종료"
+  ],
+  "confidenceScoreNote": "데이터·논리·반례를 종합한 AI 연구 판단 점수이며 예측확률이 아님.",
   "categoryValues": [
     "Macro",
     "Quant / Market Structure",
