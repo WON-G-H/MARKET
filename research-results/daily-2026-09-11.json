@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "module": "daily",
+  "date": "2026-09-11",
+  "context": {
+    "file": "daily-2026-09-11.json",
+    "sha256": "6ab01b146016664f3c8dc909f79ce1e0d175f361c7631ff1f4c1ced1fbdb37fd"
+  },
+  "report": {
+    "date": "2026-09-11",
+    "title": "",
+    "tags": [],
+    "lead": [],
+    "report": [
+      {
+        "no": "02",
+        "title": "전일 미국시장 및 글로벌 환경",
+        "paragraphs": []
+      },
+      {
+        "no": "03",
+        "title": "국내 지수와 수급",
+        "paragraphs": []
+      },
+      {
+        "no": "04",
+        "title": "시장 내부 자금 흐름",
+        "paragraphs": []
+      },
+      {
+        "no": "05",
+        "title": "주요 산업 및 기업",
+        "paragraphs": []
+      },
+      {
+        "no": "06",
+        "title": "주요 해석과 반대 근거",
+        "paragraphs": []
+      },
+      {
+        "no": "07",
+        "title": "시장 전달경로",
+        "paragraphs": []
+      }
+    ],
+    "watch": []
+  },
+  "addendum": {
+    "changes": {
+      "maintained": [],
+      "new": []
+    },
+    "assessment": [],
+    "implications": [],
+    "conclusion": ""
+  },
+  "researchAudit": {
+    "sources": [],
+    "unverified": [],
+    "counterEvidence": [],
+    "timingNotes": []
+  },
+  "revisionNote": ""
+}

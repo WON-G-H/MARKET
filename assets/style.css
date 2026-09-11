@@ -19,6 +19,7 @@ body.light .report-summary>p,body.light .brief-section p,body.light .paper-secti
 
 /* Structured live metric fields */
 .primary-metric{min-height:205px;display:flex;flex-direction:column}
+.dashboard-data-status{display:flex;flex-wrap:wrap;gap:6px 20px;margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.6}
 .primary-metric .metric-value{font-size:19px;margin:14px 0 4px;line-height:1.35}
 .metric-value.missing{font-size:13px;margin-top:18px}
 .metric-unit{color:var(--muted);font-size:9px;min-height:24px;line-height:1.35}
@@ -64,3 +65,5 @@ body.light .regime-hero p,body.light .regime-axis summary>p,body.light .regime-a
 
 /* Complex external research — internal logic, natural-language presentation */
 .hypothesis-box blockquote{font-weight:500}.original-hypothesis{margin-top:17px;padding-top:14px;border-top:1px solid var(--line)}.original-hypothesis summary{cursor:pointer;color:var(--muted);font-size:12px}.original-hypothesis p{margin:10px 0 0!important;color:var(--muted)!important;font-size:13px!important;line-height:1.7!important}
+.metric-collection{font-size:10px;line-height:1.5;color:var(--muted,#8294a8);margin-top:5px}
+.metric-collection.failed,.metric-collection.stale{color:#e7b56b}

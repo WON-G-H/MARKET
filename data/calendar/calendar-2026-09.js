@@ -1,4 +1,4 @@
-/* Market Ledger calendar module · refreshed on 2026-09-10. */
+/* Market Ledger calendar module · refreshed on 2026-09-11. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.calendar=window.MARKET_LEDGER.calendar||{};
 window.MARKET_LEDGER.calendar["2026-09"]=[
@@ -281,13 +281,13 @@ window.MARKET_LEDGER.calendar["2026-09"]=[
     "importance": 2,
     "country": "미국",
     "kst": "2026-09-10 21:30",
-    "status": "발표 완료 · 원문 대조 대기",
+    "status": "발표 완료 · BLS 원문 확인",
     "previous": "Headline +4.7% YoY / 0.0% MoM",
-    "consensus": "Headline +5.3% YoY / +0.4% MoM · Core +4.6% YoY / +0.3% MoM",
-    "actual": "Headline +5.4% YoY / +0.4% MoM · Core +4.6% YoY / +0.2% MoM",
-    "surprise": "Headline YoY +0.1%p 상회 · Core MoM -0.1%p 하회",
-    "source": "사용자 제공 경제일정 화면·U.S. BLS 발표 일정",
-    "sourceUrl": "https://www.bls.gov/schedule/2026/09_sched.htm",
+    "consensus": "Headline +5.3% YoY / +0.4% MoM",
+    "actual": "Final demand +5.4% YoY / +0.4% MoM · 음식·에너지·무역 제외 +4.7% YoY / +0.3% MoM",
+    "surprise": "Headline YoY +0.1%p 상회 · 에너지 goods +4.2%",
+    "source": "U.S. BLS",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
     "why": "기업 단계의 가격압력과 PCE 구성항목을 통해 인플레이션 경로를 보완한다.",
     "path": "PPI → PCE 추정·마진 → Fed 기대 → 국채금리 → 주식",
     "checkpoints": [
@@ -297,7 +297,7 @@ window.MARKET_LEDGER.calendar["2026-09"]=[
       "무역서비스",
       "PCE 연계 항목"
     ],
-    "reaction": "Headline과 core가 혼재해 PPI 자체의 금리 반응은 추가 확인이 필요하다. 같은 시각 WTI 2026년 10월물은 100.24달러(+4.36%)를 기록해 공급측 물가 압력이 더 직접적인 위험으로 부상했다.",
+    "reaction": "디젤 +24.1%, 운송·창고 서비스 +2.3%, 트럭 화물운송 +2.0%가 확인돼 에너지 충격의 운송비 전가가 구체화됐다. 미국 10년물은 약 4.95%까지 상승했다.",
     "linkedDaily": "2026-09-11"
   },
   {
@@ -356,17 +356,17 @@ window.MARKET_LEDGER.calendar["2026-09"]=[
     "importance":2,
     "country":"미국",
     "kst":"2026-09-11 02:00",
-    "status":"예정",
+    "status":"발표 완료 · 공식 결과표 대조 가능",
     "previous":"5.216%",
     "consensus":"—",
-    "actual":"—",
-    "surprise":"—",
-    "source":"U.S. Treasury",
+    "actual":"High yield 5.308% · Bid-to-cover 2.61",
+    "surprise":"수요 지표 개선·절대금리 고점권",
+    "source":"U.S. Treasury 일정·시장 결과 보도",
     "sourceUrl":"https://home.treasury.gov/resource-center/data-chart-center/quarterly-refunding/most-recent-quarterly-refunding-documents",
     "why":"장기물 바이백 확대에도 금리가 오른 뒤 실제 최장기물 수요와 기간 프리미엄을 확인한다.",
     "path":"30년물 응찰 → Term Premium → 10Y·30Y → 성장주 할인율 → 글로벌·한국 주식",
     "checkpoints":["High yield","WI 대비 tail·stop-through","Bid-to-cover","간접낙찰","딜러 인수"],
-    "reaction":"입찰 후 업데이트",
+    "reaction":"Bid-to-cover는 이전 2.39에서 2.61로 개선됐지만 미국 10년물은 약 4.95%까지 상승했다. 입찰 수요와 에너지발 기간 프리미엄을 분리해 본다.",
     "linkedDaily":"2026-09-11"
   },
   {

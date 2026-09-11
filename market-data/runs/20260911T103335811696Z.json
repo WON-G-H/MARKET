@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "observationCutoff": "2026-09-11",
+  "collection": {
+    "status": "success",
+    "checkedAt": "2026-09-11T10:33:35.811696+00:00",
+    "sources": [
+      {
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2025",
+        "sha256": "2c93210334df3b48282ce0a1bad6c05846f0e569df942bdcb149edfafdf40715"
+      },
+      {
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+        "sha256": "0009e4e70cdb390db7848a2388fb801f72aa5218835449979224d1e0b3f412f2"
+      }
+    ]
+  },
+  "definition": "US Treasury daily par yield curve (CMT); not an intraday traded yield.",
+  "limitations": [
+    "Observation cutoff is NOT historical information availability. Later revisions may be present.",
+    "Publication time is unavailable; do not infer same-day Korean market causation.",
+    "Freshness uses calendar days, not a US holiday calendar.",
+    "Python supplies facts and arithmetic only; AI retains interpretation and confidence judgments."
+  ],
+  "metrics": [
+    {
+      "series": "us_treasury_2y",
+      "current": {
+        "series": "us_treasury_2y",
+        "observationDate": "2026-09-10",
+        "value": 4.56,
+        "unit": "percent",
+        "fetchedAt": "2026-09-11T10:33:35.811696+00:00",
+        "publishedAt": null,
+        "sourceUrl": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
+        "rawHash": "0009e4e70cdb390db7848a2388fb801f72aa5218835449979224d1e0b3f412f2",
+        "validation": "numeric_and_schema_passed",
+        "independentVerification": "not_performed"
+      },
+      "previous": {
+        "series": "us_treasury_2y",
+        "observationDate": "2026-09-09",
+        "value": 4.43,
+        "unit": "percent",
+        "fetchedAt": "2026-09-11T10:33:35.811696+00:00",
+        "publishedAt": null,
+        "sourceUrl": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
+        "rawHash": "0009e4e70cdb390db7848a2388fb801f72aa5218835449979224d1e0b3f412f2",
+        "validation": "numeric_and_schema_passed",
+        "independentVerification": "not_performed"
+      },
+      "changeBp": 13.0,
+      "ageCalendarDays": 1,
+      "freshness": "within_4_days",
+      "latestResponseMissing": false
+    },
+    {
+      "series": "us_treasury_10y",
+      "current": {
+        "series": "us_treasury_10y",
+        "observationDate": "2026-09-10",
+        "value": 4.95,
+        "unit": "percent",
+        "fetchedAt": "2026-09-11T10:33:35.811696+00:00",
+        "publishedAt": null,
+        "sourceUrl": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
+        "rawHash": "0009e4e70cdb390db7848a2388fb801f72aa5218835449979224d1e0b3f412f2",
+        "validation": "numeric_and_schema_passed",
+        "independentVerification": "not_performed"
+      },
+      "previous": {
+        "series": "us_treasury_10y",
+        "observationDate": "2026-09-09",
+        "value": 4.83,
+        "unit": "percent",
+        "fetchedAt": "2026-09-11T10:33:35.811696+00:00",
+        "publishedAt": null,
+        "sourceUrl": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
+        "rawHash": "0009e4e70cdb390db7848a2388fb801f72aa5218835449979224d1e0b3f412f2",
+        "validation": "numeric_and_schema_passed",
+        "independentVerification": "not_performed"
+      },
+      "changeBp": 12.0,
+      "ageCalendarDays": 1,
+      "freshness": "within_4_days",
+      "latestResponseMissing": false
+    }
+  ],
+  "spread10yMinus2yBp": 39.0
+}

@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-11T11:31:58.834337+00:00",
+  "cards": {
+    "kospi": {
+      "id": "kospi",
+      "label": "KOSPI",
+      "current": "6,909.91",
+      "previous": "7,033.92",
+      "previousLabel": "이전 관측",
+      "previousAsOf": "2026-09-10",
+      "numericCurrent": 6909.91,
+      "numericPrevious": 7033.92,
+      "change": "-124.01",
+      "changePct": "-1.76%",
+      "direction": "down",
+      "unit": "index",
+      "observationDate": "2026-09-11",
+      "asOf": "2026-09-11 · 일별 공표값",
+      "source": "네이버 금융 · 지수 일별시세",
+      "sourceUrl": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=1",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+      "collectionNote": "자동 수집",
+      "collectionState": "success"
+    },
+    "kosdaq": {
+      "id": "kosdaq",
+      "label": "KOSDAQ",
+      "current": "820.64",
+      "previous": "836.92",
+      "previousLabel": "이전 관측",
+      "previousAsOf": "2026-09-10",
+      "numericCurrent": 820.64,
+      "numericPrevious": 836.92,
+      "change": "-16.28",
+      "changePct": "-1.95%",
+      "direction": "down",
+      "unit": "index",
+      "observationDate": "2026-09-11",
+      "asOf": "2026-09-11 · 일별 공표값",
+      "source": "네이버 금융 · 지수 일별시세",
+      "sourceUrl": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSDAQ&page=1",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+      "collectionNote": "자동 수집",
+      "collectionState": "success"
+    },
+    "disparity": {
+      "id": "disparity",
+      "label": "이격도",
+      "current": "KOSPI 101.27 / KOSDAQ 99.50",
+      "previous": "KOSPI 103.16 / KOSDAQ 101.23",
+      "previousLabel": "이전 관측",
+      "previousAsOf": "2026-09-10",
+      "numericCurrent": 101.27063324428435,
+      "numericPrevious": 103.16110849441071,
+      "change": "KOSPI -1.89 / KOSDAQ -1.72 %p",
+      "changePct": "",
+      "direction": "flat",
+      "unit": "20거래일 이동평균=100",
+      "observationDate": "2026-09-11",
+      "asOf": "2026-09-11 · 일별 공표값",
+      "source": "네이버 지수 종가 · Python 계산",
+      "sourceUrl": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=1",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+      "collectionNote": "20거래일 종가로 자동 계산",
+      "collectionState": "success",
+      "components": {
+        "kospi": {
+          "2026-09-07": 103.98060762017192,
+          "2026-09-08": 102.87243204255884,
+          "2026-09-09": 103.76712890670554,
+          "2026-09-10": 103.16110849441071,
+          "2026-09-11": 101.27063324428435
+        },
+        "kosdaq": {
+          "2026-09-07": 98.8948468686927,
+          "2026-09-08": 97.90551324482347,
+          "2026-09-09": 100.30137399969803,
+          "2026-09-10": 101.2269957201199,
+          "2026-09-11": 99.50299428061484
+        }
+      }
+    },
+    "vix": {
+      "id": "vix",
+      "label": "VIX",
+      "current": "17.84",
+      "previous": "16.46",
+      "previousLabel": "이전 관측",
+      "previousAsOf": "2026-09-09",
+      "numericCurrent": 17.84,
+      "numericPrevious": 16.46,
+      "change": "+1.38",
+      "changePct": "+8.38%",
+      "direction": "up",
+      "unit": "index · 미국 종가",
+      "observationDate": "2026-09-10",
+      "asOf": "2026-09-10 · 일별 공표값",
+      "source": "CBOE VIX History",
+      "sourceUrl": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+      "collectionNote": "자동 수집",
+      "collectionState": "success"
+    },
+    "foreign": {
+      "id": "foreign",
+      "label": "KOSPI 외국인 현물",
+      "current": "-22,984",
+      "previous": "-26,217",
+      "previousLabel": "이전 관측",
+      "previousAsOf": "2026-09-10",
+      "numericCurrent": -22984.0,
+      "numericPrevious": -26217.0,
+      "change": "+3,233",
+      "changePct": "",
+      "direction": "up",
+      "unit": "억원 · 순매수",
+      "observationDate": "2026-09-11",
+      "asOf": "2026-09-11 · 일별 공표값",
+      "source": "네이버 금융 · KOSPI 투자자별 매매",
+      "sourceUrl": "https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260911&sosok=01",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+      "collectionNote": "자동 수집",
+      "collectionState": "success"
+    },
+    "fx": {
+      "id": "fx",
+      "label": "USD/KRW",
+      "current": "1,342.50",
+      "previous": "1,351.00",
+      "previousLabel": "이전 관측",
+      "previousAsOf": "2026-09-10",
+      "numericCurrent": 1342.5,
+      "numericPrevious": 1351.0,
+      "change": "-8.50",
+      "changePct": "-0.63%",
+      "direction": "down",
+      "unit": "원 · 매매기준율",
+      "observationDate": "2026-09-11",
+      "asOf": "2026-09-11 · 일별 공표값",
+      "source": "네이버 금융 · 매매기준율",
+      "sourceUrl": "https://finance.naver.com/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=1",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+      "collectionNote": "자동 수집",
+      "collectionState": "success"
+    },
+    "wti": {
+      "id": "wti",
+      "label": "WTI · 일별 연속시세",
+      "current": "102.48",
+      "previous": "96.05",
+      "previousLabel": "이전 관측",
+      "previousAsOf": "2026-09-09",
+      "numericCurrent": 102.48,
+      "numericPrevious": 96.05,
+      "change": "+6.43",
+      "changePct": "+6.69%",
+      "direction": "up",
+      "unit": "달러/배럴 · 계약월 미제공",
+      "observationDate": "2026-09-10",
+      "asOf": "2026-09-10 · 일별 공표값",
+      "source": "네이버 금융 · OIL_CL",
+      "sourceUrl": "https://finance.naver.com/marketindex/worldDailyQuote.naver?marketindexCd=OIL_CL&fdtc=2&page=1",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+      "collectionNote": "자동 수집 · 월물 변경 포함 가능",
+      "collectionState": "success"
+    },
+    "credit": {
+      "id": "credit",
+      "label": "신용융자잔고",
+      "current": "32.3599",
+      "previous": "32.4092",
+      "previousLabel": "전회 공표값",
+      "previousAsOf": null,
+      "numericCurrent": 32.359893,
+      "numericPrevious": 32.409221,
+      "change": "-0.0493",
+      "changePct": "-0.15%",
+      "direction": "down",
+      "unit": "조원",
+      "observationDate": "2026-09-10",
+      "asOf": "2026-09-10 · 일별 공표값",
+      "source": "금융투자협회 FreeSIS",
+      "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행. 원자료 백만원→조원 환산. 월/일의 연도는 수집일 기준 추론; 전회 관측일 미제공.",
+      "collectionNote": "자동 수집",
+      "collectionState": "success"
+    },
+    "deposit": {
+      "id": "deposit",
+      "label": "투자자예탁금",
+      "current": "107.6573",
+      "previous": "102.8462",
+      "previousLabel": "전회 공표값",
+      "previousAsOf": null,
+      "numericCurrent": 107.657276,
+      "numericPrevious": 102.84617,
+      "change": "+4.8111",
+      "changePct": "+4.68%",
+      "direction": "up",
+      "unit": "조원",
+      "observationDate": "2026-09-10",
+      "asOf": "2026-09-10 · 일별 공표값",
+      "source": "금융투자협회 FreeSIS",
+      "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
+      "managedBy": "core-metrics-collector",
+      "verified": false,
+      "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행. 원자료 백만원→조원 환산. 월/일의 연도는 수집일 기준 추론; 전회 관측일 미제공.",
+      "collectionNote": "자동 수집",
+      "collectionState": "success"
+    }
+  },
+  "errors": {
+    "vkospi": "자동 수집 가능한 VKOSPI 원천 연결 필요 · 기존값 유지"
+  },
+  "sources": [
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=1",
+      "sha256": "6e0a424f5926d8dc95d5d5e7c4a1fd71bdc2d97e8a571f0f36c854aec27746f0",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=2",
+      "sha256": "deff388614a2539a211725b5381f005c0e162e0a2bdd3772a8087a7cdab5685b",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=3",
+      "sha256": "cada46b4c39471e9137815f77a8d260ba3f9b9db542d862b25db22924570b846",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=4",
+      "sha256": "e711cc61ed22af7562898f5db7e85517b5dd6ce99dfb2a97f19806873c3ffa15",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSDAQ&page=1",
+      "sha256": "e7fe8c9decf4e6dae877e3109577781bd3a990e80e903b2e740d44be5b8533df",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSDAQ&page=2",
+      "sha256": "3365ad59be107c5f907f576e7acf60ef05cb03b02505a11b8fa6c2dc236108ac",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSDAQ&page=3",
+      "sha256": "3fb3460034aec773a5ed38882ac2f0a8d9989beb9253565382ba925871a04e52",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/sise/sise_index_day.naver?code=KOSDAQ&page=4",
+      "sha256": "3e010bce225ab9f994e29150e9ff4387fcb18063f6b24e9a90b50b2a898aa57e",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "sha256": "013e6edc73c5d305f96c0b184eb48773852ffb58dfa1d1d5e64adfdcdc7dc2f7",
+      "encoding": "utf-8"
+    },
+    {
+      "url": "https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260911&sosok=01",
+      "sha256": "070b876f9fda2103052a531d4e8cb654957831a6f69a1332dab98d9fe62dd3ca",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=1",
+      "sha256": "bdb6815d280ca07a3188215a5af2f64ec3d92263e163b323dcbb65be8d0e8231",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://finance.naver.com/marketindex/worldDailyQuote.naver?marketindexCd=OIL_CL&fdtc=2&page=1",
+      "sha256": "5f13943b9b245ef4af6b5358c56fb01f674cdc26010c37326622ab6dcfb1eacb",
+      "encoding": "cp949"
+    },
+    {
+      "url": "https://freesis.kofia.or.kr/stat/main.do",
+      "sha256": "cec3ffaedb57b6de86b81cd9803c212c9903bbc41ed0187dcbe3626f7aa3bb6b",
+      "encoding": "utf-8"
+    }
+  ],
+  "status": "partial"
+}

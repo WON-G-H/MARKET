@@ -1,24 +1,24 @@
-/* Market Ledger Regime Monitor · refreshed with 2026-09-10 Daily. */
+/* Market Ledger Regime Monitor · refreshed with 2026-09-11 Daily. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.regime={
   "schemaVersion":1,
   "current":{
-    "asOf":"2026-09-10 한국 종가 · 미국 PPI·ECB 발표 직후",
-    "overallState":"경계",
-    "previousState":"중립",
+    "asOf":"2026-09-11 한국 종가 · 미국 CPI 발표 전",
+    "overallState":"위험회피",
+    "previousState":"경계",
     "direction":"악화 중",
-    "confidence":"보통",
-    "summary":"KOSPI는 만기·리밸런싱 충격으로 장중 6,898.45까지 하락했지만 7,033.92로 7천선을 회복했고 KOSDAQ은 상승했다. 그러나 외국인 KOSPI 현물 -2조4,821억원, 미국 10년물 4.845%, Brent 100달러 상회에 이어 장 마감 뒤 WTI 10월물이 100.24달러를 기록했다. PPI는 headline과 core가 혼재했지만 ECB가 25bp 인상해 에너지발 물가와 글로벌 금융여건의 부담이 커졌다. 국내 하단 수요가 남아 전면 위험회피는 아니지만 전일 중립에서 경계로 하향한다.",
+    "confidence":"높음",
+    "summary":"KOSPI는 6,909.91(-1.76%), KOSDAQ은 820.64(-1.95%)로 동반 하락했고 KOSPI는 7천선을 다시 이탈했다. 외국인과 기관이 KOSPI에서 각각 약 2.29조원, 1.22조원을 순매도했고 KOSDAQ도 하락 종목이 1,004개로 상승 607개를 크게 웃돌았다. 전일 미국 10년물 4.9626%, WTI 10월물 102.48달러와 8월 PPI의 에너지·운송비 확산이 금융여건을 압박했다. 장중 저점 반등과 수출 호조, Oracle의 강한 AI 계약 잔고는 반대 근거지만 가격·수급·시장 폭이 함께 악화돼 경계에서 위험회피로 하향한다.",
     "keyChanges":[
-      "KOSPI는 장중 6,898.45에서 7,033.92로 회복했고 KOSDAQ은 +0.79%로 마감해 충격 흡수력을 보였지만 외국인은 양 시장 현물을 대규모 순매도했다.",
-      "미국 10년물은 4.845%로 상승했고 장기물 Buyback 확대가 기간 프리미엄과 재정공급 부담을 상쇄하지 못했다.",
-      "미국 PPI는 headline +5.4% YoY, core +4.6% YoY로 제시됐고 WTI 10월물 $100.24, ECB 25bp 인상이 에너지발 글로벌 긴축 위험을 강화했다."
+      "KOSPI 7천선 이탈과 KOSDAQ 동반 하락, KOSPI 외국인·기관 동반 순매도로 국내 위험회피 신호가 강화됐다.",
+      "미국 2년물 4.5856%, 10년물 4.9626%와 WTI 102.48달러가 할인율과 실질소득 부담을 동시에 높였다.",
+      "BLS 8월 PPI에서 디젤 +24.1%, 운송·창고 서비스 +2.3%, 화물트럭 운송 +2.0%가 확인돼 제품가격의 물류비 전가가 시작됐다."
     ],
-    "holdCondition":"KOSPI 7천선과 KOSDAQ Breadth는 유지되지만 외국인 현물 매도와 미국 10년물·원유의 높은 수준이 지속되는 경우",
-    "changeCondition":"CPI 둔화와 외국인 현물·선물 수급 회복이 겹치면 중립·선별적 위험선호로 복귀하고, 10년물·WTI 추가 상승과 7천선 재이탈이 겹치면 위험회피로 하향한다.",
+    "holdCondition":"KOSPI가 7천선 아래에 머물고 외국인·기관 매도, 높은 미국 금리·원유, 약한 시장 폭이 지속되는 경우",
+    "changeCondition":"CPI 둔화와 금리·원유 안정, 외국인 수급 회복이 겹치면 경계로 상향하고, 물가 상방과 신용·원화 스트레스까지 확대되면 위험회피 강도를 높인다.",
     "sourceRefs":[
+      {"type":"daily","id":"2026-09-11","label":"2026-09-11 Daily"},
       {"type":"daily","id":"2026-09-10","label":"2026-09-10 Daily"},
-      {"type":"daily","id":"2026-09-09","label":"2026-09-09 Daily"},
       {"type":"weekly","id":"2026-W36","label":"기존 기준선 · 2026-W36 Weekly"}
     ],
     "axes":[
@@ -31,19 +31,19 @@ window.MARKET_LEDGER.regime={
         "direction":"유지",
         "confidence":"높음",
         "tone":"positive",
-        "summary":"미국 고용과 서비스 수요, 한국 2분기 GDP·GDI는 견조하고 TSMC 8월 매출도 전년 대비 53.3% 증가했다. 다만 한국의 성장은 반도체 수출과 교역조건에 집중됐고 고유가·고금리가 비반도체 수요를 제약할 수 있어 성장의 폭은 고르지 않다.",
-        "evidence":["한국 2분기 실질 GDP +0.6% QoQ·+3.7% YoY","TSMC 8월 매출 NT$514,806m·+53.3% YoY","미국 8월 비농업 고용 +16.2만명·실업률 4.1%"],
+        "summary":"한국 9월 1~10일 수출은 349.73억달러로 전년 대비 82.6% 늘었고 반도체 수출은 164.83억달러로 270.1% 증가했다. 조업일수가 전년과 같은 8.5일이라 방향성은 강하지만 반도체가 전체의 47.1%를 차지해 성장의 폭은 편중됐다. 고유가·고금리가 비반도체 수요를 제약할 수 있어 견조하되 편중된 성장 판정을 유지한다.",
+        "evidence":["9월 1~10일 수출 $34.973bn·+82.6% YoY","반도체 수출 $16.483bn·+270.1% YoY·전체 47.1%","한국 2분기 실질 GDP +0.6% QoQ"],
         "counterEvidence":["한국 건설업 -1.9% QoQ","한국의 명목 성장과 반도체 교역조건 개선을 내수 회복으로 일반화할 수 없음","미국 ISM 서비스 고용지수 47.8로 수축"],
         "indicators":[
           {"label":"한국 실질 GDP","current":"+0.6% QoQ","previous":"속보 +0.6%","change":"수정 없음","changePct":"0.0%p","unit":"2분기","asOf":"2026-09-08 발표","source":"한국은행","sourceUrl":"https://www.bok.or.kr/portal/stats/statsPublictSchdul/listCldr.do?date=2026-09&menuNo=200775","interpretation":"반도체 수출 중심의 견조한 성장"},
           {"label":"한국 실질 GDI","current":"+3.7% QoQ","previous":"+3.6% 속보","change":"+0.1%p","changePct":"—","unit":"2분기","asOf":"2026-09-08 발표","source":"한국은행","sourceUrl":"https://www.bok.or.kr/portal/stats/statsPublictSchdul/listCldr.do?date=2026-09&menuNo=200775","interpretation":"교역조건 개선으로 구매력 상승"},
-          {"label":"미국 비농업 고용","current":"+162K","previous":"+21K","change":"예상 +55K 상회","changePct":"—","unit":"명 · 8월","asOf":"2026-09-04 발표","source":"U.S. BLS","sourceUrl":"https://www.bls.gov/news.release/archives/empsit_09042026.htm","interpretation":"미국 수요의 견조함"}
+          {"label":"9월 1~10일 수출","current":"$34.973B","previous":"$19.155B","change":"+$15.818B","changePct":"+82.6% YoY","unit":"달러 · 8.5일","asOf":"2026-09-11 발표","source":"관세청","sourceUrl":"https://www.thepowernews.co.kr/view.php?ud=20260911091621701de3f0aa1be_7","interpretation":"반도체 중심 수출 모멘텀 강세"}
         ],
-        "asOf":"2026-09-10 TSMC 매출·9/8 한국 국민소득·9/4 미국 고용",
+        "asOf":"2026-09-11 한국 9월 초 수출·9/8 국민소득",
         "nextEvent":"미국 CPI·Oracle 실적",
         "holdCondition":"반도체 수출과 서비스 수요가 성장권을 유지",
         "changeCondition":"수출·신규주문·고용의 동반 둔화 또는 내수 확산",
-        "sourceRefs":[{"type":"daily","id":"2026-09-10","label":"9/10 Daily"}]
+        "sourceRefs":[{"type":"daily","id":"2026-09-11","label":"9/11 Daily"}]
       },
       {
         "id":"inflation",
@@ -54,19 +54,19 @@ window.MARKET_LEDGER.regime={
         "direction":"악화 중",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"Brent 100달러 상회와 WTI 10월물 장중 100.24달러, 낮은 미국 디젤 재고 전망이 공급측 물가 위험을 키웠다. 미국 PPI는 headline +5.4% YoY·+0.4% MoM으로 높았지만 core는 +4.6% YoY·+0.2% MoM으로 월간 예상치를 밑돌아 근원 확산은 혼재했다.",
-        "evidence":["WTI 2026년 10월물 $100.24·+4.36% 장중 스냅샷","미국 8월 PPI +5.4% YoY·+0.4% MoM","미국 디젤 재고 1억배럴 하회와 높은 크랙스프레드 전망"],
-        "counterEvidence":["Core PPI +0.2% MoM으로 예상 +0.3% 하회","유가·정제제품의 CPI·기대인플레이션 전가는 아직 미확인","WTI는 장중값이고 PPI 세부표는 BLS 원문 대조가 남음"],
+        "summary":"WTI 102.48달러와 미국 8월 최종수요 PPI +5.4% YoY·+0.4% MoM이 공급측 물가 위험을 강화했다. BLS 세부표에서 최종수요 상품 +1.1%, 에너지 상품 +4.2%, 디젤 +24.1%, 운송·창고 서비스 +2.3%, 화물트럭 운송 +2.0%가 확인돼 정제제품 충격이 물류비로 번지는 초기 직접 증거가 생겼다.",
+        "evidence":["WTI $102.48","미국 8월 최종수요 PPI +5.4% YoY·+0.4% MoM","BLS 디젤 +24.1%·운송·창고 서비스 +2.3%·화물트럭 운송 +2.0%"],
+        "counterEvidence":["식품·에너지·무역서비스 제외 최종수요는 +0.3% MoM","소비자물가·기대인플레이션 전가는 아직 미확인","에너지 공급 정상화 시 제품가격 충격이 되돌려질 수 있음"],
         "indicators":[
-          {"label":"WTI 2026년 10월물","current":"$100.24","previous":"$96.05","change":"+$4.19","changePct":"+4.36%","unit":"배럴당 달러","asOf":"2026-09-10 21:32 KST 장중","source":"사용자 제공 시세 화면","sourceUrl":"","interpretation":"공급 충격 확대·정산가와 구분"},
-          {"label":"미국 8월 PPI","current":"+5.4% YoY","previous":"+4.7% YoY","change":"예상 +0.1%p 상회","changePct":"+0.4% MoM","unit":"Final demand","asOf":"2026-09-10 발표","source":"사용자 제공 경제일정 화면·BLS 일정","sourceUrl":"https://www.bls.gov/schedule/news_release/ppi.htm","interpretation":"headline 압력 확대·core 월간은 예상 하회"},
+          {"label":"WTI","current":"$102.48","previous":"$100.24","change":"+$2.24","changePct":"+2.23%","unit":"배럴당 달러","asOf":"2026-09-11 한국장 이후 확보값","source":"시장 시세","sourceUrl":"","interpretation":"에너지발 비용·금리 압력 확대"},
+          {"label":"미국 8월 PPI","current":"+5.4% YoY","previous":"+4.7% YoY","change":"+0.7%p","changePct":"+0.4% MoM","unit":"Final demand","asOf":"2026-09-10 발표","source":"U.S. BLS","sourceUrl":"https://www.bls.gov/news.release/archives/ppi_09102026.htm","interpretation":"최종수요 헤드라인 압력 확대"},
           {"label":"미국 디젤 재고","current":"1억배럴 하회 전망","previous":"—","change":"2003년 이후 최저 가능성","changePct":"—","unit":"배럴","asOf":"2026-09-09 EIA 전망 인용","source":"Bloomberg·EIA","sourceUrl":"","interpretation":"제품 공급 단계의 직접 압박"}
         ],
-        "asOf":"2026-09-10 21:32 KST",
+        "asOf":"2026-09-11 한국 종가 이후",
         "nextEvent":"미국 CPI",
         "holdCondition":"원유·제품가격은 높지만 core CPI·기대인플레이션으로의 확산은 제한",
         "changeCondition":"CPI·기대인플레이션의 동반 상승이면 추가 악화, 원유·크랙스프레드 정상화면 완화",
-        "sourceRefs":[{"type":"daily","id":"2026-09-10","label":"9/10 Daily"}]
+        "sourceRefs":[{"type":"daily","id":"2026-09-11","label":"9/11 Daily"}]
       },
       {
         "id":"liquidity",
@@ -89,7 +89,7 @@ window.MARKET_LEDGER.regime={
         "nextEvent":"주간 Fed 유동성 통계·9월 세금 납부",
         "holdCondition":"준비금 감소가 가속하지 않고 자금시장 기능이 정상",
         "changeCondition":"준비금 급감·자금시장 스트레스 또는 TGA 하락으로 순유동성 전환",
-        "sourceRefs":[{"type":"daily","id":"2026-09-10","label":"9/10 Daily"}]
+        "sourceRefs":[{"type":"daily","id":"2026-09-11","label":"9/11 Daily"}]
       },
       {
         "id":"financial-conditions",
@@ -100,76 +100,85 @@ window.MARKET_LEDGER.regime={
         "direction":"악화 중",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"미국 10년물 4.845%, WTI 100.24달러와 ECB 25bp 인상이 글로벌 할인율 부담을 키웠다. 한국 원·달러는 1,339.2원으로 하루 상승했지만 9월 8일보다 낮고 KOSPI가 7천선을 지켜 국내 충격은 부분적으로 완충됐다.",
-        "evidence":["미국 10년물 4.845%·2년물 4.434%","WTI 10월물 $100.24·Brent $100 상회","ECB 기준금리 2.50%로 25bp 인상"],
-        "counterEvidence":["USD/KRW 1,339.2원으로 9/8 1,345.6원보다 낮음","KOSPI 장중 6,898.45에서 7,033.92로 회복","미국 신용스프레드의 새 악화는 미확인"],
+        "summary":"미국 10년물 4.9626%, 2년물 4.5856%, WTI 102.48달러가 글로벌 할인율과 에너지 비용 부담을 함께 높였다. 9월 10일 달러-원 현물은 1,339.20원이었지만 1개월 NDF가 1,350.30원으로 뛰어 다음 한국장의 원화 부담을 예고했다. 9월 11일 KOSPI가 7천선을 이탈하고 외국인·기관이 동반 매도해 국내 완충력도 약해졌다.",
+        "evidence":["미국 10년물 4.9626%·2년물 4.5856%","WTI 10월물 $102.48·Brent 11월물 $107.63","달러-원 1개월 NDF 1,350.30원"],
+        "counterEvidence":["USD/KRW 1,342.5원으로 원화 급락은 제한","KOSPI가 장중 저점에서 100포인트 넘게 반등","미국 신용스프레드의 새 악화는 미확인"],
         "indicators":[
-          {"label":"USD/KRW","current":"1,339.20원","previous":"1,336.10원","change":"+3.10원","changePct":"+0.23%","unit":"원","asOf":"2026-09-10 15:30","source":"서울외환시장·Korea Times","sourceUrl":"https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000","interpretation":"외국인 매도 속 원화 소폭 약세"},
-          {"label":"미국 10년물","current":"4.845%","previous":"4.792%","change":"+5.3bp","changePct":"—","unit":"%","asOf":"2026-09-09 미국 종가 부근","source":"SAVE 브리핑·신한투자증권","sourceUrl":"","interpretation":"바이백 확대에도 기간 프리미엄 상승"},
-          {"label":"WTI 2026년 10월물","current":"$100.24","previous":"$96.05","change":"+$4.19","changePct":"+4.36%","unit":"배럴당 달러","asOf":"2026-09-10 21:32 KST 장중","source":"사용자 제공 시세 화면","sourceUrl":"","interpretation":"에너지발 실질소득·금리 부담"},
+          {"label":"USD/KRW","current":"1,342.50원","previous":"1,339.20원","change":"+3.30원","changePct":"+0.25%","unit":"원","asOf":"2026-09-11","source":"시장 시세","sourceUrl":"","interpretation":"위험회피에도 원화 약세 폭은 제한"},
+          {"label":"미국 10년물","current":"4.9626%","previous":"4.8406%","change":"+12.20bp","changePct":"—","unit":"%","asOf":"2026-09-10 미국장","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"에너지·PPI·재정 우려로 할인율 상승"},
+          {"label":"WTI 10월물","current":"$102.48","previous":"$96.05","change":"+$6.43","changePct":"+6.69%","unit":"배럴당 달러","asOf":"2026-09-10 미국장","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"에너지발 실질소득·금리 부담"},
           {"label":"ECB 기준금리","current":"2.50%","previous":"2.25%","change":"+25bp","changePct":"—","unit":"%","asOf":"2026-09-10","source":"ECB·AP","sourceUrl":"https://www.ecb.europa.eu/press/press_conference/html/index.en.html","interpretation":"에너지발 물가에 대응한 긴축 재개"}
         ],
-        "asOf":"2026-09-10 21:32 KST",
+        "asOf":"2026-09-11 한국 종가 이후",
         "nextEvent":"미국 30년물 입찰·CPI",
         "holdCondition":"원화와 신용은 버티지만 미국 금리·원유가 높은 수준 유지",
         "changeCondition":"금리·원유·변동성 동반 안정 또는 CPI 상방·신용스프레드 확대",
-        "sourceRefs":[{"type":"daily","id":"2026-09-10","label":"9/10 Daily"}]
+        "sourceRefs":[{"type":"daily","id":"2026-09-11","label":"9/11 Daily"}]
       },
       {
         "id":"global-risk",
         "label":"글로벌 위험선호",
         "layer":"시장 확인",
-        "currentState":"지수 약세·AI 상대강세",
+        "currentState":"광범위 위험회피",
         "previousState":"후속 확인 대기",
         "direction":"악화 중",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"9월 9일 미국 주요 지수는 S&P500 -0.48%, Dow -0.77%, Nasdaq Composite -0.64%, Russell2000 -1.32%로 하락했다. 유가와 금리 상승이 광범위한 위험선호를 눌렀지만 Meta·Micron과 TSMC 매출은 AI 공급망의 상대강세를 지지했다.",
-        "evidence":["S&P500 7,636.36(-0.48%)·Russell2000 -1.32%","미국 10년물 4.845%·WTI $100.24 장중","외국인 KOSPI 현물 -2조4,821억원"],
-        "counterEvidence":["TSMC 8월 매출 +53.3% YoY","KOSDAQ +0.79%·Breadth 균형","미국 신용시장 경색이나 AI 주문 취소는 미확인"],
+        "summary":"9월 10일 미국 주요 지수는 S&P500 -0.58%, Dow -0.60%, Nasdaq -0.65%, Russell2000 -1.04%로 동반 하락했고 9월 11일 한국도 양 지수가 약세였다. 유가와 장기금리 상승이 대형 성장주부터 중소형주까지 위험선호를 눌렀다. 일부 사이버보안·MLCC 테마 급등은 있었지만 시장 전체로 확산되지 않았다.",
+        "evidence":["S&P500 7,591.70(-0.58%)·Russell2000 -1.04%","KOSPI -1.76%·KOSDAQ -1.95%","미국 10년물 4.95%·WTI $102.48"],
+        "counterEvidence":["한국 9월 초 반도체 수출 +270.1% YoY","Oracle 클라우드 인프라 매출 두 배 이상·RPO $664bn","KOSPI 장중 저점에서 100포인트 넘게 반등"],
         "indicators":[
-          {"label":"S&P500","current":"7,636.36","previous":"7,673.52","change":"-37.16","changePct":"-0.48%","unit":"index","asOf":"2026-09-09","source":"AP","sourceUrl":"https://apnews.com/article/31c966aef214740b8fec71e399a051b8","interpretation":"유가·금리 상승에 광범위 약세"},
-          {"label":"Nasdaq Composite","current":"26,253.34","previous":"26,421.41","change":"-168.07","changePct":"-0.64%","unit":"index","asOf":"2026-09-09","source":"AP","sourceUrl":"https://apnews.com/article/31c966aef214740b8fec71e399a051b8","interpretation":"AI 상대강세에도 지수 하락"},
-          {"label":"Russell2000","current":"2,921.23","previous":"2,960.20","change":"-38.97","changePct":"-1.32%","unit":"index","asOf":"2026-09-09","source":"AP","sourceUrl":"https://apnews.com/article/31c966aef214740b8fec71e399a051b8","interpretation":"고금리에 중소형주 상대약세"}
+          {"label":"S&P500","current":"7,591.70","previous":"7,636.36","change":"-44.66","changePct":"-0.58%","unit":"index","asOf":"2026-09-10","source":"AP","sourceUrl":"https://apnews.com/article/0c547c6cc3e374a2c04f78a90e35e113","interpretation":"유가·금리 상승에 광범위 약세"},
+          {"label":"Nasdaq Composite","current":"26,081.72","previous":"26,253.34","change":"-171.62","changePct":"-0.65%","unit":"index","asOf":"2026-09-10","source":"AP","sourceUrl":"https://apnews.com/article/0c547c6cc3e374a2c04f78a90e35e113","interpretation":"고금리에 성장주 약세"},
+          {"label":"Russell2000","current":"2,890.95","previous":"2,921.23","change":"-30.28","changePct":"-1.04%","unit":"index","asOf":"2026-09-10","source":"AP","sourceUrl":"https://apnews.com/article/0c547c6cc3e374a2c04f78a90e35e113","interpretation":"중소형주 상대약세 지속"}
         ],
-        "asOf":"2026-09-09 미국 종가·9/10 한국 종가",
+        "asOf":"2026-09-10 미국 종가·9/11 한국 종가",
         "nextEvent":"미국 CPI·Oracle 실적",
         "holdCondition":"지수는 약하지만 AI 공급망 실적과 신용시장이 버팀",
         "changeCondition":"금리·원유 안정과 시장 폭 회복 또는 신용·중소형주 추가 악화",
-        "sourceRefs":[{"type":"daily","id":"2026-09-10","label":"9/10 Daily"}]
+        "sourceRefs":[{"type":"daily","id":"2026-09-11","label":"9/11 Daily"}]
       },
       {
         "id":"korea-transmission",
         "label":"한국시장 전달",
         "layer":"시장 확인",
-        "currentState":"7천선 방어·외국인 매도",
-        "previousState":"종가 돌파·기관 주도",
-        "direction":"혼조",
+        "currentState":"7천선 이탈·동반 매도",
+        "previousState":"7천선 방어·외국인 매도",
+        "direction":"악화 중",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"KOSPI는 만기·리밸런싱으로 장중 6,898.45까지 밀렸지만 7,033.92로 회복했고 KOSDAQ은 0.79% 상승했다. Breadth는 균형에 가까워졌으나 외국인이 양 시장 현물을 대규모 순매도해 하단 방어의 지속성은 만기 이후 확인이 필요하다.",
-        "evidence":["KOSPI 7,033.92(-0.25%)·장중 저가 6,898.45","KOSPI 상승 419·하락 443 / KOSDAQ 상승 827·하락 796","기관 KOSDAQ +1조3,491억원"],
-        "counterEvidence":["외국인 KOSPI -2조4,821억원·KOSDAQ -1조758억원","만기·KRX 섹터지수 변경의 기계적 수급","USD/KRW 1,339.2원으로 하루 +3.1원"],
+        "summary":"KOSPI는 6,909.91(-1.76%), KOSDAQ은 820.64(-1.95%)로 마감했다. KOSPI 외국인 약 -2.29조원, 기관 약 -1.22조원의 동반 매도와 KOSDAQ 하락 1,004개가 가격 하락을 확인했다. 다만 KOSPI는 시가·저가 6,802.50에서 100포인트 넘게 회복했고 수출 펀더멘털은 강해 일방적 투매로 보지는 않는다.",
+        "evidence":["KOSPI 6,909.91(-1.76%)·KOSDAQ 820.64(-1.95%)","KOSPI 외국인 약 -2.29조원·기관 약 -1.22조원","KOSDAQ 상승 607·하락 1,004"],
+        "counterEvidence":["KOSPI 시가·저가 6,802.50에서 6,909.91로 회복","9월 1~10일 수출 +82.6%·반도체 +270.1% YoY","USD/KRW 1,342.5원으로 원화 급락은 제한"],
         "indicators":[
-          {"label":"KOSPI","current":"7,033.92","previous":"7,051.64","change":"-17.72","changePct":"-0.25%","unit":"index","asOf":"2026-09-10 종가","source":"한국거래소·Korea Times","sourceUrl":"https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000","interpretation":"6,900선 이탈 뒤 7천선 회복"},
-          {"label":"KOSDAQ","current":"836.92","previous":"830.37","change":"+6.55","changePct":"+0.79%","unit":"index","asOf":"2026-09-10 종가","source":"한국거래소·Korea Times","sourceUrl":"https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000","interpretation":"기관 매수로 상대강세"},
-          {"label":"KOSPI 외국인 현물","current":"-24,821억원","previous":"-4,271억원","change":"-20,550억원","changePct":"순매도 확대","unit":"억원 · 순매수","asOf":"2026-09-10 종가","source":"한국거래소·신한투자증권","sourceUrl":"","interpretation":"만기·리밸런싱 영향 포함 대규모 매도"},
-          {"label":"USD/KRW","current":"1,339.20원","previous":"1,336.10원","change":"+3.10원","changePct":"+0.23%","unit":"원","asOf":"2026-09-10 15:30","source":"서울외환시장·Korea Times","sourceUrl":"https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000","interpretation":"하루 원화 약세지만 9/8보다 안정"}
+          {"label":"KOSPI","current":"6,909.91","previous":"7,033.92","change":"-124.01","changePct":"-1.76%","unit":"index","asOf":"2026-09-11 종가","source":"한국거래소·Korea Times","sourceUrl":"https://www.koreatimes.co.kr/economy/20260911/kospi-falls-on-higher-oil-prices-global-bond-yields","interpretation":"7천선 이탈·저점 대비 낙폭 축소"},
+          {"label":"KOSDAQ","current":"820.64","previous":"836.92","change":"-16.28","changePct":"-1.95%","unit":"index","asOf":"2026-09-11 종가","source":"한국거래소·Investing","sourceUrl":"https://kr.investing.com/indices/kosdaq-historical-data","interpretation":"하락 종목 우위의 광범위 약세"},
+          {"label":"KOSPI 외국인 현물","current":"약 -22,900억원","previous":"-24,821억원","change":"순매도 지속","changePct":"—","unit":"억원 · 순매수","asOf":"2026-09-11 종가","source":"한국거래소·Korea Times","sourceUrl":"https://www.koreatimes.co.kr/economy/20260911/kospi-falls-on-higher-oil-prices-global-bond-yields","interpretation":"대형주 중심 위험회피 지속"},
+          {"label":"USD/KRW","current":"1,342.50원","previous":"1,339.20원","change":"+3.30원","changePct":"+0.25%","unit":"원","asOf":"2026-09-11","source":"시장 시세","sourceUrl":"","interpretation":"원화 약세 폭은 제한"}
         ],
-        "asOf":"2026-09-10 한국장",
+        "asOf":"2026-09-11 한국장",
         "nextEvent":"만기 이후 외국인 현선물 수급·미국 CPI",
-        "holdCondition":"7천선과 Breadth는 버티지만 외국인 매도가 지속",
-        "changeCondition":"외국인 현선물 동반 매수와 Breadth 개선 또는 7천선 재이탈·원화 급락",
-        "sourceRefs":[{"type":"daily","id":"2026-09-10","label":"9/10 Daily"}]
+        "holdCondition":"7천선 아래에서 외국인·기관 매도와 약한 Breadth가 지속",
+        "changeCondition":"7천선 회복과 외국인 현선물 동반 매수·Breadth 개선 또는 원화·신용 스트레스 확대",
+        "sourceRefs":[{"type":"daily","id":"2026-09-11","label":"9/11 Daily"}]
       }
     ],
     "nextEvents":[
-      {"date":"2026-09-11","title":"미국 30년물 입찰·Oracle 실적","why":"기간 프리미엄과 AI CapEx의 매출·FCF 전환을 함께 확인","axisIds":["liquidity","financial-conditions","global-risk"]},
       {"date":"2026-09-11","title":"미국 CPI","why":"FOMC 직전 서비스·주거비와 에너지 충격의 결합을 확인","axisIds":["growth","inflation","financial-conditions","global-risk"]},
+      {"date":"2026-09-16","title":"미국 수출입물가","why":"에너지·정제제품 충격의 무역가격 전가를 확인","axisIds":["inflation","financial-conditions"]},
       {"date":"2026-09-16","title":"FOMC·SEP·점도표","why":"강한 물가와 성장 사이의 정책경로가 장단기 금리와 달러를 재설정","axisIds":["growth","inflation","liquidity","financial-conditions","global-risk"]}
     ]
   },
   "history":[
+    {
+      "date":"2026-09-11",
+      "overallState":"위험회피",
+      "previousState":"경계",
+      "direction":"악화 중",
+      "summary":"KOSPI 7천선 이탈, 양 시장 동반 하락, KOSPI 외국인·기관 동반 매도와 높은 미국 금리·원유가 겹쳐 위험회피로 하향했다.",
+      "changedAxes":["물가","시장 금융여건","글로벌 위험선호","한국시장 전달"],
+      "sourceDaily":"2026-09-11"
+    },
     {
       "date":"2026-09-10",
       "overallState":"경계",
@@ -205,16 +214,6 @@ window.MARKET_LEDGER.regime={
       "summary":"Astra·메모리 기대, 원화 강세와 외국인·기관 매수로 한국 반도체가 급등했지만 시장 폭과 KOSDAQ 수급은 제한돼 선별적 개선으로 판정했다.",
       "changedAxes":["성장","물가","글로벌 위험선호","한국시장 전달"],
       "sourceDaily":"2026-09-07",
-      "sourceWeekly":"2026-W36"
-    },
-    {
-      "date":"2026-09-05",
-      "overallState":"경계",
-      "previousState":"중립",
-      "direction":"악화 중",
-      "summary":"미국 고용 호조로 금리 인상 기대와 단기금리·달러가 반등해 주중 완화 흐름이 되돌려졌다.",
-      "changedAxes":["물가","시장 금융여건","글로벌 위험선호"],
-      "sourceDaily":"2026-09-04",
       "sourceWeekly":"2026-W36"
     }
   ]

@@ -1,0 +1,295 @@
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>Npay 증권</title>
+
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/newstock.css">
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/common.css">
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/layout.css">
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/main.css">
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/newstock2.css">
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/newstock3.css">
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/world.css">
+</head>
+<body>
+<script type="text/javascript" src="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/js/jindo.min.ns.1.5.3.euckr.js"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/js/ntm.js"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/js/nLog.js"></script>
+				<!-- 일별시세 -->
+				<div class="box_type_m">
+					<h4 class="top_tlt" style="text-align:left;"><em>일별</em>시세</h4>
+					<table summary="일별 시세표:날짜에 따른 체결가 전일비 등락률 거래량 거래대금 정보를 제공합니다." cellpadding="0" cellspacing="0" class="type_1">
+					<caption>일별시세</caption>
+					<col width="15%"><col width="14%"><col width="18%"><col width="14%"><col width="*"><col width="18%">
+					
+						
+						
+						<tr>
+							<th>날짜</th>
+							<th>체결가</th>
+							<th>전일비</th>
+							<th>등락률</th>
+							<th>거래량<span class="add_txt">(천주)</span></th>
+							<th>거래대금<span class="add_txt">(백만)</span></th>
+						</tr>
+						
+										
+					<tr><td colspan="6" class="blank_07"></td></tr>
+
+	
+	
+	
+		
+			
+				
+					<tr>
+						<td class="date">2026.09.03</td>
+						<td class="number_1">6,579.48</td>
+						<td class="rate_down" style="padding-right:35px;">
+				<img src="https://ssl.pstatic.net/imgstock/images/images4/ico_up.gif" width="7" height="6" style="margin-right:4px;" alt="상승"><span class="tah p11 red02">
+				16.76
+				</span>
+			</td>
+						<td class="number_1">
+				<span class="tah p11 red01">
+				+0.26%
+				</span>
+			</td>
+						<td class="number_1" style="padding-right:40px;">433,473</td>
+						<td class="number_1" style="padding-right:30px;">22,165,010</td>
+					</tr>
+				
+				
+			
+			
+			
+			
+				
+			
+			
+		
+			
+				
+					<tr>
+						<td class="date">2026.09.02</td>
+						<td class="number_1">6,562.72</td>
+						<td class="rate_down" style="padding-right:35px;">
+				<img src="https://ssl.pstatic.net/imgstock/images/images4/ico_down.gif" width="7" height="6" style="margin-right:4px;" alt="하락"><span class="tah p11 nv01">
+				273.08
+				</span>
+			</td>
+						<td class="number_1">
+				<span class="tah p11 nv01">
+				-3.99%
+				</span>
+			</td>
+						<td class="number_1" style="padding-right:40px;">324,053</td>
+						<td class="number_1" style="padding-right:30px;">18,776,771</td>
+					</tr>
+				
+				
+			
+			
+			
+			
+				
+			
+			
+		
+			
+				
+					<tr>
+						<td class="date">2026.09.01</td>
+						<td class="number_1">6,835.80</td>
+						<td class="rate_down" style="padding-right:35px;">
+				<img src="https://ssl.pstatic.net/imgstock/images/images4/ico_up.gif" width="7" height="6" style="margin-right:4px;" alt="상승"><span class="tah p11 red02">
+				15.78
+				</span>
+			</td>
+						<td class="number_1">
+				<span class="tah p11 red01">
+				+0.23%
+				</span>
+			</td>
+						<td class="number_1" style="padding-right:40px;">273,600</td>
+						<td class="number_1" style="padding-right:30px;">19,203,446</td>
+					</tr>
+				
+				
+			
+			
+			
+			
+				
+					<tr><td colspan="6" class="blank_08"></td></tr>
+					<tr><td colspan="6" class="division_line"></td></tr>
+					<tr><td colspan="6" class="blank_08"></td></tr>
+					<tr>
+				
+			
+			
+		
+			
+				
+					<tr>
+						<td class="date">2026.08.31</td>
+						<td class="number_1">6,820.02</td>
+						<td class="rate_down" style="padding-right:35px;">
+				<img src="https://ssl.pstatic.net/imgstock/images/images4/ico_up.gif" width="7" height="6" style="margin-right:4px;" alt="상승"><span class="tah p11 red02">
+				31.14
+				</span>
+			</td>
+						<td class="number_1">
+				<span class="tah p11 red01">
+				+0.46%
+				</span>
+			</td>
+						<td class="number_1" style="padding-right:40px;">364,254</td>
+						<td class="number_1" style="padding-right:30px;">27,542,000</td>
+					</tr>
+				
+				
+			
+			
+			
+			
+				
+			
+			
+		
+			
+				
+					<tr>
+						<td class="date">2026.08.28</td>
+						<td class="number_1">6,788.88</td>
+						<td class="rate_down" style="padding-right:35px;">
+				<img src="https://ssl.pstatic.net/imgstock/images/images4/ico_down.gif" width="7" height="6" style="margin-right:4px;" alt="하락"><span class="tah p11 nv01">
+				123.49
+				</span>
+			</td>
+						<td class="number_1">
+				<span class="tah p11 nv01">
+				-1.79%
+				</span>
+			</td>
+						<td class="number_1" style="padding-right:40px;">292,615</td>
+						<td class="number_1" style="padding-right:30px;">21,637,450</td>
+					</tr>
+				
+				
+			
+			
+			
+			
+				
+			
+			
+		
+			
+				
+					<tr>
+						<td class="date">2026.08.27</td>
+						<td class="number_1">6,912.37</td>
+						<td class="rate_down" style="padding-right:35px;">
+				<img src="https://ssl.pstatic.net/imgstock/images/images4/ico_up.gif" width="7" height="6" style="margin-right:4px;" alt="상승"><span class="tah p11 red02">
+				104.16
+				</span>
+			</td>
+						<td class="number_1">
+				<span class="tah p11 red01">
+				+1.53%
+				</span>
+			</td>
+						<td class="number_1" style="padding-right:40px;">268,465</td>
+						<td class="number_1" style="padding-right:30px;">22,943,592</td>
+					</tr>
+				
+				
+			
+			
+			
+			
+				
+			
+			
+		
+			
+	
+	
+
+					<tr><td colspan="6" class="blank_09"></td></tr>
+					<tr><td colspan="6" class="division_line"></td></tr>
+					</table>
+				<!--- 페이지 네비게이션 시작--->
+				<table summary="페이지 네비게이션 리스트" class="Nnavi" align="center">
+				<caption>페이지 네비게이션</caption>
+				<tr>		
+			
+				<td class="pgLL">
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=1"  >
+				<img src="https://ssl.pstatic.net/static/n/cmn/bu_pgarLL.gif" width="7" height="5" alt="">맨앞
+				</a>
+				</td>
+
+                
+                <td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=1"  >1</a>
+				</td>
+<td class="on">
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=2"  >2</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=3"  >3</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=4"  >4</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=5"  >5</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=6"  >6</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=7"  >7</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=8"  >8</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=9"  >9</a>
+				</td>
+<td>
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=10"  >10</a>
+				</td>
+
+                <td class="pgR">
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=11"  >
+				다음<img src="https://ssl.pstatic.net/static/n/cmn/bu_pgarR.gif" width="3" height="5" alt="" border="0">
+				</a>
+				</td>
+
+                <td class="pgRR">
+				<a href="/sise/sise_index_day.naver?code=KOSPI&amp;page=1578"  >맨뒤
+				<img src="https://ssl.pstatic.net/static/n/cmn/bu_pgarRR.gif" width="8" height="5" alt="" border="0">
+				</a>
+				</td>
+
+            
+				</tr>
+				</table>
+				<!--- 페이지 네비게이션 끝--->
+				</div>
+				<!-- //일별시세 -->
+				
+<script type="text/javascript">
+    ;(function(){
+        var eventType = "onpageshow" in window ? "pageshow" : "load";
+        jindo.$Fn(function(){
+            lcs_do();
+        }).attach(window, eventType);
+    })();
+</script>
+
+</body>
+</html>

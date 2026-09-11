@@ -1,0 +1,21 @@
+{
+  "status": "partial",
+  "checkedAt": "2026-09-11T11:32:00.380593+00:00",
+  "observationDates": {
+    "kospi": "2026-09-11",
+    "kosdaq": "2026-09-11",
+    "vix": "2026-09-10",
+    "disparity": "2026-09-11",
+    "foreign": "2026-09-11",
+    "credit": "2026-09-10",
+    "deposit": "2026-09-10",
+    "fx": "2026-09-11",
+    "us_treasury_10y": "2026-09-10",
+    "us_treasury_2y": "2026-09-10",
+    "wti": "2026-09-10"
+  },
+  "warnings": [
+    "VKOSPI: 자동 수집 가능한 VKOSPI 원천 연결 필요 · 기존값 유지"
+  ],
+  "scope": "core-metrics"
+}

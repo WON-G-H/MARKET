@@ -1,0 +1,303 @@
+/* Market Ledger data module · dashboard metrics refreshed on 2026-09-10. */
+window.MARKET_LEDGER=window.MARKET_LEDGER||{};
+window.MARKET_LEDGER.core={
+  "marketDataStatus": {
+  "status": "success",
+  "checkedAt": "2026-09-11T10:41:39.462844+00:00",
+  "observationDates": {
+    "us_treasury_10y": "2026-09-10",
+    "us_treasury_2y": "2026-09-10"
+  },
+  "warnings": []
+},
+  "schemaVersion": 1,
+  "siteName": "Market Ledger",
+  "dashboardDate": "2026-09-10",
+  "lastUpdatedAt": "2026-09-10 22:20 KST",
+  "dashboard": {
+    "judgmentAsOf": "2026-09-10 22:20 KST",
+    "week": "2026 W37 · 2026.09.10",
+    "regime": "7천선 방어·외국인 매도 · 경계",
+    "confidence": "보통",
+    "thesis": "KOSPI는 만기·리밸런싱 수급으로 장중 6,898.45까지 밀렸지만 7,033.92(-0.25%)로 7,000선을 지켰고 KOSDAQ은 836.92(+0.79%)로 상승했다. 다만 외국인이 KOSPI 현물을 2조4,821억원 순매도했고 미국 10년물은 4.845%, Brent는 100달러를 넘어섰다. 국내 하단 수요는 유효하지만 에너지·금리와 외국인 수급이 동시에 악화돼 Regime을 중립에서 경계로 낮춘다.",
+    "primaryMetrics": [
+  {
+    "label": "KOSPI",
+    "current": "7,033.92",
+    "previous": "7,051.64",
+    "change": "▼ 17.72",
+    "changePct": "-0.25%",
+    "unit": "index",
+    "asOf": "2026-09-10 종가",
+    "source": "한국거래소 집계·신한투자증권·Korea Times",
+    "sourceUrl": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+    "direction": "down",
+    "note": "장중 고가 7,072.79 · 저가 6,898.45 · 상승 419 · 하락 443",
+    "numericCurrent": 7033.92,
+    "numericPrevious": 7051.64,
+    "sourceMeta": {
+      "name": "한국거래소 집계·신한투자증권·Korea Times",
+      "url": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+      "type": "exchange",
+      "accessedAt": "2026-09-10"
+    },
+    "verified": true,
+    "verificationNote": "정규시장 종가·등락률·장중 고저와 상승·하락 종목 수를 대조."
+  },
+  {
+    "label": "KOSDAQ",
+    "current": "836.92",
+    "previous": "830.37",
+    "change": "▲ 6.55",
+    "changePct": "+0.79%",
+    "unit": "index",
+    "asOf": "2026-09-10 종가",
+    "source": "한국거래소 집계·신한투자증권·Korea Times",
+    "sourceUrl": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+    "direction": "up",
+    "note": "상승 827 · 하락 796 · 기관 +1조3,491억원",
+    "numericCurrent": 836.92,
+    "numericPrevious": 830.37,
+    "sourceMeta": {
+      "name": "한국거래소 집계·신한투자증권·Korea Times",
+      "url": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+      "type": "exchange",
+      "accessedAt": "2026-09-10"
+    },
+    "verified": true,
+    "verificationNote": "KRX 정규시장 종가와 상승·하락 종목 수 확인."
+  },
+  {
+    "label": "VIX",
+    "current": "14.07",
+    "previous": "14.32",
+    "change": "▼ 0.25",
+    "changePct": "-1.75%",
+    "unit": "index",
+    "asOf": "2026-09-04 미국 종가",
+    "source": "Cboe VIX 시세·Investing.com",
+    "sourceUrl": "https://ca.investing.com/indices/volatility-s-p-500-historical-data?cid=1096487",
+    "direction": "down",
+    "note": "9/7 미국 Labor Day로 신규 현물 종가 없음",
+    "numericCurrent": 14.07,
+    "numericPrevious": 14.32,
+    "sourceMeta": {
+      "name": "Cboe VIX 시세·Investing.com",
+      "url": "https://ca.investing.com/indices/volatility-s-p-500-historical-data?cid=1096487",
+      "type": "market-data",
+      "accessedAt": "2026-09-07"
+    },
+    "verified": true,
+    "verificationNote": "9/4 종가를 유지. 9/7 미국 현물시장 휴장."
+  },
+  {
+    "label": "VKOSPI",
+    "current": "47.34",
+    "previous": "42.67",
+    "change": "▲ 4.67",
+    "changePct": "+10.94%",
+    "unit": "index",
+    "asOf": "2026-09-08 종가",
+    "source": "Investing.com 시장 시세",
+    "sourceUrl": "https://kr.investing.com/analysis/article-200458940",
+    "direction": "up",
+    "note": "지수 반락과 함께 변동성 경계 재강화",
+    "numericCurrent": 47.34,
+    "numericPrevious": 42.67,
+    "sourceMeta": {
+      "name": "Investing.com 시장 시세",
+      "url": "https://kr.investing.com/analysis/article-200458940",
+      "type": "market-data",
+      "accessedAt": "2026-09-08"
+    },
+    "verified": true,
+    "verificationNote": "9/8 종가 47.34와 일간 +10.94%를 확인. 공식 KRX 원시자료는 추후 대조 필요."
+  },
+  {
+    "label": "이격도",
+    "current": "KOSPI 102.87 / KOSDAQ 97.91",
+    "previous": "KOSPI 103.98 / KOSDAQ 98.89",
+    "change": "KOSPI ▼ 1.11%p / KOSDAQ ▼ 0.98%p",
+    "changePct": "-1.07% / -0.99%",
+    "unit": "20일 이동평균=100",
+    "asOf": "2026-09-08 종가",
+    "source": "지수 종가 기반 자체 계산·Investing.com",
+    "sourceUrl": "https://kr.investing.com/indices/kospi-historical-data",
+    "direction": "down",
+    "numericCurrent": 102.87,
+    "numericPrevious": 103.98,
+    "sourceMeta": {
+      "name": "지수 종가 기반 자체 계산·Investing.com",
+      "url": "https://kr.investing.com/indices/kospi-historical-data",
+      "type": "market-data",
+      "accessedAt": "2026-09-08"
+    },
+    "verified": true,
+    "verificationNote": "9/7 자체 계산 MA20에서 8/10 종가를 제외하고 9/8 종가를 반영. KOSPI MA20 6,760.334, KOSDAQ MA20 829.2485 기준."
+  },
+  {
+    "label": "KOSPI 외국인 현물",
+    "current": "-24,821",
+    "previous": "-4,271",
+    "change": "▼ 20,550억원",
+    "changePct": "순매도 확대",
+    "unit": "억원 · 순매수",
+    "asOf": "2026-09-10 종가",
+    "source": "한국거래소 집계·신한투자증권·Korea Times",
+    "sourceUrl": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+    "direction": "down",
+    "note": "개인 +3,802억원 · 기관 +4,334억원 · 만기·리밸런싱 영향",
+    "numericCurrent": -24821,
+    "numericPrevious": -4271,
+    "sourceMeta": {
+      "name": "한국거래소 집계·신한투자증권·Korea Times",
+      "url": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+      "type": "exchange",
+      "accessedAt": "2026-09-10"
+    },
+    "verified": true,
+    "verificationNote": "외국인·개인·기관 현물 수급을 대조. 세 주체 외 기타법인 등은 별도."
+  },
+  {
+    "label": "신용융자잔고",
+    "current": "33.1903",
+    "previous": "33.5958",
+    "change": "▼ 0.4055조원",
+    "changePct": "-1.21%",
+    "unit": "조원",
+    "asOf": "2026-09-07 · 최신 공표값",
+    "source": "금융투자협회 FreeSIS",
+    "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
+    "direction": "down",
+    "note": "통계 공표 시차 반영 · 4,054.87억원 감소",
+    "numericCurrent": 33.190325,
+    "numericPrevious": 33.595812,
+    "sourceMeta": {
+      "name": "금융투자협회 FreeSIS",
+      "url": "https://freesis.kofia.or.kr/stat/main.do",
+      "type": "official",
+      "accessedAt": "2026-09-08"
+    },
+    "verified": true,
+    "verificationNote": "금융투자협회 9/7 공표값 33,190,325백만원, 전일 대비 405,487백만원 감소."
+  },
+  {
+    "label": "투자자예탁금",
+    "current": "93.9258",
+    "previous": "93.5500",
+    "change": "▲ 0.3758조원",
+    "changePct": "+0.40%",
+    "unit": "조원",
+    "asOf": "2026-09-07 · 최신 공표값",
+    "source": "금융투자협회 FreeSIS",
+    "sourceUrl": "https://freesis.kofia.or.kr/stat/main.do",
+    "direction": "up",
+    "note": "통계 공표 시차 반영 · 3,758.08억원 증가",
+    "numericCurrent": 93.925789,
+    "numericPrevious": 93.549981,
+    "sourceMeta": {
+      "name": "금융투자협회 FreeSIS",
+      "url": "https://freesis.kofia.or.kr/stat/main.do",
+      "type": "official",
+      "accessedAt": "2026-09-08"
+    },
+    "verified": true,
+    "verificationNote": "금융투자협회 9/7 공표값 93,925,789백만원, 전일 대비 375,808백만원 증가."
+  },
+  {
+    "label": "USD/KRW",
+    "current": "1,339.20",
+    "previous": "1,336.10",
+    "change": "▲ 3.10원",
+    "changePct": "+0.23%",
+    "unit": "원",
+    "asOf": "2026-09-10 15:30 종가",
+    "source": "서울외환시장·Korea Times",
+    "sourceUrl": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+    "direction": "up",
+    "note": "전일 대비 원화 약세, 9/8 1,345.6원보다는 낮음",
+    "numericCurrent": 1339.2,
+    "numericPrevious": 1336.1,
+    "sourceMeta": {
+      "name": "서울외환시장·Korea Times",
+      "url": "https://www.koreatimes.co.kr/economy/20260910/kospi-falls-as-oil-prices-jump-but-retains-7000",
+      "type": "market-data",
+      "accessedAt": "2026-09-10"
+    },
+    "verified": true,
+    "verificationNote": "서울외환시장 15:30 종가."
+  },
+  {
+    "id": "us_treasury_10y",
+    "label": "미국 10년물",
+    "current": "4.95%",
+    "previous": "4.83%",
+    "previousLabel": "이전 관측",
+    "previousAsOf": "2026-09-09",
+    "change": "+12 bp",
+    "changePct": "",
+    "unit": "공식 일별 CMT · %",
+    "asOf": "2026-09-10 미국 관측",
+    "observationDate": "2026-09-10",
+    "source": "미국 재무부",
+    "sourceUrl": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
+    "direction": "up",
+    "numericCurrent": 4.95,
+    "numericPrevious": 4.83,
+    "managedBy": "treasury-collector",
+    "verified": false,
+    "verificationNote": "공식 원출처 수집·숫자 형식 검증 완료. 독립 교차검증은 수행하지 않음."
+  },
+  {
+    "id": "us_treasury_2y",
+    "label": "미국 2년물",
+    "current": "4.56%",
+    "previous": "4.43%",
+    "previousLabel": "이전 관측",
+    "previousAsOf": "2026-09-09",
+    "change": "+13 bp",
+    "changePct": "",
+    "unit": "공식 일별 CMT · %",
+    "asOf": "2026-09-10 미국 관측",
+    "observationDate": "2026-09-10",
+    "source": "미국 재무부",
+    "sourceUrl": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
+    "direction": "up",
+    "numericCurrent": 4.56,
+    "numericPrevious": 4.43,
+    "managedBy": "treasury-collector",
+    "verified": false,
+    "verificationNote": "공식 원출처 수집·숫자 형식 검증 완료. 독립 교차검증은 수행하지 않음."
+  },
+  {
+    "label": "WTI 2026년 10월물",
+    "current": "$100.24",
+    "previous": "$96.05",
+    "change": "▲ $4.19",
+    "changePct": "+4.36%",
+    "unit": "배럴당 달러",
+    "asOf": "2026-09-10 21:32:55 KST 장중",
+    "source": "사용자 제공 시세 화면",
+    "sourceUrl": "",
+    "direction": "up",
+    "note": "장중 스냅샷 · 정산가 아님",
+    "numericCurrent": 100.24,
+    "numericPrevious": 96.05,
+    "sourceMeta": {
+      "name": "사용자 제공 시세 화면",
+      "url": "",
+      "type": "market-snapshot",
+      "accessedAt": "2026-09-10"
+    },
+    "verified": false,
+    "verificationNote": "계약월·화면시각을 보존. 정산가와 별도."
+  }
+],
+    "marketBlocks": [
+      {"title":"한국 수급과 시장 폭","body":"외국인이 KOSPI에서 2조4,821억원을 순매도했지만 지수는 장중 6,898.45에서 7,033.92로 회복했다. KOSPI 419대 443, KOSDAQ 827대 796으로 Breadth는 전일보다 균형에 가까워졌으나 만기·리밸런싱 수급을 추세성 매수로 보지 않는다."},
+      {"title":"만기 이후 확인","body":"선물옵션 만기와 KRX 섹터지수 정기변경의 기계적 수급이 컸다. 다음 거래일 외국인 현물·선물 수급과 시장 폭이 함께 개선되는지 확인한다."},
+      {"title":"금리·에너지","body":"미국 10년물 4.845%와 Brent 100달러 재돌파에 이어 장 마감 뒤 WTI 10월물이 100.24달러를 기록했다. 에너지발 금융여건 악화가 성장주 할인율과 실물비용을 함께 높이는지가 핵심이다."},
+      {"title":"오늘의 운용 판단","body":"7,000선 방어와 KOSDAQ 상승 때문에 전면 위험회피로 내리지는 않는다. 다만 외국인 현물 매도와 금리·유가의 동반 상승을 반영해 경계로 하향하고, CPI와 만기 이후 수급이 안정되기 전까지 고밸류 성장주의 추격을 제한한다."}
+    ]
+  }
+};

@@ -1,0 +1,494 @@
+<html lang='ko'>
+<head>
+<title>Npay 증권</title>
+<meta http-equiv='Content-Type' content='text/html; charset=euc-kr'>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/css/finance.css">
+
+<script type="text/javascript" src="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/js/info/jindo.min.ns.1.5.3.euckr.js"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/js/ntm.js"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/imgstock/static.pc/20260910104351/js/nLog.js"></script>
+</head>
+<body>
+<div class="section_exchange section_today">
+	<h3 class="h_today"><span>일별 환율</span></h3>
+	<table border="1" class="tbl_exchange today" summary="일별 환율 리스트">
+	<caption>일별 환율</caption>
+	<colgroup>
+		<col width="100" />
+		<col width="90" />
+		<col width="90" />
+		<col width="105" />
+		<col width="105" />
+		<col width="105" />
+		<col width="78" />
+	</colgroup>
+	<thead>
+	<tr>
+		<th rowspan="2" class="th_today1"><span>날짜</span></th>
+		<th rowspan="2" class="th_today2"><span>매매기준율</span></th>
+		<th rowspan="2" class="th_today3"><span>전일대비</span></th>
+		<th colspan="2" class="th_today4"><span>현찰</span></th>
+		<th colspan="2" class="th_today5"><span>송금</span></th>
+	</tr>
+	<tr>
+		<th class="th_today9"><span>사실 때 </span></th>
+		<th class="th_today10"><span>파실 때 </span></th>
+		<th class="th_today11"><span>보내실 때 </span></th>
+		<th class="th_today12"><span>받으실 때</span></th>
+	</tr>
+	</thead>
+	<tbody>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.09.11</td>
+	<td class="num">1,342.70</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  8.30</td>
+	<td>
+		
+			
+			1,366.19
+		
+	</td>
+	<td>
+		
+			
+			1,319.21
+		
+	</td>
+	<td>
+		
+			
+			1,355.80
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,329.60
+		
+	</td>
+	</tr>
+	
+			
+		
+		
+			
+			
+		
+		
+	
+	<tr class="up">
+	<td class="date">2026.09.10</td>
+	<td class="num">1,351.00</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_up.gif" width="7" height="6" alt="상승"> 10.00</td>
+	<td>
+		
+			
+			1,374.64
+		
+	</td>
+	<td>
+		
+			
+			1,327.36
+		
+	</td>
+	<td>
+		
+			
+			1,364.20
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,337.80
+		
+	</td>
+	</tr>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.09.09</td>
+	<td class="num">1,341.00</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  0.50</td>
+	<td>
+		
+			
+			1,364.46
+		
+	</td>
+	<td>
+		
+			
+			1,317.54
+		
+	</td>
+	<td>
+		
+			
+			1,354.10
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,327.90
+		
+	</td>
+	</tr>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.09.08</td>
+	<td class="num">1,341.50</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  5.50</td>
+	<td>
+		
+			
+			1,364.97
+		
+	</td>
+	<td>
+		
+			
+			1,318.03
+		
+	</td>
+	<td>
+		
+			
+			1,354.60
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,328.40
+		
+	</td>
+	</tr>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.09.07</td>
+	<td class="num">1,347.00</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  2.50</td>
+	<td>
+		
+			
+			1,370.57
+		
+	</td>
+	<td>
+		
+			
+			1,323.43
+		
+	</td>
+	<td>
+		
+			
+			1,360.20
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,333.80
+		
+	</td>
+	</tr>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.09.04</td>
+	<td class="num">1,349.50</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  9.00</td>
+	<td>
+		
+			
+			1,373.11
+		
+	</td>
+	<td>
+		
+			
+			1,325.89
+		
+	</td>
+	<td>
+		
+			
+			1,362.70
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,336.30
+		
+	</td>
+	</tr>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.09.03</td>
+	<td class="num">1,358.50</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  1.80</td>
+	<td>
+		
+			
+			1,382.27
+		
+	</td>
+	<td>
+		
+			
+			1,334.73
+		
+	</td>
+	<td>
+		
+			
+			1,371.80
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,345.20
+		
+	</td>
+	</tr>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.09.02</td>
+	<td class="num">1,360.30</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  15.20</td>
+	<td>
+		
+			
+			1,384.10
+		
+	</td>
+	<td>
+		
+			
+			1,336.50
+		
+	</td>
+	<td>
+		
+			
+			1,373.60
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,347.00
+		
+	</td>
+	</tr>
+	
+			
+		
+		
+			
+			
+		
+		
+	
+	<tr class="up">
+	<td class="date">2026.09.01</td>
+	<td class="num">1,375.50</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_up.gif" width="7" height="6" alt="상승"> 6.00</td>
+	<td>
+		
+			
+			1,399.57
+		
+	</td>
+	<td>
+		
+			
+			1,351.43
+		
+	</td>
+	<td>
+		
+			
+			1,388.90
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,362.10
+		
+	</td>
+	</tr>
+	
+			
+		
+			
+			
+		
+		
+		
+	
+	<tr class="down">
+	<td class="date">2026.08.31</td>
+	<td class="num">1,369.50</td>
+	<td class="num"><img src="https://ssl.pstatic.net/static/nfinance/ico_down.gif" width="7" height="6" alt="하락">  11.50</td>
+	<td>
+		
+			
+			1,393.46
+		
+	</td>
+	<td>
+		
+			
+			1,345.54
+		
+	</td>
+	<td>
+		
+			
+			1,382.90
+		
+	</td>
+	<td class="last_td">
+		
+			
+			1,356.10
+		
+	</td>
+	</tr>
+	
+	</tbody>
+	</table>
+	<div class="paging">
+		
+		
+		<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=1" class=on onclick=parent.clickcr(this,'med.pagination','','',event);>1</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=2" onclick=parent.clickcr(this,'med.pagination','','',event);>2</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=3" onclick=parent.clickcr(this,'med.pagination','','',event);>3</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=4" onclick=parent.clickcr(this,'med.pagination','','',event);>4</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=5" onclick=parent.clickcr(this,'med.pagination','','',event);>5</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=6" onclick=parent.clickcr(this,'med.pagination','','',event);>6</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=7" onclick=parent.clickcr(this,'med.pagination','','',event);>7</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=8" onclick=parent.clickcr(this,'med.pagination','','',event);>8</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=9" onclick=parent.clickcr(this,'med.pagination','','',event);>9</a>
+<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=10" onclick=parent.clickcr(this,'med.pagination','','',event);>10</a>
+
+		<a href="/marketindex/exchangeDailyQuote.naver?marketindexCd=FX_USDKRW&page=11" class='next' onclick=parent.clickcr(this,'med.pagination','','',event);>다음 <img src="https://ssl.pstatic.net/static/nfinance/bu_pgarR.gif" width="3" height="5" border="0" alt=""></a>
+
+		
+	</div>
+</div>
+
+<script>
+	
+	 var iframeResizeHelper = jindo.$Class({
+		resizeIframe: function(minFrameSize){
+		    var iframe = jindo.$Element(parent.document.getElementById('exchangeDailyQuote'));
+		    if (iframe) {
+                var agent = jindo.$Agent().navigator();
+                var height = (agent.ie ? document.body.scrollHeight + (document.body.offsetHeight - document.body.clientHeight) : document.body.offsetHeight);
+		        height = (agent.opera ? document.body.scrollHeight : height);
+		
+		        if (agent.chrome || agent.safari) {
+		            var dummy = document.createElement("DIV");
+		            document.body.appendChild(dummy);
+		            height = dummy.offsetTop;
+		            document.body.removeChild(dummy);
+		        }
+		        
+		        //minFrameSize가 document.body.height 보다 크다면 minFrameSize로 높이를 조정한다.
+		        if(typeof minFrameSize == 'number' && minFrameSize > height){
+		            height = minFrameSize;
+		        }
+		        iframe.height(height);
+		
+		
+		        if (typeof this.resizeIframe.check == 'undefined') {
+		            this.resizeIframe.check = 0;
+		        }
+		
+		        if (this.resizeIframe.check < 3) {
+		            this.resizeIframe.check = this.resizeIframe.check + 1;
+		            setTimeout(jindo.$Fn(this.resizeIframe, this).bind(height), 100); // check 5 times for IE bug
+		
+		        }else {
+		            this.resizeIframe.check = 0;
+		        }
+		    }
+		}
+	});
+
+	 jindo.$Fn(function() {
+		var oIframeResizeHelper = new iframeResizeHelper();
+		oIframeResizeHelper.resizeIframe(1);
+	}).attach(window, "load");	
+</script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
