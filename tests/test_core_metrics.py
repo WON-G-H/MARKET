@@ -17,6 +17,16 @@ def table(rows, headers=('날짜', '체결가')):
 
 
 class CoreMetricTests(unittest.TestCase):
+    def test_vkospi_identity_dates_and_price_bounds(self):
+        text='KOSPI Volatility KSVKOSPI'+table([
+            ('Sep 11, 2026','46.28','47.40','47.53','46.06'),
+            ('Sep 10, 2026','47.28','48.59','48.59','47.27'),
+            ('Sep 09, 2026','49.23','50.76','50.76','49.11')],('Date','Price','Open','High','Low'))
+        result=c.vkospi_table(text,date(2026,9,10))
+        self.assertEqual(result,{'2026-09-10':47.28,'2026-09-09':49.23})
+        for broken in [text.replace('KSVKOSPI','OTHER'),text.replace('46.28','99.00'),text.replace('Price','Last')]:
+            with self.assertRaises(ValueError):c.vkospi_table(broken,date(2026,9,11))
+
     def test_table_dates_duplicates_and_missing(self):
         text = table([('2026.09.11', '1,100.25'), ('2026.09.10', '1,000')])
         self.assertEqual(c.daily_table(text, date(2026, 9, 10)), {'2026-09-10': 1000})

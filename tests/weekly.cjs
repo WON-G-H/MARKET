@@ -11,6 +11,7 @@ vm.createContext(context);
 for (const file of files) vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context);
 const ledger=context.window.MARKET_LEDGER;
 const report=ledger.weekly['2026'][0];
+assert(nodes.content.innerHTML.includes('<div class="archive-list"><button class="archive-row" data-week="2026-W37"'));
 assert(nodes.content.innerHTML.includes('data-week="2026-W36"'));
 assert(!nodes.content.innerHTML.includes('weekly-section-00'));
 context.location.hash='#weekly/2026-W36'; handlers.hashchange();

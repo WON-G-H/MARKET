@@ -2,12 +2,13 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.core={
   "marketDataStatus": {
-  "status": "partial",
-  "checkedAt": "2026-09-11T11:32:00.380593+00:00",
+  "status": "success",
+  "checkedAt": "2026-09-11T17:03:41.800742+00:00",
   "observationDates": {
     "kospi": "2026-09-11",
     "kosdaq": "2026-09-11",
     "vix": "2026-09-10",
+    "vkospi": "2026-09-11",
     "disparity": "2026-09-11",
     "foreign": "2026-09-11",
     "credit": "2026-09-10",
@@ -17,9 +18,7 @@ window.MARKET_LEDGER.core={
     "us_treasury_2y": "2026-09-10",
     "wti": "2026-09-10"
   },
-  "warnings": [
-    "VKOSPI: 자동 수집 가능한 VKOSPI 원천 연결 필요 · 기존값 유지"
-  ],
+  "warnings": [],
   "scope": "core-metrics"
 },
   "schemaVersion": 1,
@@ -103,29 +102,27 @@ window.MARKET_LEDGER.core={
     "collectionState": "success"
   },
   {
+    "id": "vkospi",
     "label": "VKOSPI",
-    "current": "47.34",
-    "previous": "42.67",
-    "change": "▲ 4.67",
-    "changePct": "+10.94%",
-    "unit": "index",
-    "asOf": "2026-09-08 종가",
-    "source": "Investing.com 시장 시세",
-    "sourceUrl": "https://kr.investing.com/analysis/article-200458940",
-    "direction": "up",
-    "note": "지수 반락과 함께 변동성 경계 재강화",
-    "numericCurrent": 47.34,
-    "numericPrevious": 42.67,
-    "sourceMeta": {
-      "name": "Investing.com 시장 시세",
-      "url": "https://kr.investing.com/analysis/article-200458940",
-      "type": "market-data",
-      "accessedAt": "2026-09-08"
-    },
-    "verified": true,
-    "verificationNote": "9/8 종가 47.34와 일간 +10.94%를 확인. 공식 KRX 원시자료는 추후 대조 필요.",
-    "collectionState": "failed",
-    "collectionNote": "갱신 보류 · 기존값 유지"
+    "current": "46.28",
+    "previous": "47.28",
+    "previousLabel": "이전 관측",
+    "previousAsOf": "2026-09-10",
+    "numericCurrent": 46.28,
+    "numericPrevious": 47.28,
+    "change": "-1.00",
+    "changePct": "-2.12%",
+    "direction": "down",
+    "unit": "index · 일별 종가",
+    "observationDate": "2026-09-11",
+    "asOf": "2026-09-11 · 일별 공표값",
+    "source": "Investing.com · KOSPI Volatility",
+    "sourceUrl": "https://www.investing.com/indices/kospi-volatility-historical-data",
+    "managedBy": "core-metrics-collector",
+    "verified": false,
+    "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
+    "collectionNote": "자동 수집",
+    "collectionState": "success"
   },
   {
     "id": "disparity",
@@ -182,7 +179,7 @@ window.MARKET_LEDGER.core={
     "observationDate": "2026-09-11",
     "asOf": "2026-09-11 · 일별 공표값",
     "source": "네이버 금융 · KOSPI 투자자별 매매",
-    "sourceUrl": "https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260911&sosok=01",
+    "sourceUrl": "https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate=20260912&sosok=01",
     "managedBy": "core-metrics-collector",
     "verified": false,
     "verificationNote": "공개 원자료 수집·형식 검증. 독립 교차검증 미수행.",
@@ -238,14 +235,14 @@ window.MARKET_LEDGER.core={
   {
     "id": "fx",
     "label": "USD/KRW",
-    "current": "1,342.50",
+    "current": "1,341.60",
     "previous": "1,351.00",
     "previousLabel": "이전 관측",
     "previousAsOf": "2026-09-10",
-    "numericCurrent": 1342.5,
+    "numericCurrent": 1341.6,
     "numericPrevious": 1351.0,
-    "change": "-8.50",
-    "changePct": "-0.63%",
+    "change": "-9.40",
+    "changePct": "-0.70%",
     "direction": "down",
     "unit": "원 · 매매기준율",
     "observationDate": "2026-09-11",

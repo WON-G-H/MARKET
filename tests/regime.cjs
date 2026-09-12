@@ -25,6 +25,7 @@ assert(nodes.content.innerHTML.includes('반대 근거와 한계'));
 assert(nodes.content.innerHTML.includes('Regime 유지 조건'));
 assert(nodes.content.innerHTML.includes('다음 핵심 이벤트'));
 assert(nodes.content.innerHTML.includes('최근 상태 변화'));
+assert(nodes.content.innerHTML.includes('<div class="regime-history-list"><article>'));
 assert(nodes.content.innerHTML.includes('data-log="2026-09-11"'));
 assert(nodes.content.innerHTML.includes('data-week="2026-W36"'));
 nodes.globalSearch.input({target:{value:'시스템 유동성'}});
