@@ -60,12 +60,18 @@ def main():
         meta['calendar'] = {'status':calendar['status'],'events':len(calendar['events']),
                             'warnings':calendar['warnings']}
         if calendar['status'] != 'success':meta['status']='partial'
+        from heatmap_data import collect as collect_heatmap
+        heatmap=collect_heatmap(ROOT,apply=args.update_dashboard)
+        meta['heatmap']={'status':heatmap['status'],'warnings':heatmap['warnings'],
+                         'counts':{key:len(value['rows']) for key,value in heatmap['markets'].items()}}
+        if heatmap['status']!='success':meta['status']='partial'
         meta['checkedAt'] = datetime.now(timezone.utc).isoformat()
         save_json(output / 'collection-status.json', meta)
         print('Dashboard collection: ' + meta['status'])
         print('Indicator cards collected: ' + str(len(extra['cards'])) + '/10; Treasury: ' + treasury['collection']['status'])
         print('Expanded series: ' + str(len(expanded['metrics'])) + '; ' + expanded['status'])
         print('Macro calendar: ' + calendar['status'] + '; events: ' + str(len(calendar['events'])))
+        print('Market heatmaps: ' + heatmap['status'])
         print('Report: market-data/collection-status.json')
         return 0 if meta['status'] == 'success' else 2
     except (OSError, ValueError) as exc:

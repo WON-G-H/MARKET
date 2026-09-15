@@ -2,7 +2,7 @@ param([switch]$NoOpen)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $projectRoot
-Write-Host 'Market Ledger: updating Dashboard, Macro, Korea and Macro Calendar...'
+Write-Host 'Market Ledger: updating Dashboard, Macro, Korea, Calendar and Heatmaps...'
 Write-Host 'Please keep this window open until collection finishes.'
 try {
     $started = Get-Date
@@ -18,7 +18,7 @@ try {
     Write-Host ''
     if ($result -eq 0) { Write-Host 'DONE: available market data updated.' -ForegroundColor Green }
     else { Write-Host 'PARTIAL: some sources failed. Successful data was updated; other values were kept.' -ForegroundColor Yellow }
-    foreach ($warning in @($status.warnings) + @($status.expandedData.warnings) + @($status.calendar.warnings)) {
+    foreach ($warning in @($status.warnings) + @($status.expandedData.warnings) + @($status.calendar.warnings) + @($status.heatmap.warnings)) {
         if ($warning) { Write-Host ('- ' + $warning) }
     }
     Write-Host 'AI research text is unchanged. See observation dates on each page.'
