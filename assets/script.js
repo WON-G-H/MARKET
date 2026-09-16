@@ -14,7 +14,11 @@ const data={
  decisions:ledger.portfolio?.decisions||[]
 };
 const researchAsOf=document.getElementById('researchAsOf');
-if(researchAsOf)researchAsOf.textContent=data.dashboard?.judgmentAsOf||ledger.core?.dashboardDate||'확인 필요';
+if(researchAsOf){
+ const checkedAt=new Date(ledger.marketLive?.checkedAt||'');
+ researchAsOf.textContent=Number.isNaN(checkedAt.getTime())?'확인 필요':new Date(checkedAt.getTime()+9*60*60*1000).toISOString().slice(0,16).replace('T',' ')+' KST';
+ researchAsOf.title='시장데이터 수집 확인 시각입니다. 개별 지표의 관측일과 수집 실패 여부는 각 항목에서 확인하세요.';
+}
 const content=document.getElementById('content'),nav=[...document.querySelectorAll('.nav-item')];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const tags=a=>`<div class="tags">${a.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`;

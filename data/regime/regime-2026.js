@@ -1,21 +1,21 @@
-/* Market Ledger Regime Monitor · refreshed with 2026-09-15 Daily. */
+/* Market Ledger Regime Monitor · refreshed with 2026-09-16 market close. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.regime={
   "schemaVersion":1,
   "current":{
-    "asOf":"2026-09-15 한국 종가 · 9월 14일 미국 종가 반영",
+    "asOf":"2026-09-16 한국 종가 · 9월 15일 미국 종가 반영",
     "overallState":"위험회피",
     "previousState":"위험회피",
-    "direction":"제한적 안정",
+    "direction":"기술적 반등·스트레스 지속",
     "confidence":"높음",
-    "summary":"KOSPI는 6,627.26(-0.85%)로 추가 하락했지만 KOSDAQ은 812.41(+0.70%)로 반등했다. KOSPI 외국인과 기관은 각각 약 1.55조원과 0.96조원을 순매도한 반면 KOSDAQ에서는 두 주체가 순매수했고 상승 종목이 하락 종목을 웃돌았다. 미 10년물 4.97%, WTI 101.39달러, 원·달러 1,359원은 할인율·비용 압력을 유지한다. 다만 TGA 감소와 연준 자산 증가, VKOSPI 하락, KOSDAQ 시장 폭 개선으로 전일의 전면적 악화는 멈췄다. 레짐은 위험회피를 유지하되 방향은 제한적 안정으로 조정한다.",
+    "summary":"KOSPI 6,717.97(+1.37%)와 KOSDAQ 815.98(+0.44%)가 반등했지만 KOSPI 외국인은 약 1.68조원을 순매도했고 상승 종목보다 하락 종목이 많았다. 기관이 반도체·광통신·전력설비를 선별 매수해 지수를 끌어올렸지만 미 10년물 5.0019%, WTI 105.83달러, 원·달러 1,367.60원은 할인율·비용·외국인 수급 압력을 동시에 높였다. AI 속도조절 우려에도 실제 메모리·네트워크·전력 투자는 이어져 성장 붕괴는 아니지만, 반등의 폭과 수급이 위험선호 전환을 확인하지 못했다. 레짐은 위험회피를 유지하고 방향을 기술적 반등·스트레스 지속으로 판정한다.",
     "keyChanges":[
-      "KOSPI는 외국인·기관 합계 약 2.50조원 순매도로 6,627선까지 밀렸지만 낙폭은 전일보다 축소됐다.",
-      "KOSDAQ은 외국인·기관 동반 순매수와 상승 825·하락 518로 전환돼 위험회피가 시장 전체에서 대형주 중심으로 좁혀졌다.",
-      "TGA 주평균 -846억달러와 연준 자산 +34.15억달러는 단기 유동성 완충이지만 미 10년 4.97%·WTI 101.39달러·원달러 1,359원이 금융여건 개선을 제한했다."
+      "기관의 KOSPI 약 1.21조원 순매수로 지수는 1.37% 반등했지만 외국인은 약 1.68조원 순매도했고 KOSPI Breadth는 266 대 392로 약했다.",
+      "반도체·광통신·전력설비·기판의 동반 강세는 AI 수요가 전면 취소된 것이 아니라 실물 주문과 이익 가시성에 따라 재선별되고 있음을 보여준다.",
+      "미 10년물은 5.0019%, WTI는 105.83달러, 원·달러는 1,367.60원으로 상승해 지수 반등과 별개로 시장 금융여건은 다시 악화됐다."
     ],
-    "holdCondition":"KOSPI 외국인 매도와 높은 미국 금리·원유·원화 약세가 지속되지만 KOSDAQ의 수급·시장 폭이 버티는 경우",
-    "changeCondition":"금리·유가 안정과 KOSPI 외국인 수급·반도체 Breadth 회복이 겹치면 경계로 상향하고, 원화·신용 스트레스와 양 시장 Breadth가 다시 동반 악화하면 위험회피 강도를 높인다.",
+    "holdCondition":"반도체·AI 인프라 이익 기대가 지수를 지지하더라도 외국인 매도와 5% 금리·고유가·원화 약세가 지속되고 Breadth가 좁은 경우",
+    "changeCondition":"금리 상승 속도와 유가가 안정되고 외국인 현선물·Breadth·신용스프레드가 함께 개선되면 경계로 상향한다. 반대로 신용스프레드 확대와 AI·메모리 EPS 하향, 원화 약세가 겹치면 위험회피 강도를 높인다.",
     "sourceRefs":[
       {"type":"daily","id":"2026-09-15","label":"2026-09-15 Daily"},
       {"type":"daily","id":"2026-09-14","label":"2026-09-14 Daily"},
@@ -32,7 +32,7 @@ window.MARKET_LEDGER.regime={
         "direction":"유지",
         "confidence":"높음",
         "tone":"positive",
-        "summary":"한국 9월 1~10일 수출은 349.73억달러로 전년 대비 82.6% 늘었고 반도체 수출은 164.83억달러로 270.1% 증가했다. 조업일수가 전년과 같은 8.5일이라 방향성은 강하지만 반도체가 전체의 47.1%를 차지한다. 9월 15일 KOSPI 약세와 KOSDAQ 반등의 분화는 성장지표 붕괴보다 높은 할인율과 대형주 수급을 먼저 반영한 결과에 가깝다. 미국 소비자심리 하락과 고유가가 비반도체 수요를 제약할 수 있어 견조하되 편중된 성장 판정을 유지한다.",
+        "summary":"한국 9월 1~10일 수출과 반도체 수출의 강한 증가, 9월 16일 반도체·광통신·전력설비 반등은 AI 공급망의 실물 수요가 아직 유지됨을 보여준다. 다만 외국인 매도와 좁은 KOSPI Breadth는 이 성장 기대가 시장 전체 이익으로 확산되지 않았다는 신호다. 고유가와 높은 자본비용이 비반도체 수요와 AI 프로젝트 ROI를 제약할 수 있어 성장 견조·편중 판정을 유지한다.",
         "evidence":["9월 1~10일 수출 $34.973bn·+82.6% YoY","반도체 수출 $16.483bn·+270.1% YoY·전체 47.1%","한국 2분기 실질 GDP +0.6% QoQ"],
         "counterEvidence":["한국 건설업 -1.9% QoQ","한국의 명목 성장과 반도체 교역조건 개선을 내수 회복으로 일반화할 수 없음","미시간대 9월 예비 소비자심리 47.8·기대지수 45.8"],
         "indicators":[
@@ -40,8 +40,8 @@ window.MARKET_LEDGER.regime={
           {"label":"한국 실질 GDI","current":"+3.7% QoQ","previous":"+3.6% 속보","change":"+0.1%p","changePct":"—","unit":"2분기","asOf":"2026-09-08 발표","source":"한국은행","sourceUrl":"https://www.bok.or.kr/portal/stats/statsPublictSchdul/listCldr.do?date=2026-09&menuNo=200775","interpretation":"교역조건 개선으로 구매력 상승"},
           {"label":"9월 1~10일 수출","current":"$34.973B","previous":"$19.155B","change":"+$15.818B","changePct":"+82.6% YoY","unit":"달러 · 8.5일","asOf":"2026-09-11 발표","source":"관세청","sourceUrl":"https://www.thepowernews.co.kr/view.php?ud=20260911091621701de3f0aa1be_7","interpretation":"반도체 중심 수출 모멘텀 강세"}
         ],
-        "asOf":"2026-09-15 한국 종가 · 최신 성장자료 유지",
-        "nextEvent":"9월 16일 FOMC·이후 한국 수출 흐름",
+        "asOf":"2026-09-16 한국 종가 · 최신 성장자료 유지",
+        "nextEvent":"FOMC 결과·메모리 계약가격·AI CapEx와 주문",
         "holdCondition":"반도체 수출과 서비스 수요가 성장권을 유지",
         "changeCondition":"수출·신규주문·고용의 동반 둔화 또는 내수 확산",
         "sourceRefs":[{"type":"daily","id":"2026-09-15","label":"9/15 Daily"}]
@@ -50,21 +50,21 @@ window.MARKET_LEDGER.regime={
         "id":"inflation",
         "label":"물가",
         "layer":"거시 레짐",
-        "currentState":"높은 에너지·기대물가 압력",
-        "previousState":"CPI·기대물가로 확산",
-        "direction":"높은 수준 유지",
+        "currentState":"에너지 충격 재가속",
+        "previousState":"높은 에너지·기대물가 압력",
+        "direction":"악화 중",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"미국 8월 CPI의 에너지 +2.1%·휘발유 +3.9%와 미시간대 1년 기대인플레이션 4.6%로 에너지 충격의 소비자물가·기대 경로 전가는 이미 확인됐다. 9월 14일 WTI가 101.39달러로 다시 100달러를 웃돌아 비용 압력은 높은 수준을 유지한다. 근원 CPI +0.3% MoM·+2.4% YoY와 하루 단위 유가 변동은 광범위한 재가속을 확정하지 못하므로 추가 악화 대신 높은 압력 유지로 판정한다.",
-        "evidence":["미국 8월 CPI +0.4% MoM·+3.4% YoY","에너지 +2.1%·휘발유 +3.9% MoM","미시간대 1년 기대인플레이션 4.6%·장기 3.4%"],
+        "summary":"미국 8월 CPI에서 에너지·휘발유 상승과 1년 기대인플레이션 4.6%가 확인된 뒤 WTI가 105.83달러로 하루 4.38% 급등했다. 사우디 East-West Pipeline·Yanbu 선적과 리비아 유전 차질이 겹쳤다는 기관 해석은 실물 공급 충격이 단순 선물 투기보다 길어질 위험을 높인다. 정제품 재고·크랙스프레드와 운임의 연속 확인 전에는 광범위한 물가 재가속을 확정하지 않지만, 물가 축은 높은 수준 유지에서 에너지 충격 재가속으로 한 단계 악화시킨다.",
+        "evidence":["WTI $105.83·+4.38%, Brent $108.75·+2.67%","사우디 우회수출·리비아 유전 차질이라는 기관자료상 공급충격","미시간대 1년 기대인플레이션 4.6%·미국 8월 CPI 에너지 +2.1% MoM"],
         "counterEvidence":["식품·에너지 제외 CPI +0.3% MoM·+2.4% YoY","유가의 하루 변동만으로 기대물가 고착을 확정할 수 없음","장기 기대인플레이션 상승은 +0.1%p에 그쳤고 예비치"],
         "indicators":[
           {"label":"미국 8월 CPI","current":"+3.4% YoY","previous":"+3.4% YoY","change":"0.0%p","changePct":"+0.4% MoM","unit":"CPI-U","asOf":"2026-09-11 발표","source":"U.S. BLS","sourceUrl":"https://www.bls.gov/news.release/archives/cpi_09112026.htm","interpretation":"에너지 주도의 높은 월간 상승"},
           {"label":"미시간대 1년 기대물가","current":"4.6%","previous":"4.0%","change":"+0.6%p","changePct":"—","unit":"예비치","asOf":"2026-09-11 발표","source":"University of Michigan Surveys of Consumers","sourceUrl":"https://www.sca.isr.umich.edu/","interpretation":"연료비 충격의 소비자 기대 전가"},
-          {"label":"WTI","current":"$101.39","previous":"$100.05","change":"+$1.34","changePct":"+1.34%","unit":"배럴당 달러","asOf":"2026-09-14 미국 종가","source":"공개 시장자료 수집본","sourceUrl":"","interpretation":"100달러대 비용 압력 지속"}
+          {"label":"WTI","current":"$105.83","previous":"$101.39","change":"+$4.44","changePct":"+4.38%","unit":"배럴당 달러","asOf":"2026-09-15 미국 종가","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"공급차질 우려로 비용 압력 재가속"}
         ],
-        "asOf":"2026-09-15 한국 종가 · 9/14 미국 원유·최신 물가자료",
-        "nextEvent":"9월 16일 FOMC·9월 25일 미시간대 확정치",
+        "asOf":"2026-09-16 한국 종가 · 9/15 미국 원유·최신 물가자료",
+        "nextEvent":"사우디 설비 복구·정제품 재고와 크랙스프레드·미시간대 확정치",
         "holdCondition":"근원 물가는 통제권에 있지만 에너지·기대인플레이션이 높은 상태",
         "changeCondition":"기대·서비스·임금의 동반 상승이면 추가 악화, 원유·제품가격과 기대물가 정상화면 완화",
         "sourceRefs":[{"type":"daily","id":"2026-09-15","label":"9/15 Daily"}]
@@ -96,22 +96,22 @@ window.MARKET_LEDGER.regime={
         "id":"financial-conditions",
         "label":"시장 금융여건",
         "layer":"금융환경",
-        "currentState":"높은 할인율 고착",
+        "currentState":"5% 금리·고유가·원화 약세",
         "previousState":"높은 할인율 고착",
-        "direction":"높은 수준 유지",
+        "direction":"악화 중",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"9월 14일 미국 2년물은 4.65%, 10년물은 4.97%로 각각 2bp와 1bp 올랐고 WTI는 101.39달러였다. 원·달러도 1,359원으로 10.5원 상승해 한국 성장주가 체감하는 할인율은 여전히 긴축적이다. VIX 17.10과 VKOSPI 하락, 단기 유동성 완화는 반대 근거지만 KOSPI 외국인·기관 매도가 이어져 높은 할인율 고착 판정을 유지한다.",
-        "evidence":["미국 2년물 4.65%·10년물 4.97%","WTI $101.39","USD/KRW 1,359원·KOSPI 외국인 약 -1.55조원"],
+        "summary":"미 10년물은 5.0019%, 30년물은 5.3662%, WTI는 105.83달러로 올랐고 원·달러도 1,367.60원까지 상승했다. 금리의 절대 수준 하나가 기계적인 주가 붕괴선은 아니지만 상승 속도와 에너지 비용, 외국인 매도가 동시에 나타나 한국 성장주의 체감 금융여건은 악화됐다. VIX 17.20과 반도체 반등은 신용위기 반례이며, 다음 판정은 하이일드·BBB 스프레드와 AI·메모리 EPS 추정치가 가격 변수와 함께 악화되는지에 달렸다.",
+        "evidence":["미국 10년물 5.0019%·30년물 5.3662%","WTI $105.83","USD/KRW 1,367.60원·KOSPI 외국인 약 -1.68조원"],
         "counterEvidence":["VIX 17.10으로 공포의 급등은 미확인","VKOSPI 45.63으로 전일 대비 1.22포인트 하락","TGA 감소와 Fed 자산 증가로 단기 유동성은 완화 방향"],
         "indicators":[
-          {"label":"USD/KRW","current":"1,359.00원","previous":"1,348.50원","change":"+10.50원","changePct":"+0.78%","unit":"원","asOf":"2026-09-15","source":"공개 외환시장 수집본","sourceUrl":"","interpretation":"외국인 매도와 달러 강세 속 원화 약세"},
-          {"label":"미국 10년물","current":"4.97%","previous":"4.96%","change":"+1bp","changePct":"—","unit":"%","asOf":"2026-09-14 미국장","source":"U.S. Treasury","sourceUrl":"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView","interpretation":"5% 부근의 높은 할인율"},
+          {"label":"USD/KRW","current":"1,367.60원","previous":"1,359.00원","change":"+8.60원","changePct":"+0.63%","unit":"원","asOf":"2026-09-16","source":"사용자 제공 한국장 스냅샷","sourceUrl":"","interpretation":"금리·유가 상승과 외국인 매도 속 원화 약세"},
+          {"label":"미국 10년물","current":"5.0019%","previous":"4.97%","change":"+3.19bp","changePct":"—","unit":"%","asOf":"2026-09-15 미국장","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"5% 위로 진입한 높은 할인율"},
           {"label":"미국 2년물","current":"4.65%","previous":"4.63%","change":"+2bp","changePct":"—","unit":"%","asOf":"2026-09-14 미국장","source":"U.S. Treasury","sourceUrl":"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView","interpretation":"추가 긴축 기대가 남은 단기금리"},
-          {"label":"WTI","current":"$101.39","previous":"$100.05","change":"+$1.34","changePct":"+1.34%","unit":"배럴당 달러","asOf":"2026-09-14 미국장","source":"공개 시장자료 수집본","sourceUrl":"","interpretation":"비용 압력을 주는 100달러대 유지"}
+          {"label":"WTI","current":"$105.83","previous":"$101.39","change":"+$4.44","changePct":"+4.38%","unit":"배럴당 달러","asOf":"2026-09-15 미국장","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"에너지 비용과 인플레이션 압력 확대"}
         ],
-        "asOf":"2026-09-15 한국 종가 · 9/14 미국 종가",
-        "nextEvent":"9월 16일 FOMC·점도표",
+        "asOf":"2026-09-16 한국 종가 · 9/15 미국 종가",
+        "nextEvent":"FOMC 결과·국채 숏커버와 장단기곡선·신용스프레드",
         "holdCondition":"장기금리·원유의 절대 수준이 높고 원화·외국인 수급이 취약",
         "changeCondition":"금리·원유·원화·변동성 동반 안정 또는 신용스프레드·자금시장 스트레스 확대",
         "sourceRefs":[{"type":"daily","id":"2026-09-15","label":"9/15 Daily"}]
@@ -120,21 +120,21 @@ window.MARKET_LEDGER.regime={
         "id":"global-risk",
         "label":"글로벌 위험선호",
         "layer":"시장 확인",
-        "currentState":"미국 약세·한국 내부 분화",
-        "previousState":"미국 반등·한국 위험회피",
-        "direction":"제한적 안정",
+        "currentState":"미국 약세·한국 기술적 반등",
+        "previousState":"미국 약세·한국 내부 분화",
+        "direction":"반등하되 확인 부족",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"9월 14일 미국은 S&P500 -0.48%, Nasdaq100 -0.82%, Russell2000 -0.40%로 다시 약세였지만 VIX는 17.10으로 급격한 공포 확산을 보이지 않았다. 9월 15일 한국은 KOSPI -0.85%와 KOSDAQ +0.70%로 내부 분화가 나타났다. KOSPI 외국인·기관 매도가 위험회피를 확인하지만 KOSDAQ의 동반 순매수와 상승 종목 우위는 낙폭 과대 구간의 제한적 안정을 보여준다.",
-        "evidence":["S&P500 -0.48%·Nasdaq100 -0.82%","KOSPI -0.85%·외국인·기관 합계 약 -2.50조원","미 10년물 4.97%·WTI $101.39"],
-        "counterEvidence":["KOSDAQ +0.70%·외국인과 기관 동반 순매수","KOSDAQ 상승 825·하락 518","VIX 17.10·VKOSPI 전일 대비 하락"],
+        "summary":"9월 15일 미국은 S&P500 -0.45%, Nasdaq -0.78%로 약세였지만 SOX는 +0.40%, VIX는 17.20으로 신용위기형 공포는 나타나지 않았다. 9월 16일 한국은 반도체·AI 인프라 주도로 양 지수가 반등했지만 외국인은 KOSPI를 6거래일 연속 순매도했고 KOSPI Breadth도 약했다. 높은 금리에도 이익 가시성이 있는 주식으로 자금이 선별 이동하는 국면이지 광범위한 위험선호 회복은 아니다.",
+        "evidence":["S&P500 -0.45%·Nasdaq -0.78%","KOSPI 외국인 약 -1.68조원·상승 266 대 하락 392","미 10년물 5.0019%·WTI $105.83"],
+        "counterEvidence":["KOSPI +1.37%·KOSDAQ +0.44%","SOX +0.40%와 한국 반도체·AI 인프라 반등","VIX 17.20으로 공포 급등은 제한"],
         "indicators":[
-          {"label":"S&P500","current":"7,619.98","previous":"7,656.98","change":"-37.00","changePct":"-0.48%","unit":"index","asOf":"2026-09-14","source":"사용자 제공 장 마감자료","sourceUrl":"","interpretation":"높은 금리·유가 속 재약세"},
-          {"label":"Nasdaq100","current":"29,127.16","previous":"—","change":"—","changePct":"-0.82%","unit":"index","asOf":"2026-09-14","source":"사용자 제공 장 마감자료","sourceUrl":"","interpretation":"대형 기술주 할인율 부담"},
-          {"label":"VIX","current":"17.10","previous":"—","change":"—","changePct":"—","unit":"index","asOf":"2026-09-14","source":"CBOE 공개자료 수집본","sourceUrl":"https://www.cboe.com/tradable_products/vix/","interpretation":"주가 약세에도 공포 급등은 제한"}
+          {"label":"S&P500","current":"7,585.73","previous":"7,619.98","change":"-34.25","changePct":"-0.45%","unit":"index","asOf":"2026-09-15","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"고금리·고유가 속 이틀째 약세"},
+          {"label":"Nasdaq Composite","current":"25,981.57","previous":"—","change":"—","changePct":"-0.78%","unit":"index","asOf":"2026-09-15","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"대형 기술주 할인율 부담"},
+          {"label":"VIX","current":"17.20","previous":"17.10","change":"+0.10","changePct":"—","unit":"index","asOf":"2026-09-15","source":"미래에셋증권 글로벌 마켓 브리핑","sourceUrl":"","interpretation":"주가 약세에도 공포 급등은 제한"}
         ],
-        "asOf":"2026-09-14 미국 종가·9/15 한국 종가",
-        "nextEvent":"9월 15일 중국 실물지표·9월 16일 FOMC",
+        "asOf":"2026-09-15 미국 종가·9/16 한국 종가",
+        "nextEvent":"FOMC 이후 미국 주식·신용·한국 외국인 수급 반응",
         "holdCondition":"미국 지수와 KOSPI는 약하지만 KOSDAQ 수급·시장 폭과 변동성이 안정",
         "changeCondition":"KOSPI까지 외국인 수급·시장 폭이 회복되거나 미국 신용·중소형주와 한국 Breadth가 동반 재악화",
         "sourceRefs":[{"type":"daily","id":"2026-09-15","label":"9/15 Daily"}]
@@ -143,32 +143,40 @@ window.MARKET_LEDGER.regime={
         "id":"korea-transmission",
         "label":"한국시장 전달",
         "layer":"시장 확인",
-        "currentState":"KOSPI 약세·KOSDAQ 회복",
-        "previousState":"6,700선 이탈·매도 확대",
-        "direction":"분화·악화 둔화",
+        "currentState":"지수 반등·수급 미확인",
+        "previousState":"KOSPI 약세·KOSDAQ 회복",
+        "direction":"기술적 반등",
         "confidence":"높음",
         "tone":"negative",
-        "summary":"KOSPI는 6,627.26(-0.85%)로 추가 하락했지만 KOSDAQ은 812.41(+0.70%)로 반등했다. KOSPI 외국인 약 -1.55조원과 기관 약 -0.96조원의 동반 매도는 대형주 위험축소가 끝나지 않았음을 보여준다. 반면 KOSDAQ은 외국인·기관 동반 순매수와 상승 825·하락 518로 회복해 전일의 광범위한 매도가 선택적 순환매로 좁혀졌다. 원·달러 1,359원과 KOSPI 이격도 97.51 때문에 신용경색이 아닌 수급·할인율 중심 위험회피 판정을 유지한다.",
-        "evidence":["KOSPI 6,627.26(-0.85%)·KOSDAQ 812.41(+0.70%)","KOSPI 외국인 약 -1.55조원·기관 약 -0.96조원","KOSPI 상승 248·하락 456"],
-        "counterEvidence":["KOSDAQ 외국인 +272억원·기관 +1,149억원","KOSDAQ 상승 825·하락 518","VKOSPI 45.63으로 전일 대비 1.22포인트 하락"],
+        "summary":"KOSPI 6,717.97(+1.37%)와 KOSDAQ 815.98(+0.44%)가 반등했지만 KOSPI 외국인은 약 1.68조원을 순매도했고 기관이 약 1.21조원을 받아냈다. KOSPI 상승 266·하락 392로 지수 반등이 시장 전체로 확산되지 않았고 KOSDAQ 외국인도 293억원 순매도했다. 반도체·광통신·전력설비의 이익 가시성은 방어막이지만 원·달러 1,367.60원과 외국인 매도 지속 때문에 수급·할인율 중심 위험회피 판정을 유지한다.",
+        "evidence":["KOSPI 외국인 약 -1조6,829억원·6거래일 연속 순매도","KOSPI 상승 266·하락 392","USD/KRW 1,367.60원"],
+        "counterEvidence":["KOSPI 6,717.97(+1.37%)·KOSDAQ 815.98(+0.44%)","KOSPI 기관 약 +1조2,145억원","반도체·광통신·전력설비·기판 동반 반등"],
         "indicators":[
-          {"label":"KOSPI","current":"6,627.26","previous":"6,684.37","change":"-57.11","changePct":"-0.85%","unit":"index","asOf":"2026-09-15 종가","source":"국내 공개 시세 수집본·신한투자증권","sourceUrl":"","interpretation":"외국인·기관 매도로 추가 하락"},
-          {"label":"KOSDAQ","current":"812.41","previous":"806.79","change":"+5.62","changePct":"+0.70%","unit":"index","asOf":"2026-09-15 종가","source":"국내 공개 시세 수집본·신한투자증권","sourceUrl":"","interpretation":"수급·Breadth 동반 회복"},
-          {"label":"KOSPI 외국인 현물","current":"약 -15,458억원","previous":"약 -32,900억원","change":"순매도 축소","changePct":"—","unit":"억원 · 순매수","asOf":"2026-09-15 종가","source":"국내 공개 투자자별 매매 수집본","sourceUrl":"","interpretation":"매도 규모는 줄었지만 위험축소 지속"},
-          {"label":"USD/KRW","current":"1,359.00원","previous":"1,348.50원","change":"+10.50원","changePct":"+0.78%","unit":"원","asOf":"2026-09-15","source":"공개 외환시장 수집본","sourceUrl":"","interpretation":"KOSPI 외국인 매도와 함께 원화 약세"}
+          {"label":"KOSPI","current":"6,717.97","previous":"6,627.26","change":"+90.71","changePct":"+1.37%","unit":"index","asOf":"2026-09-16 종가","source":"신한투자증권·미래에셋증권 마감자료","sourceUrl":"","interpretation":"기관의 반도체·AI 인프라 매수로 반등"},
+          {"label":"KOSDAQ","current":"815.98","previous":"812.41","change":"+3.57","changePct":"+0.44%","unit":"index","asOf":"2026-09-16 종가","source":"신한투자증권·미래에셋증권 마감자료","sourceUrl":"","interpretation":"동반 반등했으나 외국인 수급은 약함"},
+          {"label":"KOSPI 외국인 현물","current":"약 -16,829억원","previous":"약 -15,458억원","change":"순매도 확대","changePct":"—","unit":"억원 · 순매수","asOf":"2026-09-16 종가","source":"신한투자증권 마감자료","sourceUrl":"","interpretation":"지수 반등에도 위험축소 지속"},
+          {"label":"USD/KRW","current":"1,367.60원","previous":"1,359.00원","change":"+8.60원","changePct":"+0.63%","unit":"원","asOf":"2026-09-16","source":"사용자 제공 한국장 스냅샷","sourceUrl":"","interpretation":"금리·유가 상승과 외국인 매도 속 원화 약세"}
         ],
-        "asOf":"2026-09-15 한국장",
-        "nextEvent":"9월 16일 외국인 현선물 수급·9월 17일 한국장 FOMC 반응",
-        "holdCondition":"KOSPI 외국인·기관 매도와 원화 약세가 지속되지만 KOSDAQ 수급·Breadth가 버팀",
+        "asOf":"2026-09-16 한국장",
+        "nextEvent":"9월 17일 한국장 FOMC 반응·외국인 현선물·반도체 EPS",
+        "holdCondition":"기관의 반도체·AI 인프라 매수가 지수를 방어하지만 외국인 매도·원화 약세·좁은 Breadth가 지속",
         "changeCondition":"반도체와 KOSPI Breadth·외국인 현선물 동반 매수 또는 원화·신용 스트레스와 KOSDAQ Breadth 재악화",
         "sourceRefs":[{"type":"daily","id":"2026-09-15","label":"9/15 Daily"}]
       }
     ],
     "nextEvents":[
-      {"date":"2026-09-16","title":"FOMC·SEP·점도표","why":"강한 물가와 성장 사이의 정책경로가 장단기 금리와 달러를 재설정","axisIds":["growth","inflation","liquidity","financial-conditions","global-risk"]}
+      {"date":"2026-09-17","title":"FOMC 결과 이후 한국장 반응","why":"인상 여부보다 장단기곡선·달러·신용스프레드와 외국인 수급의 결합이 레짐을 결정","axisIds":["inflation","liquidity","financial-conditions","global-risk","korea-transmission"]}
     ]
   },
   "history":[
+    {
+      "date":"2026-09-16",
+      "overallState":"위험회피",
+      "previousState":"위험회피",
+      "direction":"기술적 반등·스트레스 지속",
+      "summary":"반도체·AI 인프라의 이익 가시성으로 양 지수가 반등했지만 외국인 매도·좁은 KOSPI Breadth와 5% 금리·고유가·원화 약세가 남아 위험회피를 유지했다.",
+      "changedAxes":["물가","시장 금융여건","글로벌 위험선호","한국시장 전달"]
+    },
     {
       "date":"2026-09-15",
       "overallState":"위험회피",
