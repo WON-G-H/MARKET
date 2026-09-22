@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="개인 투자 리서치 로그와 시장 판단을 축적하는 로컬 허브">
   <title>Market Ledger — 개인 투자 리서치 허브</title>
-  <link rel="stylesheet" href="assets/style.css?v=ae49137886b04914">
+  <link rel="stylesheet" href="assets/style.css?v=b4aa399150172f7e">
 </head>
 <body>
+  <div class="app-viewport">
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
       <div class="brand">
@@ -31,6 +32,7 @@
       </div>
     </aside>
 
+    <button class="menu-backdrop" id="menuBackdrop" aria-label="메뉴 닫기" tabindex="-1"></button>
     <main class="main">
       <header class="topbar">
         <button class="menu-button" id="menuButton" aria-label="메뉴 열기">☰</button>
@@ -39,6 +41,7 @@
         </div>
         <div class="top-actions">
           <span class="asof">시장데이터 갱신 <b id="researchAsOf">—</b></span>
+          <label class="view-picker"><span>화면</span><select id="viewMode" aria-label="화면 보기 방식"><option value="auto">자동</option><option value="mobile">모바일</option><option value="pc">PC</option></select></label>
           <button class="icon-button" id="themeButton" aria-label="색상 테마 전환">◐</button>
         </div>
       </header>
@@ -47,7 +50,8 @@
     </main>
   </div>
   <div class="toast" id="toast"></div>
-  <script src="data/core.js?v=688a84604f4f8da5"></script>
+  </div>
+  <script src="data/core.js?v=c448711f69850505"></script>
   <script src="data/macro.js?v=20260904-ledger1"></script>
   <script src="data/korea.js?v=20260917-manual1"></script>
   <script src="data/ideas.js?v=20260916-yield1"></script>
@@ -55,10 +59,10 @@
   <script src="data/daily/daily-2026-09.js?v=1c1a3750c0ac3dc6"></script>
   <script src="data/weekly/weekly-2026.js?v=6fa7277a36217a9b"></script>
   <script src="data/calendar/calendar-2026-09.js?v=20260905-ledger1"></script>
-  <script src="data/market-live.js?v=4651ca127c24fd4d"></script>
-  <script src="data/calendar-live.js?v=26391b4ff00f67af"></script>
-  <script src="data/heatmap.js?v=463cbe922acc035d"></script>
-  <script src="assets/heatmap.js?v=20260921-indices4"></script>
-  <script src="assets/script.js?v=010b958202eec4e7"></script>
+  <script src="data/market-live.js?v=ab6580c0e3ac0800"></script>
+  <script src="data/calendar-live.js?v=6693d38fb3f4eae0"></script>
+  <script src="data/heatmap.js?v=9d1e2283fac78502"></script>
+  <script src="assets/heatmap.js?v=6f06b90d78b83e1b"></script>
+  <script src="assets/script.js?v=beddec0998a39ede"></script>
 </body>
 </html>

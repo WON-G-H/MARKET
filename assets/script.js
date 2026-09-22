@@ -132,7 +132,45 @@ function macroCalendar(){const events=data.calendar.events,[y,m]=calendarMonth.s
 function eventDetail(id){const e=data.calendar.events.find(v=>v.id===id);if(!e)return '';return `<div class="event-detail-head"><span class="event-category ${categoryClass(e.category)}">${esc(e.category)}</span><span class="event-status">${esc(e.status)}</span><h2>${esc(e.title)}</h2><div>${esc(e.date)} · ${esc(e.kst)} · ${esc(e.dateBasis||"KST")} · ${esc(e.country)} · <b>${stars(e.importance)}</b></div></div><div class="event-numbers"><div><span>이전</span><b>${esc(e.previous)}</b></div><div><span>컨센서스</span><b>${esc(e.consensus)}</b></div><div><span>실제</span><b>${esc(e.actual)}</b></div><div><span>예상 대비</span><b>${esc(e.surprise)}</b></div></div>${e.scheduleNote?`<p class="snapshot-note">${esc(e.scheduleNote)}</p>`:""}<section><h3>왜 지금 중요한가</h3><p>${esc(e.why)}</p></section><section><h3>시장 전달경로</h3><p class="event-path">${esc(e.path)}</p></section><section><h3>세부 체크포인트</h3>${bullets(e.checkpoints)}</section><section><h3>발표 후 시장반응</h3><p>${esc(e.reaction)}</p></section><div class="event-links"><a href="${e.sourceUrl}" target="_blank" rel="noreferrer">${esc(e.source)} ↗</a><span>한국 Daily 귀속: ${esc(e.linkedDaily)}</span></div>`}
 const renders={heatmap:()=>window.MarketHeatmap.render(),dashboard:()=>dashboard().replace('<div class="dashboard-report">',weeklySummary()+'<div class="dashboard-report">'),daily,weekly,macro,korea,ideas,portfolio,calendar:macroCalendar};
 function show(view,push=true){nav.forEach(n=>n.classList.toggle('active',n.dataset.view===view));content.innerHTML=renders[view]();content.dataset.view=view;bind();window.scrollTo(0,0);if(push)location.hash=view}
-function bind(){if(content.querySelectorAll("[data-hm-market]").length)window.MarketHeatmap.bind(content);content.querySelectorAll("[data-week]").forEach(b=>b.onclick=()=>showWeek(b.dataset.week));content.querySelectorAll("[data-hypothesis]").forEach(b=>b.onclick=e=>{e.preventDefault();document.getElementById(b.dataset.hypothesis)?.scrollIntoView({behavior:"smooth"})});content.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>show(b.dataset.jump));content.querySelectorAll('[data-log]').forEach(b=>b.onclick=()=>{content.innerHTML=dailyDetail(b.dataset.log);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-idea]').forEach(b=>b.onclick=()=>{content.innerHTML=ideaDetail(b.dataset.idea);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{content.innerHTML=ideas(b.dataset.filter);bind()});content.querySelectorAll('[data-event]').forEach(b=>b.onclick=()=>{const dialog=document.getElementById('eventDialog'),detail=document.getElementById('eventDetail');detail.innerHTML=eventDetail(b.dataset.event);dialog.showModal()});content.querySelectorAll('[data-dialog-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());content.querySelectorAll('[data-cal-shift]').forEach(b=>b.onclick=()=>{const [y,m]=calendarMonth.split('-').map(Number),d=new Date(y,m-1+Number(b.dataset.calShift),1);calendarMonth=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;content.innerHTML=macroCalendar();bind()});content.querySelectorAll('[data-cal-today]').forEach(b=>b.onclick=()=>{calendarMonth=data.calendar.today.slice(0,7);content.innerHTML=macroCalendar();bind()})}
+
+function bindReader(){
+ content.querySelectorAll('.research-paper').forEach(paper=>{
+  if(paper.querySelector('.reader-tools'))return;
+  const sections=[...paper.querySelectorAll('.paper-section')];
+  const controls=document.createElement('div');controls.className='reader-tools';
+  controls.innerHTML=`<details class="reader-toc"><summary>보고서 목차</summary><nav aria-label="보고서 목차">${sections.map((section,i)=>`<button data-reader-section="${i}"><span>${esc(section.querySelector('.section-number')?.textContent||'')}</span>${esc(section.querySelector('h2')?.textContent||'')}</button>`).join('')}</nav></details><button class="reader-font" aria-label="본문 글자 크기 변경">글자 크게</button>`;
+  paper.querySelector('.paper-head').after(controls);
+  let large=false;
+  try{large=localStorage.getItem('ledger-reader-large')==='true';}catch{}
+  const font=controls.querySelector('.reader-font');
+  const apply=()=>{paper.classList.toggle('reader-large',large);font.textContent=large?'기본 글자':'글자 크게';font.setAttribute('aria-pressed',String(large));};
+  apply();
+  font.onclick=()=>{large=!large;apply();try{localStorage.setItem('ledger-reader-large',String(large));}catch{}};
+  controls.querySelectorAll('[data-reader-section]').forEach(button=>button.onclick=()=>{
+   controls.querySelector('details').open=false;
+   const target=sections[Number(button.dataset.readerSection)];
+   target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  paper.querySelectorAll('.weekly-table-wrap').forEach(table=>{
+   table.setAttribute('tabindex','0');table.setAttribute('role','region');
+   table.setAttribute('aria-label',(table.closest('.paper-section')?.querySelector('h2')?.textContent||'보고서')+' 표 · 좌우 스크롤');
+   const hint=document.createElement('p');hint.className='reader-table-hint';hint.textContent='표는 좌우로 밀어서 볼 수 있습니다 →';table.before(hint);
+  });
+ });
+}
+function bind(){bindReader();if(content.querySelectorAll("[data-hm-market]").length)window.MarketHeatmap.bind(content);content.querySelectorAll("[data-week]").forEach(b=>b.onclick=()=>showWeek(b.dataset.week));content.querySelectorAll("[data-hypothesis]").forEach(b=>b.onclick=e=>{e.preventDefault();document.getElementById(b.dataset.hypothesis)?.scrollIntoView({behavior:"smooth"})});content.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>show(b.dataset.jump));content.querySelectorAll('[data-log]').forEach(b=>b.onclick=()=>{content.innerHTML=dailyDetail(b.dataset.log);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-idea]').forEach(b=>b.onclick=()=>{content.innerHTML=ideaDetail(b.dataset.idea);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{content.innerHTML=ideas(b.dataset.filter);bind()});content.querySelectorAll('[data-event]').forEach(b=>b.onclick=()=>{const dialog=document.getElementById('eventDialog'),detail=document.getElementById('eventDetail');detail.innerHTML=eventDetail(b.dataset.event);dialog.showModal()});content.querySelectorAll('[data-dialog-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());content.querySelectorAll('[data-cal-shift]').forEach(b=>b.onclick=()=>{const [y,m]=calendarMonth.split('-').map(Number),d=new Date(y,m-1+Number(b.dataset.calShift),1);calendarMonth=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;content.innerHTML=macroCalendar();bind()});content.querySelectorAll('[data-cal-today]').forEach(b=>b.onclick=()=>{calendarMonth=data.calendar.today.slice(0,7);content.innerHTML=macroCalendar();bind()})}
+
+const viewPicker=document.getElementById('viewMode');
+let viewMode='auto';try{viewMode=localStorage.getItem('market-ledger-view')||'auto';}catch{}
+const applyView=mode=>{
+ viewMode=['auto','mobile','pc'].includes(mode)?mode:'auto';
+ document.body.dataset.viewMode=viewMode;viewPicker.value=viewMode;
+ document.getElementById('sidebar').classList.remove('open');
+ try{localStorage.setItem('market-ledger-view',viewMode);}catch{}
+};
+applyView(viewMode);viewPicker.onchange=()=>applyView(viewPicker.value);
+document.getElementById('menuBackdrop').onclick=()=>document.getElementById('sidebar').classList.remove('open');
+window.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('sidebar').classList.remove('open');});
 nav.forEach(n=>n.onclick=()=>{show(n.dataset.view);document.getElementById('sidebar').classList.remove('open')});document.getElementById('menuButton').onclick=()=>document.getElementById('sidebar').classList.toggle('open');document.getElementById('themeButton').onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('market-ledger-theme',document.body.classList.contains('light')?'light':'dark')};if(localStorage.getItem('market-ledger-theme')==='light')document.body.classList.add('light');
 
 function showWeek(id,push=true){nav.forEach(n=>n.classList.toggle('active',n.dataset.view==='weekly'));content.innerHTML=weeklyDetail(id);content.dataset.view='weekly';content.dataset.week=id;bind();window.scrollTo(0,0);if(push)location.hash='weekly/'+id}

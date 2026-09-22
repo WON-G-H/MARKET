@@ -3,7 +3,7 @@ window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.core={
   "marketDataStatus": {
   "status": "success",
-  "checkedAt": "2026-09-22T13:36:25.960146+00:00",
+  "checkedAt": "2026-09-22T14:22:50.463292+00:00",
   "observationDates": {
     "kospi": "2026-09-22",
     "kosdaq": "2026-09-22",
@@ -307,14 +307,14 @@ window.MARKET_LEDGER.core={
   {
     "id": "fx",
     "label": "USD/KRW",
-    "current": "1,359.20",
+    "current": "1,356.40",
     "previous": "1,375.00",
     "previousLabel": "이전 관측",
     "previousAsOf": "2026-09-21",
-    "numericCurrent": 1359.2,
+    "numericCurrent": 1356.4,
     "numericPrevious": 1375.0,
-    "change": "-15.80",
-    "changePct": "-1.15%",
+    "change": "-18.60",
+    "changePct": "-1.35%",
     "direction": "down",
     "unit": "원 · 매매기준율",
     "observationDate": "2026-09-22",

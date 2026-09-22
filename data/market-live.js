@@ -1,6 +1,6 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.marketLive={
-  "checkedAt": "2026-09-22T13:36:26.204145+00:00",
+  "checkedAt": "2026-09-22T14:22:50.487518+00:00",
   "cards": {
     "kospi": {
       "id": "kospi",
@@ -125,11 +125,11 @@ window.MARKET_LEDGER.marketLive={
     "fx": {
       "id": "fx",
       "label": "USD/KRW",
-      "current": "1,359.20",
+      "current": "1,356.40",
       "previous": "1,375.00",
       "previousAsOf": "2026-09-21",
-      "change": "-15.80",
-      "changePct": "-1.15%",
+      "change": "-18.60",
+      "changePct": "-1.35%",
       "unit": "원 · 매매기준율",
       "observationDate": "2026-09-22",
       "source": "네이버 금융 · 매매기준율",
@@ -275,10 +275,10 @@ window.MARKET_LEDGER.marketLive={
     "jpykrw_reference": {
       "id": "jpykrw_reference",
       "label": "엔화 매매기준율",
-      "current": "864",
+      "current": "862.38",
       "previous": "873.68",
       "previousAsOf": "2026-09-21",
-      "change": "-9.68",
+      "change": "-11.3",
       "unit": "원/100엔",
       "observationDate": "2026-09-22",
       "source": "daily",
@@ -290,10 +290,10 @@ window.MARKET_LEDGER.marketLive={
     "eurkrw_reference": {
       "id": "eurkrw_reference",
       "label": "유로 매매기준율",
-      "current": "1,557.03",
+      "current": "1,552.94",
       "previous": "1576.3",
       "previousAsOf": "2026-09-21",
-      "change": "-19.27",
+      "change": "-23.36",
       "unit": "원/유로",
       "observationDate": "2026-09-22",
       "source": "daily",
@@ -305,10 +305,10 @@ window.MARKET_LEDGER.marketLive={
     "cnykrw_reference": {
       "id": "cnykrw_reference",
       "label": "위안 매매기준율",
-      "current": "202.9",
+      "current": "202.47",
       "previous": "205.43",
       "previousAsOf": "2026-09-21",
-      "change": "-2.53",
+      "change": "-2.96",
       "unit": "원/위안",
       "observationDate": "2026-09-22",
       "source": "daily",
