@@ -6,6 +6,7 @@ const data={
  daily:flatten(ledger.daily).sort((a,b)=>a.date.localeCompare(b.date)),
  dailyAddenda:ledger.dailyAddenda||{},
  weekly:flatten(ledger.weekly),
+ cardNews:ledger.cardNews,
  macro:ledger.macro?.current||[],
  korea:ledger.korea?.current,
  ideas:ledger.ideas?.items||[],
@@ -130,9 +131,35 @@ function calendarEventButton(e){return `<button class="calendar-event ${category
 function calendarCollectionStatus(){const s=ledger.calendarLive;if(!s)return '';return `<div class="dashboard-data-status"><span>일정 확인 ${esc(new Date(s.checkedAt).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',hour12:false}))} KST</span><span>${esc(s.coverage)}</span>${s.warnings.map(w=>`<span>${esc(w)}</span>`).join('')}</div>`;}
 function macroCalendar(){const events=data.calendar.events,[y,m]=calendarMonth.split('-').map(Number),today=new Date(`${data.calendar.today}T00:00:00Z`),monday=new Date(today);monday.setUTCDate(today.getUTCDate()-((today.getUTCDay()+6)%7));const sunday=new Date(monday);sunday.setUTCDate(monday.getUTCDate()+6);const weekStart=monday.toISOString().slice(0,10),weekEnd=sunday.toISOString().slice(0,10),weekly=events.filter(e=>e.date>=weekStart&&e.date<=weekEnd).sort((a,b)=>b.importance-a.importance||a.date.localeCompare(b.date)).slice(0,7),cells=monthGrid(calendarMonth);return head('MONTHLY MARKET EVENT SYSTEM','Macro Calendar','일정, 해석 포인트, 전달경로와 발표 후 시장반응을 함께 축적합니다.',`${y}년 ${m}월`)+calendarCollectionStatus()+`<section class="calendar-week"><div><span>이번 주 핵심 이벤트</span><small>한국시장 귀속일은 상세보기에서 별도로 확인합니다.</small></div><div>${weekly.map(e=>`<button data-event="${e.id}"><time>${e.date.slice(5).replace('-','/')}</time><b>${esc(e.title)}</b><i>${stars(e.importance)}</i></button>`).join('')}</div></section><section class="calendar-shell"><div class="calendar-toolbar"><button data-cal-shift="-1">← 이전 달</button><div><strong>${y}년 ${m}월</strong><button data-cal-today>오늘</button></div><button data-cal-shift="1">다음 달 →</button></div><div class="calendar-weekdays">${['월','화','수','목','금','토','일'].map(x=>`<b>${x}</b>`).join('')}</div><div class="calendar-grid">${cells.map(date=>{if(!date)return '<div class="calendar-day outside"></div>';const dayEvents=events.filter(e=>e.date===date);return `<div class="calendar-day ${date===data.calendar.today?'today':''}"><time>${Number(date.slice(-2))}</time><div>${dayEvents.map(calendarEventButton).join('')}</div></div>`}).join('')}</div></section><dialog class="event-dialog" id="eventDialog"><button class="dialog-close" data-dialog-close aria-label="닫기">×</button><div id="eventDetail"></div></dialog>`}
 function eventDetail(id){const e=data.calendar.events.find(v=>v.id===id);if(!e)return '';return `<div class="event-detail-head"><span class="event-category ${categoryClass(e.category)}">${esc(e.category)}</span><span class="event-status">${esc(e.status)}</span><h2>${esc(e.title)}</h2><div>${esc(e.date)} · ${esc(e.kst)} · ${esc(e.dateBasis||"KST")} · ${esc(e.country)} · <b>${stars(e.importance)}</b></div></div><div class="event-numbers"><div><span>이전</span><b>${esc(e.previous)}</b></div><div><span>컨센서스</span><b>${esc(e.consensus)}</b></div><div><span>실제</span><b>${esc(e.actual)}</b></div><div><span>예상 대비</span><b>${esc(e.surprise)}</b></div></div>${e.scheduleNote?`<p class="snapshot-note">${esc(e.scheduleNote)}</p>`:""}<section><h3>왜 지금 중요한가</h3><p>${esc(e.why)}</p></section><section><h3>시장 전달경로</h3><p class="event-path">${esc(e.path)}</p></section><section><h3>세부 체크포인트</h3>${bullets(e.checkpoints)}</section><section><h3>발표 후 시장반응</h3><p>${esc(e.reaction)}</p></section><div class="event-links"><a href="${e.sourceUrl}" target="_blank" rel="noreferrer">${esc(e.source)} ↗</a><span>한국 Daily 귀속: ${esc(e.linkedDaily)}</span></div>`}
-const renders={heatmap:()=>window.MarketHeatmap.render(),dashboard:()=>dashboard().replace('<div class="dashboard-report">',weeklySummary()+'<div class="dashboard-report">'),daily,weekly,macro,korea,ideas,portfolio,calendar:macroCalendar};
+let cardNewsPage=0;
+function cardNews(){
+ const news=data.cardNews;
+ if(!news?.cards?.length)return head('VISUAL RESEARCH','Card News','시장데이터 업데이트를 실행하면 작성된 Daily와 Korea Market을 카드로 정리합니다.')+'<div class="empty">아직 생성된 카드가 없습니다.</div>';
+ cardNewsPage=Math.min(cardNewsPage,news.cards.length-1);
+ const card=news.cards[cardNewsPage],number=String(cardNewsPage+1).padStart(2,'0'),total=String(news.cards.length).padStart(2,'0');
+ const rows=(card.rows||[]).map(row=>`<div class="cn-row"><div class="cn-row-label">${esc(row.label)}</div><div class="cn-row-main"><strong>${esc(row.value)}</strong>${row.detail?`<p>${esc(row.detail)}</p>`:''}</div></div>`).join('');
+ const source=card.source==='Daily Research'?`data-log="${esc(card.sourceDate)}"`:'data-jump="korea"';
+ return head('VISUAL RESEARCH','Card News','한 장씩 핵심과 근거를 읽을 수 있도록 정리했습니다.')+
+  `<div class="cn-status"><span>Daily ${esc(news.dailyDate)} · Korea Market ${esc(news.koreaDate)}</span><span>${esc(news.note)}</span></div>`+
+  `<div class="cn-reader"><nav class="cn-chapters" aria-label="카드 목차"><div class="cn-chapters-head"><span>오늘의 카드 <b>${total}장</b></span><small>좌우로 밀어 모든 카드 보기</small></div><div class="cn-chapter-strip"><button class="cn-chapter-arrow" data-cn-step="-1" aria-label="이전 카드" ${cardNewsPage===0?'disabled':''}>‹</button><div class="cn-chapter-track">${news.cards.map((item,i)=>`<button data-cn-page="${i}" ${i===cardNewsPage?'aria-current="page"':''}><span>${String(i+1).padStart(2,'0')}</span><b>${esc(item.title)}</b></button>`).join('')}</div><button class="cn-chapter-arrow" data-cn-step="1" aria-label="다음 카드" ${cardNewsPage===news.cards.length-1?'disabled':''}>›</button></div></nav>`+
+  `<div class="cn-stage"><article class="cn-card cn-kind-${esc(card.kind)}" aria-label="${number} / ${total}"><div class="cn-top"><span class="cn-mark">${esc(card.eyebrow)}</span><span>${number} / ${total}</span></div><h2>${esc(card.title)}</h2>${card.summary?`<section class="cn-summary"><span>핵심</span><p>${esc(card.summary)}</p></section>`:''}${rows?`<div class="cn-evidence"><div class="cn-evidence-head"><span>항목</span><span>내용</span></div>${rows}</div>`:''}<div class="cn-foot"><span>${esc(card.source)} · ${esc(card.sourceDate)}</span><button ${source}>원문 보기 ↗</button></div></article>`+
+  `<div class="cn-controls"><button data-cn-page="${cardNewsPage-1}" ${cardNewsPage===0?'disabled':''}>← 이전 장</button><span>${number} / ${total}</span><button data-cn-page="${cardNewsPage+1}" ${cardNewsPage===news.cards.length-1?'disabled':''}>다음 장 →</button></div></div></div>`;
+}
+const renders={heatmap:()=>window.MarketHeatmap.render(),dashboard:()=>dashboard().replace('<div class="dashboard-report">',weeklySummary()+'<div class="dashboard-report">'),daily,weekly,macro,korea,ideas,portfolio,calendar:macroCalendar,cardnews:cardNews};
 function show(view,push=true){nav.forEach(n=>n.classList.toggle('active',n.dataset.view===view));content.innerHTML=renders[view]();content.dataset.view=view;bind();window.scrollTo(0,0);if(push)location.hash=view}
 
+function setCardNewsPage(page){
+ if(!Number.isInteger(page)||page<0||page>=data.cardNews.cards.length)return;
+ cardNewsPage=page;content.innerHTML=cardNews();bind();content.querySelector('.cn-reader')?.scrollIntoView({block:'start'});
+}
+function bindCardNews(){
+ content.querySelectorAll('[data-cn-page]').forEach(b=>b.onclick=()=>setCardNewsPage(Number(b.dataset.cnPage)));
+ content.querySelectorAll('[data-cn-step]').forEach(b=>b.onclick=()=>setCardNewsPage(cardNewsPage+Number(b.dataset.cnStep)));
+ const track=content.querySelectorAll('.cn-chapter-track')[0],active=track?.querySelector('[aria-current="page"]');
+ if(track&&active){const trackBox=track.getBoundingClientRect(),activeBox=active.getBoundingClientRect();track.scrollLeft+=activeBox.left-trackBox.left-(trackBox.width-activeBox.width)/2;}
+ const stage=content.querySelectorAll('.cn-stage')[0];
+ if(stage){let start;stage.addEventListener('touchstart',e=>{if(e.touches.length===1)start=[e.touches[0].clientX,e.touches[0].clientY]},{passive:true});stage.addEventListener('touchend',e=>{if(!start||!e.changedTouches.length)return;const dx=e.changedTouches[0].clientX-start[0],dy=e.changedTouches[0].clientY-start[1];start=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.4)setCardNewsPage(cardNewsPage+(dx<0?1:-1))},{passive:true});}
+}
 function bindReader(){
  content.querySelectorAll('.research-paper').forEach(paper=>{
   if(paper.querySelector('.reader-tools'))return;
@@ -157,6 +184,7 @@ function bindReader(){
    const hint=document.createElement('p');hint.className='reader-table-hint';hint.textContent='표는 좌우로 밀어서 볼 수 있습니다 →';table.before(hint);
   });
  });
+ bindCardNews();
 }
 function bind(){bindReader();if(content.querySelectorAll("[data-hm-market]").length)window.MarketHeatmap.bind(content);content.querySelectorAll("[data-week]").forEach(b=>b.onclick=()=>showWeek(b.dataset.week));content.querySelectorAll("[data-hypothesis]").forEach(b=>b.onclick=e=>{e.preventDefault();document.getElementById(b.dataset.hypothesis)?.scrollIntoView({behavior:"smooth"})});content.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>show(b.dataset.jump));content.querySelectorAll('[data-log]').forEach(b=>b.onclick=()=>{content.innerHTML=dailyDetail(b.dataset.log);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-idea]').forEach(b=>b.onclick=()=>{content.innerHTML=ideaDetail(b.dataset.idea);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{content.innerHTML=ideas(b.dataset.filter);bind()});content.querySelectorAll('[data-event]').forEach(b=>b.onclick=()=>{const dialog=document.getElementById('eventDialog'),detail=document.getElementById('eventDetail');detail.innerHTML=eventDetail(b.dataset.event);dialog.showModal()});content.querySelectorAll('[data-dialog-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());content.querySelectorAll('[data-cal-shift]').forEach(b=>b.onclick=()=>{const [y,m]=calendarMonth.split('-').map(Number),d=new Date(y,m-1+Number(b.dataset.calShift),1);calendarMonth=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;content.innerHTML=macroCalendar();bind()});content.querySelectorAll('[data-cal-today]').forEach(b=>b.onclick=()=>{calendarMonth=data.calendar.today.slice(0,7);content.innerHTML=macroCalendar();bind()})}
 

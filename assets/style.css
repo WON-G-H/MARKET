@@ -222,3 +222,52 @@ body[data-view-mode="pc"] .app-viewport{min-width:1200px}
 .fm-tooltip:popover-open{margin:0;inset:auto}
 
 @media(max-width:760px){body[data-view-mode="pc"] .view-picker{position:fixed;right:12px;bottom:16px;z-index:120;background:var(--panel);padding:6px;border:1px solid var(--line);border-radius:8px}}
+/* Card News: portrait research sheets built from authored Daily and Korea Market text. */
+.cn-status{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;margin:-8px 0 24px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.6}
+.cn-status span:first-child{color:var(--accent);font-weight:700}
+.cn-reader{display:grid;grid-template-columns:minmax(190px,230px) minmax(0,760px);justify-content:center;align-items:start;gap:22px;margin:0 auto 64px;max-width:1050px;scroll-margin-top:86px}
+.cn-chapters{position:sticky;top:18px;max-height:calc(100dvh - 36px);overflow:auto;border:1px solid var(--line);background:var(--panel);padding:12px;border-radius:8px}
+.cn-chapters::-webkit-scrollbar{width:5px;height:5px}
+.cn-chapters::-webkit-scrollbar-thumb{background:#9b777e;border-radius:10px}
+.cn-chapters-head{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:700;padding:5px 9px 12px}
+.cn-chapters-head small{display:none}
+.cn-chapter-track button{display:flex;align-items:flex-start;gap:11px;width:100%;border:0;background:transparent;color:var(--muted);padding:11px 9px;text-align:left;border-radius:5px;cursor:pointer;line-height:1.45}
+.cn-chapter-track button span{font:700 11px Arial,sans-serif;color:#b76b76;margin-top:2px}
+.cn-chapter-track button b{font-size:12px;font-weight:600;word-break:keep-all}
+.cn-chapter-track button:hover,.cn-chapter-track button:focus-visible,.cn-chapter-track button[aria-current="page"]{background:#b8394d20;color:var(--text)}
+.cn-chapter-track button[aria-current="page"]{box-shadow:inset 3px 0 #b8394d}
+.cn-chapter-arrow{display:none}
+.cn-stage{min-width:0}
+.cn-card{box-sizing:border-box;min-width:0;min-height:890px;padding:38px 42px 30px;border:1px solid #d7d3d1;background:#fff;color:#28272a;box-shadow:0 18px 52px #00000020;display:flex;flex-direction:column}
+.cn-kind-cover{background:#fff}
+.cn-top,.cn-foot{display:flex;align-items:center;justify-content:space-between;gap:15px;font:700 13px Arial,sans-serif}
+.cn-top{padding-bottom:19px;border-bottom:2px solid #2d2c30}
+.cn-top>span:last-child{color:#95101c;white-space:nowrap;font-size:17px}
+.cn-mark{display:inline-block;padding:5px 9px;background:#2d2c30;color:#fff;letter-spacing:.01em}
+.cn-card h2{font-size:clamp(30px,3.1vw,46px);line-height:1.25;letter-spacing:-.05em;word-break:keep-all;margin:28px 0 28px;padding-bottom:25px;border-bottom:2px solid #2d2c30}
+.cn-kind-cover h2{font-size:clamp(37px,3.7vw,54px)}
+.cn-summary{padding:25px 28px;margin:0 0 26px;background:#f4f4f3;line-height:1.65}
+.cn-kind-closing .cn-summary{background:#f4bfc4;border:2px solid #2d2c30}
+.cn-summary span{display:inline-block;padding:3px 8px;background:#2d2c30;color:#fff;font-size:13px;font-weight:800}
+.cn-summary p{font-size:clamp(20px,2vw,27px);font-weight:650;margin:16px 0 0;word-break:keep-all}
+.cn-evidence{border-top:2px solid #2d2c30;margin-bottom:25px}
+.cn-evidence-head,.cn-row{display:grid;grid-template-columns:minmax(90px,25%) minmax(0,1fr)}
+.cn-evidence-head{background:#ecebea;font-size:14px;font-weight:800}
+.cn-evidence-head span{padding:14px 16px}
+.cn-evidence-head span+span,.cn-row-main{border-left:1px solid #d0cecc}
+.cn-row{border-top:1px solid #d0cecc}
+.cn-row-label{font-size:17px;font-weight:800;color:#7f1220;padding:15px 14px;word-break:keep-all}
+.cn-row-main{padding:14px 16px;line-height:1.6;word-break:keep-all}
+.cn-row-main strong{font-size:17px;font-weight:600}
+.cn-row-main p{font-size:14px;color:#57565a;margin:7px 0 0}
+.cn-foot{margin-top:auto;padding-top:15px;border-top:1px solid #cfcaca;color:#6b696b;font-size:12px}
+.cn-foot button{border:0;background:transparent;color:#95101c;font:700 12px Arial,sans-serif;cursor:pointer;white-space:nowrap;min-height:36px}
+.cn-foot button:hover,.cn-foot button:focus-visible{text-decoration:underline}
+.cn-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:16px 0 30px}
+.cn-controls button{border:1px solid var(--line);background:var(--panel);color:var(--text);font:700 13px Arial,sans-serif;padding:12px 17px;cursor:pointer;border-radius:5px}
+.cn-controls button:hover,.cn-controls button:focus-visible{border-color:#b8394d}
+.cn-controls button:disabled{opacity:.35;cursor:default}
+.cn-controls span{color:var(--muted);font-size:12px}
+@container ledger (max-width:900px){.cn-reader{grid-template-columns:minmax(0,1fr)}.cn-chapters{position:static;max-height:none;overflow:hidden;padding:8px}.cn-chapters-head{padding:5px 8px 9px}.cn-chapters-head small{display:block;font-size:11px;font-weight:500}.cn-chapter-strip{display:flex;align-items:center;gap:6px;min-width:0}.cn-chapter-track{display:flex;flex:1;min-width:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.cn-chapter-track::-webkit-scrollbar{display:none}.cn-chapter-track button{flex:0 0 180px;width:180px;height:44px;min-width:0;align-items:center;scroll-snap-align:center}.cn-chapter-track button b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.cn-chapter-arrow{display:block;flex:0 0 34px;height:42px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text);font-size:25px;line-height:1;cursor:pointer}.cn-chapter-arrow:disabled{opacity:.35;cursor:default}.cn-card{max-width:760px;margin:auto}}
+@container ledger (max-width:600px){.cn-status{margin-top:0}.cn-reader{gap:12px}.cn-chapter-track button{flex-basis:170px;width:170px}.cn-card{padding:23px 20px 20px;min-height:680px}.cn-card h2,.cn-kind-cover h2{font-size:31px;margin:21px 0;padding-bottom:20px}.cn-top{font-size:10px}.cn-top>span:last-child{font-size:13px}.cn-summary{padding:17px;margin-bottom:18px}.cn-summary p{font-size:18px}.cn-evidence-head,.cn-row{grid-template-columns:minmax(66px,25%) minmax(0,1fr)}.cn-evidence-head span,.cn-row-label,.cn-row-main{padding:10px}.cn-row-label,.cn-row-main strong{font-size:14px}.cn-row-main p{font-size:12px}.cn-foot{font-size:10px}}
+@media print{.sidebar,.topbar,.cn-chapters,.cn-controls,.cn-foot button{display:none!important}.app-shell{display:block}.content{padding:0}.cn-reader{display:block}.cn-card{box-shadow:none;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
