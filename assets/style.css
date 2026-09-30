@@ -223,6 +223,13 @@ body[data-view-mode="pc"] .app-viewport{min-width:1200px}
 
 @media(max-width:760px){body[data-view-mode="pc"] .view-picker{position:fixed;right:12px;bottom:16px;z-index:120;background:var(--panel);padding:6px;border:1px solid var(--line);border-radius:8px}}
 /* Card News: portrait research sheets built from authored Daily and Korea Market text. */
+.cn-date-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 20px;font-size:13px}
+.cn-date-bar label{color:var(--muted);font-weight:700}
+.cn-date-bar select{min-width:180px;max-width:100%;padding:10px 12px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:7px;font:inherit}
+.cn-date-actions{display:flex;gap:8px;margin-left:auto}
+.cn-date-actions button{padding:9px 12px;font-size:12px;white-space:nowrap;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:7px;cursor:pointer}
+.cn-date-actions button:disabled{opacity:.35;cursor:default}
+@container ledger (max-width:600px){.cn-date-bar select{flex:1;min-width:160px}.cn-date-actions{width:100%;margin-left:0}.cn-date-actions button{flex:1}}
 .cn-status{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;margin:-8px 0 24px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.6}
 .cn-status span:first-child{color:var(--accent);font-weight:700}
 .cn-reader{display:grid;grid-template-columns:minmax(190px,230px) minmax(0,760px);justify-content:center;align-items:start;gap:22px;margin:0 auto 64px;max-width:1050px;scroll-margin-top:86px}
