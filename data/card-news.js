@@ -1,8 +1,8 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.cardNews={
   "dailyDate": "2026-10-02",
-  "koreaDate": "2026-10-02",
-  "sourceHash": "1ef6b7bc323f45c3a2d610ea185ab7750b2939abfb727d1136b41668587236b3",
+  "koreaDate": "2026-10-06",
+  "sourceHash": "06d3eb5634f32fca7ad249ab9aa25e9c23881fc55ef2bb86143fe425f17645ad",
   "cards": [
     {
       "kind": "cover",
@@ -34,7 +34,7 @@ window.MARKET_LEDGER.cardNews={
       "kind": "market",
       "eyebrow": "KOREA MARKET · 지수",
       "title": "지수와 시장 내부",
-      "summary": "지수 방향은 엇갈렸지만 양 시장 상승 종목 우위; 전일보다 시장 폭 축소",
+      "summary": "코스피 하락 종목 소폭 우세; 코스닥은 지수 상승과 시장 폭 개선 동반",
       "rows": [
         {
           "label": "KOSPI",
@@ -48,32 +48,32 @@ window.MARKET_LEDGER.cardNews={
         }
       ],
       "source": "Korea Market",
-      "sourceDate": "2026-10-02"
+      "sourceDate": "2026-10-06"
     },
     {
       "kind": "market",
       "eyebrow": "KOREA MARKET · 수급",
       "title": "누가 사고팔았나",
-      "summary": "KOSPI 상승 500·하락 362 · KOSDAQ 상승 958·하락 681",
+      "summary": "KOSPI 상승425·하락461 · KOSDAQ 상승1,012·하락645",
       "rows": [
         {
           "label": "외국인",
-          "value": "KOSPI -1,367억원 · KOSDAQ -1,742억원",
-          "detail": "양 시장 현물 순매도; 코스닥은 전일 매수에서 전환, 장 후반 코스피 선물 매수는 별도 흐름"
+          "value": "KOSPI -1조7,508억원 · KOSDAQ +1,187억원",
+          "detail": "신한 마감 표 기준; 코스피 오후 현선물 매도 확대와 코스닥 매수 분화"
         },
         {
           "label": "기관",
-          "value": "KOSPI +3,813억원 · KOSDAQ +938억원",
-          "detail": "두 시장 순매수 유지; 코스닥 매수 규모는 전일 +5,683억원보다 축소"
+          "value": "KOSPI -20억원 · KOSDAQ +1,018억원",
+          "detail": "코스피 소폭 순매도, 코스닥 외국인과 동반 순매수"
         },
         {
           "label": "개인",
-          "value": "KOSPI -1조7,205억원 · KOSDAQ +814억원",
-          "detail": "신한 10월 2일 마감 집계; 코스피 매도·코스닥 매수"
+          "value": "KOSPI +7,421억원 · KOSDAQ -2,089억원",
+          "detail": "신한 마감 집계; 코스피 매수·코스닥 매도, 원자료별 수치로 기록"
         }
       ],
       "source": "Korea Market",
-      "sourceDate": "2026-10-02"
+      "sourceDate": "2026-10-06"
     },
     {
       "kind": "market",
@@ -81,28 +81,28 @@ window.MARKET_LEDGER.cardNews={
       "title": "업종 지도 1",
       "rows": [
         {
-          "label": "광통신·네트워크",
-          "value": "주도 테마로 부각",
-          "detail": "티엠씨 +29.9%, 머큐리 +29.8%, 다산네트웍스 +15.2%, 빛샘전자 +12.5%, 오이솔루션 +9.4%; 미국 AI 인프라·네트워크 확장 이슈"
+          "label": "메모리 대형주",
+          "value": "실적 대기 속 조정",
+          "detail": "삼성전자 -1.5%·SK하이닉스 -3.7%; 10/8 예상 잠정실적과 자사주 매입 종료 임박, 미국 Micron도 약세"
         },
         {
-          "label": "정유·제품 공급",
-          "value": "제품 부족·마진 확대",
-          "detail": "S-Oil +11.7%; 중국 10월 제품 수출 중단 보도, 복합 정제마진 일간 42.9달러·월~목 평균 37.4달러; 아시아 디젤 마진 75달러는 별도 지표"
+          "label": "기판·MLCC·장비",
+          "value": "대형 메모리와 수급 분화",
+          "detail": "삼성전기 +6.0%·약2,900억원 MLCC LTA, LG이노텍 +12.2%·심텍 +4.7%·주성엔지니어링 +17.5%; ETF 소부장 편입 확산"
         },
         {
-          "label": "반도체·장비",
-          "value": "실적 재료 유지, 일부 차익실현",
-          "detail": "삼성전자 보합·SK하이닉스 +0.4%, 원익IPS -3.7%·ISC -8.2%; Micron SCA 26건·FY27 CapEx 500억달러 이상 계획"
+          "label": "배터리·2차전지",
+          "value": "인도량·정책 기대와 소재 협약",
+          "detail": "LG에너지솔루션 +5.1%·삼성SDI +8.7%·에코프로비엠 +11.4%·에코프로 +7.3%; Tesla 인도486,532대·ESS13.7GWh, 소재 개발 MoU는 수주와 구분"
         },
         {
-          "label": "전력설비·데이터센터",
-          "value": "수주·전력 확보 부각",
-          "detail": "일진전기 +4.0%·영국 해상풍력 전력망 1,871억원 수주, 대한전선 +4.5%; LG전자 냉각 수주·JERA Chiba 400MW MoU"
+          "label": "바이오·헬스케어",
+          "value": "행사·개별 규제 재료 강세",
+          "detail": "HLB +17.2%·삼천당제약 +16.4%; CPHI Milan·World ADC 기대, 리보세라닙 제조시설 실사 완료는 최종 품목 허가 아님"
         }
       ],
       "source": "Korea Market",
-      "sourceDate": "2026-10-02"
+      "sourceDate": "2026-10-06"
     },
     {
       "kind": "market",
@@ -110,23 +110,28 @@ window.MARKET_LEDGER.cardNews={
       "title": "업종 지도 2",
       "rows": [
         {
-          "label": "방산·우주·로봇",
-          "value": "지정학·개별 뉴스 강세",
-          "detail": "한화에어로스페이스 +3.7%, LIG디펜스앤에어로스페이스 +5.3%, 스피어 +7.2%, 나라스페이스 +22.5%; Atlas 손 공개에 로보티즈 +4.9%"
+          "label": "냉각·전력 인프라",
+          "value": "장기 본계약 구체화",
+          "detail": "LG전자 +7.6%·GST +5.9%; AIR와 총5GW AIDC 칠러 순차 공급 본계약, 추가 CDU 협의; 용량과 계약금액·매출은 구분"
         },
         {
-          "label": "배터리·2차전지",
-          "value": "순환매 지속",
-          "detail": "하이드로리튬 +16.8%, 대주전자재료 +12.0%, 솔브레인홀딩스 +9.8%, SK아이이테크놀로지 +8.5%; SK이노베이션은 정유 재료도 중첩"
+          "label": "보안·우주·방산",
+          "value": "개별 테마 분화",
+          "detail": "샌즈랩 상한가·안랩 +15.6% 금융기관 해킹 재료; 스피어 +8.9%·에이치브이엠 +9.3%, 한화에어로스페이스 -4.6%"
         },
         {
-          "label": "물가·항공·관광",
-          "value": "기저효과·원가·실적의 차이",
-          "detail": "한국 CPI 2.9%·근원 2.8%, 석유류 14.8%; 항공유 부담에 한진칼 -1.1%, 인바운드 호조에도 롯데관광개발 카지노 홀드율 하락"
+          "label": "정유·원유·제품",
+          "value": "원유 회복에도 제품 부족",
+          "detail": "S-Oil -0.5%; 호르무즈 원유 수송 회복·사우디 OSP 인하와 낮은 정제유 비중이 공존, 비축유 발표와 실제 공급 구분"
+        },
+        {
+          "label": "기업 실적·ETF 일정",
+          "value": "환율·납기·정비·예상 수급",
+          "detail": "LG디스플레이 3Q 이익 추정 하향·한전KPS 정비 일정 영향; ETF 10/8·12 거래 예상은 10/2 비중 기준 추정, 실제 자금 유입 아님"
         }
       ],
       "source": "Korea Market",
-      "sourceDate": "2026-10-02"
+      "sourceDate": "2026-10-06"
     },
     {
       "kind": "research",
@@ -356,8 +361,8 @@ window.MARKET_LEDGER.cardNews={
   "editions": {
     "2026-10-02": {
       "dailyDate": "2026-10-02",
-      "koreaDate": "2026-10-02",
-      "sourceHash": "1ef6b7bc323f45c3a2d610ea185ab7750b2939abfb727d1136b41668587236b3",
+      "koreaDate": "2026-10-06",
+      "sourceHash": "06d3eb5634f32fca7ad249ab9aa25e9c23881fc55ef2bb86143fe425f17645ad",
       "cards": [
         {
           "kind": "cover",
@@ -389,7 +394,7 @@ window.MARKET_LEDGER.cardNews={
           "kind": "market",
           "eyebrow": "KOREA MARKET · 지수",
           "title": "지수와 시장 내부",
-          "summary": "지수 방향은 엇갈렸지만 양 시장 상승 종목 우위; 전일보다 시장 폭 축소",
+          "summary": "코스피 하락 종목 소폭 우세; 코스닥은 지수 상승과 시장 폭 개선 동반",
           "rows": [
             {
               "label": "KOSPI",
@@ -403,32 +408,32 @@ window.MARKET_LEDGER.cardNews={
             }
           ],
           "source": "Korea Market",
-          "sourceDate": "2026-10-02"
+          "sourceDate": "2026-10-06"
         },
         {
           "kind": "market",
           "eyebrow": "KOREA MARKET · 수급",
           "title": "누가 사고팔았나",
-          "summary": "KOSPI 상승 500·하락 362 · KOSDAQ 상승 958·하락 681",
+          "summary": "KOSPI 상승425·하락461 · KOSDAQ 상승1,012·하락645",
           "rows": [
             {
               "label": "외국인",
-              "value": "KOSPI -1,367억원 · KOSDAQ -1,742억원",
-              "detail": "양 시장 현물 순매도; 코스닥은 전일 매수에서 전환, 장 후반 코스피 선물 매수는 별도 흐름"
+              "value": "KOSPI -1조7,508억원 · KOSDAQ +1,187억원",
+              "detail": "신한 마감 표 기준; 코스피 오후 현선물 매도 확대와 코스닥 매수 분화"
             },
             {
               "label": "기관",
-              "value": "KOSPI +3,813억원 · KOSDAQ +938억원",
-              "detail": "두 시장 순매수 유지; 코스닥 매수 규모는 전일 +5,683억원보다 축소"
+              "value": "KOSPI -20억원 · KOSDAQ +1,018억원",
+              "detail": "코스피 소폭 순매도, 코스닥 외국인과 동반 순매수"
             },
             {
               "label": "개인",
-              "value": "KOSPI -1조7,205억원 · KOSDAQ +814억원",
-              "detail": "신한 10월 2일 마감 집계; 코스피 매도·코스닥 매수"
+              "value": "KOSPI +7,421억원 · KOSDAQ -2,089억원",
+              "detail": "신한 마감 집계; 코스피 매수·코스닥 매도, 원자료별 수치로 기록"
             }
           ],
           "source": "Korea Market",
-          "sourceDate": "2026-10-02"
+          "sourceDate": "2026-10-06"
         },
         {
           "kind": "market",
@@ -436,28 +441,28 @@ window.MARKET_LEDGER.cardNews={
           "title": "업종 지도 1",
           "rows": [
             {
-              "label": "광통신·네트워크",
-              "value": "주도 테마로 부각",
-              "detail": "티엠씨 +29.9%, 머큐리 +29.8%, 다산네트웍스 +15.2%, 빛샘전자 +12.5%, 오이솔루션 +9.4%; 미국 AI 인프라·네트워크 확장 이슈"
+              "label": "메모리 대형주",
+              "value": "실적 대기 속 조정",
+              "detail": "삼성전자 -1.5%·SK하이닉스 -3.7%; 10/8 예상 잠정실적과 자사주 매입 종료 임박, 미국 Micron도 약세"
             },
             {
-              "label": "정유·제품 공급",
-              "value": "제품 부족·마진 확대",
-              "detail": "S-Oil +11.7%; 중국 10월 제품 수출 중단 보도, 복합 정제마진 일간 42.9달러·월~목 평균 37.4달러; 아시아 디젤 마진 75달러는 별도 지표"
+              "label": "기판·MLCC·장비",
+              "value": "대형 메모리와 수급 분화",
+              "detail": "삼성전기 +6.0%·약2,900억원 MLCC LTA, LG이노텍 +12.2%·심텍 +4.7%·주성엔지니어링 +17.5%; ETF 소부장 편입 확산"
             },
             {
-              "label": "반도체·장비",
-              "value": "실적 재료 유지, 일부 차익실현",
-              "detail": "삼성전자 보합·SK하이닉스 +0.4%, 원익IPS -3.7%·ISC -8.2%; Micron SCA 26건·FY27 CapEx 500억달러 이상 계획"
+              "label": "배터리·2차전지",
+              "value": "인도량·정책 기대와 소재 협약",
+              "detail": "LG에너지솔루션 +5.1%·삼성SDI +8.7%·에코프로비엠 +11.4%·에코프로 +7.3%; Tesla 인도486,532대·ESS13.7GWh, 소재 개발 MoU는 수주와 구분"
             },
             {
-              "label": "전력설비·데이터센터",
-              "value": "수주·전력 확보 부각",
-              "detail": "일진전기 +4.0%·영국 해상풍력 전력망 1,871억원 수주, 대한전선 +4.5%; LG전자 냉각 수주·JERA Chiba 400MW MoU"
+              "label": "바이오·헬스케어",
+              "value": "행사·개별 규제 재료 강세",
+              "detail": "HLB +17.2%·삼천당제약 +16.4%; CPHI Milan·World ADC 기대, 리보세라닙 제조시설 실사 완료는 최종 품목 허가 아님"
             }
           ],
           "source": "Korea Market",
-          "sourceDate": "2026-10-02"
+          "sourceDate": "2026-10-06"
         },
         {
           "kind": "market",
@@ -465,23 +470,28 @@ window.MARKET_LEDGER.cardNews={
           "title": "업종 지도 2",
           "rows": [
             {
-              "label": "방산·우주·로봇",
-              "value": "지정학·개별 뉴스 강세",
-              "detail": "한화에어로스페이스 +3.7%, LIG디펜스앤에어로스페이스 +5.3%, 스피어 +7.2%, 나라스페이스 +22.5%; Atlas 손 공개에 로보티즈 +4.9%"
+              "label": "냉각·전력 인프라",
+              "value": "장기 본계약 구체화",
+              "detail": "LG전자 +7.6%·GST +5.9%; AIR와 총5GW AIDC 칠러 순차 공급 본계약, 추가 CDU 협의; 용량과 계약금액·매출은 구분"
             },
             {
-              "label": "배터리·2차전지",
-              "value": "순환매 지속",
-              "detail": "하이드로리튬 +16.8%, 대주전자재료 +12.0%, 솔브레인홀딩스 +9.8%, SK아이이테크놀로지 +8.5%; SK이노베이션은 정유 재료도 중첩"
+              "label": "보안·우주·방산",
+              "value": "개별 테마 분화",
+              "detail": "샌즈랩 상한가·안랩 +15.6% 금융기관 해킹 재료; 스피어 +8.9%·에이치브이엠 +9.3%, 한화에어로스페이스 -4.6%"
             },
             {
-              "label": "물가·항공·관광",
-              "value": "기저효과·원가·실적의 차이",
-              "detail": "한국 CPI 2.9%·근원 2.8%, 석유류 14.8%; 항공유 부담에 한진칼 -1.1%, 인바운드 호조에도 롯데관광개발 카지노 홀드율 하락"
+              "label": "정유·원유·제품",
+              "value": "원유 회복에도 제품 부족",
+              "detail": "S-Oil -0.5%; 호르무즈 원유 수송 회복·사우디 OSP 인하와 낮은 정제유 비중이 공존, 비축유 발표와 실제 공급 구분"
+            },
+            {
+              "label": "기업 실적·ETF 일정",
+              "value": "환율·납기·정비·예상 수급",
+              "detail": "LG디스플레이 3Q 이익 추정 하향·한전KPS 정비 일정 영향; ETF 10/8·12 거래 예상은 10/2 비중 기준 추정, 실제 자금 유입 아님"
             }
           ],
           "source": "Korea Market",
-          "sourceDate": "2026-10-02"
+          "sourceDate": "2026-10-06"
         },
         {
           "kind": "research",
