@@ -8,6 +8,7 @@ const data={
  weekly:flatten(ledger.weekly),
  cardNews:ledger.cardNews,
  macro:ledger.macro?.current||[],
+ macroReports:[...(ledger.macroReports?.items||[]),...(ledger.macroReports?.topicReports||[]).map(r=>({...r,tags:[r.category],institution:'Market Ledger',type:'파트별 보고서'}))],
  korea:ledger.korea?.current,
  ideas:ledger.ideas?.items||[],
  calendar:{today:ledger.calendarLive?.today||ledger.core?.dashboardDate||new Date().toISOString().slice(0,10),events:ledger.calendarLive?.events||flatten(ledger.calendar)},
@@ -151,7 +152,7 @@ function cardNews(){
   `<div class="cn-stage"><article class="cn-card cn-kind-${esc(card.kind)}" aria-label="${number} / ${total}"><div class="cn-top"><span class="cn-mark">${esc(card.eyebrow)}</span><span>${number} / ${total}</span></div><h2>${esc(card.title)}</h2>${card.summary?`<section class="cn-summary"><span>핵심</span><p>${esc(card.summary)}</p></section>`:''}${rows?`<div class="cn-evidence"><div class="cn-evidence-head"><span>항목</span><span>내용</span></div>${rows}</div>`:''}<div class="cn-foot"><span>${esc(card.source)} · ${esc(card.sourceDate)}</span><button ${source}>원문 보기 ↗</button></div></article>`+
   `<div class="cn-controls"><button data-cn-page="${cardNewsPage-1}" ${cardNewsPage===0?'disabled':''}>← 이전 장</button><span>${number} / ${total}</span><button data-cn-page="${cardNewsPage+1}" ${cardNewsPage===news.cards.length-1?'disabled':''}>다음 장 →</button></div></div></div>`;
 }
-const renders={heatmap:()=>window.MarketHeatmap.render(),dashboard:()=>dashboard().replace('<div class="dashboard-report">',weeklySummary()+'<div class="dashboard-report">'),daily,weekly,macro,korea,ideas,portfolio,calendar:macroCalendar,cardnews:cardNews};
+const renders={heatmap:()=>window.MarketHeatmap.render(),dashboard:()=>dashboard().replace('<div class="dashboard-report">',weeklySummary()+'<div class="dashboard-report">'),daily,weekly,macro,'macro-reports':()=>window.MacroReports.render(),korea,ideas,portfolio,calendar:macroCalendar,cardnews:cardNews};
 function show(view,push=true){nav.forEach(n=>n.classList.toggle('active',n.dataset.view===view));content.innerHTML=renders[view]();content.dataset.view=view;bind();window.scrollTo(0,0);if(push)location.hash=view}
 
 function setCardNewsPage(page){
@@ -171,12 +172,13 @@ function bindCardNews(){
  if(stage){let start;stage.addEventListener('touchstart',e=>{if(e.touches.length===1)start=[e.touches[0].clientX,e.touches[0].clientY]},{passive:true});stage.addEventListener('touchend',e=>{if(!start||!e.changedTouches.length)return;const dx=e.changedTouches[0].clientX-start[0],dy=e.changedTouches[0].clientY-start[1];start=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.4)setCardNewsPage(cardNewsPage+(dx<0?1:-1))},{passive:true});}
 }
 function bindReader(){
+ window.MacroReports?.bind(content);
  content.querySelectorAll('.research-paper').forEach(paper=>{
   if(paper.querySelector('.reader-tools'))return;
   const sections=[...paper.querySelectorAll('.paper-section')];
   const controls=document.createElement('div');controls.className='reader-tools';
   controls.innerHTML=`<details class="reader-toc"><summary>보고서 목차</summary><nav aria-label="보고서 목차">${sections.map((section,i)=>`<button data-reader-section="${i}"><span>${esc(section.querySelector('.section-number')?.textContent||'')}</span>${esc(section.querySelector('h2')?.textContent||'')}</button>`).join('')}</nav></details><button class="reader-font" aria-label="본문 글자 크기 변경">글자 크게</button>`;
-  paper.querySelector('.paper-head').after(controls);
+  (paper.querySelector('.paper-head')||paper.querySelector('.report-header'))?.after(controls);
   let large=false;
   try{large=localStorage.getItem('ledger-reader-large')==='true';}catch{}
   const font=controls.querySelector('.reader-font');
@@ -212,8 +214,8 @@ window.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementByI
 nav.forEach(n=>n.onclick=()=>{show(n.dataset.view);document.getElementById('sidebar').classList.remove('open')});document.getElementById('menuButton').onclick=()=>document.getElementById('sidebar').classList.toggle('open');document.getElementById('themeButton').onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('market-ledger-theme',document.body.classList.contains('light')?'light':'dark')};if(localStorage.getItem('market-ledger-theme')==='light')document.body.classList.add('light');
 
 function showWeek(id,push=true){nav.forEach(n=>n.classList.toggle('active',n.dataset.view==='weekly'));content.innerHTML=weeklyDetail(id);content.dataset.view='weekly';content.dataset.week=id;bind();window.scrollTo(0,0);if(push)location.hash='weekly/'+id}
-function route(){const hash=location.hash.slice(1);if(hash.startsWith('weekly/'))showWeek(decodeURIComponent(hash.slice(7)),false);else show(hash in renders?hash:'dashboard',false)}
-document.getElementById('globalSearch').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();if(!q){route();return}const match=x=>JSON.stringify(x).toLowerCase().includes(q),weeklyMatch=x=>JSON.stringify(x,(k,v)=>['ideaUpdates','ideaIds','validation','comparison','migrationNote'].includes(k)?undefined:v).toLowerCase().includes(q),logs=data.daily.filter(match),weeks=data.weekly.filter(weeklyMatch),is=data.ideas.filter(match),ds=data.decisions.filter(match),es=data.calendar.events.filter(match),count=logs.length+weeks.length+is.length+ds.length+es.length;content.innerHTML=head('SEARCH','검색 결과','“'+e.target.value+'”와 관련된 기록입니다.',count+' RESULTS')+(logs.length?'<h2>Daily</h2>'+dailyArchive(logs):'')+(weeks.length?'<h2>Weekly</h2>'+weeklyArchive(weeks):'')+(is.length?'<h2>Idea Lab</h2>'+ideaList(is):'')+(ds.length?'<h2>Portfolio</h2>'+ds.map(d=>'<div class="weekly-note">'+weeklyFields(d,{date:'날짜',title:'제목',reason:'근거',action:'결정',rationale:'판단'})+'<button data-jump="portfolio">Decision Log →</button></div>').join(''):'')+(es.length?'<h2>Calendar</h2>'+es.map(calendarEventButton).join('')+'<dialog class="event-dialog" id="eventDialog"><button data-dialog-close>닫기</button><div id="eventDetail"></div></dialog>':'')+(!count?'<div class="empty">일치하는 기록이 없습니다.</div>':'');bind()});
+function route(){const hash=location.hash.slice(1);if(hash.startsWith('macro-reports/')){nav.forEach(n=>n.classList.toggle('active',n.dataset.view==='macro-reports'));let id;try{id=decodeURIComponent(hash.slice(14));}catch{id='';}content.innerHTML=window.MacroReports.detail(id);content.dataset.view='macro-reports';bind();window.scrollTo(0,0);}else if(hash.startsWith('weekly/'))showWeek(decodeURIComponent(hash.slice(7)),false);else show(hash in renders?hash:'dashboard',false)}
+document.getElementById('globalSearch').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();if(!q){route();return}const match=x=>JSON.stringify(x).toLowerCase().includes(q),weeklyMatch=x=>JSON.stringify(x,(k,v)=>['ideaUpdates','ideaIds','validation','comparison','migrationNote'].includes(k)?undefined:v).toLowerCase().includes(q),logs=data.daily.filter(match),weeks=data.weekly.filter(weeklyMatch),mrs=data.macroReports.filter(match),is=data.ideas.filter(match),ds=data.decisions.filter(match),es=data.calendar.events.filter(match),count=logs.length+weeks.length+mrs.length+is.length+ds.length+es.length;content.innerHTML=head('SEARCH','검색 결과','“'+esc(e.target.value)+'”와 관련된 기록입니다.',count+' RESULTS')+(logs.length?'<h2>Daily</h2>'+dailyArchive(logs):'')+(weeks.length?'<h2>Weekly</h2>'+weeklyArchive(weeks):'')+(mrs.length?'<h2>매크로 리포트</h2>'+window.MacroReports.rows(mrs):'')+(is.length?'<h2>Idea Lab</h2>'+ideaList(is):'')+(ds.length?'<h2>Portfolio</h2>'+ds.map(d=>'<div class="weekly-note">'+weeklyFields(d,{date:'날짜',title:'제목',reason:'근거',action:'결정',rationale:'판단'})+'<button data-jump="portfolio">Decision Log →</button></div>').join(''):'')+(es.length?'<h2>Calendar</h2>'+es.map(calendarEventButton).join('')+'<dialog class="event-dialog" id="eventDialog"><button data-dialog-close>닫기</button><div id="eventDetail"></div></dialog>':'')+(!count?'<div class="empty">일치하는 기록이 없습니다.</div>':'');bind()});
 window.addEventListener('hashchange',route);
 route();
 })();
