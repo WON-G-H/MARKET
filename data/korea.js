@@ -1,4 +1,4 @@
-/* Korea manual interpretation ·2026-10-12. Automatic fields preserved. */
+/* Korea manual interpretation ·2026-10-13. Automatic fields preserved. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.korea={
   "asOf": "2026-10-12",
@@ -87,3 +87,27 @@ window.MARKET_LEDGER.korea={
   "verified": false,
   "verificationNote": "10/12 신한 마감 표 이미지·미래에셋 종가 대조, 공식 관세청·미 재무부·Fed·OFAC 선별 확인. 일부 수급 합계·종목 시점·추정 및 보도는 출처별 한계 유지. 수동 해석만 갱신, 자동 지수·수급 보존."
 };
+/* Korea manual update · 2026-10-13. Automatic cards and flow data preserved. */
+Object.assign(window.MARKET_LEDGER.korea,{
+asOf:"2026-10-13",updatedAt:"2026-10-13",verified:false,
+verificationNote:"신한 10/13 마감 표·장중 자료를 분리하고 연합뉴스 종가를 선별 대조. 기관 전망·기사 재료는 출처에 귀속. 자동 지수·유동성·투자자 순매수 데이터는 변경하지 않음."
+});
+Object.assign(window.MARKET_LEDGER.korea.current,{
+asOf:"2026.10.13",
+narrative:"코스피는 6,035.35(-5.46%), 코스닥은 837.03(-1.43%)로 마감했다. 거래대금은 제공 자료 기준 각각 26.8조원·6.8조원이었다. 반도체 대형주 투매로 매도 사이드카가 발동했고 코스피는 장중 6,000선을 밑돈 뒤 회복했지만 200일선 아래에서 마쳤다. 신한 마감 기준 삼성전자 -7.4%, SK하이닉스 -10.1%로 지수 부담이 컸다. 외국인은 코스피 4조5,330억원을 순매도한 반면 코스닥은 1,399억원 순매수했다. 개인·기관의 코스피 매수에도 대형주 매도가 강했고 두 시장 모두 하락 종목이 많았다. CXMT의 차세대 서버 D램 출시 계획과 AI 자본조달 경계, 국내 자사주 매입 종료 구간이 겹쳤다. 난야의 가격 상승·장기 공급 확보 설명은 현재 공급 제약이 여전함을 보여주는 별도 재료였다. LG에너지솔루션·에코프로·일부 장비주의 종가 반등과 해운 상대강세는 전체 매수 복원과 구분된다. 원·달러는 1,342.50원(+6.50원)으로 전일 강세 뒤 되돌렸다. 기업 리포트에서는 물류비·인도 시점·데이터센터 계약의 매출 전환과 이익 추정 수정이 함께 드러났다.",
+flows:[
+{actor:"외국인",focus:"KOSPI -4조5,330억원 · KOSDAQ +1,399억원",reading:"신한 마감 표. 대형주 현물 매도 지속, 선물 순매수 전환·코스닥 매수와 분리"},
+{actor:"기관",focus:"KOSPI +1조6,884억원 · KOSDAQ +429억원",reading:"순매수에도 코스피 투매를 상쇄하지 못함. 코스닥 낙폭 축소"},
+{actor:"개인",focus:"KOSPI +2조2,361억원 · KOSDAQ -1,909억원",reading:"코스피 대응 매수와 코스닥 순매도. 표 합계는 임의 보정하지 않음"},
+{actor:"시장 내부",focus:"KOSPI 상승247·하락630 · KOSDAQ 상승422·하락1,250",reading:"두 시장 하락 우세. 장중 저점 이후 회복과 종가 약세 공존"}
+],
+sectors:[
+{name:"메모리·반도체",state:"대형주 급락·미래 공급 경계",detail:"삼성 -7.4%·하이닉스 -10.1%(신한 마감). CXMT 연내 제품 계획은 양산 수율·서버 인증·확정 출하와 구분. 난야 가격 강세 재료도 공존."},
+{name:"장비·기판",state:"동반 약세 속 일부 장비 반발",detail:"주성 +3.6%·PSK +6.5%. ASML 생산능력·가격 가이던스 관심. 선익시스템은 이익 추정 상향과 적용 배수 하향이 갈림."},
+{name:"배터리·ESS",state:"장중 하락 뒤 종가 회복",detail:"LGES +3.0%·에코프로 +1.3%(신한 마감). 전일 손익·보상금·AMPC 논점과 실제 수급은 분리."},
+{name:"화장품·미용",state:"비용·마진 경계",detail:"에이피알 신한 3Q 매출7882억·이익1781억 전망, 물류비로 이익 컨센서스 약200억 하회. 미국·유럽 판매 성장과 비용 압력 공존."},
+{name:"바이오·헬스케어",state:"약세 속 개별 계약·규제 재료",detail:"엘앤씨바이오 미국 최소6000만달러 장기 공급계약. FDA361 HCT/P 추진·증설·유증·분기 기대하회 전망은 각각 구분."},
+{name:"해운·방어",state:"상대 강세",detail:"HMM +1.2%·팬오션 +1.6%. 운임·공급망 경계 속 선별 방어이며 광범위한 위험선호 회복과 다름."},
+{name:"건설·AI 데이터센터",state:"허가·수주·매출 전환의 시차",detail:"GS건설 동해100MW 허가·4Q 수주 예상. DL이앤씨 플랜트 추가 원가·실적 하향, Pre-Construction 계약은 즉시 전액 매출 아님."},
+{name:"AI 인프라·광통신",state:"조달·비용·표준 변화",detail:"Broadcom 자본 제약 발언, MS 자체칩 목표, Nvidia-Cisco 광모듈 발표. LS머트리얼즈 약690억 계약은 개별 실행 재료."}
+]});
