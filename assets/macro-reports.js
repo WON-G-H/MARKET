@@ -17,6 +17,20 @@
     const peers=archive.categories.map(c=>sorted(archive.topicReports||[]).find(r=>r.category===c)).filter(Boolean);
     const related={ '금리·채권':['경제·물가','유동성·신용'], '경제·물가':['금리·채권','원자재·공급망'], '유동성·신용':['퀀트·시장구조','금리·채권'], '퀀트·시장구조':['금리·채권','유동성·신용'], '환율·자산배분':['금리·채권','유동성·신용'], '원자재·공급망':['경제·물가','금리·채권'] };
     const section=(n,title,body)=>`<section class="paper-section"><div class="section-number">${n}</div><div><h2>${esc(title)}</h2>${body}</div></section>`;
+    if(x.report?.length){
+      const bodySections=[
+        {no:'01',title:'당일 핵심 정리',body:paragraphs(x.lead||[x.summary])},
+        ...x.report.map(s=>({no:s.no,title:s.title,body:paragraphs(s.paragraphs)})),
+        {no:'05',title:'오늘 무엇이 달라졌는가',body:`<h3>이어진 흐름</h3>${list(x.changes?.maintained)}<h3>새롭게 확인된 변화</h3>${list(x.changes?.new)}`},
+        {no:'06',title:'현재 판단',body:paragraphs(x.assessment)},
+        {no:'07',title:'해석·운용 함의',body:list(x.implications)},
+        {no:'08',title:'다음 확인 항목',body:list(x.watch)},
+        {no:'09',title:'최종 정리',body:paragraphs([x.conclusion])},
+        {no:'10',title:'참고 리포트',body:sources.map(s=>`<div class="mr-reference-row"><a href="#macro-reports/${encodeURIComponent(s.id)}">${esc(s.title)} ↗</a><p>${esc(s.institution)} · ${esc(s.date)} · ${esc(s.period)}</p><small>${esc(s.sourceNote)}</small></div>`).join('')}
+      ];
+      const nav=`<div class="report-nav"><a href="#macro-reports">← 매크로 리포트</a><b>${esc(x.date)}</b><span>${esc(x.category)}</span></div>`;
+      return `<nav class="mr-topic-tabs" aria-label="매크로 파트">${peers.map(r=>`<a class="${r.category===x.category?'active':''}" href="${topicLink(r)}">${esc(r.category)}</a>`).join('')}</nav><article class="research-paper mr-paper mr-topic-report mr-daily-paper">${nav}<header class="paper-head"><div class="paper-series">DAILY MACRO RESEARCH REPORT</div><h1>${esc(x.date.replaceAll('-','.'))}<br>${esc(x.title)}</h1><div class="mr-tags"><span>${esc(x.category)}</span></div><div class="mr-meta">${esc(x.period)}</div></header>${bodySections.map(s=>section(s.no,s.title,s.body).replace('<section class="paper-section">',`<section class="paper-section" id="mr-section-${esc(s.no)}">`)).join('')}<div class="mr-related"><span>함께 읽을 파트</span>${peers.filter(r=>(related[x.category]||[]).includes(r.category)).map(r=>`<a href="${topicLink(r)}">${esc(r.category)} →</a>`).join('')}</div>${histories.length>1?`<details class="mr-references"><summary>${esc(x.category)} 이전 보고서</summary>${histories.filter(r=>r.id!==x.id).map(r=>`<p><a href="${topicLink(r)}">${esc(r.date)} · ${esc(r.title)}</a></p>`).join('')}</details>`:''}${nav}</article>`;
+    }
     return `<nav class="mr-topic-tabs" aria-label="매크로 파트">${peers.map(r=>`<a class="${r.category===x.category?'active':''}" href="${topicLink(r)}">${esc(r.category)}</a>`).join('')}</nav><article class="research-paper mr-paper mr-topic-report"><div class="report-nav"><a href="#macro-reports">← 파트 목록</a><b>${esc(x.date)}</b><span>${esc(x.category)}</span></div><header class="report-header"><div class="eyebrow">${esc(x.category)} REPORT</div><h1>${esc(x.title)}</h1><p>${esc(x.summary)}</p><div class="mr-meta">${esc(x.period)} · ${x.sources.length}개 참고 자료 · 관측기간은 원문별로 구분</div></header>${section('01',x.category+' 내러티브',paragraphs(x.paragraphs))}${section('02','다음 확인 항목',list(x.watch))}${section('03','참고 리포트',sources.map(s=>`<div class="mr-reference-row"><a href="#macro-reports/${encodeURIComponent(s.id)}">${esc(s.title)} ↗</a><p>${esc(s.institution)} · ${esc(s.date)} · ${esc(s.period)}</p><small>${esc(s.sourceNote)}</small></div>`).join(''))}<div class="mr-related"><span>함께 읽을 파트</span>${peers.filter(r=>(related[x.category]||[]).includes(r.category)).map(r=>`<a href="${topicLink(r)}">${esc(r.category)} →</a>`).join('')}</div>${histories.length>1?`<details class="mr-references"><summary>${esc(x.category)} 이전 보고서</summary>${histories.filter(r=>r.id!==x.id).map(r=>`<p><a href="${topicLink(r)}">${esc(r.date)} · ${esc(r.title)}</a></p>`).join('')}</details>`:''}</article>`;
   }
   function rows(items){

@@ -1,4 +1,4 @@
-/* Korea manual interpretation ·2026-10-13. Automatic fields preserved. */
+/* Korea manual interpretation ·2026-10-14. Automatic fields preserved. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.korea={
   "asOf": "2026-10-12",
@@ -111,3 +111,74 @@ sectors:[
 {name:"건설·AI 데이터센터",state:"허가·수주·매출 전환의 시차",detail:"GS건설 동해100MW 허가·4Q 수주 예상. DL이앤씨 플랜트 추가 원가·실적 하향, Pre-Construction 계약은 즉시 전액 매출 아님."},
 {name:"AI 인프라·광통신",state:"조달·비용·표준 변화",detail:"Broadcom 자본 제약 발언, MS 자체칩 목표, Nvidia-Cisco 광모듈 발표. LS머트리얼즈 약690억 계약은 개별 실행 재료."}
 ]});
+
+/* 2026-10-14 manual interpretation only. Automatic cards preserved. */
+Object.assign(window.MARKET_LEDGER.korea,{asOf:"2026-10-14",updatedAt:"2026-10-14",verified:false,verificationNote:"신한/미래에셋 마감대조·연합뉴스종가선별확인. 전망/시점/수급합계한계유지. 자동지표는변경하지않음."});
+Object.assign(window.MARKET_LEDGER.korea.current,{
+  "asOf": "2026.10.14",
+  "narrative": "코스피는 6,008.81(-0.44%), 코스닥은 823.88(-1.57%)로 마감했다. 오전 반도체 저가 매수로 출발했지만 오후 ASML 실적 발표 뒤 상승분을 반납했다. 외국인은 코스피 1조1,831억원을 순매도했고 선물은 3일째 순매수했다. 코스피에서는 상승 종목이 하락 종목보다 많아 지수와 내부 흐름이 갈렸다. ASML은 연간 매출 전망 하단을 높이고 장비 수요의 장기 가시성을 설명했지만 주식시장은 즉시 반등하지 못했다. 메모리 가격·이익 전망과 주가의 괴리, 자사주 매입 완충의 감소가 함께 남았다. 해운·정유·배터리·화장품에는 매수가 유입됐고 해외 자료에서는 은행 사업별 실적 차이, AI 금융지원, 디젤 공급과 프랑스 재정 위험이 부각됐다. 신한 마감 기준 삼성전자 보합·하이닉스-1.7%, 삼성전기+.8%·SDI+5.5%로 갈렸다. 장중 반등 수치를 종가와 섞지 않고, 현물·선물·기관의 성격을 분리했다.",
+  "flows": [
+    {
+      "actor": "외국인",
+      "focus": "KOSPI -1조1,831억원 · KOSDAQ -2,172억원",
+      "reading": "신한마감표. 선물3일순매수와 현물매도 분리"
+    },
+    {
+      "actor": "기관",
+      "focus": "KOSPI +8,053억원 · KOSDAQ -1,811억원",
+      "reading": "코스피 흡수·코스닥매도, 장기투자자 추세수요와 구분"
+    },
+    {
+      "actor": "개인",
+      "focus": "KOSPI -3,093억원 · KOSDAQ +3,853억원",
+      "reading": "전일과 다른수급구성, 표합계 임의보정안함"
+    },
+    {
+      "actor": "시장 내부",
+      "focus": "KOSPI 상승503·하락371 · KOSDAQ 상승787·하락856",
+      "reading": "코스피 상승종목우세에도 지수하락·코스닥하락우세"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "메모리·반도체",
+      "state": "반등반납·이익지속성 경계",
+      "detail": "삼성보합·하이닉스-1.7%. 메모리가격/내년컨센서스 유지와 자사주완충감소·외인매도 공존."
+    },
+    {
+      "name": "장비·기판",
+      "state": "ASML호실적과매도 반응",
+      "detail": "연가이던스440~450억유로. 능력/주문의향은확정인도와분리. 삼성전기+.8%."
+    },
+    {
+      "name": "배터리·ESS",
+      "state": "선별강세",
+      "detail": "삼성SDI+5.5%, 배터리ETF+3.94/+3.57%. 데이터센터ESS수요기대."
+    },
+    {
+      "name": "해운·정유",
+      "state": "운임·제품공급 상대강세",
+      "detail": "HMM+5.89%·팬오션+10.53%·S-Oil+2.7%. 디젤합의총량과도착/재고는시차."
+    },
+    {
+      "name": "화장품",
+      "state": "판매기대반발",
+      "detail": "APR+3.71%·달바+4.38%. 아마존판매재료와기존물류비/마진부담은별개."
+    },
+    {
+      "name": "방산·철강",
+      "state": "지정학·LNG언급 재료",
+      "detail": "한화시스템+3.6%·POSCO+3.3%·넥스틸+4.6%. 미국측LNG언급은한국확정투자아님."
+    },
+    {
+      "name": "AI 금융·메모리",
+      "state": "계약·금융종결 구분",
+      "detail": "AMD/Fermi222MW신용지원·CoreWeave담보IG, CXL자체시연과상용채택 구분."
+    },
+    {
+      "name": "시장구조",
+      "state": "주체·레버리지의 차이",
+      "detail": "매도흡수와지속매수구분. LETFAUM축소 대신용융자증가, CANSLIM신호10/12기준."
+    }
+  ]
+});

@@ -11,3 +11,4 @@ body[data-view-mode="mobile"] .mr-list{grid-template-columns:1fr}
 @media(max-width:850px){.mr-topic-list{grid-template-columns:1fr}}
 body[data-view-mode="mobile"] .mr-topic-list{grid-template-columns:1fr}
 @container ledger (max-width:700px){.mr-topic-list{grid-template-columns:1fr}}
+.mr-daily-paper .paper-head h1{overflow-wrap:anywhere}.mr-daily-toc{padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-size:12px}.mr-daily-toc summary{cursor:pointer}.mr-daily-toc ol{list-style:none;padding:0;display:grid;gap:12px}.mr-daily-toc a{color:var(--accent);text-decoration:none}.mr-daily-paper .paper-section{scroll-margin-top:90px}.mr-daily-paper h3{margin:20px 0 12px}
