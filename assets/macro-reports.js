@@ -49,8 +49,9 @@
     const references=ids=>`<details class="mr-references"><summary>참고 리포트 · ${ids.length}건</summary>${ids.map(id=>{const x=archive.items.find(x=>x.id===id);return x?`<p><a href="#macro-reports/${encodeURIComponent(id)}">${esc(x.title)} ↗</a><small>${esc(x.institution)} · ${esc(x.date)} · ${esc(x.period)}</small></p>`:''}).join('')}</details>`;
     return `<div class="mr-mode"><a class="active" href="#macro-reports">종합 보고서</a><a href="#macro-reports/library">원문·자료 보관함</a></div><article class="research-paper mr-paper mr-issue"><div class="report-nav"><span>MACRO RESEARCH</span><b>${esc(r.date)}</b><span>${archive.items.length} 참고 자료</span></div><header class="report-header"><div class="eyebrow">매크로 리포트 · ${esc(r.date)}</div><h1>${esc(r.title)}</h1><p>${esc(r.lead)}</p><div class="mr-meta">${esc(r.period)} · 당일 신규 발표만을 모은 보고서가 아닙니다.</div></header>${section('00','핵심 요약',paragraphs(r.overview))}${r.sections.map((s,i)=>section(String(i+1).padStart(2,'0'),s.category,`<h3 class="mr-subtitle">${esc(s.title)}</h3>${paragraphs(s.paragraphs)}${references(s.sources)}`)).join('')}${section('07','다음 확인 항목',list(r.watch))}${section('08','종합 정리',`<p>${esc(r.conclusion)}</p>`)}<div class="report-nav"><a href="#macro-reports/library">원문·자료 보관함 →</a><span>작성 ${esc(r.date)}</span><span>${issues.length} 보고서</span></div></article>`;
   }
-  function render(category,query){return arguments.length ? library(category,query) : topics();}
+  function render(category,query){return arguments.length ? library(category,query) : window.MacroEvents.render();}
   function detail(id){
+    if(id==='topics')return topics();
     if(id.startsWith('topic/'))return topicReport(id);
     if(id==='library')return library();
     if(id.startsWith('report/'))return report(id.slice(7));

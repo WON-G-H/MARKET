@@ -1,4 +1,4 @@
-/* Korea manual interpretation ·2026-10-15. Automatic fields preserved. */
+/* Korea manual interpretation ·2026-10-16. Automatic fields preserved. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.korea={
   "asOf": "2026-10-12",
@@ -251,5 +251,29 @@ Object.assign(window.MARKET_LEDGER.korea.current,{
       "state": "변동성·담보 매도 경계",
       "detail": "VKOSPI55.67(+24.65%) 사용자 집계. 반대매매·외인 현물과 선물 분리, 러시아 디젤 합의 이후 실행 위험."
     }
+  ]
+});
+
+/* 2026-10-16: manual reading only; automatic cards and investor tables unchanged. */
+Object.assign(window.MARKET_LEDGER.korea,{asOf:"2026-10-16",updatedAt:"2026-10-16",verified:false,verificationNote:"신한16일 마감 지수·시장 폭·현선물/업종 수급 대조, 코스피 외부 종가 확인. 합계 불일치 수급표의 총합은 재구성하지 않음. 자동 지수·유동성·수급 표는 변경하지 않음."});
+Object.assign(window.MARKET_LEDGER.korea.current,{
+  asOf:"2026.10.16",
+  narrative:"코스피는5,668.05(+2.05%), 코스닥은794.78(+4.46%)로 마감해 전일 동반 서킷브레이커 이후 반등했다. 상승/하락 종목은 각각759/135개·1,471/222개로 시장 폭도 넓어졌고 코스닥에는 매수 사이드카가 발동됐다. 외국인 코스피 현물은9거래일 만에3,431억원 순매수였지만 오후 선물 약1조원 순매도와 전기전자 현물1,219억원 매도가 남았다. 바이오·화장품·로봇·일부 장비주가 반등했고 항공은 연료비 부담에 약했다. 미국 장기금리 하락과 CoreWeave 관련 발언이 심리를 완화했지만 주가 반등이 차환 비용·AI 투자회수 문제의 해소를 뜻하지는 않았다. 금요일 매도 진정과 광범위한 반등은 분명했으나 현선물·업종 수급의 방향 차이는 남은 하루였다.",
+  flows:[
+    {actor:"외국인 현물",focus:"KOSPI +3,431억원 · 9거래일 만 순매수",reading:"신한 마감. 전기전자 -1,219억원으로 지수 전체 매수와 IT 복귀는 다름"},
+    {actor:"외국인 선물",focus:"오후 약1조원 순매도 · 현선물 합산8일째 이탈",reading:"장중 선물 매수에서 반전. 주식 현물·지수선물·국채선물 구분"},
+    {actor:"코스닥 수급",focus:"외국인 -903억원 · 기관 +1,681억원",reading:"기관 매수와 시총 상위20종목 반등·매수 사이드카 동반"},
+    {actor:"반도체 내부",focus:"삼성전자 +1,819억원 · SK하이닉스 -730억원",reading:"외국인 현물 기준. 삼성전기 -1,352억원, 전기전자 매도 잔존"},
+    {actor:"시장 폭",focus:"KOSPI 상승759·하락135 · KOSDAQ 상승1,471·하락222",reading:"전일 전면 투매에서 광범위한 반등. 코스닥 종가는800선 아래"}
+  ],
+  sectors:[
+    {name:"메모리·반도체",state:"가격 반등과 IT 외인 매도 병존",detail:"삼성전자+2.6%·하이닉스+0.8%. CXMT 조기 양산 회의론과 Jensen 발언에 심리 완화, 업종 전체 순매수는 아님."},
+    {name:"장비·SSD",state:"소부장 반등·기업 전망은 차별화",detail:"주성+2.9%·EO+5.9%. 파두3Q 호실적 예상에도2027 매출/OP 추정은-18.1/-15.5%, NAND 공급·평가배수 부담."},
+    {name:"바이오·헬스케어",state:"대형주와 개별 호재 동반 반등",detail:"삼성바이오+4.1%·셀트리온+6.5%·알테오젠+9.6%·리가켐+8.8%. 임상 첫 투여·특허 설명 등 개별 단계 구분."},
+    {name:"화장품",state:"전일 급락 뒤 반발",detail:"APR+9.2%·달바+8.3%. 낮아진 금리와 이익 기대가 완충, 물류·판매비 부담과 추정치 차이는 잔존."},
+    {name:"자동차·로봇",state:"사업전략 조직 신설 재료",detail:"현대차+5.6%·로보티즈+5.8%. 그룹 RX사업전략실 신설 소식, 양산·실제 현장 ROI는 별도."},
+    {name:"전력기기",state:"장중 반등·생산능력 확충",detail:"효성중공업 초고압차단기 신공장 준공·HD현대일렉트릭 장중 강세. 공장 준공과 당일 확정 수주는 구분."},
+    {name:"항공·연료",state:"반등장에서 이익 비용 부담",detail:"대한항공-10.5%·아시아나-9.3%. 최대 매출과 고유가에 따른 영업이익 감소의 괴리."},
+    {name:"채권·AI 금융",state:"무위험금리 완화와 개별 신용 차별화",detail:"미 장기채 강세·CoreWeave 주가 반발에도 CDS/무담보채 부담. 국내 우량채 수요와 프로젝트 위험은 별개."}
   ]
 });
