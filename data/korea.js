@@ -1,4 +1,4 @@
-/* Korea manual interpretation ·2026-10-16. Automatic fields preserved. */
+/* Korea manual interpretation · updated through2026-10-19. Automatic fields preserved. */
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.korea={
   "asOf": "2026-10-12",
@@ -183,6 +183,7 @@ Object.assign(window.MARKET_LEDGER.korea.current,{
   ]
 });
 
+
 /* 2026-10-15 manual interpretation only; automatic data untouched. */
 Object.assign(window.MARKET_LEDGER.korea,{asOf:"2026-10-15",updatedAt:"2026-10-15",verified:false,verificationNote:"신한 마감 수급/지수 기준, 코스피 외부 종가 대조. 기관 전망·장중/종가·CPI 해석 차이 보존. 자동 카드와 자동 투자자 표는 변경하지 않음."});
 Object.assign(window.MARKET_LEDGER.korea.current,{
@@ -276,4 +277,28 @@ Object.assign(window.MARKET_LEDGER.korea.current,{
     {name:"항공·연료",state:"반등장에서 이익 비용 부담",detail:"대한항공-10.5%·아시아나-9.3%. 최대 매출과 고유가에 따른 영업이익 감소의 괴리."},
     {name:"채권·AI 금융",state:"무위험금리 완화와 개별 신용 차별화",detail:"미 장기채 강세·CoreWeave 주가 반발에도 CDS/무담보채 부담. 국내 우량채 수요와 프로젝트 위험은 별개."}
   ]
+});
+
+/* 2026-10-19: manual interpretation only; automatic cards and flow tables untouched. */
+Object.assign(window.MARKET_LEDGER.korea,{asOf:'2026-10-19',updatedAt:'2026-10-19',verified:false,verificationNote:'신한 마감표 이미지·미래에셋 마감과 연합뉴스 종가 대조. 장중과 종가·환율 주간 종가의 기준 차이를 분리. 투자자 범주 합계는 보정하지 않음. 자동 지수·유동성·투자자 표는 변경하지 않음.'});
+Object.assign(window.MARKET_LEDGER.korea.current,{
+ asOf:'2026.10.19',
+ narrative:'코스피는5,768.01(+1.76%), 코스닥은808.89(+1.78%)로 마감했다. 미국 금요일 AI주 급락과 Nscale 영국 데이터센터 계약 철회 보도에 코스피는5,488.41(-3.17%)로 출발했지만 저가 매수와 기관 수요로 상승 전환했다. 코스닥도800선을 회복했다. 상승·하락 종목은 코스피677·204개, 코스닥1,186·469개로 반등이 넓어졌다. 외국인 코스피 현물은365억원 순매도였고 선물도 매도여서 금요일의 현물 복귀가 지속적 자금 유입으로 정착한 것은 아니다. 기관은 코스피5,760억원·코스닥670억원을 순매수했다. 반도체의 작은 회복보다 배터리·ESS, 바이오, 로봇의 강세가 눈에 띄었고 중국 ESS 업체의 북미 진출 제약 보도와 개별 기업 재료가 겹쳤다. AI 수요의 부정이 아니라 전력 연결·조달 비용·FCF의 실행 조건이 쟁점인 가운데 국내는 악재를 흡수하는 가격 반응을 보였다. 오전 외국인 매수·지수 약세와 최종 현물 매도·지수 상승을 구분한다.',
+ flows:[
+  {actor:'외국인 현물',focus:'KOSPI -365억원 · KOSDAQ -1,438억원',reading:'신한 마감표. 매도 규모 완화와 순매수 복귀는 다름. 오전 매수 출발과 분리'},
+  {actor:'기관',focus:'KOSPI +5,760억원 · KOSDAQ +670억원',reading:'두 시장 매수·오전 하락 흡수. 표 범주 합계 불일치는 임의로 보정하지 않음'},
+  {actor:'개인',focus:'KOSPI -1조876억원 · KOSDAQ +641억원',reading:'코스피 반등에서 매도, 코스닥은 매수. 양 시장 동일 방향으로 일반화하지 않음'},
+  {actor:'외국인 선물',focus:'마감 설명상 현선물 순매도 지속',reading:'오전 선물·프로그램 비차익 매수와 다른 관측 구간. 확정 마감 금액은 생성하지 않음'},
+  {actor:'시장 폭',focus:'KOSPI 상승677·하락204 · KOSDAQ 상승1,186·하락469',reading:'두 시장 상승 우세·코스닥800선 회복. 기관 매수와 비반도체 확산 동반'}
+ ],
+ sectors:[
+  {name:'메모리·반도체',state:'소폭 회복·자본 제약 경계 잔존',detail:'신한 마감 설명 삼성+1.2%·하이닉스+0.4%. 미국 SOX-3.83%, CoreWeave-11.91% 뒤 국내 반등. 자사주 기대와 실제 신규 매입 결정은 구분.'},
+  {name:'배터리·ESS',state:'북미 수요·공급망 재편 기대',detail:'신한 설명 삼성SDI+11.7%·LGES+7.2%, 소재ETF+9.11%(미래에셋). 중국 업체 진출 제약 보도는 대체 수주·이익 확정과 다름.'},
+  {name:'바이오·헬스케어',state:'방어적 순환·개별 데이터 재료',detail:'바이오TOP10 ETF+4.37%. 에이비엘 ESMO 데이터 공개, 지투지바이오·유한양행 강세. 행사 기대·임상 성과·허가를 분리.'},
+  {name:'로봇·자동차',state:'피지컬 AI 동반 강세',detail:'신한 현대차+4.5%·레인보우 약+7%, 로봇ETF+5.34%. RX 전략·중국 상용화 정책은 실제 배치와 고객 ROI로 이어지는 시점 확인.'},
+  {name:'우주항공·공급망',state:'개별 계약·발표 중심 확산',detail:'KBI동양철관 공급망 합류 발표·상한가, 나라스페이스 등 반등. 같은 테마라도 제품·수익 구조는 서로 다름.'},
+  {name:'정유·에너지',state:'원유와 제품 병목 병존',detail:'S-Oil+1.6%·GS+0.9%(신한). WTI 금요일100달러 상회, 월요일 제재 유예 기대와 러시아 시설 공격이 반대 방향으로 작용.'},
+  {name:'소비·폴더블',state:'유통 확대·신제품 개별 재료',detail:'APR Costco 매장 진출 소식, 비에이치+5.4%와 폴더블폰 사전예약 보도. 오전 Market View 수익률은 종가로 사용하지 않음.'},
+  {name:'AI 인프라·신용',state:'전력 지연이 계약 실행 문제로',detail:'Nscale 영국 계약 철회 보도, Anthropic 조달 협상. 한 부지·한 트랜치의 위험과 하이퍼스케일러 전체 투자 위축을 동일시하지 않음.'}
+ ]
 });

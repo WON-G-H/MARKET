@@ -1,7 +1,7 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.calendarLive={
-  "checkedAt": "2026-10-16T14:54:44.246304+00:00",
-  "today": "2026-10-16",
+  "checkedAt": "2026-10-19T13:34:00.226055+00:00",
+  "today": "2026-10-19",
   "status": "partial",
   "sources": {
     "bea": {
@@ -15,16 +15,16 @@ window.MARKET_LEDGER.calendarLive={
     },
     "fed": {
       "status": "success",
-      "sha256": "412132af8540aae35be619473069fecde2027d31d78ad47565dff01676ed4cc7",
+      "sha256": "082ac4a01a62049f8352b7cc82de7e3b1de7eb80a2c2550eb864f5b24cb79823",
       "events": 3
     },
     "te": {
       "status": "success",
-      "sha256": "cfdf692f0c54b334067ca023d8147d59aefb56c636aefb03828dfaf7ea931302",
-      "events": 22,
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
-      "windowStart": "2026-10-15",
-      "windowEnd": "2026-11-10"
+      "sha256": "07ee29476dd0a1e33893a1cd919297f96f152b39c3c32bedba29d7767b771c1c",
+      "events": 21,
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
+      "windowStart": "2026-10-20",
+      "windowEnd": "2026-11-13"
     }
   },
   "events": [
@@ -1651,7 +1651,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -1672,7 +1672,7 @@ window.MARKET_LEDGER.calendarLive={
       "status": "발표 예정",
       "actual": "확인 필요",
       "previous": "1.275M",
-      "consensus": "1.30M",
+      "consensus": "1.31M",
       "surprise": "AI 확인 필요",
       "source": "Trading Economics · 중요도 3",
       "sourceUrl": "https://tradingeconomics.com/united-states/housing-starts",
@@ -1685,7 +1685,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -1719,7 +1719,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -1784,7 +1784,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -1818,7 +1818,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -1916,7 +1916,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -1950,7 +1950,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -1984,7 +1984,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2018,7 +2018,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2052,7 +2052,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2086,7 +2086,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2152,7 +2152,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2186,7 +2186,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2220,7 +2220,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2254,7 +2254,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2288,7 +2288,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2322,7 +2322,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2356,7 +2356,7 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {
@@ -2390,7 +2390,75 @@ window.MARKET_LEDGER.calendarLive={
       "linkedDaily": "미지정",
       "managedBy": "calendar-collector",
       "scheduleStatus": "confirmed",
-      "checkedAt": "2026-10-16T14:54:44.246304+00:00",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
+      "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
+    },
+    {
+      "id": "auto-te-398059",
+      "provider": "te",
+      "providerUid": "398059",
+      "family": "te-398059",
+      "title": "Existing Home Sales",
+      "category": "미국 주요지표",
+      "importance": 3,
+      "importanceNote": "Trading Economics 중요도 3 · Investing.com 등급과 별개",
+      "country": "미국",
+      "date": "2026-11-13",
+      "kst": "2026-11-13 00:00",
+      "dateBasis": "KST",
+      "sourceLocalDate": "2026-11-12",
+      "scheduledAt": "2026-11-12T15:00:00+00:00",
+      "status": "발표 예정",
+      "actual": "확인 필요",
+      "previous": "3.99M",
+      "consensus": "확인 필요",
+      "surprise": "AI 확인 필요",
+      "source": "Trading Economics · 중요도 3",
+      "sourceUrl": "https://tradingeconomics.com/united-states/existing-home-sales",
+      "why": "리서치 해석 미작성",
+      "path": "리서치 해석 미작성",
+      "checkpoints": [
+        "실제치와 시장 컨센서스 비교"
+      ],
+      "reaction": "AI 확인 필요",
+      "linkedDaily": "미지정",
+      "managedBy": "calendar-collector",
+      "scheduleStatus": "confirmed",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
+      "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
+    },
+    {
+      "id": "auto-te-398183",
+      "provider": "te",
+      "providerUid": "398183",
+      "family": "te-398183",
+      "title": "PPI MoM",
+      "category": "미국 주요지표",
+      "importance": 3,
+      "importanceNote": "Trading Economics 중요도 3 · Investing.com 등급과 별개",
+      "country": "미국",
+      "date": "2026-11-13",
+      "kst": "2026-11-13 22:30",
+      "dateBasis": "KST",
+      "sourceLocalDate": "2026-11-13",
+      "scheduledAt": "2026-11-13T13:30:00+00:00",
+      "status": "발표 예정",
+      "actual": "확인 필요",
+      "previous": "1.3%",
+      "consensus": "확인 필요",
+      "surprise": "AI 확인 필요",
+      "source": "Trading Economics · 중요도 3",
+      "sourceUrl": "https://tradingeconomics.com/united-states/producer-price-inflation-mom",
+      "why": "리서치 해석 미작성",
+      "path": "리서치 해석 미작성",
+      "checkpoints": [
+        "실제치와 시장 컨센서스 비교"
+      ],
+      "reaction": "AI 확인 필요",
+      "linkedDaily": "미지정",
+      "managedBy": "calendar-collector",
+      "scheduleStatus": "confirmed",
+      "checkedAt": "2026-10-19T13:34:00.226055+00:00",
       "scheduleNote": "Trading Economics 중요도 3 · 시장 컨센서스 사용(자체 전망치 제외). 기존 리서치 일정과 별도 출처 기록."
     },
     {

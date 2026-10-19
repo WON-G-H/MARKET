@@ -276,3 +276,94 @@ window.MARKET_LEDGER.macroEvents={
     if(cases[event.id])event.casebook={...cases[event.id],editedAt:'2026-10-16',editorialNote:'기존 사건·수치·출처를 보존하고 인과관계 중심으로 재구성. 새 시장 관측이나 원문 재검증을 추가한 갱신은 아님.'};
   }
 }
+
+/* 2026-10-19: append dated evidence; do not rewrite the earlier observation window. */
+{
+ const archive=window.MARKET_LEDGER.macroEvents;
+ const id='2026-10-18-nscale-loughton-microsoft-withdrawal';
+ const core=archive.events.find(e=>e.id==='2026-10-14-coreweave-credit-shock');
+ core.casebookRevisions=[{asOf:'2026-10-16',casebook:{...core.casebook,sections:core.casebook.sections.slice()}}];
+ core.sources.push(
+  {id:'research-19',title:'10월19일 브리핑·마감·키움 주간자료',publisher:'미래에셋·신한·키움 / 제공 자료',publishedAt:'2026-10-19',observedAt:'미국10/16 종가·한국10/19 마감',dailyDate:'2026-10-19',verification:'기관 마감자료 대조',note:'CoreWeave -11.91%·미국 장기물 금리 소폭 상승. CDS/YTM은 시점별 기관 인용이며 실거래 원시계열은 미확보.'},
+  {id:'crwv-history-19',title:'CoreWeave 미국 주식 일별 가격',publisher:'Investing.com',publishedAt:'2026-10-19 조회',observedAt:'미국10/15·16 종가',url:'https://www.investing.com/equities/coreweave-historical-data',verification:'검색 표시·제공 종가 대조',note:'10/15 69.69달러(+5.94%),10/16 61.39달러(-11.91%). CDS 원자료나 주가 원인 추정 자료가 아님.'}
+ );
+ core.timeline.push(
+  {at:'2026-10-16 미국 종가',session:'10/19 추가 관측',title:'안도 반등 다음 날 다시 급락',paragraphs:['CoreWeave는61.39달러(-11.91%)로 마감했다. SOX도3.83% 하락했고 8거래일 연속 약세였다. 금요일 장기금리는 소폭 상승했으므로 주간 채권 강세를 당일 종가 반응으로 대체하지 않는다. 이 결과는 한국16일 장 이후의 정보다.'],sourceIds:['research-19','crwv-history-19']},
+  {at:'2026-10-19 한국 마감',session:'새 선행 정보 반영',title:'미국 악재에도 한국은 급락 출발 뒤 반등',paragraphs:['코스피+1.76%, 코스닥+1.78%로 기관 매수와 배터리·헬스케어·로봇 확산이 관찰됐다. 외국인 현선물 매도는 남았다. 주말 Nscale 계약 철회 보도와 유가·국내 수급도 겹쳐 특정 미국 차주의 신용 충격만으로 당일 한국장을 설명할 수 없다.'],sourceIds:['research-19']}
+ );
+ core.reactions.push({market:'후속 주가와 한국 시장',window:'미국10/16·한국10/19',observation:'CoreWeave -11.91%, KOSPI +1.76%·KOSDAQ +1.78%',interpretation:'미국 금요일 재급락과 다음 한국 거래일 반등이 엇갈림. 두 시장의 관측창과 개별 신용·국내 수급을 구분.',sourceIds:['research-19','crwv-history-19']});
+ core.updates.push({date:'2026-10-19',title:'후속 관측 — 금요일 재급락과 한국의 악재 흡수',paragraphs:[
+  '기존 기록은 미국10/15 종가·한국10/16 마감까지였다. 이번 추가분은 미국10/16 종가와 한국10/19 마감이다. 목요일 반등을 신용 정상화로 보지 않았던 당시 판단은 보존하며 미래 결과를 과거 원인에 소급하지 않는다.',
+  'CoreWeave -11.91%와 SOX -3.83%, 기관 인용 CDS·YTM 부담이 추가됐다. Nscale 영국 계약 철회는 다른 차주·촉발 원인의 별도 사건으로 연결했다. 기존 Casebook 본문5개 절과 출처·가격 기록은 그대로 두고 날짜가 있는 추가 절을 붙였다.'
+ ],sourceIds:['research-19','crwv-history-19']});
+ core.casebook.sections.push({title:'10월19일 후속 기록 — 반등 뒤 재급락, 한국의 다른 반응',paragraphs:[
+  '미국16일 CoreWeave는61.39달러(-11.91%)로 내려와 전날 반등을 반납했다. SOX도3.83% 하락했다. 키움은 회사채 수익률15%대·CDS1,200bp대의 부담을 짚었다. 이 수치는 기관 인용의 관측 범위이며 동일 만기·동일시각 원시자료를 새로 확보한 것은 아니다. 목요일의 안도 발언은 실제 금융종결·차환·현금회수 개선과 같지 않았다는 구분이 후속 가격에서도 중요했다.',
+  '다만 이를 단순한 무위험금리 급등 사건으로 환원하기도 어렵다. 제공 금요일 종가에서 미10년물은5.0728%로1.48bp,30년물은5.4209%로1.53bp 올랐지만 주간 국채가격은 강했다는 별도 보도가 있었다. 회사의 사업·신용 위험과 국채수익률의 관측창을 나누어야 한다. 인용 CDS를 실제 부도확률이나 부도 발생으로 바꾸지는 않는다.',
+  '한국19일은 미국 악재와 주말 Nscale 보도에 급락 출발했지만 코스피+1.76%·코스닥+1.78%로 마감했다. 기관 매수와 배터리·바이오·로봇 확산이 반도체의 작은 회복보다 눈에 띄었다. 외국인 현선물 매도와 AI 자본 부담은 남았으므로 국내 반등도 신용 문제의 해결이 아니라 매도 흡수력의 변화로 읽는다. 19일 미국장 종가처럼 아직 관측하지 않은 결과는 포함하지 않는다.'
+ ],sourceIds:['research-19','crwv-history-19']});
+ core.casebook.impact='10/14 주가 -15.46% 뒤 15일 반등·16일 -11.91%로 재급락. 신용 부담이 남았지만 다음 한국19일은 기관 매수로 반등했다.';
+ core.casebook.editedAt='2026-10-19';
+ core.casebook.editorialNote='10/16 작성 본문과 관측 기록을 보존하고10/19 후속 절·출처·이력을 추가. 계약·CDS 인용의 확인 범위는 출처별 표기.';
+ core.updatedAt='2026-10-19';
+ core.coverage='초기 기록:미국10/14~15·한국10/15~16 / 추가:미국10/16 종가·한국10/19 마감';
+ core.relatedIds.push(id);
+
+ const chapters=[
+  {title:'계약은 컸지만 전력과 매출의 시계는 같지 않았다',paragraphs:[
+   'Loughton 사건의 배경은 AI 수요의 성장과 전력망 접속 일정 사이의 차이다. Nscale이2025년10월 발표한 계획에서 이 영국 부지는 초기50MW, 향후90MW 확장이 가능한 시설로, 약2만3,000개의 GB300을 통해2027년1분기 Azure 서비스를 시작할 예정이었다. 이는 가동 실적이 아니라 당시 회사가 공개한 이행 계획이다.',
+   '발표된 고객 계약은 미래 수입의 근거가 될 수 있지만 계약이 매출로 전환되려면 전력과 설비가 제때 준비돼야 한다. 건설·GPU 선금·금융 비용이 먼저 나가고 서비스 제공 뒤 현금이 들어오는 구조라면 지연 기간만큼 자금이 묶일 수 있다. 수요가 존재한다는 주장과 개별 프로젝트의 일정·수익성이 유지된다는 판단은 따라서 별개다.'
+  ],sourceIds:['nscale-2025','intake-19']},
+  {title:'10월18일, 전력 연결 지연이 고객 이탈 보도로 바뀌다',paragraphs:[
+   '18일 보도는 Microsoft가 이 부지의 AI 인프라 임대계약에서 철수했다고 전했다. 배경으로는2030년대까지 충분한 계통 전력을 공급받기 어려울 수 있다는 통보가 제시됐다. 계약 해지서·위약금·대금 지급 조건을 직접 확인한 기록은 아니며, 이 Casebook은 보도로 확인한 사건과 아직 확보되지 않은 법률·금융 조건을 나눠 기록한다.',
+   '이번 사건은 계약 실행이 전력 확보라는 조건에 달려 있음을 보여주는 사례다. 다만 Microsoft와 Nscale의 모든 지역 협력이 종료됐다는 뜻은 아니다. 대변인의 다른 계약 유지·대체 전력 검토 설명도 보도에 담겼다. 특정 부지의 지연을 고객의 전세계 AI 투자 취소나 영구적인 수요 소멸로 확장해서는 안 된다.'
+  ],sourceIds:['withdrawal-report','intake-19']},
+  {title:'사업 지연이 자금조달과 평가에 전달될 수 있는 경로',paragraphs:[
+   'Nscale은 IPO를 준비하는 비상장 개발사여서, 이 사건의 즉각적 충격을 상장주식 수익률로 보여줄 수 없다. 시장에 중요한 질문은 예정한 가동·고객 계약을 토대로 조달하려던 자본을 어떤 조건으로 확보할 수 있는가였다. 지연이 예상 현금흐름의 시점을 늦추면 할인 가치가 낮아지고 운영 전 자금 수요가 커질 수 있다는 것은 분석상 전달 경로다. 그 크기를 실제 손실액으로 추정한 자료는 확보되지 않았다.',
+   '제공 TNB는 희망 기업가치와 투자자 제안의 차이, Firmus IPO 철회와 CoreWeave 차입비용을 함께 전했다. 이들은 각각 미확정 평가·다른 차주의 자금조달 사건이다. 같은 환경에서 나타난 경계의 사례로는 참고할 수 있지만, 한 계약 철회가 다른 회사의 주가나 모든 조달 조건을 바꿨다는 인과 증거는 아니다. 특히 희망 가치와 제안 가격을 상장 후 실제 시가총액 하락으로 표현하지 않는다.'
+  ],sourceIds:['intake-19','research-19']},
+  {title:'첫 한국 거래일은 급락 출발 후 반등했다',paragraphs:[
+   '19일 한국 시장은 전약후강이었다. 신한 마감은 미국 금요일 네오클라우드·반도체 급락과 Nscale 보도가 부담이었다고 설명했다. 코스피는5,488.41로 출발했지만5,768.01(+1.76%), 코스닥은808.89(+1.78%)로 마감했다. 기관이 두 시장을 순매수하고 배터리·바이오·로봇으로 반등이 퍼졌다.',
+   '이 가격 반응은 보도가 무의미했다거나 사업 차질이 해소됐다는 증거가 아니다. 이미 크게 낮아진 주가, 국내 수급, 업종 순환이 다른 방향의 힘을 만들었다는 것이 당시 기관 해석이다. 미국16일 CoreWeave -11.91%는18일 계약 철회 보도보다 먼저 발생했으므로 이 사건의 결과로 소급하지 않는다. 19일 Microsoft 미국 종가도 아직 관측하지 않아 기록하지 않는다.'
+  ],sourceIds:['research-19','korea-close']},
+  {title:'대체 전력의 검토와 실제 복구는 다르다',paragraphs:[
+   'Nscale은 대체 전력과 다른 영국 확장 부지를 모색한다고 설명했다. 이는 대응 방향이지 계통 접속·전력 비용·새 가동일 확정이 아니다. 독립 발전이나 다른 부지가 가능하더라도 인허가·연료·냉각·고객 이전 조건을 충족하는지는 후속 근거가 필요하다. 이 사건을 위한 별도 정부 구제나 금융 지원이 집행됐다는 자료도 없다.',
+   '자료에 등장하는 미국 프로젝트 최소47건 지연·철회·중단과 실현 가능성35%는 별도 조사·기관 추정이다. 지연과 취소, 시설 건수와MW·투자금액을 같은 분모로 계산하지 않는다. 개별 부지의 차질이 산업 전체 투자 감소로 이어졌는지는 실제 CapEx 수정과 다른 지역의 대체 집행을 확인해야 판단할 수 있다.'
+  ],sourceIds:['withdrawal-report','intake-19']},
+  {title:'이 사례를 다시 참고할 수 있는 조건',paragraphs:[
+   '이 사건의 학습점은 모든 전력 병목이 금융위기로 이어진다는 데 있지 않다. 가동 전 현금 지출이 크고 고객·부지 집중도가 높으며 지연 비용을 부담할 자본이 부족한 프로젝트일수록, 전력 접속 일정의 변화가 조달·가치평가 문제로 넘어갈 수 있다. 반대로 대체 전력과 고객 이전, 충분한 현금 완충이 확보된다면 같은 물리적 지연의 금융 충격은 작을 수 있다.',
+   '후속 판단은 새 전력 계약과 허가, 수정된 가동일, 대체 임차인, 금융종결·조달 조건을 날짜별로 남기는 방식으로 이어간다. 과거 계획을 실제 가동으로, 이후에 나온 결과를 당시의 확정 사실로 바꾸지 않는다. 이 Casebook의 관측 기준은19일 한국 마감까지이며 사건의 최종 비용·정책·IPO 결과는 아직 미확인이다.'
+  ],sourceIds:['nscale-2025','withdrawal-report','research-19']}
+ ];
+ const summary=['Microsoft가 Nscale의 영국 Loughton 데이터센터 계약에서 철수했다는10월18일 보도. 당초2027년1분기 가동 계획과 달리 계통 전력 연결이2030년대까지 늦어질 수 있다는 문제가 제시됐다.','전력망 병목이 단순한 비용 상승을 넘어 고객 계약 실행과 자본조달의 질문으로 이어진 사건이다.19일 한국은 급락 출발 뒤 반등했고 이 계약만의 시장 기여도·확정 손실액은 분해되지 않았다.'];
+ archive.events.push({
+  id,eventDate:'2026-10-18',eventTime:'영국 주말 보도·개별 계약 해지 통보 시각 미확보',koreaAttributionDate:'2026-10-19',recordedAt:'2026-10-19',updatedAt:'2026-10-19',category:'전력·공급망',phase:'계약 철회 보도·후속 조건 확인 중',
+  coverage:'당초 계획:2025년 회사 발표 / 사건:10/18 보도 / 반응:한국10/19 마감까지',
+  title:'Microsoft의 Nscale 영국 Loughton 계약 철회 보도',subtitle:'전력 연결 지연이 고객 계약과 자금회수 일정으로 전이된 사건',
+  tags:['Nscale','엔스케일','Microsoft','Loughton','전력망','데이터센터','계약철회','네오클라우드','AI 자금조달','IPO'],
+  summary,highlights:[{label:'당초 초기 용량',value:'50MW'},{label:'당초 서비스 계획',value:'2027년1분기'},{label:'첫 한국 거래일',value:'10/19'}],
+  background:chapters[0].paragraphs,trigger:chapters[1].paragraphs,transmission:chapters[2].paragraphs,alternatives:chapters[3].paragraphs,aftermath:chapters[4].paragraphs,
+  timeline:[
+   {at:'2025-10-15',session:'당초 회사 발표',title:'Loughton 계획을 글로벌 계약과 함께 공개',paragraphs:['초기50MW·향후90MW,약2만3,000개GB300과2027년1분기 서비스 계획. 실제 가동 실적이 아님.'],sourceIds:['nscale-2025']},
+   {at:'2026-10-18',session:'주말 사건 보도',title:'전력 지연과 Microsoft 계약 철회',paragraphs:['해지 조건·정확한 통보 시각은 미확보. 회사 대변인은 다른 계약 유지와 대체 전력 검토를 설명한 것으로 보도됨.'],sourceIds:['withdrawal-report']},
+   {at:'2026-10-19 한국장',session:'첫 국내 거래일',title:'급락 출발 후 두 지수 반등',paragraphs:['KOSPI5,768.01(+1.76%)·KOSDAQ808.89(+1.78%). 미 금요일 신용·반도체 약세와 국내 기관 매수가 겹친 복합 반응.'],sourceIds:['research-19','korea-close']}
+  ],
+  reactions:[
+   {market:'Nscale 자금조달·기업가치',window:'10/18~19 보도',observation:'IPO 전 계획·평가의 불확실성 확대, 상장주식 수익률은 없음',interpretation:'희망 가치와 투자자 제안은 공모가 확정이나 실제 시총 손실이 아님.',sourceIds:['intake-19']},
+   {market:'한국 주식',window:'10/19 종가',observation:'KOSPI +1.76%·KOSDAQ +1.78%, 기관 양 시장 매수',interpretation:'계약 보도만의 효과는 분해 불가. 급락 출발과 종가 반등을 함께 기록.',sourceIds:['research-19','korea-close']},
+   {market:'미국 네오클라우드',window:'10/16 종가·사건 보도 이전',observation:'CoreWeave -11.91%는 선행 환경',interpretation:'18일 보도의 결과로 소급 금지.19일 미국 종가는 아직 포함하지 않음.',sourceIds:['research-19']}
+  ],
+  openQuestions:['대체 전력의 비용·허가·계통 접속과 수정 가동일이 확정되는가','다른 지역 계약·대체 고객·금융종결에 실제 변화가 있는가','해지 비용·보증·대금 지급 의무가 어떤 주체에 귀속되는가','IPO 희망 가치와 실제 조달 결과가 어떻게 달라지는가'],
+  relatedIds:['2026-10-14-coreweave-credit-shock'],
+  updates:[{date:'2026-10-19',title:'최초 기록 — 당초 공식 계획과 철회 보도의 확인 범위 분리',paragraphs:['원문 회사 발표의 용량·당초 일정과18일 보도·19일 국내 반응을 구분. 실제 해지 계약·전체 산업 취소액·19일 미국장 종가 미확보.'],sourceIds:['nscale-2025','withdrawal-report','research-19']}],
+  sources:[
+   {id:'nscale-2025',title:'Nscale–Microsoft 글로벌 AI 인프라 계약 발표',publisher:'Nscale',publishedAt:'2025-10-15',observedAt:'2025년 당시 계획·목표',url:'https://www.nscale.com/press-releases/nscale-microsoft-2025',verification:'회사 발표 원문 확인',note:'Loughton 초기50MW·확장90MW·약23,000GB300·2027Q1계획. 전체 글로벌 계약 철회로 확대하지 않음.'},
+   {id:'withdrawal-report',title:'Nscale 영국 계약 철회·대변인 설명 보도',publisher:'SiliconANGLE / Telegraph 인용',publishedAt:'2026-10-18 20:57 EDT 갱신',observedAt:'영국 주말 보도·대변인 설명',url:'https://siliconangle.com/2026/10/18/neocloud-operator-nscales-ipo-plans-could-be-at-risk-after-microsoft-pulls-the-plug-on-u-k-data-center-project/',verification:'보도 본문 열람·계약 원문 미확보',note:'철회·2030년대 접속·다른 계약 유지 설명의 보도 확인. FT 최초 원문과 개별 해지 약정은 직접 확인하지 못함.'},
+   {id:'intake-19',title:'10월19일 TNB·월스파·키움·SAVE 제공 자료',publisher:'사용자 제공 자료',publishedAt:'2026-10-16~19',observedAt:'자료별 공표·관측창',dailyDate:'2026-10-19',verification:'제공 자료·전망·보도 재인용',note:'47건·35%·IPO 제안·고객 집중도는 각 조사/기관 인용. 독립 실증·계약 검증으로 취급하지 않음.'},
+   {id:'research-19',title:'10월19일 한국 마감·미국 전거래일 브리핑',publisher:'신한·미래에셋 / Market Ledger',publishedAt:'2026-10-19',observedAt:'미국10/16·한국10/19',dailyDate:'2026-10-19',verification:'제공 마감자료 대조',note:'국내 지수·시장 폭·현선물 구분. 오전 부진과 오후 반등은 별개 시점.'},
+   {id:'korea-close',title:'코스피·코스닥10월19일 마감',publisher:'연합뉴스',publishedAt:'2026-10-19 15:36 KST',observedAt:'한국10/19 시초·종가',url:'https://www.yna.co.kr/view/AKR20261019130800008',verification:'종가 보도 확인',note:'코스피5488.41출발·5768.01마감,코스닥808.89. 개별 사건 기여도 자료 아님.'}
+  ],
+  casebook:{title:'2026년 10월 Microsoft의 Nscale 영국 데이터센터 계약 철회',cause:'당초2027년 서비스 개시를 계획했지만 계통 전력 연결이2030년대로 지연될 수 있다는 문제가 제기됐다. 고객 계약이 있어도 전력이 없으면 가동·현금회수 일정이 뒤로 밀리는 구조가 드러났다.',impact:'네오클라우드의 자금회수·IPO 평가 우려가 부각. 첫 한국 거래일은 급락 출발 뒤 기관 매수로 반등했고, 이 보도만의 가격 효과는 분해되지 않았다.',thesis:'AI 수요의 크기만으로 프로젝트의 실행 가능성을 판단할 수 없었다. Loughton 사건은 전력 접속이라는 물리적 조건이 고객 계약과 자본조달의 조건으로 바뀌는 경로를 보여준다.',sections:chapters,editedAt:'2026-10-19',editorialNote:'당초 회사 발표와 사건 보도·기관 해석을 구분한 최초 기록. 해지 약정·손실액·미국19일 종가 미확인.'}
+ });
+ archive.updatedAt='2026-10-19';
+ if(!archive.categories.includes('전력·공급망'))archive.categories.push('전력·공급망');
+}
