@@ -367,3 +367,215 @@ window.MARKET_LEDGER.macroEvents={
  archive.updatedAt='2026-10-19';
  if(!archive.categories.includes('전력·공급망'))archive.categories.push('전력·공급망');
 }
+
+/* 2026-10-20 selection correction: background news is not a market-shock case. */
+{
+ const archive=window.MARKET_LEDGER.macroEvents;
+ const id='2026-10-18-nscale-loughton-microsoft-withdrawal';
+ const reason='사용자 선별 기준 재확인: 개별 영국 부지의 계약 철회 보도이며, 독립적인 주요 시장 충격과 시장 전반의 중요 이슈였다는 근거가 부족함. AI 병목 참고자료로만 보존.';
+ const event=archive.events.find(e=>e.id===id);
+ archive.referenceCases=archive.referenceCases||[];
+ if(event)archive.referenceCases.push({event,excludedAt:'2026-10-20',reason});
+ archive.events=archive.events.filter(e=>e.id!==id);
+ for(const e of archive.events)e.relatedIds=e.relatedIds.filter(relatedId=>relatedId!==id);
+ archive.categories=[...new Set(archive.events.map(e=>e.category))];
+ archive.selectionLog=[...(archive.selectionLog||[]),{date:'2026-10-20',eventId:id,action:'주요 사건 목록에서 제외·참고자료 보존',reason}];
+ archive.updatedAt='2026-10-20';
+}
+
+/* 2026-10-20: follow the existing material shock, not a daily collection of macro news. */
+{
+ const archive=window.MARKET_LEDGER.macroEvents;
+ const core=archive.events.find(e=>e.id==='2026-10-14-coreweave-credit-shock');
+ core.casebookRevisions.push({asOf:'2026-10-19',casebook:JSON.parse(JSON.stringify(core.casebook))});
+ core.sources.push(
+  {id:'research-20-us',title:'10월20일 글로벌 마켓 브리핑 — 미국19일 종가와 장중 전개',publisher:'미래에셋증권',publishedAt:'2026-10-20',observedAt:'미국2026-10-19 거래',dailyDate:'2026-10-20',verification:'사용자 제공 리포트 본문·종가표 확인',note:'CoreWeave 장 초반 약+7% 후-0.44%, Nasdaq+1.11%, SOX+1.61%, 미10년물5.1397%. CDS 동일시점 원시계열이나 사건 기여도 추정은 아님.'},
+  {id:'research-20-kr',title:'10월20일 국내 마감·국내외 전략자료',publisher:'신한·미래에셋증권',publishedAt:'2026-10-20',observedAt:'한국2026-10-20 마감·자료별 분석 기준일',dailyDate:'2026-10-20',verification:'제공 마감표 이미지·본문 대조',note:'KOSPI5552.74/-3.73%,KOSDAQ781.97/-3.33%. 신한 표 외국인/기관 매도와 시장 폭 확인. AI 금융제약→투자제약은 기관의 조건부 메커니즘이며 실제 전체 CapEx 감소 확정이 아님.'}
+ );
+ core.timeline.push(
+  {at:'2026-10-19 미국 거래',session:'한국20일의 선행정보',title:'매수 의견에도 CoreWeave 반등이 종가까지 이어지지 않다',paragraphs:['Goldman Sachs의 긍정적 평가에 장 초반 약7% 상승했으나 종가는-0.44%. Nasdaq+1.11%·SOX+1.61%와 다른 반응. 미10년물은 시장호가5.1397%로 전일보다6.69bp 상승했다.'],sourceIds:['research-20-us']},
+  {at:'2026-10-20 한국 마감',session:'반등 지속 실패',title:'외국인·기관 매도와 반도체·방산 약세로 하락 재개',paragraphs:['KOSPI5552.74(-3.73%)·KOSDAQ781.97(-3.33%). 신한 표 외국인 현물은 각각5395억·1864억원 순매도, 기관도 각각1조11억·1106억원 순매도. 미국 반도체 반등에도 국내 수급과 이익 지속성 할인은 남았다. 방산 실적 재료·프랑스 금리·에너지도 겹쳐 단독 인과 귀속은 불가.'],sourceIds:['research-20-kr']}
+ );
+ core.reactions.push(
+  {market:'CoreWeave 주식과 미국 기술주',window:'미국10/19 장중→종가',observation:'CoreWeave 약+7% 출발 후-0.44%; Nasdaq+1.11%·SOX+1.61%',interpretation:'지수 저가 매수와 문제 차주의 신뢰 회복은 달랐다. 투자의견 변경은 신규 금융종결·신용 정상화의 증거가 아니다.',sourceIds:['research-20-us']},
+  {market:'한국 주식·시장 폭',window:'한국10/20 종가',observation:'KOSPI-3.73%·KOSDAQ-3.33%, 상승/하락118/773·310/1348',interpretation:'전날 반등 후 매도 압력이 재확산. 높은 AI 투자 민감도와 매수 기반 약화가 기관 설명이며 CoreWeave만의 효과는 분해되지 않았다.',sourceIds:['research-20-kr']}
+ );
+ core.casebook.sections.push({title:'10월20일 후속 기록 — 미국의 저가 매수와 한국의 매수 공백',paragraphs:[
+  '미국19일에는 충격의 중심 차주와 시장 전체가 서로 다르게 움직였다. CoreWeave는 Goldman Sachs의 매수 의견과 차입비용 우려가 과도하다는 평가에 장 초반 약7% 반등했지만 종가는-0.44%였다. 반면 Nasdaq은1.11%, 반도체지수는1.61% 올라 반도체의8거래일 연속 하락이 끝났다. 이는 AI 관련 자산을 일괄 매도하던 흐름 속에서도 저가 매수는 가능했지만, 취약 차주의 신용 문제까지 해결됐다고 받아들여지지는 않았다는 가격상 관측이다.',
+  '투자의견 상향은 회사의 현금·담보·대출 인출 조건을 바꾸는 거래가 아니다. 새 차입의 성사, 채권 가격·동일 만기 CDS의 안정, 실제 현금 수익화가 확인돼야 조달 제약 완화를 판단할 수 있다. 이번 자료로20일 동일시점 CDS·채권 수익률 계열은 확보하지 못했으므로 기존 고점 수치를 새 급등처럼 반복하지 않는다. 19일 미국 장기금리의 재상승도 관측됐지만 프랑스·에너지·위험회피 완화가 겹쳐 전부 AI 채권 발행의 결과로 돌릴 수 없다.',
+  '다음 한국 거래일인20일에는 전날 반등의 흡수력이 다시 약해졌다. 코스피5,552.74(-3.73%), 코스닥781.97(-3.33%)였으며 상승·하락 종목은118·773개와310·1,348개로 하락이 우세했다. 외국인은 현물·선물에서 이탈했고 전날 매수하던 기관도 매도로 전환했다. 미국 반도체지수 상승만으로 국내 반등이 보장되지 않았으며, 국내 지수의 메모리 이익 집중과 수급 공백이 충격을 다르게 전달한 것으로 당시 기관들은 해석했다.',
+  '국내 반도체의 이익 추정은 아직 높았다는 반론도 중요하다. 신한 전략자료는9월23일~10월19일 삼성전자·하이닉스 주가 급락과 선행 EPS 상향의 괴리를 제시했다. 시장이 현재 이익보다 그 이익의 지속기간과 고객의 투자 능력을 할인하고 있다는 설명은 이 괴리를 연결하는 가설이다. 그러나 미래 주문 감소·전체 CapEx 축소가 이미 확정됐다는 사실로 바꾸어서는 안 된다. 방산 실적 눈높이 조정 등 별도 악재도20일 국내 낙폭에 겹쳤다.',
+  '이 충격이 확산될 수 있는 연결고리는 요구수익률 상승→조달·차환 제약→투자 지연→공급사 현금흐름 기대 약화다. 반대로 기존 사업의 현금창출과 대체 조달이 충분하면 이 고리는 끊길 수 있다. 따라서 차입형 네오클라우드의 위험을 현금 완충이 큰 하이퍼스케일러에 그대로 적용하지 않는다. 현 단계에서 확인된 것은 가격과 수급의 불안정성 지속이며 산업 전체의 투자 중단이나 시스템 위기의 확정은 아니다.'
+ ],sourceIds:['research-20-us','research-20-kr']});
+ core.updates.push({date:'2026-10-20',title:'후속 관측 — 매수 의견 뒤 반등 실패와 한국 재하락',paragraphs:['미국19일 CoreWeave의 장 초반 약+7%→종가-0.44%와 기술주 지수 반등을 분리 기록. 한국20일의 외국인·기관 동반 매도·시장 폭 악화 추가. 과거 판단은 수정하지 않고19일 표시 본문을 개정 이력에 보존. 동일시점 신용 원시자료·CapEx 취소액 미확보.'],sourceIds:['research-20-us','research-20-kr']});
+ core.coverage='주요 충격: 미국10/14 · 후속: 미국10/19 종가·한국10/20 마감까지';
+ core.updatedAt='2026-10-20';
+ core.casebook.editedAt='2026-10-20';
+ core.casebook.editorialNote+=' 10/20: 미국19일 장중·종가와 한국20일 반응을 후속 장으로 추가. 새 신용 고점·부도·전체 투자 취소를 추정하지 않음.';
+ archive.updatedAt='2026-10-20';
+}
+
+/* 10/21 observations, recorded 10/22: append the response to the existing AI credit shock. */
+{
+ const archive=window.MARKET_LEDGER.macroEvents;
+ const core=archive.events.find(e=>e.id==='2026-10-14-coreweave-credit-shock');
+ core.casebookRevisions.push({asOf:'2026-10-20',casebook:JSON.parse(JSON.stringify(core.casebook))});
+ core.sources.push(
+  {id:'spcx-q3-26',title:'SpaceX Reports Third Quarter 2026 Results',publisher:'SpaceX / SEC Exhibit99.1',publishedAt:'2026-10-20 미국 장후',observedAt:'3Q26 손익·1~9월 현금흐름 / 10/22 원문 확인',url:'https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm',verification:'공식 공시 원문 표 확인',note:'SI+830%·분기CapEx195.93억달러 확인. 1~9월OCF130.97억·PP&E480.69억. 분기 영업흑자를 자체 투자재원 충족으로 보지 않음. 제공리포트 +538%/연간CapEx 표기는 채택하지 않음.'},
+  {id:'smci-prelim-21',title:'FY2027 Q1 Preliminary Business Update',publisher:'Supermicro / SEC Exhibit99.1',publishedAt:'2026-10-20 16:44:26 미국 SEC 접수',observedAt:'2026-09-30 종료 분기 잠정범위',url:'https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm',verification:'공식 잠정 발표 원문 확인',note:'매출185~195억·GM12.0~12.5%, 확정 감사실적이나 고객 ROI가 아님.'},
+  {id:'research-21',title:'10월21일 글로벌 브리핑·국내 마감',publisher:'미래에셋·신한증권 / Market Ledger',publishedAt:'2026-10-21',observedAt:'미국20일 정규/장후·한국21일 종가',dailyDate:'2026-10-21',verification:'제공 마감표·본문 대조',note:'미국 CRWV약+1.7%,Nasdaq-.02%,SOX-.29%. 한국KS+3.29/KQ+1.38, 외인KS+6649억/KQ-1717억. 한국21일 주가를 한 기업의 효과로 수치 귀속하지 않음.'},
+  {id:'korea-close-21',title:'10월21일 코스피·코스닥 및 주간 환율 종가',publisher:'뉴스1 / 파이낸셜뉴스',publishedAt:'2026-10-21 15:37 KST',observedAt:'한국21일 마감',url:'https://www.fnnews.com/news/202610211537311135',verification:'검색 표시와 제공 종가 대조·기사 본문 열기 오류',note:'5735.66/+3.29,792.76/+1.38,1325.2원/-2.9. 세부 수급 원문 검증 자료는 아님.'}
+ );
+ core.timeline.push(
+  {at:'2026-10-20 미국 정규장',session:'안도 이전의 시장',title:'가치주 순환과 기술주 약세, CoreWeave는 소폭 반등',paragraphs:['Nasdaq-.02%·SOX-.29%와 Dow+1.02%·헬스케어+2.33%가 엇갈렸다. CoreWeave 약+1.7%는 기관 종가 인용. 이후 나온 실적을 정규장 원인으로 소급하지 않음.'],sourceIds:['research-21']},
+  {at:'2026-10-20 미국 장후 / 한국21일 장전',session:'새 수익화 정보',title:'SpaceX 영업흑자와 Supermicro 잠정 상향',paragraphs:['공식 공시는 손익 개선과 큰 투자 현금 지출을 함께 보여준다. 한국장 이전 시간외 안도는 관측됐으나 동일시점 CDS·신규 차환 정상화는 확인되지 않았다.'],sourceIds:['spcx-q3-26','smci-prelim-21','research-21']},
+  {at:'2026-10-21 한국 종가',session:'수출·외국인 코스피 매수 동반',title:'두 지수 반등에도 코스피 하락종목 우세',paragraphs:['코스피5735.66/+3.29%,코스닥792.76/+1.38%. 시장폭372/490·832/802, 외국인은 코스피 현물 매수·코스닥 매도. 반도체와 수출 호조도 함께 작용.'],sourceIds:['research-21','korea-close-21']}
+ );
+ core.reactions.push(
+  {market:'미국 AI주·주가지수',window:'10/20 정규장과 장후 분리',observation:'CRWV약+1.7%·SOX-.29%; 실적 후 SpaceX·SMCI 시간외 상승',interpretation:'동일 업종 안에서도 회복 속도가 다름. 장후 실적을 정규장 원인으로 사용하지 않음.',sourceIds:['research-21','smci-prelim-21']},
+  {market:'한국 지수·수급',window:'10/21 마감',observation:'KS+3.29%·KQ+1.38%, 외인KS+6649억/KQ-1717억',interpretation:'수익화 안도·수출·대형주 수요가 결합. 코스피 하락종목 우세로 전면 수급·신용 정상화 확인은 아님.',sourceIds:['research-21','korea-close-21']}
+ );
+ core.casebook.sections.push({title:'10월21일 후속 기록 — 수익화의 반론에 반등했지만 현금의 질문은 남았다',paragraphs:[
+  '미국20일 정규장에는 기술주 대신 헬스케어·금융·유틸리티로 매수가 이동했다. CoreWeave는 약1.7% 올랐지만 반도체지수는0.29% 내렸고 Nasdaq도 약보합이었다. 충격의 중심 종목이 하루 반등했다고 AI 밸류체인 전체의 신뢰가 회복된 것은 아니었다. 이후 장후 실적이라는 새로운 정보가 들어오면서 시장의 판단 근거가 달라졌다.',
+  '공식 공시로 SpaceX의 SI 영업흑자와 분기 투자비를 확인했다. 반면1~9월 영업현금과 유형자산 취득의 차이는 약-349.72억달러였다. 이는 분기 손익 개선과 투자 재원 자립이 다르다는 반론이다. 제공 자료의 SI 성장률·연간/분기 투자 표기 차이는 원문 기준으로 바로잡되 과거 사건 서술은 유지한다.',
+  'Supermicro의 잠정 매출·마진 상향도 하드웨어 수요가 곧바로 붕괴하고 있다는 주장에 반대 근거를 보탰다. 다만 장비 공급사의 인도 매출과 장기간 서비스를 팔아야 하는 고객의 회수기간은 다르다. 동일시점 CoreWeave 채권·CDS 정상화나 실제 차환 완료를 확인하지 못했으므로, 주식의 안도를 신용 문제가 해결됐다는 사실로 바꾸지 않는다.',
+  '21일 한국은 반도체 수출 호조와 함께 코스피5,735.66(+3.29%), 코스닥792.76(+1.38%)로 반등했다. 외국인은 코스피 현물6,649억원을 샀지만 코스닥에서는1,717억원을 팔았다. 코스피는 상승372개보다 하락490개가 많았고 코스닥도 장중800선을 지키지 못했다. 대형주 중심으로 위험을 되사는 가격 반응과 시장 내부의 수요 복구는 다른 단계였다.',
+  '당시 기관은 수익성 우려가 커졌기 때문에 반증 실적의 가치도 커졌다고 해석했다. 이 연결은 조건부다. 매출 인식이 실제 현금 수취로 이어지고 투자 지출·차입 만기를 감당할 수 있어야 반등의 재무적 근거가 이어진다. 반대로 좋은 공급사 실적만으로 취약 차주를 함께 평가하면 위험의 차이를 놓친다. 정책 구제나 산업 전반 자금조달 해소는 이번 관측에서 확인되지 않았다.',
+  '이 후속 기록은 충격 이후의 반등도 함께 남기기 위한 것이다. 급락만 나열하면 당시 수익화 증거에 시장이 반응했던 점을 지우게 되고, 반등만 보면 계속되는 현금·신용 부담을 놓친다. 수출·외국인 대형주 매수·업종 순환이 함께 작용한 만큼 한국 지수 상승분 전체를 SpaceX 실적의 효과로 계산하지 않는다. 다음 관측은 실제 현금창출·조달 조건과 반등의 시장 폭이다.'
+ ],sourceIds:['spcx-q3-26','smci-prelim-21','research-21','korea-close-21']});
+ core.updates.push({date:'2026-10-22',title:'10월21일 후속 관측 추가 — 실적 안도와 남은 투자 현금 부담',paragraphs:['기록일22일과 관측일21일을 구분. 미국20일 정규장→장후 실적→한국21일 반등을 추가하고20일 Casebook 본문은 개정 이력에 보존. SpaceX SI+830%·분기CapEx를 공식표로 확인했으며 누적 현금부담을 반론으로 병기. 신규 독립 사례를 늘리지 않음.'],sourceIds:['spcx-q3-26','smci-prelim-21','research-21']});
+ core.coverage='주요 충격: 미국10/14 · 후속: 미국10/20 장후·한국10/21 마감까지';
+ core.updatedAt='2026-10-22';core.casebook.editedAt='2026-10-22';
+ core.casebook.editorialNote+=' 10/22: 한국21일 반등과 미국20일 장후 정보를 추가. 공식 손익/누적현금 기간 분리, 기존 판단 보존.';
+ archive.updatedAt='2026-10-22';
+}
+
+/* New, separately identifiable earnings catalyst: US10/21 after hours -> US10/22 selloff. */
+{
+ const archive=window.MARKET_LEDGER.macroEvents;
+ const id='2026-10-21-lam-meta-ai-earnings-shock';
+ const sections=[
+  {title:'안도 랠리 다음에 찾아온 시험 — 시장은 더 큰 주문보다 회수를 묻고 있었다',paragraphs:[
+   '이번 충격은 AI 산업이 갑자기 아무 수요도 없는 상태로 바뀌어서 시작된 것은 아니다. 10월 중순 CoreWeave의 높은 차입비용과 신용 경계가 투자 지속성을 문제 삼은 가운데, SpaceX·Supermicro의 개선이 수익화의 반론을 제공했다. 미국21일에는 기술주가 반등했고 한국도21일 반도체 중심으로 회복했다. 긍정적인 정보에도 시장이 확인하려던 것은 계약의 크기보다 매출·이익·현금으로 이어지는 능력이었다.',
+   '장비사는 고객의 투자를 출하·인도 매출로 바꾸고, 플랫폼은 장비와 데이터센터에 먼저 돈을 쓴 뒤 서비스로 회수한다. 둘은 같은 투자 사이클에 있지만 현금이 발생하는 시점과 위험이 다르다. 따라서 공급사의 호실적이 모든 고객의 투자 수익성을 입증하지도 않고, 고객의 FCF 적자가 당장 공급사 주문 붕괴를 뜻하지도 않는다.',
+   '이 배경에서21일 미국 장후의 두 발표가 서로 다른 약한 고리를 건드렸다. 램리서치는 공급 제약 때문에 수요를 계획한 매출로 바꾸는 속도가 쟁점이었고, 메타는 매출 성장에도 큰 투자를 지속할 현금 여력이 관심이었다. 이를 한 기업의 부도 사건이나 단순한 금리 급등 사건으로 묶으면 실제 전달 경로를 놓친다.'
+  ],sourceIds:['briefing-22','research-22','core-context']},
+  {title:'램리서치의 기록적 실적 — 수요 붕괴 발표가 아니라 기대·출하 제약이었다',paragraphs:[
+   '공식9월분기 매출은82.19억달러, 조정EPS는2.20달러였다. 다음 분기 매출86±4억달러·조정EPS2.33±0.15달러를 제시했다. 이는 성장 자체를 부정한 전망이 아니다. 공급 제약이 상향 여력을 제한했다는 설명은 공식 컨콜 검색 표시와 당시 기관 보도에 제시됐지만 컨콜PDF 전문은 확보하지 못했다.',
+   '주가가 좋은 과거 숫자에도 하락할 수 있는 연결고리는 이미 가격에 들어 있던 기대다. 강한 고객 수요가 존재해도 필요한 부품과 생산 능력·인도 일정이 맞지 않으면 주문이 당기 매출로 바뀌지 않는다. 더 높은 전망을 기대한 투자자는 인식 시점이 밀리는 만큼 이익 경로를 조정할 수 있다. 실제 비공개 기대치 분포나 취소 주문 규모는 자료로 확인되지 않았다.',
+   '그래서 이번 기록에서 공급 제약을 최종 수요 붕괴로 바꾸지 않는다. 발표 후 장후 약세와 미국22일 큰 주가 하락은 관측이지만, 향후 메모리 고객의 투자 취소나 장비 주문 감소가 확정됐다는 결론은 아니다. 실제 출하·수주 수정이 뒤따르는지와 일시적인 실행 지연인지를 후속 검증 대상으로 남긴다.'
+  ],sourceIds:['lam-results','lam-call','research-22','briefing-23']},
+  {title:'메타의 다른 신호 — 광고 성장과 투자 후 현금은 같은 답이 아니었다',paragraphs:[
+   '메타 공식 발표에서는 매출이 늘었지만 영업현금보다 CapEx가 커 FCF가-21.2억달러였다. 연간CapEx 하단도 올라갔다. 법률 관련 일회성 비용은 손익을 따로 조정해야 하지만 투자 후 현금 부족과 동일한 항목은 아니다. 큰 현금 보유와 계속되는 본업 수입은 당장 지급불능이라는 해석의 반론이다.',
+   '투자는 향후 수익을 위한 것이지만 지출이 먼저 크고 사용료 수입의 시점이 불확실하면 재원 조달을 더 필요로 한다. 이때 이익 성장률만 높아도 리스·채권·지분 등 조달 비용이나 희석이 커질 수 있다. 시장이 CapEx 상향을 더 이상 일방적인 호재로 받아들이지 않은 이유를 이 경로로 해석할 수 있다.',
+   '발표 직후 메타는 시간외에서 상승하기도 했다. 한국22일 자료에는 약+2.1~3.65%가 남아 있다. 이후 미국22일 정규장-6.98%와 구분해야 한다. 실적 발표라는 하나의 시점에 모든 해석이 즉시 끝난 것이 아니라 투자자들이 손익과 현금·전망을 소화하면서 가격 반응이 달라진 사건이었다.'
+  ],sourceIds:['meta-results','research-22','briefing-23']},
+  {title:'한국22일의 선행 반응과 미국22일의 본격 재평가',paragraphs:[
+   '미국21일 장후는 한국22일 장전 정보였다. 한국은 코스피5,533.77(-3.52%), 코스닥764.10(-3.62%)로 전날 반등을 반납했다. 제공 마감PDF에 반복된20일 지수는 종가 보도로 대조해 제외했다. 금통위3.00% 동결과 배터리·개별 기업 재료도 겹쳤으므로 국내 낙폭을 램리서치 하나의 효과로 분해할 수 없다.',
+   '뒤이은 미국22일 정규장에는 램리서치-11.76%, 메타-6.98%, Nvidia-4.40%, GE Vernova-10.64%가 관측됐다. 반도체지수-6.72%, Nasdaq-2.60%, S&P500-1.21%로 핵심 업종과 지수에 의미 있는 충격이 나타났다. 이 미국 본장 결과는 한국22일 하락의 원인이 아니라 한국23일의 선행정보다.',
+   '장비의 출하 속도와 플랫폼의 현금 부담에 대한 경계가 반도체·전력 인프라까지 확장됐다는 것이 당시 기관 해석이다. 그러나 메타·Tesla·중동·프랑스 채권 위험도 동시에 있었다. 개별 실적 충격의 기여도를 추정하는 이벤트 스터디가 없으므로 지수 하락 전체를 단독 램리서치 쇼크의 수치로 귀속하지 않는다.'
+  ],sourceIds:['research-22','close-22','briefing-23','bok-22']},
+  {title:'유가는 올랐는데 국채는 강했다 — 시장 전체 붕괴와 다른 전이',paragraphs:[
+   '미국22일에는 Brent12월물이3.84% 상승했는데 미10년물은 약4.95~4.97%로5%를 밑돌았다. 표·요약·14:59ET 호가가 달라 단일 종가로 통합하지 않았다. 에너지 물가 위험이 사라져서라기보다 성장·현금 위험에서 국채로 피신하는 수요가 강했다는 것이 당시의 해석이다. 국채 숏커버도 기관 설명이며 실제 강제청산 금액은 확인하지 못했다.',
+   '필수소비재·유틸리티·헬스케어는 올랐고 Dow와 Russell2000은 소폭 상승했다. 동일가중지수도 상승했다는 자료가 있어, 시총가중 기술주 지수의 급락을 모든 기업의 경기 붕괴로 바꿔 읽으면 안 된다. 자금은 성장주에서 방어주와 국채로 재배분됐다.',
+   '이때 할인율 하락이 성장주를 지켜주지 못한 것은 중요한 연결이다. 할인율이 낮아져도 기대 현금흐름의 크기와 시점·실현 가능성이 더 나빠지면 가격은 하락할 수 있다. 반대로 물가 충격이 지배적이면 주식과 채권이 함께 약해질 수도 있다. 이번 사건은 주식·채권 상관을 고정된 법칙으로 쓰기 어렵다는 조건부 사례다.'
+  ],sourceIds:['briefing-23','etf-window']},
+  {title:'한국23일, 급락 출발을 되돌린 것은 새 정책 구제가 아니었다',paragraphs:[
+   '한국23일 코스피는 장중4%대 하락 뒤5,550.30(+0.30%)로 돌아섰고 코스닥은751.69(-1.62%)로 마감했다. 기관의 코스피8,723억원 매수와 SK하이닉스+4.41%가 완충했다. 외국인은 코스피9,928억원을 팔았으며 상승172개보다 하락720개가 많아 시장 내부가 복구됐다고 보기 어려웠다.',
+   '이날 회사는 Solidigm의 pre-IPO·IPO 검토 중단을 발표했다. 국내 자료는 중복상장 우려 완화를 하이닉스 반등의 배경으로 설명했다. 이는 미국 AI 고객의 차입 문제가 해결됐다는 뉴스가 아니라 국내 지배구조·기존 주주 가치에 관한 완충 재료다. 성장 투자 자체의 포기나 대체 자금 필요의 소멸도 아니다.',
+   '전날 금통위 동결은 이미 알려진 정책으로 추가 구제 조치가 아니었다. 정부·중앙은행이 이번 실적 충격을 위해 자산매입이나 보증을 집행했다는 근거는 확보되지 않았다. 가격의 회복과 신용·시장 폭 정상화를 구분해 남기는 이유다.'
+  ],sourceIds:['research-23','close-23','solidigm','bok-22']},
+  {title:'현재 참고할 조건 — 기대가 아니라 출하·현금·계약 실행을 확인한다',paragraphs:[
+   '이 사건의 학습점은 좋은 실적이 무의미하다는 것이 아니다. 수요·공급 능력·가동 일정·현금 회수가 서로 다른 시계를 가진다는 데 있다. 매출 전망의 제한이 공급 병목인지 고객 취소인지, FCF 적자가 계획된 선투자인지 회수력 약화인지에 따라 다음 결과는 달라진다.',
+   '순환금융에서는 고객의 지급 능력 악화가 공급사 매출과 보증 부담을 동시에 건드릴 수 있다. 다만 계약 노출 총액은 현재 손실액이 아니며 담보·취소·우선순위와 현금 완충에 따라 손실 귀속이 달라진다. 이 기록만으로 시스템 위기가 확정됐다고 결론 내리지 않는다.',
+   '후속 기록은 실제 장비 출하·가이던스 수정, 하이퍼스케일러 현금창출과 투자·리스 지급, 신규 조달의 가격·완료, 신용 스프레드, 반등의 시장 폭을 날짜별로 비교한다. 23일 미국장과 이후 실적·정책 결과는 아직 포함하지 않는다. 초기의 안도와 이후 급락·국내 반등을 모두 보존해 사후적으로 한 방향의 이야기로 다시 쓰지 않는다.'
+  ],sourceIds:['lam-results','meta-results','briefing-23','research-23']}
+ ];
+ archive.events.push({
+  id,eventDate:'2026-10-21',eventTime:'미국21일 장후 실적·컨콜 / 본장 충격22일',koreaAttributionDate:'2026-10-22',recordedAt:'2026-10-23',updatedAt:'2026-10-23',
+  coverage:'미국21일 장후→한국22일→미국22일 종가→한국23일 마감',category:'기업실적·AI 투자',phase:'실적 재평가·안전자산 이동·후속 검증 중',
+  title:'램리서치·메타 실적 이후 AI주 급락과 국채 강세',subtitle:'장비 공급 제약과 플랫폼 투자 현금 부담이 성장 기대를 재조정한 사건',
+  tags:['램리서치','Lam Research','LRCX','Meta','메타','FCF','공급제약','실적가이던스','AI CapEx','SOX','국채강세','업종순환','Solidigm'],
+  summary:['램리서치의 기록적 실적에도 공급 제약·기대 대비 상향 여력, 메타의 투자 후 현금 부담이 겹쳐 미국22일 AI 밸류체인이 급락했다.','SOX-6.72%·램리서치-11.76%와 국채·방어주 강세가 공존했다. 한국23일은 기관·하이닉스가 지수를 되돌렸지만 폭과 외국인 수급은 약했다.'],
+  highlights:[{label:'램리서치 미국22일',value:'-11.76%'},{label:'반도체지수 미국22일',value:'-6.72%'},{label:'미10년물 관측범위',value:'4.95~4.97%'}],
+  background:sections[0].paragraphs,trigger:[...sections[1].paragraphs,...sections[2].paragraphs],transmission:sections[4].paragraphs,alternatives:sections[3].paragraphs,aftermath:sections[5].paragraphs,
+  timeline:[
+   {at:'2026-10-21 미국 정규장',session:'촉발 전',title:'AI 실적 안도 지속',paragraphs:['Nasdaq+1.05%·SOX+1.97%. SpaceX·SMCI 개선 이후. 장후 새 실적은 아직 포함하지 않음.'],sourceIds:['briefing-22']},
+   {at:'2026-10-21 미국 장후',session:'실적 촉발',title:'램리서치·메타의 서로 다른 제약',paragraphs:['Lam 기록적 실적과 공급 제약/기대, Meta 투자 후 현금 부담. 장후 메타 초기 상승과 다음날 하락을 구분.'],sourceIds:['lam-results','lam-call','meta-results','research-22']},
+   {at:'2026-10-22 한국 마감',session:'첫 국내 반영',title:'전날 반등 반납',paragraphs:['KS5533.77(-3.52%)·KQ764.10(-3.62%). 금통위동결과 개별 업종 이슈도 동시 관측.'],sourceIds:['close-22','research-22']},
+   {at:'2026-10-22 미국 종가',session:'본격 업종 충격',title:'SOX급락·국채와 방어주로 재배분',paragraphs:['Lam-11.76%·Meta-6.98%,SOX-6.72%·Nasdaq-2.60%. Dow/Russell소폭상승,미10년물5%하회.'],sourceIds:['briefing-23']},
+   {at:'2026-10-23 한국 장전~마감',session:'전이와 국내 완충',title:'장중급락→코스피양전·코스닥하락',paragraphs:['Solidigm검토중단·기관매수가완충. KS5550.30(+.30%)·KQ751.69(-1.62%). 외인매도·하락종목우세 잔존.'],sourceIds:['solidigm','research-23','close-23']}
+  ],
+  reactions:[
+   {market:'램리서치·미국 반도체',window:'미국22일 정규 종가',observation:'LRCX-11.76%·SOX-6.72%·Nvidia-4.40%',interpretation:'발표·시장반응 관측. 공급제약을 확정 수요붕괴로 바꾸거나 지수 전체를 단독 효과로 귀속하지 않음.',sourceIds:['briefing-23','lam-results']},
+   {market:'플랫폼·전력 인프라',window:'미국22일 종가',observation:'Meta-6.98%·Tesla-3.08%·GEV-10.64%',interpretation:'현금회수·투자집행 의구심의 확장이라는 기관해석. 각 기업 요인과 지정학 대안 존재.',sourceIds:['briefing-23','meta-results']},
+   {market:'국채·방어주',window:'미국22일 표/요약·14:59ET 별도',observation:'10Y약4.95~4.97%,필수소비재+3.11%·유틸+1.98%',interpretation:'유가 상승에도 위험회피/순환. 호가창 차이 때문에 -19bp와-14.75bp를 한 종가로 합치지 않음.',sourceIds:['briefing-23','etf-window']},
+   {market:'한국 주식 첫 반영',window:'한국22일 종가',observation:'KS-3.52%·KQ-3.62%',interpretation:'미국22일본장 이전. 첫 장후정보·국내 수급·금통위 등 복합반응.',sourceIds:['close-22','research-22']},
+   {market:'한국 완충·시장 폭',window:'한국23일 마감',observation:'KS+.30%·KQ-1.62%;KS상승172/하락720·외인-9928억원',interpretation:'기관+8723억원·SKH회복이 지수방어. 신용문제해소·폭넓은 위험선호로 확대하지 않음.',sourceIds:['research-23','close-23','solidigm']}
+  ],
+  openQuestions:['Lam 제약은 실제 출하 이연인가 수주 취소로 변하는가','하이퍼스케일러 FCF와 투자/리스 지급·신규 조달이 어떻게 바뀌는가','AI 고객·공급사 보증과 담보 가치의 공통 위험이 현실화되는가','국채 강세가 신용 안정으로 연결되는가','한국 기관의 지수 방어가 외국인 복귀·시장 폭 확대로 이어지는가'],
+  relatedIds:['2026-10-14-coreweave-credit-shock'],
+  updates:[{date:'2026-10-23',title:'최초 기록 — 실적·미국 본장·한국 양일 반응 구분',paragraphs:['별도 발표계기와 큰 업종충격을 확인해 편입. 수요붕괴나 단독Lam인과로 단정하지 않음. 미국23일장·이후 정책/실적은 미포함.'],sourceIds:['lam-results','meta-results','briefing-23','research-23']}],
+  sources:[
+   {id:'lam-results',title:'September2026 Quarter Results and December Outlook',publisher:'Lam Research 공식IR',publishedAt:'2026-10-21 미국장후',observedAt:'9월분기실적·12월분기예상',url:'https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27%2C-2026',verification:'공식 본문·전망표 확인',note:'당기실적·미래범위와컨센서스구분. 다음매출/EPS감소공시가아님.'},
+   {id:'lam-call',title:'Lam Research Q1 FY2027 Earnings Call',publisher:'Lam Research 공식IR',publishedAt:'2026-10-21 21:00UTC 컨콜자료',observedAt:'공급제약 발언',url:'https://investor.lamresearch.com/image/LRCX-USQ_Transcript_2026-10-21.pdf',verification:'공식 검색표시 확인·PDF전문접근오류',note:'제약없으면가이던스상향여지발언은검색표시/당시기관보도. 전문검증으로표현하지않음.'},
+   {id:'meta-results',title:'Meta Third Quarter2026 Results',publisher:'Meta 공식IR',publishedAt:'2026-10-21 미국장후',observedAt:'분기 손익/현금·연간전망',url:'https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx',verification:'공식 본문·FCF정의 확인',note:'일회성비용·영업현금·투자후현금분리. FCF는회사비GAAP정의.'},
+   {id:'briefing-22',title:'10월22일 Global Market Briefing',publisher:'미래에셋증권 / 제공PDF',publishedAt:'2026-10-22',observedAt:'미국21일정규·장후',dailyDate:'2026-10-22',verification:'제공 표·본문대조',note:'실적안도본장과후속장후구분. 혼재된FCF문구는공식Meta로대조.'},
+   {id:'research-22',title:'10월22일 Radar·마감·금통위 자료',publisher:'신한·미래에셋 / 제공자료',publishedAt:'2026-10-22',observedAt:'한국22일 장중·마감',dailyDate:'2026-10-22',verification:'장중/종가·오류표 분리',note:'마감PDF지수칸20일값반복을배제. 수급/종목은관측창·출처보존.'},
+   {id:'briefing-23',title:'10월23일 Global Market Briefing',publisher:'미래에셋증권 / 제공PDF',publishedAt:'2026-10-23',observedAt:'미국22일 종가·자료별 호가',dailyDate:'2026-10-23',verification:'제공 종가표·업종·FICC대조',note:'Lam/Meta/SOX급락·방어순환. 10Y표4.97와요약4.95의시각차이보존.'},
+   {id:'etf-window',title:'ETF로 본 미국시장10월22일',publisher:'사용자 제공',publishedAt:'2026-10-23 수신',observedAt:'미국22일14:59ET 등',dailyDate:'2026-10-23',verification:'제공 시각표시 보존',note:'ETF수익률은지수와다름. 장중금리와종가혼합금지.'},
+   {id:'research-23',title:'10월23일 한국마감·시장폭·투자자표',publisher:'신한·미래에셋 / 제공PDF',publishedAt:'2026-10-23',observedAt:'한국23일 마감',dailyDate:'2026-10-23',verification:'신한p1이미지·미래에셋종가 대조',note:'KQ751.70/751.69차이기록·공통종가채택. 수급합계보정없음.'},
+   {id:'close-22',title:'코스피5533.77·코스닥764.10 마감',publisher:'전자신문',publishedAt:'2026-10-22 16:01KST',observedAt:'한국22일종가',url:'https://m.etnews.com/20261022000405',verification:'종가 검색표시·타보도 대조',note:'원리포트의반복지수오류를대조한근거.'},
+   {id:'close-23',title:'코스피장중급락딛고5550.30마감',publisher:'뉴스웨이',publishedAt:'2026-10-23 15:51KST',observedAt:'한국23일종가',url:'https://newsway.co.kr/news/view?ud=2026102315464647334',verification:'종가 검색표시·기관표 대조',note:'KQ751.69. 사건기여도실증자료는아님.'},
+   {id:'solidigm',title:'Solidigm Potential IPO Review Discontinued',publisher:'SK hynix 공식뉴스룸',publishedAt:'2026-10-23',observedAt:'검토중단발표',url:'https://news.skhynix.com/en/fact-12/',verification:'회사공식설명 확인',note:'기존주주가치·시장조건재검토. 성장투자포기/재원수요소멸아님.'},
+   {id:'bok-22',title:'통화정책방향2026.10.22',publisher:'한국은행',publishedAt:'2026-10-22',observedAt:'기준금리결정',url:'https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=11065823',verification:'공식결정문 확인',note:'3.00%만장일치동결. 이번실적충격에대한특별구제아님.'},
+   {id:'core-context',title:'기존CoreWeave 신용충격의 관측 배경',publisher:'Market Ledger',publishedAt:'2026-10-14~21 관측',observedAt:'이번발표이전',dailyDate:'2026-10-21',verification:'기존사건·보고서 연결',note:'과거본문·전망은새사건결과에맞춰수정하지않음.'}
+  ],
+  casebook:{title:'2026년10월 램리서치·메타 실적 이후 AI주 급락',cause:'기록적인 실적에도 램리서치의 공급 제약·기대 대비 상향 여력과 메타의 투자 후 현금 부족이 동시에 쟁점이 됐다. 기존 신용 경계 속에서 AI 투자 확대를 현금으로 뒷받침할 수 있는지 검증이 강화됐다.',impact:'미국22일 램리서치-11.76%·SOX-6.72%, 국채·방어주는 강세. 한국은22일하락 뒤23일기관·하이닉스로 지수를 방어했지만 시장 폭과 외국인 수급은 약했다.',thesis:'수요가 강하다는 말만으로 출하와 현금 회수가 보장되지는 않는다. 이 사건은 장비의 실행 제약과 플랫폼의 투자 재원 문제가 성장 기대를 바꾸고, 국채·방어주·국내 대형주로 위험이 재배분된 경로를 보여준다.',sections,editedAt:'2026-10-23',editorialNote:'발생21일미국장후/첫한국22일/미국본장22일/한국완충23일을분리. 단독인과·부도·산업수요붕괴로확대하지않음.'}
+ });
+ if(!archive.categories.includes('기업실적·AI 투자'))archive.categories.push('기업실적·AI 투자');
+ archive.updatedAt='2026-10-23';
+}
+
+/* Dated follow-up, not a rewrite of the original October 21-23 information set. */
+{
+ const archive=window.MARKET_LEDGER.macroEvents;
+ const event=archive.events.find(e=>e.id==='2026-10-21-lam-meta-ai-earnings-shock');
+ const sources=[
+  {id:'briefing-26',title:'10월26일 글로벌 마켓 브리핑',publisher:'미래에셋증권 / 제공 PDF 2148025',publishedAt:'2026-10-26',observedAt:'미국23일 정규 종가·자료 작성시점 호가',dailyDate:'2026-10-26',verification:'제공 표·FICC·업종 설명 대조',note:'SOX +0.44%, Dow -1.23%, 10Y 4.9945%/+4.15bp. SAVE 전일 주가지수 요약과 불일치, 동일 표의 관측창 사용.'},
+  {id:'korea-close-26',title:'10월26일 한국 마감과 시장 폭',publisher:'신한·미래에셋 / 제공 PDF',publishedAt:'2026-10-26',observedAt:'한국26일 마감',dailyDate:'2026-10-26',verification:'신한 p1 이미지·두 기관 종가·마감 보도 대조',note:'KS5469.47/-1.46%,KQ727.21/-3.26%. 수급 신한 기준·미래에셋 외인 집계 차이 보존.'},
+  {id:'hynix-return-26',title:'16조원 특별배당 보도 미확정 및 향후 발표 안내',publisher:'연합인포맥스 / 회사 공시 인용',publishedAt:'2026-10-26 13:45KST·14:10수정',observedAt:'한국26일 장중',url:'https://news.einfomax.co.kr/news/articleView.html?idxno=4441119',verification:'보도 본문·회사 인용 확인, 거래소 원공시 직접 확인은 아님',note:'검토·이사회 예정과 확정 금액을 구분. 이후 결의 결과 미포함.'},
+  {id:'meta-financing-26',title:'공모·의무전환우선주와 향후 ATM 조달 계획',publisher:'Meta 공식IR',publishedAt:'2026-10-26 미국 일자 / 사용자 KST20:35 전달',observedAt:'한국26일 마감 후 정보 집합',url:'https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx',verification:'공식 본문 확인. 한국 수신시각과 공식 페이지의 일자만 확인',note:'350억 공모 계획+향후600억ATM. 선도매각 최초 수취 없음·ATM 미체결/향후계획. 칩기업 앵커 참여는 확인한 본문에 없음. 가격·결제·미국26일종가 미확인.'},
+  {id:'pmi-oct-flash',title:'미국10월 잠정PMI: 강한 성장과 판매가격 압력',publisher:'S&P Global',publishedAt:'2026-10-23',observedAt:'10월잠정조사',url:'https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/10/us-flash-pmi-signals-sustained-strong-growth-but-also-further-inflation-uplift-in-october',verification:'공식 설명 확인',note:'종합57.6/전월58.4. 조사와 실제GDP·CPI는 구분. 유가와 신용·성장 기대의 복합 배경.'}
+ ];
+ event.sources.push(...sources);
+ event.casebook.sections.push(
+  {title:'10월26일 후속 기록 — 반도체 반등 뒤에도 회복의 폭은 좁았다',paragraphs:[
+   '미국 23일에는 SOX가 0.44%, 마이크론이 2.46% 반등했지만 다우 -1.23%·S&P500 -0.52%로 시장 전체는 약했다. 전날 반도체 투매가 진정된 것과 위험선호가 전면 회복된 것은 달랐다. 에너지 강세와 다른 우량주의 하락은 AI에서 방어주로 이동한 자금도 유가·금리 부담에서 자유롭지 않았음을 보여준다.',
+   '브렌트는 116.72달러로 올랐고 미 10년물 호가는 4.9945%로 4.15bp 상승했다. 22일에는 현금흐름·성장 우려가 국채 매수를 이끌었지만 23일에는 유가와 강한 PMI·가격 압력이 함께 남았다. 주식·채권 관계를 영구적인 한 방향으로 일반화할 수 없는 이유다. 이 하루의 금리 반등을 AI 투자 신뢰의 복구나 물가 단독 효과로 수치 귀속하지 않는다.',
+   '한국 26일은 코스피 5,469.47(-1.46%)·코스닥 727.21(-3.26%)로 다시 하락했다. 신한표 코스피 외국인 -6,986억원을 기관 +6,047억원이 흡수해도 상승101·하락792개, 거래대금 약12조원이었다. 코스닥은 외국인 +391억원에도 기관 -1,279억원으로 약했다. 23일 기관의 지수 방어가 넓은 매수 기반으로 번졌다는 증거는 아직 부족했다.',
+   'Solidigm 검토 중단 뒤 하이닉스는 환원 기대로 상대적으로 선방했지만 16조원 특별배당은 미확정이었다. 환원 기대가 할인 완충 요인이 될 수 있어도 고객의 투자재원과 공급사의 현금 이익까지 동시에 회복시키지는 않는다. 실적·정책을 앞둔 관망과 지정학 위험도 함께 작용했으므로 국내 하락 전체를 램리서치 발표 하나의 후속 효과로 설명하지 않는다.'
+  ],sourceIds:['briefing-26','korea-close-26','hynix-return-26','pmi-oct-flash']},
+  {title:'10월26일 한국장 후속 정보 — 메타의 자본조달은 시간을 사되 수익화를 대신하지 않는다',paragraphs:[
+   '한국장 마감 후 확인한 메타 공식 발표는 약350억달러 공모 계획과 향후 약600억달러 ATM으로 구분된다. 공모 안에서도 선도매각 연계 보통주와 의무전환우선주 예탁증권은 다른 수단이다. 선도매각의 최초 현금 수취와 미래 결제, 아직 계약되지 않은 ATM을 구분해야 하며950억달러 전액 입금으로 기록할 수 없다.',
+   '투자 후 현금의 부족에 주식자본을 더하면 차입 의존을 완충할 수 있지만 기존 주주의 희석과 투자 효율의 검증은 남는다. 이는 조달 수단 다변화라는 후속 대응이지 영업의 현금 수익화가 끝났다는 증거는 아니다. 제공 글의 반도체 기업 앵커 참여는 확인한 공식 본문에서 검증되지 않았다.',
+   '이 정보는 미국26일 결과가 아니라 한국장 이후의 공시 확인이다. 발행 가격·실제 조달·시장 반응이 아직 확인되지 않았으므로 부도 구제나 성공적인 투자 회수로 결론 내리지 않는다. 다음 관측에서는 조달 비용·현금 유입 시점·주가 및 신용 반응과 실제 투자 집행을 함께 확인해야 한다.'
+  ],sourceIds:['meta-financing-26']}
+ );
+ event.timeline.push(
+  {at:'2026-10-23 미국 종가',session:'후속 관측·26일 국내 선행정보',title:'반도체 소폭 반등, 유가·금리 상승',paragraphs:['SOX +0.44%, Dow -1.23%, S&P500 -0.52%. 10Y호가4.9945%/+4.15bp·Brent116.72달러. 전체 위험선호 정상화와 다름.'],sourceIds:['briefing-26','pmi-oct-flash']},
+  {at:'2026-10-26 한국 마감',session:'후속 국내 반응',title:'5,500선 하회·거래 참여 위축',paragraphs:['KS-1.46%·KQ-3.26%. 수급은 시장별로 다름. 새 정치·지정학·실적대기 요인도 존재.'],sourceIds:['korea-close-26']},
+  {at:'2026-10-26 한국 마감 후',session:'발표 후속·가격반응 미확인',title:'메타 자본조달 공식 계획 확인',paragraphs:['공모·선도매각·의무전환·미래ATM을 구분. KST20:35 사용자전달. 한국장 원인으로 소급하지 않고 미국26일종가 미기입.'],sourceIds:['meta-financing-26']}
+ );
+ event.reactions.push(
+  {market:'미국주식·국채·유가',window:'미국23일 정규·브리핑 호가',observation:'SOX+0.44%·Dow-1.23%;10Y4.9945%/+4.15bp·Brent+3.14%',interpretation:'반도체의 반발과 유가·금리 부담이 공존. 램/메타 단일 기여도 미분해.',sourceIds:['briefing-26']},
+  {market:'한국 수급·폭',window:'한국26일 마감',observation:'KS5469.47/-1.46%·KQ727.21/-3.26%;KS상승101/하락792',interpretation:'기관의 코스피 흡수에도 하락. 코스닥 외인순매수·기관매도, 전시장 동반외인매도 아님.',sourceIds:['korea-close-26']}
+ );
+ event.updates.push(
+  {date:'2026-10-26',title:'미국23일과 한국26일 — 기존 방어가 확산됐는가',paragraphs:['기존21~23일 서술을 보존한 채 후속 본문·가격 대조를 추가했다. 기술주 안정과 광범위한 매수 정상화를 분리하고 유가·정치·실적 대기라는 동시 요인을 명시했다.'],sourceIds:['briefing-26','korea-close-26','hynix-return-26']},
+  {date:'2026-10-26',title:'한국장 후 메타 조달 발표 — 실행과 시장 반응은 아직 미확인',paragraphs:['공식 공모·미래ATM 구조를 확인했다. 전액 수취 완료·칩기업 앵커 참여로 단정하지 않으며 당일 한국장에 소급하지 않는다. 미국26일종가/발행가격 미포함.'],sourceIds:['meta-financing-26']}
+ );
+ event.updatedAt='2026-10-26';event.casebook.editedAt='2026-10-26';
+ event.casebook.impact+=' 26일 후속: 반도체 반발 뒤에도 코스피-1.46%·코스닥-3.26%, 매수 폭 위축. 한국장 후 메타 조달 계획은 가격 반응 미확인.';
+ archive.updatedAt='2026-10-26';
+}

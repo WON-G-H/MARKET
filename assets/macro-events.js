@@ -27,6 +27,7 @@
   function sourceRefs(event,ids=[]){return ids.map(id=>{const s=event.sources.find(s=>s.id===id);return s?`<a href="#" data-me-source="${esc(id)}">${esc(s.dailyDate?s.dailyDate+' Daily':s.publisher)}</a>`:'';}).filter(Boolean).join(' · ');}
   function detail(id){
     const x=archive.events.find(x=>x.id===id);
+    if(!x&&archive.referenceCases?.some(r=>r.event.id===id))return '<div class="empty"><strong>주요 시장 충격 사례에서 제외된 참고자료입니다.</strong><p>독립적인 시장 충격의 근거가 부족해 Macro Casebook 목록에서 제외했습니다. 원자료는 보존되어 있습니다.</p><a href="#macro-events">Macro Casebook으로 돌아가기 →</a></div>';
     if(!x)return '<div class="empty"><strong>사건 기록을 찾을 수 없습니다.</strong><a href="#macro-events">Macro Casebook으로 돌아가기 →</a></div>';
     const sorted=ordered(archive.events),i=sorted.findIndex(e=>e.id===id),older=sorted[i+1],newer=sorted[i-1];
     const nav=`<nav class="report-nav me-record-nav" aria-label="사건 이동">${older?`<a href="${url(older)}">← 이전 사건 · ${esc(older.eventDate)}</a>`:'<span>이전 사건 없음</span>'}<a href="${esc(lastArchive)}">사건 목록</a>${newer?`<a href="${url(newer)}">다음 사건 · ${esc(newer.eventDate)} →</a>`:'<span>다음 사건 없음</span>'}</nav>`;
