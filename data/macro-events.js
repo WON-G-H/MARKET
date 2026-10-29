@@ -609,6 +609,62 @@ window.MARKET_LEDGER.macroEvents={
  a.updatedAt='2026-10-27';
 }
 
+/* 10/28-29: observed follow-ups to the existing AI cash-flow shock, not a daily-news archive. */
+{
+ const a=window.MARKET_LEDGER.macroEvents,e=a.events.find(x=>x.id==='2026-10-21-lam-meta-ai-earnings-shock');
+ e.sources.push(
+  {id:'meta-price-27',title:'Meta · 공모 가격 결정과 선도매각',publisher:'Meta 공식IR',publishedAt:'2026-10-27',observedAt:'가격 결정·예상 결제/미래 현금 유입',url:'https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx',verification:'공식 본문 확인',note:'250억/625달러,125억 의무전환. 최초 보통주 현금未수취·미래선도결제.975억 전액현재현금아님.'},
+  {id:'nvda-meta-27',title:'Nvidia · Meta 협력과 공모 투자',publisher:'Nvidia 공식IR',publishedAt:'2026-10-27',observedAt:'30억달러 투자 계획',url:'https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx',verification:'공식 본문 확인',note:'기존26/27미확인기록은그대로. 새확인시점에추가.'},
+  {id:'amd-meta-27',title:'AMD · Meta 인프라 협력 확대',publisher:'AMD 공식IR',publishedAt:'2026-10-27',observedAt:'10억달러 투자 계획',url:'https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure',verification:'공식 본문 확인',note:'공급사 지분투자와 최종 고객 사용료를 구분.'},
+  {id:'hynix-28',title:'SK hynix 3Q26 Results',publisher:'SK하이닉스 공식',publishedAt:'2026-10-28',observedAt:'3분기 실적·환원 계획',url:'https://news.skhynix.com/en/q3-2026-business-results/',verification:'공식 실적·환원 본문 확인',note:'기존40조포함총계.20조취득중10조소각용·10조보상용.계약은현금선취아님.'},
+  {id:'samsung-29',title:'Samsung Electronics 3Q26 Results',publisher:'삼성전자 공식',publishedAt:'2026-10-29',observedAt:'3분기 실적',url:'https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results',verification:'공식 실적 본문 확인',note:'주주환원 기대·지배구조 인과는기관해석과구분.'},
+  {id:'alphabet-28',title:'Alphabet 3Q26 Earnings Release · FCF 조정표',publisher:'Alphabet 공식IR',publishedAt:'2026-10-28 미국장후',observedAt:'3분기/직전분기/TTM 현금',url:'https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf',verification:'공식 PDF 현금표 확인',note:'Q3-90.65억·Q2-58.55억·TTM+197.47억. 분기첫적자아님·평가손실과분리.'},
+  {id:'msft-28',title:'Microsoft FY27Q1 · 현금흐름표',publisher:'Microsoft 공식IR',publishedAt:'2026-10-28 미국장후',observedAt:'2026년9월말 종료분기',url:'https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast',verification:'공식 현금표 확인',note:'OCF580억-현금PP&E393.67억=186.33억. 리스포함CapEx와다름.'},
+  {id:'closes-28-29',title:'신한 양일 국내 주식 마감·미래에셋 대조',publisher:'제공 기관PDF',publishedAt:'2026-10-28~29',observedAt:'한국양일마감',route:'#daily',dailyDate:'2026-10-29',verification:'마감표 이미지 확인',note:'수급은신한기준. 개별주수익률 시각차이·현물/선물분리.'},
+  {id:'briefings-28-29',title:'미래에셋 글로벌 마켓 브리핑 28/29',publisher:'제공2148056·2148087',publishedAt:'2026-10-28~29',observedAt:'미국27/28본장·28장후',route:'#daily',dailyDate:'2026-10-29',verification:'제공 본문·가격표 확인',note:'Alphabet/MS시간외와미국본장분리. 세부신용상품원가격확인아님.'},
+  {id:'texas-bond-28',title:'Banks Shelve Bond Sale for Anthropic-Tied Texas Data Center',publisher:'Bloomberg News / Bloomberg Law',publishedAt:'2026-10-28 21:50 UTC',observedAt:'기존대출 매각 지연 보도',url:'https://news.bloomberglaw.com/banking-law/banks-shelve-bond-sale-for-anthropic-tied-texas-data-center',verification:'접근 가능한 보도 첫부분 확인·제공 전문요약과 구분',note:'전력망검토·은행보유기간연장. Anthropic법인직접부도/현금총액확정아님.'},
+  {id:'fomc-28',title:'October FOMC Statement',publisher:'Federal Reserve 공식',publishedAt:'2026-10-28 14:00 EDT',observedAt:'한국29일03시 발표',url:'https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm',verification:'공식 성명 확인',note:'동결10:2·2명25bp인상선호. 12월결정아님·국내28일에소급않음.'}
+ );
+ const chapters=[
+  {title:'10월28일 후속 기록 — 메타 공모 수요가 완화한 것은 조달의 불확실성이었다',paragraphs:[
+   '메타의 보통주 공모 가격이250억달러·625달러로 구체화되고 기관이 초과 수요를 전하면서 시장은 AI 투자에 자본을 공급할 여력이 남아 있다고 읽었다. 미국27일 SOX+3.60%, Broadcom+4.00%, AMD+5.45%라는 반응은 초기 자본 제약 우려의 반대 근거다. 그러나 메타는1.64% 하락해 조달 흥행이 기존 주주의 희석·현금 회수 문제를 동시에 해소하지는 못했다.',
+   '공식 가격 결정문은 보통주의 최초 판매 시 회사가 현금을 받지 않고 선도계약 결제 때 받는다고 명시했다. 미래 ATM까지 포함한 전체 계획을 현재 입금액으로 읽으면 자금 접근성과 영업 현금의 차이를 놓친다. Nvidia·AMD의 투자도 이번에 공식 확인했으나26~27일의 미확인 기록을 조용히 덮어쓰지는 않는다.',
+   '공급사의 고객 지분투자는 장기 협력을 강화할 수 있지만 최종 사용자의 지급과는 다른 자금이다. 주문·투자·보증이 연결될수록 성장의 동력과 위험의 귀속도 함께 연결된다. 이를 회계 부정으로 단정하는 대신 실제 장비 인도, 서비스 현금, 지분과 보증의 손실 조건을 뒤이어 확인해야 한다.'
+  ],sourceIds:['meta-price-27','nvda-meta-27','amd-meta-27','briefings-28-29']},
+  {title:'10월28일 한국 — 하이닉스의 실적·계약·환원이 같은 방향으로 제시됐다',paragraphs:[
+   '하이닉스는 높은 분기 이익뿐 아니라 장기계약과 환원 계획을 제시했다. 고객 주문의 지속 기간과 주주에게 돌아올 현금의 설명이 함께 보강되면서 당기 실적만 강했던 초기 국면과 달랐다. 기존 자사주를 포함한 총계와 보상용 취득의 제외를 구분해야 하며, 취득과 소각을 각각 신규 현금으로 더하지 않는다.',
+   '한국28일 코스피는6,012.44(+6.63%), 코스닥771.28(+3.69%)로 상승했다. 신한표 양 시장 상승종목이 우세했고 코스피 외국인·기관 매수도 동반됐다. 삼성전자도 다음 발표 기대에 크게 올라, 고객 조달 안도와 국내 공급사의 환원 기대가 함께 가격을 떠받쳤다는 당시 해석이다.',
+   '반면 코스닥 외국인 매도와 지수선물 장중 매수의 종가 매도 전환은 남았다. 급등률만으로 중기 자금이 모두 복귀했다고 볼 수는 없었다. 실적·지정학 기대가 동시에 작용했고 FOMC·미국 장후 실적은 아직 발표 전이므로 그 결과를28일 국내 반등의 원인으로 넣지 않는다.'
+  ],sourceIds:['hynix-28','closes-28-29','briefings-28-29']},
+  {title:'10월29일 후속 기록 — 플랫폼 매출이 늘어도 투자 후 현금은 갈렸다',paragraphs:[
+   '미국28일 본장은 반도체 상승과 Oracle·Vertiv의 강세로 마감했지만 장후 알파벳은 약9~10% 내리고 MS는 반등했다는 기관 관측이다. 고객 수익화의 단서에 안도했던 시장이 다시 현금 지출의 크기와 시점을 따진 것이다. 알파벳은 직전분기도 FCF 적자였으므로 이번을 처음 적자 전환한 사건으로 다시 쓰지 않는다.',
+   '알파벳의 분기 FCF 적자 확대와 최근12개월 흑자, MS의 현금 유형자산 취득 차감 후 흑자는 동시에 존재했다. 클라우드 성장만으로 투자 부담이 사라지지 않지만 모든 대형 플랫폼의 자금 자립이 무너진 것도 아니다. 현금 취득과 금융리스 포함 CapEx, 부문 이익과 전사 현금의 정의를 맞춰 비교해야 한다.',
+   '같은 시기 Texas 데이터센터 대출의 채권 매각이 지연됐다는 보도는 물리적 가동 조건이 차환 일정과 은행의 보유 기간에 영향을 주는 경로를 보여준다. 메타의 지분 수요와는 차주·담보·수단이 다르다. 아직 확인되지 않은 손실액이나 전체 금융권의 대출 축소를 생성하지 않으며 독립적인 지수 충격이 입증되지 않은 이 프로젝트를 별도 사건으로 늘리지 않는다.'
+  ],sourceIds:['alphabet-28','msft-28','texas-bond-28','briefings-28-29']},
+  {title:'10월29일 한국 — 같은 메모리 이익에서도 환원과 매수의 차이가 드러났다',paragraphs:[
+   '한국29일에는 삼성전자 발표 이후 지수가 장초반 상승을 반납했다. 높은 절대 이익에도 환원 세부안의 시점과 설명이 기대에 못 미쳤다는 기관 해석이며 하이닉스는 상대적으로 강했다. 증여·지배구조에 관한 추론을 회사가 주가를 의도적으로 억제했다는 확정 사실로 바꾸지 않는다. 그날 원전·배터리·조선의 독립 재료도 함께 있었다.',
+   '코스피5,937.66(-1.24%)·코스닥753.23(-2.34%), 신한표 기관 코스피-4,472억원과 양 시장 하락종목 우세가 확인됐다. 외국인은 코스피에서 소폭 매수해 전면적인 외국인 투매와는 달랐다. 전날의 넓은 반등 뒤 다시 약해진 폭은 아직 수급 복구가 안정적이지 않다는 후속 근거다.',
+   'FOMC는 예상 범위의 동결이었고 단기금리 하락·장기금리 상승이 갈렸다. 이를 국내 하락의 단독 촉발점으로 만들지 않는다. 한국 마감 뒤 미국29일 지표와 장초반 가격도 다음 관측이다. 이후에는 실제 환원·고객 현금·같은 신용상품의 가격과 매수 지속을 확인해 이번 반등과 재차별화의 결말을 이어 기록한다.'
+  ],sourceIds:['samsung-29','hynix-28','closes-28-29','fomc-28','briefings-28-29']}
+ ];
+ e.casebook.sections.push(...chapters);
+ e.timeline.push(
+  {at:'2026-10-27 미국→2026-10-28 한국',session:'자금조달·환원의 반대 근거',title:'공모 가격 결정과 국내 반등 확대',paragraphs:['미국 공급사 상승·메타약세와 국내 실적·환원을 구분. FOMC 결과는 아직 없음.'],sourceIds:['meta-price-27','hynix-28','closes-28-29']},
+  {at:'2026-10-28 미국장후→2026-10-29 한국',session:'기업별 현금·환원 차별화',title:'알파벳/MS와 삼성/하이닉스의 다른 반응',paragraphs:['미국본장과시간외·국내마감·밤의새정보분리. 전면투매/정책단독충격아님.'],sourceIds:['alphabet-28','msft-28','closes-28-29','briefings-28-29']}
+ );
+ e.reactions.push(
+  {market:'한국 지수·시장 폭',window:'한국28일→29일마감',observation:'KS+6.63%→-1.24%;KQ+3.69%→-2.34%',interpretation:'환원 안도 이후 기업별 재평가. 상승 우세에서 하락 우세로 전환, 현물·파생 방향차이.',sourceIds:['closes-28-29']},
+  {market:'미국 클라우드',window:'미국28일본장→시간외 기관호가',observation:'Alphabet 본장+1.34%→시간외약9~10%하락 / MS장후반등',interpretation:'공급사 강세·고객 현금의 분화.29일본장종가미확인.',sourceIds:['briefings-28-29','alphabet-28','msft-28']}
+ );
+ e.updates.push(
+  {date:'2026-10-29',title:'28일 후속 관측을 별도 추가 — 자금조달 안도와 국내 환원',paragraphs:['당시 미발표였던 FOMC·장후실적을 섞지 않고 공모 가격·공식 투자 참여·한국28마감을 기록. 초기 미확인 기록과 기존 본문은 보존.'],sourceIds:['meta-price-27','nvda-meta-27','amd-meta-27','hynix-28','closes-28-29']},
+  {date:'2026-10-29',title:'29일 후속 관측 — 고객 현금과 주주환원 차별화',paragraphs:['알파벳 적자 확대/MS흑자·삼성/하이닉스 가격 분화와 수급 추가. FOMC·영국발행·개별프로젝트를 독립충격으로 자동 편입하지 않음.'],sourceIds:['alphabet-28','msft-28','texas-bond-28','samsung-29','closes-28-29','fomc-28']}
+ );
+ e.updatedAt='2026-10-29';e.casebook.editedAt='2026-10-29';e.coverage+=' / 후속: 미국27~28일·한국28~29일';
+ e.casebook.impact+=' 28~29일 후속: 국내+6.63% 반등 뒤-1.24%, 고객 현금과 주주환원에 따른 차별화.';
+ a.updatedAt='2026-10-29';
+}
+
 /* A distinct, observed multi-asset shock; not a policy preview or background story. */
 {
  const a=window.MARKET_LEDGER.macroEvents;
@@ -676,3 +732,5 @@ window.MARKET_LEDGER.macroEvents={
  a.selectionLog.push({date:'2026-10-27',eventId:'2026-10-26-brazil-election-market-selloff',action:'주요 사건 편입',reason:'전날 장외 단계 보류 이후 공식 거래소 중단 공지·본장 마감·환율과 기관 채권 반응 확보. 실제 주요 교차자산 충격 기준 충족.'});
  a.updatedAt='2026-10-27';
 }
+// Latest dated follow-up is newer than the preserved Brazil creation block.
+window.MARKET_LEDGER.macroEvents.updatedAt='2026-10-29';
