@@ -223,6 +223,9 @@ body[data-view-mode="pc"] .app-viewport{min-width:1200px}
 
 @media(max-width:760px){body[data-view-mode="pc"] .view-picker{position:fixed;right:12px;bottom:16px;z-index:120;background:var(--panel);padding:6px;border:1px solid var(--line);border-radius:8px}}
 /* Card News: portrait research sheets built from authored Daily and Korea Market text. */
+.cn-kind-tabs{display:flex;gap:8px;margin:0 0 18px}
+.cn-kind-tabs button{min-width:95px;padding:10px 18px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--muted);cursor:pointer}
+.cn-kind-tabs button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:var(--panel2);font-weight:700}
 .cn-date-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 20px;font-size:13px}
 .cn-date-bar label{color:var(--muted);font-weight:700}
 .cn-date-bar select{min-width:180px;max-width:100%;padding:10px 12px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:7px;font:inherit}
@@ -275,6 +278,11 @@ body[data-view-mode="pc"] .app-viewport{min-width:1200px}
 .cn-controls button:hover,.cn-controls button:focus-visible{border-color:#b8394d}
 .cn-controls button:disabled{opacity:.35;cursor:default}
 .cn-controls span{color:var(--muted);font-size:12px}
+.cn-export{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.cn-export button{border:1px solid var(--accent);border-radius:7px;background:var(--panel);color:var(--accent);padding:11px 16px;font-size:13px;font-weight:700;cursor:pointer}
+.cn-export button:disabled{opacity:.5;cursor:wait}
+.cn-export-status{font-size:12px;color:var(--muted);line-height:1.5}
+@media print{.cn-export{display:none!important}}
 @container ledger (max-width:900px){.cn-reader{grid-template-columns:minmax(0,1fr)}.cn-chapters{position:static;max-height:none;overflow:hidden;padding:8px}.cn-chapters-head{padding:5px 8px 9px}.cn-chapters-head small{display:block;font-size:11px;font-weight:500}.cn-chapter-strip{display:flex;align-items:center;gap:6px;min-width:0}.cn-chapter-track{display:flex;flex:1;min-width:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.cn-chapter-track::-webkit-scrollbar{display:none}.cn-chapter-track button{flex:0 0 180px;width:180px;height:44px;min-width:0;align-items:center;scroll-snap-align:center}.cn-chapter-track button b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.cn-chapter-arrow{display:block;flex:0 0 34px;height:42px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text);font-size:25px;line-height:1;cursor:pointer}.cn-chapter-arrow:disabled{opacity:.35;cursor:default}.cn-card{max-width:760px;margin:auto}}
 @container ledger (max-width:600px){.cn-status{margin-top:0}.cn-reader{gap:12px}.cn-chapter-track button{flex-basis:170px;width:170px}.cn-card{padding:23px 20px 20px;min-height:680px}.cn-card h2,.cn-kind-cover h2{font-size:31px;margin:21px 0;padding-bottom:20px}.cn-top{font-size:10px}.cn-top>span:last-child{font-size:13px}.cn-summary{padding:17px;margin-bottom:18px}.cn-summary p{font-size:18px}.cn-evidence-head,.cn-row{grid-template-columns:minmax(66px,25%) minmax(0,1fr)}.cn-evidence-head span,.cn-row-label,.cn-row-main{padding:10px}.cn-row-label,.cn-row-main strong{font-size:14px}.cn-row-main p{font-size:12px}.cn-foot{font-size:10px}}
 @media print{.sidebar,.topbar,.cn-chapters,.cn-controls,.cn-foot button{display:none!important}.app-shell{display:block}.content{padding:0}.cn-reader{display:block}.cn-card{box-shadow:none;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
