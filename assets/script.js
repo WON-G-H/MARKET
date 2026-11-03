@@ -172,7 +172,7 @@ function bindCardNews(){
   if(!news?.cards?.length||cardNewsExporting)return;
   const options={kind:cardNewsKind,key:cardNewsDate},cards=news.cards.slice();
   cardNewsExporting=true;button.disabled=true;button.textContent='이미지 생성 중…';if(status)status.textContent='';
-  try{await window.CardNewsExport.downloadAll(cards,options,(done,total)=>{button.textContent=`이미지 생성 중 ${done} / ${total}`;});if(status)status.textContent=`PNG ${cards.length}장 ZIP 다운로드를 시작했습니다.`;}
+  try{await window.CardNewsExport.downloadAll(cards,options,(done,total)=>{button.textContent=`이미지 생성 중 ${done} / ${total}`;});if(status)status.textContent=`JPG ${cards.length}장 ZIP 다운로드를 시작했습니다.`;}
   catch(error){if(status)status.textContent='저장 실패: '+(error.message||'다시 시도해 주세요.');}
   finally{cardNewsExporting=false;content.querySelectorAll('[data-cn-download]').forEach(b=>{b.disabled=false;b.textContent=`전체 이미지 다운로드 (${b.dataset.cnCount}장) ↓`;});}
  });

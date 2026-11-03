@@ -1,9 +1,9 @@
-/* Local PNG export: no uploads, external rendering service or remote fonts. */
+/* Local JPG export: no uploads, external rendering service or remote fonts. */
 (function(){
  const width=1080,pad=64,inner=width-pad*2;
  const family='"Pretendard","Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif';
  function filename(kind,key,page){
-  return `market-ledger-${kind==='weekly'?'weekly':'daily'}-${String(key).replace(/[^\w-]/g,'')}-${String(page+1).padStart(2,'0')}.png`;
+  return `market-ledger-${kind==='weekly'?'weekly':'daily'}-${String(key).replace(/[^\w-]/g,'')}-${String(page+1).padStart(2,'0')}.jpg`;
  }
  async function render(card,{page=0,total=1}={}){
   if(document.fonts)await document.fonts.ready;
@@ -72,15 +72,15 @@
   text('MARKET LEDGER',width-pad-220,y-36,220,21,700,'#6b696b');
   const height=Math.ceil(y+pad);
   // Fail explicitly instead of silently exporting a truncated/blank tall card.
-  if(height>14000)throw new Error('카드 내용이 너무 길어 PNG로 저장할 수 없습니다.');
+  if(height>14000)throw new Error('카드 내용이 너무 길어 JPG로 저장할 수 없습니다.');
   canvas.width=width;canvas.height=height;
   ctx.fillStyle='#fff';ctx.fillRect(0,0,width,height);
   for(const draw of commands)draw();
   return canvas;
  }
- async function png(card,options){
+ async function jpeg(card,options){
   const canvas=await render(card,options);
-  try{return await new Promise((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(new Error('PNG 생성에 실패했습니다.')),'image/png'));}
+  try{return await new Promise((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(new Error('JPG 생성에 실패했습니다.')),'image/jpeg',0.94));}
   finally{canvas.width=canvas.height=1;}
  }
  function save(blob,name){
@@ -89,10 +89,10 @@
   document.body.appendChild(anchor);anchor.click();anchor.remove();
   setTimeout(()=>URL.revokeObjectURL(url),60000);
  }
- async function download(card,options){save(await png(card,options),filename(options.kind,options.key,options.page));}
+ async function download(card,options){save(await jpeg(card,options),filename(options.kind,options.key,options.page));}
  const crcTable=Array.from({length:256},(_,i)=>{let crc=i;for(let bit=0;bit<8;bit++)crc=(crc&1)?0xedb88320^(crc>>>1):crc>>>1;return crc>>>0;});
  function crc32(data){let crc=0xffffffff;for(const byte of data)crc=crcTable[(crc^byte)&255]^(crc>>>8);return (crc^0xffffffff)>>>0;}
- // PNG is already compressed. Standard ZIP STORE avoids a new library and recompression.
+ // JPG is already compressed. Standard ZIP STORE avoids a new library and recompression.
  function zip(entries){
   if(entries.length>65535)throw new Error('저장할 이미지가 너무 많습니다.');
   const parts=[],directory=[];let offset=0,directorySize=0;
@@ -117,12 +117,12 @@
   if(!cards?.length)throw new Error('저장할 카드가 없습니다.');
   const entries=[];
   for(let page=0;page<cards.length;page++){
-   const blob=await png(cards[page],{page,total:cards.length});
+   const blob=await jpeg(cards[page],{page,total:cards.length});
    entries.push({name:filename(options.kind,options.key,page),data:new Uint8Array(await blob.arrayBuffer())});
    onProgress(page+1,cards.length);
    await new Promise(resolve=>setTimeout(resolve,0));
   }
-  save(zip(entries),filename(options.kind,options.key,0).replace(/-01\.png$/,'.zip'));
+  save(zip(entries),filename(options.kind,options.key,0).replace(/-01\.jpg$/,'.zip'));
  }
  window.CardNewsExport={download,downloadAll,render,filename,zip};
 })();
