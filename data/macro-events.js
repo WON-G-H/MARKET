@@ -1367,3 +1367,371 @@ if(!window.MARKET_LEDGER.macroEvents.categories.includes('에너지·공급망')
 
 /* Authorized replacement-source supplement; historical case paragraphs retained. */
 {const a=window.MARKET_LEDGER.macroEvents,e=a.events.find(e=>e.id==='2026-10-21-lam-meta-ai-earnings-shock'),o=a.events.find(e=>e.id==='2026-11-02-us-iran-talks-oil-selloff');e.sources.push(...[{"id":"save-nov03-corrected","title":"교체 제출된 11월3일 SAVE 브리핑","publisher":"사용자 제공 SAVE·기사 요약","publishedAt":"2026-11-03","observedAt":"미2일 본장·장후/한국3일·전주선물 혼합,본문별 구분","route":"#daily","dailyDate":"2026-11-03","verification":"31쪽 전문 추출·주요 페이지 이미지 확인. 기사 주장과 직접 원문 확인 구분.","note":"Apple과Palantir 장후/씨티선물/중국IPO/이란협상.29~31쪽7월일정은템플릿잔존으로제외."},{"id":"apple-nov02-release","title":"Apple reports fourth quarter results","publisher":"Apple 공식 Newsroom","publishedAt":"2026-11-02 미국","observedAt":"9월26일 종료 회계4분기","url":"https://www.apple.com/ae/newsroom/2026/11/apple-reports-fourth-quarter-results/","verification":"공식 본문 확인","note":"매출1145억·EPS2.10·GPM47.9/관세환급약1pp.12월가이던스와장후가격은별도기사관측."},{"id":"nvidia-nov03-ft","title":"Nvidia orders data centre clients to reduce China exposure","publisher":"FT / Yahoo 재게시","publishedAt":"2026-11-03","observedAt":"관계자 구두요구·신규계약 보도","url":"https://finance.yahoo.com/technology/ai/articles/nvidia-orders-data-centre-clients-050013308.html","verification":"재게시 본문 확인·요구 자체는 관계자 보도","note":"51%비중국서비스·기존리스아닌미래계약.공식법률/일괄취소로격상않음."}]);e.casebook.sections.push({"title":"11월3일 교체 자료 보강 — 매출 성장과 고객의 이익·포지션은 달랐다","paragraphs":["애플 공식 발표는 9월 종료 회계4분기 매출 1,145억달러(+12%), EPS 2.10달러와 매출총이익률 47.9%를 확인해 준다. 마진에는 관세 환급 약 1%p가 포함됐다. 새 SAVE의 12월 분기 마진 전망 45~46%·메모리 및 AI 비용 부담과 장후 약 -3%는 기사 요약의 관측이다. 매출 호조에도 고객사의 원가와 기대 이익이 눌릴 수 있어 메모리 공급사의 높은 이익과 같은 방향으로만 평가되지 않는다. 애플 회계4분기 공식 발표.","새 SAVE는 팔란티어의 매출·연간 전망 상향에도 다음 분기 성장 속도와 높은 가치평가를 우려해 장후 약 3% 하락했다고 전한다. 정규장 -3.13%와 별도 관측이며 초기 장후 반등을 언급한 브리핑과도 시점이 다르다. 기업용 AI의 실제 수요 성장은 반론으로 남지만, 좋은 실적만으로 이미 높아진 기대를 계속 넘을 수 있는지는 별도 질문이다.","FT의 재게시 본문은 엔비디아가 클라우드 고객에 비중국 기업 매출을 최소 51%로 유지하도록 구두 요구했다는 관계자 주장을 전한다. 신규 계약 대상이라는 보도이며 기존 계약 전체의 취소나 확정된 새 법률은 아니다. 실제 적용 시 중국 의존도가 높은 사업자는 고객 교체와 가동률·현금 회수 부담을 겪을 수 있다는 조건부 경로다. FT 재게시·관계자 보도.","새 SAVE의 씨티 분석은 지난주 S&P500 선물에 신규 숏 약 96억달러가 유입되고 나스닥도 약해진 반면 러셀2000은 숏커버가 나타났다고 전한다. 한국·중국A50·홍콩은 약세 포지션이 크되 신규 숏 축적 속도는 둔화됐다는 기관 해석이다. 원표·산식은 미확보이며 선물 명목 노출을 국내 현물 순유출로 더하지 않는다. 숏커버 여지와 실제 반전은 별도다."],"sourceIds":["save-nov03-corrected","apple-nov02-release","nvidia-nov03-ft"]});e.updates.push({"date":"2026-11-03","title":"교체 SAVE 자료 반영","paragraphs":["사용자가 잘못 첨부한 11/2 SAVE를 11/3 SAVE로 교체하도록 명시적으로 요청. 기존 독립 마감표는 유지하고 새 내용 보강.","애플마진·팔란티어장후·클라우드고객조건·선물포지션추가.새독립충격은편입하지않음."],"sourceIds":["save-nov03-corrected","apple-nov02-release","nvidia-nov03-ft"]});o.sources.push({"id":"save-nov03-corrected","title":"교체 제출된 11월3일 SAVE 브리핑","publisher":"사용자 제공 SAVE·기사 요약","publishedAt":"2026-11-03","observedAt":"미2일 본장·장후/한국3일·전주선물 혼합,본문별 구분","route":"#daily","dailyDate":"2026-11-03","verification":"31쪽 전문 추출·주요 페이지 이미지 확인. 기사 주장과 직접 원문 확인 구분.","note":"Apple과Palantir 장후/씨티선물/중국IPO/이란협상.29~31쪽7월일정은템플릿잔존으로제외."});o.casebook.sections.push({"title":"11월3일 교체 자료 — 협상과 제한적 공격 보도가 병존했다","paragraphs":["새 SAVE가 요약한 WSJ는 미국이 이란 케슘섬을 공격하는 가운데 외교적 합의를 논의했다고 전한다. 미국 당국자를 인용한 보도로 이번 검토에서 군사 발표 원문을 별도로 확인하지는 못했다. 유가 하락을 실제 적대행위 종료의 증거로 볼 수 없다는 반대 정보다.","같은 자료는 카타르 중재 후 양국이 최신 제안을 검토한다는 보도를 담았다. 제안 검토와 이견 해소·합의 서명·통항 정상화는 다른 단계다. 협상 기대가 공급 위험의 가격을 낮추면서도 현장 위험이 남을 수 있다는 것이 이번 추가 자료의 연결이다.","이 자료만으로 공격의 정확한 시각과 유가의 분 단위 반응을 대조하지 못했으므로 별도 충격의 순수 기여도를 추정하지 않는다. 기존 원유 결제·결제 후 발언의 순서는 유지하고 추가된 반대 정보를 후속 관측으로 남긴다."],"sourceIds":["save-nov03-corrected"]});o.updates.push({"date":"2026-11-03","title":"교체 SAVE의 협상·군사행동 병행 보도 추가","paragraphs":["협상기대와실제적대행위종료를구분.추가기사주장을공식군사발표로격상않음."],"sourceIds":["save-nov03-corrected"]});}
+
+/* November 4 observations and US midterm case. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  {
+    const event = archive.events.find(event => event.id === "2026-10-21-lam-meta-ai-earnings-shock");
+    event.sources.push(...[
+  {
+    "id": "amd-nov03-release",
+    "title": "AMD 3분기 실적",
+    "publisher": "AMD 공식 공시",
+    "publishedAt": "2026-11-03",
+    "observedAt": "미국 3일 장후",
+    "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000188/q32026991.htm",
+    "verification": "발행사 공시 확인",
+    "note": "미국 3일 장후"
+  },
+  {
+    "id": "korea-nov04-close",
+    "title": "11월4일 국내 마감",
+    "publisher": "신한투자증권",
+    "publishedAt": "2026-11-04",
+    "observedAt": "한국 4일 정규장 및 마감표",
+    "route": "#daily",
+    "dailyDate": "2026-11-04",
+    "verification": "마감 원표 이미지 확인",
+    "note": "한국 4일 정규장 및 마감표"
+  }
+]);
+    event.casebook.sections.push({
+  "title": "11월4일 후속 — AMD 수요와 선거 이후 집행 위험",
+  "paragraphs": [
+    "AMD의 3분기 데이터센터 매출 85억달러와 전년 대비 97% 성장은 AI 수요의 직접 관측이다. 미국 3일 SOX 정규장 반등과 AMD 장후 반응을 분리한다.",
+    "한국 4일 반도체 대형주는 소폭 약세로 마감했다. 실적이 확인한 수요와 선거가 바꾼 인허가 기대, 자금 조달 조건이 동시에 가격에 반영될 수 있다."
+  ],
+  "sourceIds": [
+    "amd-nov03-release",
+    "korea-nov04-close"
+  ]
+});
+    event.updates.push({
+  "date": "2026-11-04",
+  "title": "11월4일 후속 — AMD 수요와 선거 이후 집행 위험",
+  "paragraphs": [
+    "AMD의 3분기 데이터센터 매출 85억달러와 전년 대비 97% 성장은 AI 수요의 직접 관측이다. 미국 3일 SOX 정규장 반등과 AMD 장후 반응을 분리한다.",
+    "한국 4일 반도체 대형주는 소폭 약세로 마감했다. 실적이 확인한 수요와 선거가 바꾼 인허가 기대, 자금 조달 조건이 동시에 가격에 반영될 수 있다."
+  ],
+  "sourceIds": [
+    "amd-nov03-release",
+    "korea-nov04-close"
+  ]
+});
+    event.updatedAt = "2026-11-04";
+    event.casebook.editedAt = "2026-11-04";
+  }
+  {
+    const event = archive.events.find(event => event.id === "2026-11-02-us-iran-talks-oil-selloff");
+    event.sources.push(...[
+  {
+    "id": "brent-nov03-settlement",
+    "title": "브렌트 결제와 협상 보도",
+    "publisher": "Reuters 재게시",
+    "publishedAt": "2026-11-03",
+    "observedAt": "미국 3일 결제",
+    "url": "https://uk.marketscreener.com/news/oil-edges-up-after-report-of-us-strike-on-iran-s-qeshm-island-ce785fd9dc8df323",
+    "verification": "기사 결제 가격 확인",
+    "note": "미국 3일 결제"
+  },
+  {
+    "id": "korea-nov04-close",
+    "title": "11월4일 국내 마감",
+    "publisher": "신한투자증권",
+    "publishedAt": "2026-11-04",
+    "observedAt": "한국 4일 정규장 및 마감표",
+    "route": "#daily",
+    "dailyDate": "2026-11-04",
+    "verification": "마감 원표 이미지 확인",
+    "note": "한국 4일 정규장 및 마감표"
+  }
+]);
+    event.casebook.sections.push({
+  "title": "11월4일 후속 — 케슘 공격 보도 이후 브렌트 103.60달러",
+  "paragraphs": [
+    "미국 3일 브렌트는 공격 보도 뒤 장 초반 반등했으나 Reuters 결제 기준 103.60달러로 1.17달러 하락했다. 협상 기대와 공급 위험을 함께 기록한다.",
+    "유가와 별도로 확인할 항목은 양측의 합의 발표와 해협 통항이다. 미래에셋 표는 같은 가격 수준에 다른 등락률 기준을 사용했다."
+  ],
+  "sourceIds": [
+    "brent-nov03-settlement",
+    "korea-nov04-close"
+  ]
+});
+    event.updates.push({
+  "date": "2026-11-04",
+  "title": "11월4일 후속 — 케슘 공격 보도 이후 브렌트 103.60달러",
+  "paragraphs": [
+    "미국 3일 브렌트는 공격 보도 뒤 장 초반 반등했으나 Reuters 결제 기준 103.60달러로 1.17달러 하락했다. 협상 기대와 공급 위험을 함께 기록한다.",
+    "유가와 별도로 확인할 항목은 양측의 합의 발표와 해협 통항이다. 미래에셋 표는 같은 가격 수준에 다른 등락률 기준을 사용했다."
+  ],
+  "sourceIds": [
+    "brent-nov03-settlement",
+    "korea-nov04-close"
+  ]
+});
+    event.updatedAt = "2026-11-04";
+    event.casebook.editedAt = "2026-11-04";
+  }
+  archive.events.push({
+  "id": "2026-11-03-us-midterms-blue-wave",
+  "eventDate": "2026-11-03",
+  "eventTime": "미국 현지 3일 투표, 한국 4일 장중 개표",
+  "koreaAttributionDate": "2026-11-04",
+  "recordedAt": "2026-11-04",
+  "updatedAt": "2026-11-04",
+  "coverage": "미국 3일 정규장과 한국 4일 장중·마감, 이후 AP 보도",
+  "category": "정치·재정",
+  "phase": "개표와 한국 시장 반응 확인",
+  "title": "미국 중간선거 민주당 양원 확보와 코스피 장중 급락·반등",
+  "subtitle": "개표 중 데이터센터 정책 우려와 ESS·신재생 순환매",
+  "tags": [
+    "미국중간선거",
+    "블루웨이브",
+    "데이터센터",
+    "ESS",
+    "코스피",
+    "외국인수급"
+  ],
+  "summary": [
+    "한국 거래 시간에 진행된 개표에서 민주당 우위가 가시화됐다. 코스피는 5,421.72까지 밀렸다가 5,683.80으로 마감했다."
+  ],
+  "highlights": [
+    {
+      "label": "코스피 장중 범위",
+      "value": "5,421.72~5,828.13"
+    },
+    {
+      "label": "마감",
+      "value": "코스피 +0.62% · 코스닥 +1.50%"
+    },
+    {
+      "label": "외국인 코스피",
+      "value": "-25,020억원"
+    }
+  ],
+  "background": [
+    "미국 투표일 정규장에서는 반도체주가 반등했다. 한국 개장 무렵에는 AMD 실적과 초기 개표가 동시에 전해졌다. 경합주 우세 분류는 개표 진행에 따라 달라졌으며 미래에셋 전달 자료는 한국 13시 41분에 상원 다수 전망을 기록했다.",
+    "한국 마감 뒤 Axios는 AP가 민주당의 양원 장악을 전망했다고 전했다. 이후 AP 보도에서 양원 확보를 확인했다. 초기 경합주 추정, 장중 다수당 전망, 마감 뒤 보도를 시간순으로 기록한다."
+  ],
+  "trigger": [
+    "미국 투표일 정규장에서는 반도체주가 반등했다. 한국 개장 무렵에는 AMD 실적과 초기 개표가 동시에 전해졌다. 경합주 우세 분류는 개표 진행에 따라 달라졌으며 미래에셋 전달 자료는 한국 13시 41분에 상원 다수 전망을 기록했다."
+  ],
+  "transmission": [
+    "데이터센터 입지에서 전력·용수·세제 문제가 쟁점이었다. 주민 반발이 정책에 반영될 경우 일부 프로젝트는 비용 분담이나 인허가 기간이 달라질 수 있다. 실제 영향은 지방정부와 주정부의 제도, 연방 의회의 입법이 각각 결정한다.",
+    "국내에서는 LG에너지솔루션·삼성SDI가 장중 저점에서 반등하고 한화솔루션이 18.6% 올랐다. 반도체 대형주는 소폭 약세였다. 친환경 지원과 ESS에 대한 기대, 기존 포지션 조정, 기업 실적이 섞인 반응이다."
+  ],
+  "alternatives": [
+    "개표와 함께 데이터센터·관세 정책 경로가 재평가됐다는 해석이 나왔다. 동시에 코스피 외국인 2조5,020억원 순매도와 기관 1조136억원 순매수가 교차했다. 낙폭 회복의 원인으로 개표 불확실성 완화와 국내 매수 유입을 함께 본다."
+  ],
+  "aftermath": [
+    "양원 구도 변화 뒤 실제 예산·세제안과 주별 인허가가 어떻게 바뀌는지가 설비투자의 시험대다. AMD의 데이터센터 실적은 이미 발생한 수요를 보여주고, 프로젝트의 향후 가동과 수익성은 이후 계약과 집행에서 확인할 수 있다.",
+    "코스피가 양전한 날 외국인 매도는 전날보다 컸다. 다음 거래의 외국인 수급, 장중 변동 폭, 반도체·ESS 간 상대 수익률이 선거 당일 순환의 지속성을 가늠할 근거다."
+  ],
+  "timeline": [
+    {
+      "at": "2026-11-03 미국 정규장",
+      "session": "개표 전",
+      "title": "SOX +2.63%, 장후 AMD 실적 발표",
+      "paragraphs": [
+        "미국 정규장 수익률과 개표 이후 선물 관측은 별도 구간이다."
+      ],
+      "sourceIds": [
+        "amd-nov03-release",
+        "midterm-live-nov04"
+      ]
+    },
+    {
+      "at": "2026-11-04 12:45 KST",
+      "session": "한국 장중",
+      "title": "코스피 5,421.72 저점",
+      "paragraphs": [
+        "개표 중 위험 경계가 커지고 외국인 매도가 이어졌다."
+      ],
+      "sourceIds": [
+        "kospi-path-nov04",
+        "korea-nov04-close"
+      ]
+    },
+    {
+      "at": "2026-11-04 한국 마감 및 이후",
+      "session": "마감·후속",
+      "title": "코스피 반등 마감과 양원 확보 보도",
+      "paragraphs": [
+        "한국 마감 뒤의 당선 보도와 장중 전망을 구분한다."
+      ],
+      "sourceIds": [
+        "korea-nov04-close",
+        "midterm-axios-nov04",
+        "midterm-ap-nov04"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "market": "한국 지수·현물",
+      "window": "4일 정규장",
+      "observation": "코스피 5,683.80(+0.62%), 외국인 -25,020억원, 기관 +10,136억원",
+      "interpretation": "기관 매수와 업종 반등이 오후 회복을 지지했다는 해석이다.",
+      "sourceIds": [
+        "korea-nov04-close",
+        "kospi-path-nov04"
+      ]
+    },
+    {
+      "market": "국내 업종",
+      "window": "4일 신한 마감 관측",
+      "observation": "한화솔루션 +18.6%, 에코프로BM +11.0%, 삼성전자 -0.7%",
+      "interpretation": "친환경·ESS 기대와 반도체 대형주의 약세가 공존했다.",
+      "sourceIds": [
+        "korea-nov04-close"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "최종 의석 수와 실제 예산·입법",
+    "주별 인허가 및 전력비 배분",
+    "외국인 현물과 업종 순환의 지속성"
+  ],
+  "relatedIds": [
+    "2026-10-21-lam-meta-ai-earnings-shock"
+  ],
+  "updates": [
+    {
+      "date": "2026-11-04",
+      "title": "한국 마감과 양원 확보 보도 대조",
+      "paragraphs": [
+        "장중 개표 전망과 마감 뒤 확인을 시각별로 기록했다."
+      ],
+      "sourceIds": [
+        "korea-nov04-close",
+        "midterm-axios-nov04",
+        "midterm-ap-nov04"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "korea-nov04-close",
+      "title": "11월4일 국내 마감",
+      "publisher": "신한투자증권",
+      "publishedAt": "2026-11-04",
+      "observedAt": "한국 4일 정규장 및 마감표",
+      "route": "#daily",
+      "dailyDate": "2026-11-04",
+      "verification": "마감 원표 이미지 확인",
+      "note": "한국 4일 정규장 및 마감표"
+    },
+    {
+      "id": "midterm-ap-nov04",
+      "title": "민주당의 양원 확보",
+      "publisher": "AP",
+      "publishedAt": "2026-11-04",
+      "observedAt": "4일 13:19 UTC, 한국 마감 뒤 보도",
+      "url": "https://apnews.com/article/b1d26390b7ed7968435089be6d3bf612",
+      "verification": "보도 확인",
+      "note": "4일 13:19 UTC, 한국 마감 뒤 보도"
+    },
+    {
+      "id": "midterm-axios-nov04",
+      "title": "AP 양원 전망 인용",
+      "publisher": "Axios",
+      "publishedAt": "2026-11-04",
+      "observedAt": "4일 07:34 UTC, 한국 마감 뒤 보도",
+      "url": "https://www.axios.com/2026/11/03/election-day-midterm-trump-democrats-republicans",
+      "verification": "당선 전망 시각 확인",
+      "note": "4일 07:34 UTC, 한국 마감 뒤 보도"
+    },
+    {
+      "id": "midterm-live-nov04",
+      "title": "경합주 개표·당선 전망",
+      "publisher": "미래에셋 시황·SAVE",
+      "publishedAt": "2026-11-04",
+      "observedAt": "한국 오전 우세 집계와 13:41 상원 다수 전망",
+      "route": "#daily",
+      "dailyDate": "2026-11-04",
+      "verification": "제공 자료의 시각별 전망",
+      "note": "한국 오전 우세 집계와 13:41 상원 다수 전망"
+    },
+    {
+      "id": "kospi-path-nov04",
+      "title": "코스피 장중 저점과 마감",
+      "publisher": "연합뉴스",
+      "publishedAt": "2026-11-04",
+      "observedAt": "한국 4일 12:45 저점 5,421.72",
+      "url": "https://en.yna.co.kr/view/AEN20261104006851320",
+      "verification": "마감 기사 대조",
+      "note": "한국 4일 12:45 저점 5,421.72"
+    },
+    {
+      "id": "amd-nov03-release",
+      "title": "AMD 3분기 실적",
+      "publisher": "AMD 공식 공시",
+      "publishedAt": "2026-11-03",
+      "observedAt": "미국 3일 장후",
+      "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000188/q32026991.htm",
+      "verification": "발행사 공시 확인",
+      "note": "미국 3일 장후"
+    }
+  ],
+  "casebook": {
+    "title": "미국 중간선거 민주당 양원 확보와 코스피 장중 급락·반등",
+    "cause": "미국 개표에서 민주당 우위가 가시화되자 데이터센터와 친환경 정책의 향후 경로를 재평가했다.",
+    "impact": "코스피가 장중 약 4% 하락한 뒤 상승 마감했다. ESS·신재생 강세와 반도체 대형주 약세가 갈렸다.",
+    "thesis": "개표가 진행되는 동안 바뀐 정책 기대와 국내 매수·매도의 교차가 400포인트 넘는 변동을 동반했다. 결과 전망과 실제 정책 집행의 시간 차이가 중요하다.",
+    "sections": [
+      {
+        "title": "미국 3일 투표와 한국 4일 개표",
+        "paragraphs": [
+          "미국 투표일 정규장에서는 반도체주가 반등했다. 한국 개장 무렵에는 AMD 실적과 초기 개표가 동시에 전해졌다. 경합주 우세 분류는 개표 진행에 따라 달라졌으며 미래에셋 전달 자료는 한국 13시 41분에 상원 다수 전망을 기록했다.",
+          "한국 마감 뒤 Axios는 AP가 민주당의 양원 장악을 전망했다고 전했다. 이후 AP 보도에서 양원 확보를 확인했다. 초기 경합주 추정, 장중 다수당 전망, 마감 뒤 보도를 시간순으로 기록한다."
+        ],
+        "sourceIds": [
+          "midterm-live-nov04",
+          "midterm-axios-nov04",
+          "midterm-ap-nov04",
+          "amd-nov03-release"
+        ]
+      },
+      {
+        "title": "지수는 오전 상승을 반납한 뒤 저점에서 회복",
+        "paragraphs": [
+          "코스피는 5,786.13으로 출발해 고점 5,828.13과 저점 5,421.72 사이 406.41포인트를 움직였다. 정오 무렵 전일 대비 약 4%까지 밀렸으나 종가는 +0.62%였다. 코스닥도 +1.50%로 마쳤다.",
+          "개표와 함께 데이터센터·관세 정책 경로가 재평가됐다는 해석이 나왔다. 동시에 코스피 외국인 2조5,020억원 순매도와 기관 1조136억원 순매수가 교차했다. 낙폭 회복의 원인으로 개표 불확실성 완화와 국내 매수 유입을 함께 본다."
+        ],
+        "sourceIds": [
+          "kospi-path-nov04",
+          "korea-nov04-close",
+          "midterm-live-nov04"
+        ]
+      },
+      {
+        "title": "데이터센터의 비용과 ESS·신재생 기대",
+        "paragraphs": [
+          "데이터센터 입지에서 전력·용수·세제 문제가 쟁점이었다. 주민 반발이 정책에 반영될 경우 일부 프로젝트는 비용 분담이나 인허가 기간이 달라질 수 있다. 실제 영향은 지방정부와 주정부의 제도, 연방 의회의 입법이 각각 결정한다.",
+          "국내에서는 LG에너지솔루션·삼성SDI가 장중 저점에서 반등하고 한화솔루션이 18.6% 올랐다. 반도체 대형주는 소폭 약세였다. 친환경 지원과 ESS에 대한 기대, 기존 포지션 조정, 기업 실적이 섞인 반응이다."
+        ],
+        "sourceIds": [
+          "korea-nov04-close",
+          "midterm-live-nov04"
+        ]
+      },
+      {
+        "title": "추가 확인이 필요한 정책과 수급",
+        "paragraphs": [
+          "양원 구도 변화 뒤 실제 예산·세제안과 주별 인허가가 어떻게 바뀌는지가 설비투자의 시험대다. AMD의 데이터센터 실적은 이미 발생한 수요를 보여주고, 프로젝트의 향후 가동과 수익성은 이후 계약과 집행에서 확인할 수 있다.",
+          "코스피가 양전한 날 외국인 매도는 전날보다 컸다. 다음 거래의 외국인 수급, 장중 변동 폭, 반도체·ESS 간 상대 수익률이 선거 당일 순환의 지속성을 가늠할 근거다."
+        ],
+        "sourceIds": [
+          "korea-nov04-close",
+          "amd-nov03-release",
+          "midterm-ap-nov04"
+        ]
+      }
+    ],
+    "editedAt": "2026-11-04",
+    "editorialNote": "현지 사건일과 한국 반영일을 분리했다."
+  }
+});
+  archive.updatedAt = "2026-11-04";
+}
