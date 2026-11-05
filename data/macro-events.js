@@ -1735,3 +1735,292 @@ if(!window.MARKET_LEDGER.macroEvents.categories.includes('에너지·공급망')
 });
   archive.updatedAt = "2026-11-04";
 }
+
+/* November 5 dated follow-up observations. */
+{
+ const archive=window.MARKET_LEDGER.macroEvents;
+ {
+ const event=archive.events.find(event=>event.id==="2026-11-03-us-midterms-blue-wave");
+ event.sources.push(...[
+  {
+    "id": "korea-nov05-close",
+    "title": "양 시장 급락·수급·사이드카",
+    "publisher": "신한 마감·미래에셋 마감·KBS",
+    "publishedAt": "2026-11-05",
+    "observedAt": "한국5일 정규장",
+    "url": "https://world.kbs.co.kr/service/news_view.htm?Seq_Code=205373&lang=e",
+    "verification": "두 기관 지수 대조·신한 최종 수급표",
+    "note": "한국5일 정규장"
+  },
+  {
+    "id": "reaction-nov05-power",
+    "title": "The blue wave raises the bar for AI",
+    "publisher": "사용자 제공 종합 Reaction",
+    "publishedAt": "2026-11-05",
+    "observedAt": "2027·2028~29 시나리오/텍사스 HY 표본",
+    "route": "#daily",
+    "dailyDate": "2026-11-05",
+    "verification": "제공 분석, 기관별 원표 미확보",
+    "note": "2027·2028~29 시나리오/텍사스 HY 표본"
+  },
+  {
+    "id": "ballot-nov05-track",
+    "title": "지역별 데이터센터 안건",
+    "publisher": "DMGS 추적표·사용자 제공 집계",
+    "publishedAt": "2026-11-05",
+    "observedAt": "미4일33건/제공종합42건통과또는우세",
+    "url": "https://statecapitallobbyist.com/artificial-intelligence-ai/data-centers/data-centers-on-the-ballot-where-things-stand/",
+    "verification": "추적표의 조항 확인·통합수치 직접 미대조",
+    "note": "미4일33건/제공종합42건통과또는우세"
+  },
+  {
+    "id": "us-nov04-close",
+    "title": "미국 지수·AI 내부 반응·FICC",
+    "publisher": "미래에셋2148281·신한 마감",
+    "publishedAt": "2026-11-05",
+    "observedAt": "미국4일 정규장·기관 호가",
+    "route": "#daily",
+    "dailyDate": "2026-11-05",
+    "verification": "제공 자료 대조",
+    "note": "미국4일 정규장·기관 호가"
+  }
+]);
+ event.casebook.sections.push(...[
+  {
+    "title": "11월5일 후속 — 미국 안도 상승과 한국 매도의 분기",
+    "paragraphs": [
+      "미국 4일 다우 53,356.12(+3.03%), S&P500 7,688.62(+1.58%), 나스닥 25,736.51(+1.44%)로 마감했다. 반면 SOX는 10,268.65(-3.13%)였다. VIX는 16.61로 20.26% 낮아졌다. 미래에셋 브리핑의 정규장 관측이다. 지수의 불확실성 완화와 반도체의 투자 일정 경계가 동시에 나타났다.",
+      "신한은 아마존 약 +6.2%, 코어위브 -9.9%의 차이를 기존 자산과 재무 여력의 차이로 해석했다. 건설 지출이 늦어지면 단기 현금 유출이 줄 수 있으나 통전·매출이 지연되고 장비 지급은 남을 수 있다. 고객과 공급사에서 같은 CapEx 조절을 다르게 평가할 이유다.",
+      "신한 최종표 기준 코스피 개인 +2조2,770억원, 외국인 -3조4,250억원, 기관 +8,418억원이다. 코스닥은 개인 +1,722억원, 외국인 -759억원, 기관 -1,028억원이다. 기타 주체를 제외한 표 합계를 임의 보정하지 않는다.",
+      "전날 코스피 기관 +1조136억원에서 매수 규모가 줄고 외국인 매도는 -2조5,020억원에서 더 커졌다. 상승·하락 종목은 코스피 344대537, 코스닥 380대1,292였다. 기관의 저가 매수는 남아 있었지만 가격과 시장 폭을 함께 지지하는 힘은 약해졌다."
+    ],
+    "sourceIds": [
+      "korea-nov05-close",
+      "us-nov04-close"
+    ]
+  },
+  {
+    "title": "통전까지의 시간과 남은 지급 의무",
+    "paragraphs": [
+      "제공 Reaction은 2027년 확정 프로젝트와 2028~2029년 통전 계획을 구분했다. 현장 공사와 자금 조달이 진행된 사업보다 허가·전력을 기다리는 부지가 추가 비용과 이월에 민감할 수 있다는 분석이다. 프로젝트별 실제 상태를 대조하기 전에는 연도별 영향의 확정치로 쓰기 어렵다.",
+      "미국 지방 안건 45건 중 제한 찬성 33건이라는 전달 집계와 통과 또는 우세 42건이라는 종합 분석은 시각·확정 범위가 다르다. 공개 안건표에서도 건설 금지, 용량 기준, 보증 의무와 구역 변경이 혼재한다. 부지별 조항과 기존 허가에 대한 적용을 확인해야 한다. 지방 안건별 추적표",
+      "Reaction의 HY 조달 용량 중 텍사스 약 27%와 미조달 개발 파이프라인 약 78%는 분모가 다른 제공 추정이다. 원표가 확보되지 않아 두 비율로 전체 AI 투자 손실을 계산하지 않는다. 기존 PPA·완료 인허가·지연 해지권·고객 신용과 개발사 유동성을 함께 비교하는 경로로 활용한다.",
+      "기존 운영 자산은 공급 제약으로 임대료 협상력이 높아질 수 있고 신규 개발은 통전 지연으로 회수 기간이 길어질 수 있다. 규제 유틸리티도 성장 투자의 축소와 차입 감소가 주식·채권에 다르게 작용한다. 임시전원·BTM은 데이터센터 공사 자체의 지연과 지역 계통 여건에 노출된다. 아시아 15GW·BTM 8GW는 조건부 제공 시나리오다."
+    ],
+    "sourceIds": [
+      "reaction-nov05-power",
+      "ballot-nov05-track"
+    ]
+  },
+  {
+    "title": "정책의 경로와 시장 가격을 다시 연결한다",
+    "paragraphs": [
+      "연방 의회의 입법·예산과 대통령의 집행, 주정부·지방정부의 전력·입지·요금은 다른 권한이다. 선거 결과 뒤 실제 조항이 사업자 비용과 허가 기간으로 이어지는지 확인해야 한다. 임차인 신용이 높아도 준공 지연과 계약상 해지 조항은 별도의 손실 경로가 될 수 있다.",
+      "제공 분석은 기존 가동 자산과 확정 전력·계약의 상대적 희소가치를 봤다. 신규 개발까지 같은 임대료·신용 보호를 받는다는 뜻으로 확장할 근거는 없다. 텍사스12월10일 검토 일정과 아시아15GW 이동은 제공 시나리오로 남겨 실제 행정자료·통전계약을 기다린다.",
+      "기관 매수에도 지수와 시장 폭이 약해진 한국 관측은 선거 후 안도라는 하나의 설명을 제한한다. 프로젝트별 지연·지급 구조, 외국인 매도와 국내 흡수, 원가 완화의 수혜를 함께 비교하는 것이 다음 후속 기록의 조건이다."
+    ],
+    "sourceIds": [
+      "reaction-nov05-power",
+      "korea-nov05-close"
+    ]
+  }
+]);
+ event.updates.push({
+  "date": "2026-11-05",
+  "title": "11월5일 후속 — 미국 안도 상승과 한국 매도의 분기",
+  "paragraphs": [
+    "새 자료와 당일 시장 반응을 날짜를 붙여 추가했다. 기관 전망·미확인 원표의 범위를 본문에 표시했다."
+  ],
+  "sourceIds": [
+    "korea-nov05-close",
+    "reaction-nov05-power",
+    "ballot-nov05-track",
+    "us-nov04-close"
+  ]
+});
+ event.updatedAt="2026-11-05";
+ event.casebook.editedAt="2026-11-05";
+ }
+ {
+ const event=archive.events.find(event=>event.id==="2026-10-21-lam-meta-ai-earnings-shock");
+ event.sources.push(...[
+  {
+    "id": "korea-nov05-close",
+    "title": "양 시장 급락·수급·사이드카",
+    "publisher": "신한 마감·미래에셋 마감·KBS",
+    "publishedAt": "2026-11-05",
+    "observedAt": "한국5일 정규장",
+    "url": "https://world.kbs.co.kr/service/news_view.htm?Seq_Code=205373&lang=e",
+    "verification": "두 기관 지수 대조·신한 최종 수급표",
+    "note": "한국5일 정규장"
+  },
+  {
+    "id": "us-nov04-close",
+    "title": "미국 지수·AI 내부 반응·FICC",
+    "publisher": "미래에셋2148281·신한 마감",
+    "publishedAt": "2026-11-05",
+    "observedAt": "미국4일 정규장·기관 호가",
+    "route": "#daily",
+    "dailyDate": "2026-11-05",
+    "verification": "제공 자료 대조",
+    "note": "미국4일 정규장·기관 호가"
+  },
+  {
+    "id": "ddog-nov04-call",
+    "title": "최대 고객 사용량과 최소약정",
+    "publisher": "Datadog 발행사 콜",
+    "publishedAt": "2026-11-05",
+    "observedAt": "미국4일 콜, 8월 언급 이력",
+    "url": "https://investors.datadoghq.com/static-files/5a9f8cad-20c9-4b7c-9758-8f243e417d61",
+    "verification": "검색 노출 발행사 본문 확인·직접 접근 제한",
+    "note": "미국4일 콜, 8월 언급 이력"
+  },
+  {
+    "id": "reaction-nov05-power",
+    "title": "The blue wave raises the bar for AI",
+    "publisher": "사용자 제공 종합 Reaction",
+    "publishedAt": "2026-11-05",
+    "observedAt": "2027·2028~29 시나리오/텍사스 HY 표본",
+    "route": "#daily",
+    "dailyDate": "2026-11-05",
+    "verification": "제공 분석, 기관별 원표 미확보",
+    "note": "2027·2028~29 시나리오/텍사스 HY 표본"
+  }
+]);
+ event.casebook.sections.push(...[
+  {
+    "title": "11월5일 후속 — CapEx 이월의 현금과 이익",
+    "paragraphs": [
+      "신한은 아마존 약 +6.2%, 코어위브 -9.9%의 차이를 기존 자산과 재무 여력의 차이로 해석했다. 건설 지출이 늦어지면 단기 현금 유출이 줄 수 있으나 통전·매출이 지연되고 장비 지급은 남을 수 있다. 고객과 공급사에서 같은 CapEx 조절을 다르게 평가할 이유다.",
+      "제공 SAVE는 마이크로소프트의 IREN 투자 집행 지연과 Nscale 텍사스 확장 옵션 포기 보도를 전한다. 각각 실제 공사·장비 일정과 추가 선택권의 문제다. 미행사 옵션을 기존 확정 임차의 전면 해지로 확대하거나 모든 AI 주문 감소로 합산할 근거는 확보하지 못했다.",
+      "미래에셋은 브렌트 94.62달러·WTI 88.12달러를 제시했다. 전달 결제 보도의 브렌트 -8.7%와 기관 표 -8.18%는 기준 차이가 있어 같은 창으로 합치지 않는다. EIA 인용 중간유분 9,930만배럴·주간 360만배럴 감소는 원유 위험 프리미엄 축소와 제품 재고의 긴축이 병존함을 보여준다. 원문 웹 요약의 세부 수치는 직접 대조가 제한돼 제공 자료·Reuters 재인용 수준으로 남긴다."
+    ],
+    "sourceIds": [
+      "us-nov04-close",
+      "reaction-nov05-power",
+      "korea-nov05-close"
+    ]
+  },
+  {
+    "title": "한 고객의 사용량과 계약 최소치",
+    "paragraphs": [
+      "데이터독의 발행사 콜 문서 검색 본문은 최대 고객이 3분기 사용량을 줄였으나 최소약정은 웃돌았으며, 4분기 전망은 그 고객의 최소약정 수준을 가정한다고 설명한다. 이 조정은 8월에 이미 언급됐다. 실적 발표에서 새로 드러난 범위와 선반영을 함께 보아야 한다. 발행사 실적 콜 문서·검색 확인",
+      "전달 자료의 데이터독 매출 11.97억달러(+35%), FCF 2.51억달러와 다음 분기 11.9~12.0억달러 전망은 성장과 한 고객의 둔화가 공존하는 사례다. 관측 서비스 사용량과 그 고객의 전체 AI 수요·투자 총액은 범위가 다르다. 고객 이름은 확인 범위 밖에 남겨 둔다.",
+      "SAVE의 메타 유로채 주문 호조와 초기 거래 가격은 우량 발행사의 자금 접근을 보여주는 보도다. 인프라 개발사 전체의 신용 여건으로 일반화하기에는 고객·담보·만기가 다르다. 중국 AI Lab 가치 하락의 전달 의견도 미국 비상장사의 같은 결과를 확정할 증거는 아니며, 후속 공모가·자본 조달과 실제 발주를 연결해 볼 조건이다."
+    ],
+    "sourceIds": [
+      "ddog-nov04-call",
+      "us-nov04-close"
+    ]
+  }
+]);
+ event.updates.push({
+  "date": "2026-11-05",
+  "title": "11월5일 후속 — CapEx 이월의 현금과 이익",
+  "paragraphs": [
+    "새 자료와 당일 시장 반응을 날짜를 붙여 추가했다. 기관 전망·미확인 원표의 범위를 본문에 표시했다."
+  ],
+  "sourceIds": [
+    "korea-nov05-close",
+    "us-nov04-close",
+    "ddog-nov04-call",
+    "reaction-nov05-power"
+  ]
+});
+ event.updatedAt="2026-11-05";
+ event.casebook.editedAt="2026-11-05";
+ }
+ {
+ const event=archive.events.find(event=>event.id==="2026-11-02-us-iran-talks-oil-selloff");
+ event.sources.push(...[
+  {
+    "id": "energy-nov05-followup",
+    "title": "유가 하락과 중간유분 재고",
+    "publisher": "미래에셋·제공 EIA 인용·Reuters 재인용",
+    "publishedAt": "2026-11-05",
+    "observedAt": "미국4일 결제/10월30일 재고",
+    "url": "https://www.eia.gov/petroleum/supply/weekly/",
+    "verification": "가격 기관관측·재고 원표 직접 대조 제한",
+    "note": "미국4일 결제/10월30일 재고"
+  },
+  {
+    "id": "korea-nov05-close",
+    "title": "양 시장 급락·수급·사이드카",
+    "publisher": "신한 마감·미래에셋 마감·KBS",
+    "publishedAt": "2026-11-05",
+    "observedAt": "한국5일 정규장",
+    "url": "https://world.kbs.co.kr/service/news_view.htm?Seq_Code=205373&lang=e",
+    "verification": "두 기관 지수 대조·신한 최종 수급표",
+    "note": "한국5일 정규장"
+  }
+]);
+ event.casebook.sections.push(...[
+  {
+    "title": "11월5일 후속 — 원유 급락과 제품 부족의 다른 시간",
+    "paragraphs": [
+      "미래에셋은 브렌트 94.62달러·WTI 88.12달러를 제시했다. 전달 결제 보도의 브렌트 -8.7%와 기관 표 -8.18%는 기준 차이가 있어 같은 창으로 합치지 않는다. EIA 인용 중간유분 9,930만배럴·주간 360만배럴 감소는 원유 위험 프리미엄 축소와 제품 재고의 긴축이 병존함을 보여준다. 원문 웹 요약의 세부 수치는 직접 대조가 제한돼 제공 자료·Reuters 재인용 수준으로 남긴다.",
+      "원유의 예상 공급 위험이 낮아져도 디젤의 재고와 정제·수출 제약은 별도다. 정제가동률이 높아도 재고가 줄 수 있으며 단일 주간 자료만으로 원유 가격의 하락을 제품 부족 해소로 바꾸기 어렵다.",
+      "신한의 국내 S-Oil -6.2%는 원유 및 정유 이익 기대의 가격 반응이다. 디젤 마진과 물량, 실제 제품 가격이 그 뒤 어떻게 변하는지를 후속 조건으로 둔다."
+    ],
+    "sourceIds": [
+      "energy-nov05-followup",
+      "korea-nov05-close"
+    ]
+  }
+]);
+ event.updates.push({
+  "date": "2026-11-05",
+  "title": "11월5일 후속 — 원유 급락과 제품 부족의 다른 시간",
+  "paragraphs": [
+    "새 자료와 당일 시장 반응을 날짜를 붙여 추가했다. 기관 전망·미확인 원표의 범위를 본문에 표시했다."
+  ],
+  "sourceIds": [
+    "energy-nov05-followup",
+    "korea-nov05-close"
+  ]
+});
+ event.updatedAt="2026-11-05";
+ event.casebook.editedAt="2026-11-05";
+ }
+ {
+ const event=archive.events.find(event=>event.id==="2026-10-26-brazil-election-market-selloff");
+ event.sources.push(...[
+  {
+    "id": "brazil-nov05-bcb",
+    "title": "브라질 금리동결과 환율·재정",
+    "publisher": "신한 bbs_1793864192544",
+    "publishedAt": "2026-11-05",
+    "observedAt": "11월 BCB 결정과 기관 전망",
+    "route": "#daily",
+    "dailyDate": "2026-11-05",
+    "verification": "제공 보고서 본문 확인·공식 성명 미대조",
+    "note": "11월 BCB 결정과 기관 전망"
+  }
+]);
+ event.casebook.sections.push(...[
+  {
+    "title": "11월5일 후속 — 금리동결과 헤알·제품 물가의 전이",
+    "paragraphs": [
+      "신한 브라질 채권 보고서는 BCB가 13.75%로 동결하고 제품 가격·헤알 및 재정을 경계했다고 설명했다. 향후 동결 지속과 재개 인하는 기관 전망이다. 낮아진 국제유가가 현지 연료·환율·기대물가로 전이되는 시차가 있어 미국 장기금리 하락을 각국의 동일 정책 경로로 옮길 수 없다.",
+      "제공 보고서는 재정 불확실성과 헤알 약세가 물가·정책에 미칠 영향을 강조했다. 기존 대선 충격의 후속 기관 해석으로 남기며 공식 결정의 세부 논거와 예상 경로를 같은 수준의 사실로 두지 않는다."
+    ],
+    "sourceIds": [
+      "brazil-nov05-bcb"
+    ]
+  }
+]);
+ event.updates.push({
+  "date": "2026-11-05",
+  "title": "11월5일 후속 — 금리동결과 헤알·제품 물가의 전이",
+  "paragraphs": [
+    "새 자료와 당일 시장 반응을 날짜를 붙여 추가했다. 기관 전망·미확인 원표의 범위를 본문에 표시했다."
+  ],
+  "sourceIds": [
+    "brazil-nov05-bcb"
+  ]
+});
+ event.updatedAt="2026-11-05";
+ event.casebook.editedAt="2026-11-05";
+ }
+ archive.updatedAt="2026-11-05";
+}
