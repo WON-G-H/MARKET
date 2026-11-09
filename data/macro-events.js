@@ -2024,3 +2024,235 @@ if(!window.MARKET_LEDGER.macroEvents.categories.includes('에너지·공급망')
  }
  archive.updatedAt="2026-11-05";
 }
+
+/* November 6 follow-up observations. */
+{
+  const archive=window.MARKET_LEDGER.macroEvents;
+  {
+    const event=archive.events.find(event=>event.id==="2026-11-03-us-midterms-blue-wave");
+    event.sources.push(...[
+  {
+    "id": "kr-nov06-close",
+    "title": "11월 6일 마감과 거래 중단",
+    "publisher": "신한·미래에셋·AJP",
+    "publishedAt": "2026-11-06",
+    "observedAt": "신한 최종표와 마감 보도 대조",
+    "url": "https://www.ajupress.com/view/20261106164850202",
+    "verification": "신한 최종표와 마감 보도 대조",
+    "note": "신한 최종표와 마감 보도 대조"
+  },
+  {
+    "id": "kr-nov06-margin",
+    "title": "신용융자 담보비율 유지 의무 면제",
+    "publisher": "정부 정책브리핑",
+    "publishedAt": "2026-11-06",
+    "observedAt": "6일 발표, 9일 시행",
+    "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148975208",
+    "verification": "6일 발표, 9일 시행",
+    "note": "6일 발표, 9일 시행"
+  },
+  {
+    "id": "us-nov05-rout",
+    "title": "미국 5일 반도체·변동성 충격",
+    "publisher": "미래에셋 2148326·Market Issue",
+    "publishedAt": "2026-11-06",
+    "observedAt": "미국 5일 정규장과 증폭 경로에 관한 기관 해석",
+    "route": "#daily",
+    "dailyDate": "2026-11-06",
+    "verification": "미국 5일 정규장과 증폭 경로에 관한 기관 해석",
+    "note": "미국 5일 정규장과 증폭 경로에 관한 기관 해석"
+  }
+]);
+    event.casebook.sections.push({
+  "title": "11월 6일 후속 — 안도 랠리 반전과 코스피 거래 중단",
+  "paragraphs": [
+    "민주당 양원 확보 뒤 미국 4일 S&P500은 +1.58%였지만 SOX는 -3.13%였다. 주별 인허가·전력·용수 비용과 프로젝트 이월 가능성이 기존 운영사와 공급망에 다른 영향을 준다는 기대가 먼저 반영됐다.",
+    "5일 계약 위험 검토 보도와 포지션 축소 경계가 겹치며 SOX -12.25%, VIX 28.18이 관측됐다. 한국 5일 양 시장 매도 사이드카에 이어 6일 코스피는 거래가 중단됐다. 외국인 매도는 하이닉스에 집중됐으며 펀드별 강제 청산의 규모는 자료가 부족하다.",
+    "금요일 국내 기관 매수와 장중 저점 회복에도 주간 손실이 컸다. 정부는 9일부터 담보비율 의무를 한시 면제한다. 미국 금요일 기술주 반등은 다음 한국 거래일의 완충 후보이며, 정책 집행과 실제 주문의 변화가 중기 판단을 결정한다."
+  ],
+  "sourceIds": [
+    "kr-nov06-close",
+    "kr-nov06-margin",
+    "us-nov05-rout"
+  ]
+});
+    event.updates.push({
+  "date": "2026-11-06",
+  "title": "11월 6일 후속 — 안도 랠리 반전과 코스피 거래 중단",
+  "paragraphs": [
+    "민주당 양원 확보 뒤 미국 4일 S&P500은 +1.58%였지만 SOX는 -3.13%였다. 주별 인허가·전력·용수 비용과 프로젝트 이월 가능성이 기존 운영사와 공급망에 다른 영향을 준다는 기대가 먼저 반영됐다.",
+    "5일 계약 위험 검토 보도와 포지션 축소 경계가 겹치며 SOX -12.25%, VIX 28.18이 관측됐다. 한국 5일 양 시장 매도 사이드카에 이어 6일 코스피는 거래가 중단됐다. 외국인 매도는 하이닉스에 집중됐으며 펀드별 강제 청산의 규모는 자료가 부족하다.",
+    "금요일 국내 기관 매수와 장중 저점 회복에도 주간 손실이 컸다. 정부는 9일부터 담보비율 의무를 한시 면제한다. 미국 금요일 기술주 반등은 다음 한국 거래일의 완충 후보이며, 정책 집행과 실제 주문의 변화가 중기 판단을 결정한다."
+  ],
+  "sourceIds": [
+    "kr-nov06-close",
+    "kr-nov06-margin",
+    "us-nov05-rout"
+  ]
+});
+    event.updatedAt="2026-11-08";
+    event.casebook.editedAt="2026-11-08";
+  }
+  {
+    const event=archive.events.find(event=>event.id==="2026-10-21-lam-meta-ai-earnings-shock");
+    event.sources.push(...[
+  {
+    "id": "kr-nov06-close",
+    "title": "11월 6일 마감과 거래 중단",
+    "publisher": "신한·미래에셋·AJP",
+    "publishedAt": "2026-11-06",
+    "observedAt": "신한 최종표와 마감 보도 대조",
+    "url": "https://www.ajupress.com/view/20261106164850202",
+    "verification": "신한 최종표와 마감 보도 대조",
+    "note": "신한 최종표와 마감 보도 대조"
+  },
+  {
+    "id": "us-nov05-rout",
+    "title": "미국 5일 반도체·변동성 충격",
+    "publisher": "미래에셋 2148326·Market Issue",
+    "publishedAt": "2026-11-06",
+    "observedAt": "미국 5일 정규장과 증폭 경로에 관한 기관 해석",
+    "route": "#daily",
+    "dailyDate": "2026-11-06",
+    "verification": "미국 5일 정규장과 증폭 경로에 관한 기관 해석",
+    "note": "미국 5일 정규장과 증폭 경로에 관한 기관 해석"
+  }
+]);
+    event.casebook.sections.push({
+  "title": "11월 6일 후속 — 반도체 급락과 국내 매도의 집중",
+  "paragraphs": [
+    "미래에셋 브리핑 기준 5일 다우 51,523.06(-3.44%), S&P500 7,353.73(-4.36%), 나스닥 24,314.99(-5.52%), SOX 9,011.14(-12.25%)였다. VIX는 28.18로 69.66% 뛰었다. 전날 선거 안도 상승이 하루 만에 반전됐다.",
+    "MS의 네오클라우드 계약 위험 검토 보도와 데이터센터 건설 부담이 AI 투자 회수 기간에 대한 의문을 키웠다. 미래에셋은 헤지펀드 포지션 축소와 레버리지·시스템 매도를 증폭 경로로 제시했다. 실제 펀드별 청산 규모는 확인되지 않았다.",
+    "신한은 코스피 외국인 매도 중 하이닉스가 약 1.92조원을 차지했다고 집계했다. 개인 코스피 매수는 전일 2조2,770억원보다 줄었다. 기타법인 매수와 금융투자·연기금 매수의 역할은 제공 시황의 해석으로 읽는다.",
+    "선거 이후 비용 분담과 인허가 기간이 바뀌면 신규 부지의 가동과 매출 인식이 늦어질 수 있다. GPU 지급과 금융 비용이 먼저 발생할 때 프로젝트 회수 기간은 늘어난다. 계약 검토 보도와 실제 해지·발주 조정은 각기 다른 증거다."
+  ],
+  "sourceIds": [
+    "kr-nov06-close",
+    "us-nov05-rout"
+  ]
+});
+    event.updates.push({
+  "date": "2026-11-06",
+  "title": "11월 6일 후속 — 반도체 급락과 국내 매도의 집중",
+  "paragraphs": [
+    "미래에셋 브리핑 기준 5일 다우 51,523.06(-3.44%), S&P500 7,353.73(-4.36%), 나스닥 24,314.99(-5.52%), SOX 9,011.14(-12.25%)였다. VIX는 28.18로 69.66% 뛰었다. 전날 선거 안도 상승이 하루 만에 반전됐다.",
+    "MS의 네오클라우드 계약 위험 검토 보도와 데이터센터 건설 부담이 AI 투자 회수 기간에 대한 의문을 키웠다. 미래에셋은 헤지펀드 포지션 축소와 레버리지·시스템 매도를 증폭 경로로 제시했다. 실제 펀드별 청산 규모는 확인되지 않았다.",
+    "신한은 코스피 외국인 매도 중 하이닉스가 약 1.92조원을 차지했다고 집계했다. 개인 코스피 매수는 전일 2조2,770억원보다 줄었다. 기타법인 매수와 금융투자·연기금 매수의 역할은 제공 시황의 해석으로 읽는다.",
+    "선거 이후 비용 분담과 인허가 기간이 바뀌면 신규 부지의 가동과 매출 인식이 늦어질 수 있다. GPU 지급과 금융 비용이 먼저 발생할 때 프로젝트 회수 기간은 늘어난다. 계약 검토 보도와 실제 해지·발주 조정은 각기 다른 증거다."
+  ],
+  "sourceIds": [
+    "kr-nov06-close",
+    "us-nov05-rout"
+  ]
+});
+    event.updatedAt="2026-11-08";
+    event.casebook.editedAt="2026-11-08";
+  }
+  {
+    const event=archive.events.find(event=>event.id==="2026-11-02-us-iran-talks-oil-selloff");
+    event.sources.push(...[
+  {
+    "id": "oil-nov05-rebound",
+    "title": "11월 5일 유가 되돌림",
+    "publisher": "미래에셋 2148326",
+    "publishedAt": "2026-11-06",
+    "observedAt": "미국 5일 WTI·브렌트 기관 표",
+    "route": "#daily",
+    "dailyDate": "2026-11-06",
+    "verification": "미국 5일 WTI·브렌트 기관 표",
+    "note": "미국 5일 WTI·브렌트 기관 표"
+  }
+]);
+    event.casebook.sections.push({
+  "title": "11월 6일 후속 — 원유의 일부 되돌림",
+  "paragraphs": [
+    "미래에셋 미국 5일 표에서 브렌트 98.29달러, WTI 90.52달러로 전일 급락 뒤 반등했다. 선물 계약과 등락률의 기준을 맞춰 읽고 원유 가격과 정제제품 재고는 따로 본다."
+  ],
+  "sourceIds": [
+    "oil-nov05-rebound"
+  ]
+});
+    event.updates.push({
+  "date": "2026-11-06",
+  "title": "11월 6일 후속 — 원유의 일부 되돌림",
+  "paragraphs": [
+    "미래에셋 미국 5일 표에서 브렌트 98.29달러, WTI 90.52달러로 전일 급락 뒤 반등했다. 선물 계약과 등락률의 기준을 맞춰 읽고 원유 가격과 정제제품 재고는 따로 본다."
+  ],
+  "sourceIds": [
+    "oil-nov05-rebound"
+  ]
+});
+    event.updatedAt="2026-11-08";
+    event.casebook.editedAt="2026-11-08";
+  }
+  archive.updatedAt="2026-11-08";
+}
+
+/* November 9 follow-up to the US midterm election. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  const event = archive.events.find(event => event.id === "2026-11-03-us-midterms-blue-wave");
+  event.sources.push(...[
+  {
+    "id": "nov09-us-rebound",
+    "title": "미국 6일 기술주 반등",
+    "publisher": "AP·미래에셋 2148373",
+    "publishedAt": "2026-11-06 미국 · 11/9 국내 브리핑",
+    "observedAt": "11/6 미국 정규장",
+    "url": "https://apnews.com/article/806f71d95105bc7efbc760b194dd8cad",
+    "verification": "미국장 종가와 브리핑 대조",
+    "note": "나스닥 종합 +1.09%, SOX +4.21%. 한국 금요일 정규장 이후."
+  },
+  {
+    "id": "nov09-korea-close",
+    "title": "한국 9일 장중 반등 반납",
+    "publisher": "신한 마감·서울경제",
+    "publishedAt": "2026-11-09",
+    "observedAt": "11/9 한국 정규장",
+    "url": "https://en.sedaily.com/finance/2026/11/09/kospi-erases-2-percent-rally-clings-to-5000-line",
+    "dailyDate": "2026-11-09",
+    "verification": "두 마감 자료의 종가 일치",
+    "note": "코스피 5,018.85. 주체별 순매수와 시장 폭은 신한 집계."
+  },
+  {
+    "id": "nov09-data-center-bill",
+    "title": "BAAJA와 데이터센터 비용 분담",
+    "publisher": "Reuters",
+    "publishedAt": "2026-11-09 미국",
+    "observedAt": "11/9 보도 시점의 법안 논의",
+    "url": "https://www.marketscreener.com/news/us-congress-gets-first-post-blue-wave-crack-at-data-centers-with-permitting-bill-ce785fd3dd89f321",
+    "verification": "보도 본문 확인",
+    "note": "허가 절차 개편 및 다른 전력 이용자 보호를 위한 비용 분담 논의."
+  },
+  {
+    "id": "nov09-generator-orders",
+    "title": "앤트로픽 발전기 구매약정 보도",
+    "publisher": "FT·Reuters",
+    "publishedAt": "2026-11-08 미국",
+    "observedAt": "9월 말 거래로 보도",
+    "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-strikes-3-4bn-deal-to-generate-gas-fired-power-for-data-centres-report/articleshow/135657486.cms",
+    "verification": "FT 인용 보도·독립 확인 미완료",
+    "note": "1.7GW·34억달러. 구매약정과 가동 시점 구분."
+  }
+]);
+  const chapter = {
+  "title": "11월 9일 후속 — 반도체 반등의 한계와 데이터센터 전력비 논의",
+  "paragraphs": [
+    "미국 6일 정규장에서 SOX가 4.21% 반등했고, 나스닥은 1.09% 상승했지만 다우는 0.46% 하락했다. 직전 투매 이후 기술주에 매수가 돌아왔다는 관측이다. 다음 한국 거래일에 코스피는 장중 2.24% 올랐다가 5,018.85(-0.81%)에 마쳤다. 대형 메모리가 소폭 상승하고 외국인 순매도가 금요일보다 줄었으나 코스피에서 하락 종목이 530개로 상승 종목 340개를 웃돌았다. 미국 반도체 반등이 한국 시장 전반으로 이어지지 않았다는 점이 후속 가격 관측의 핵심이다.",
+    "선거 직후에는 지역사회 반발이 데이터센터 증설을 늦출 가능성이 주목받았다. 9일 현지 보도에 나온 초당적 BAAJA는 전력 인프라 인허가와 비용 분담을 한 법안에서 다룬다. 송전망 증설이 빨라지면 대기 중인 부지의 가동 시점은 당겨질 수 있다. 동시에 개발사가 증설 비용이나 사업 중단 위험을 더 부담하게 되면 자금이 부족한 사업의 손익분기점은 높아진다. 어느 효과가 더 큰지는 법안 문구와 각 프로젝트의 통전·계약 상태에 달려 있다.",
+    "앤트로픽의 1.7GW 발전기 구매약정은 계통 연결을 기다리는 사업자가 장비를 미리 확보하는 경로를 보여주는 보도다. Reuters의 독립 확인과 회사 발표는 확보되지 않았다. 장비 확보가 설치와 가동을 앞당긴다면 매출 이연을 줄일 수 있지만, 실제 경제성은 추가 투자비, 가스 조달과 인허가 조건에 좌우된다.",
+    "11월 9일 한국 마감과 미국 현지 법안 보도의 관측 시점은 다르다. 당일 지수 하락은 수급과 업종별 약세를 함께 보여주며 법안의 순수한 가격 효과를 식별할 자료는 없다. 이후에는 실제 행정조치와 프로젝트 일정 변경을 확인하고, 선거 직후에 가격에 반영된 기대와 비교할 수 있다."
+  ],
+  "sourceIds": [
+    "nov09-us-rebound",
+    "nov09-korea-close",
+    "nov09-data-center-bill",
+    "nov09-generator-orders"
+  ]
+};
+  event.casebook.sections.push(chapter);
+  event.updates.push({date:"2026-11-09", ...chapter});
+  event.updatedAt = "2026-11-09";
+  event.casebook.editedAt = "2026-11-09";
+  archive.updatedAt = "2026-11-09";
+}
