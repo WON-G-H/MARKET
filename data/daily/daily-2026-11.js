@@ -684,3 +684,102 @@ window.MARKET_LEDGER.dailyAddenda["2026-11-09"] = {
   ],
   "conclusion": "11월 9일은 미국 반도체 반등과 국내 외국인 매도 둔화에도 코스피가 반등을 이어가지 못한 날이었다. 다음 확인 지점은 반도체 밖으로의 매수 확산과 데이터센터 비용·통전 일정의 구체화다."
 };
+
+/* November 10 report. */
+window.MARKET_LEDGER.daily["2026-11"].push({
+  "date": "2026-11-10",
+  "month": "2026년 11월",
+  "createdAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "title": "반도체 반등이 전력기기·배터리로 확산, 코스피 5,200선 회복",
+  "tags": [
+    "반도체",
+    "매수사이드카",
+    "외국인수급",
+    "중국교역",
+    "AI토큰",
+    "BAAJA"
+  ],
+  "lead": [
+    "코스피 5,239.13(+4.39%), 코스닥 667.61(+4.48%). 미국 반도체주 반등에 국내 메모리·전력기기·2차전지가 동반 상승했고, 양 시장에 매수 사이드카가 발동됐다.",
+    "코스피 외국인은 7거래일 연속 순매도 뒤 3,697억원을 순매수했다. 코스닥 외국인은 순매도를 이어갔지만 기관이 순매수했고 1,399개 종목이 올랐다."
+  ],
+  "report": [
+    {
+      "no": "02",
+      "title": "미국 정규장, 유가 하락과 기술주 반등",
+      "paragraphs": [
+        "9일 미국 정규장에서 S&P500은 7,549.94(+2.35%), 다우는 52,389.75(+2.15%), 나스닥 종합은 25,253.14(+2.74%)였다. SOX는 +6.86%, VIX는 19.92(-22.31%)였다. 미래에셋 전달 시황의 S&P500과 집계 차이가 있어 AP와 SAVE가 일치하는 종가를 적용했다. <a href=\"https://apnews.com/article/f7ec9680fc858e3c2505913e7b3a54e2\" target=\"_blank\" rel=\"noopener noreferrer\">AP 정규장</a> <a href=\"https://chartexchange.com/symbol/index-vix/historical\" target=\"_blank\" rel=\"noopener noreferrer\">VIX 종가</a>",
+        "신한 브리핑에서 엔비디아는 -4.3%, AMD +13.3%, 브로드컴 +8.8%였다. 반도체 매수가 대형 종목 전반에 같은 방향으로 나타나지는 않았다. 브렌트는 AP 기준 5.8% 하락했다. 중동 협상 기대가 유가 하락 배경으로 거론됐고, 합의 조건과 실제 통항 변화는 이후 확인 대상이다.",
+        "미 재무부 2년물은 4.56%(+5bp), 10년물은 4.88%(+2bp)였다. 유가·주식 변동성이 낮아지는 동안 명목금리는 올랐다. 주가 반등을 전반적인 할인율 하락으로 설명하기 어려운 조합이다. <a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026\" target=\"_blank\" rel=\"noopener noreferrer\">미 재무부 수익률</a>"
+      ]
+    },
+    {
+      "no": "03",
+      "title": "한국 마감, 외국인과 시장 폭의 변화",
+      "paragraphs": [
+        "코스피는 장중 5,300.92까지 오른 뒤 5,239.13으로 마감했다. 양 시장 매수 사이드카로 프로그램 매수호가 효력이 일시 정지됐다. 신한 마감표의 외국인·기관·개인 순매수는 코스피 +3,697억·+4,889억·-1조3,415억원, 코스닥 -1,472억·+2,149억·-561억원이었다. <a href=\"https://en.yna.co.kr/view/AEN20261110007351320?section=economy-finance/economy\" target=\"_blank\" rel=\"noopener noreferrer\">연합뉴스 장마감</a> <a href=\"https://www.digitaltoday.co.kr/en/view/123334/kospi-kosdaq-surge-buy-sidecars-triggered-in-both-markets\" target=\"_blank\" rel=\"noopener noreferrer\">양 시장 사이드카</a>",
+        "상승·하락 종목은 코스피 716대175, 코스닥 1,399대288이었다. 9일 코스피에서는 하락 종목이 더 많았다. 하루 사이 매수 범위가 넓어졌고 코스닥에서는 기관 매수와 외국인 매도가 교차했다. 원·달러는 연합뉴스의 15:30 기준 1,337.5원으로 전일 같은 시각보다 9.6원 낮았다."
+      ]
+    },
+    {
+      "no": "04",
+      "title": "반도체·전력기기·배터리로 넓어진 매수",
+      "paragraphs": [
+        "신한 마감 기준 삼성전자 +4.7%, SK하이닉스 +6.7%, 주성엔지니어링 +7.5%였다. 삼성전기 +4.6%, 효성중공업 +12.7%, 삼성SDI +9.9%, 에코프로 +10.2%로 반등이 메모리 밖으로 확산됐다.",
+        "삼성바이오로직스 -2.8%, 셀트리온 -3.3%, KT&G -3.7%였다. 전체 상승 종목이 늘었지만 일부 방어주와 대형 바이오는 약세였다. 저가 매수와 숏커버는 기관 해석으로, 매수 사이드카나 주가만으로 실제 포지션 청산 규모를 알 수 없다."
+      ]
+    },
+    {
+      "no": "05",
+      "title": "데이터센터 인허가와 전력 비용",
+      "paragraphs": [
+        "미 상원은 9일 BAAJA의 심의 개시 절차를 73대25로 진전시켰다. 송전·발전 인허가 단축은 프로젝트 가동을 앞당길 수 있고, 개발사 비용 분담은 자금 여력이 약한 사업의 수익성에 부담이 될 수 있다. 표결의 범위는 심의 개시 절차다. <a href=\"https://www.epw.senate.gov/public/index.cfm/press-releases-republican?ID=CCD27C16-CBA8-4E56-BFAE-C30D16E0AE61\" target=\"_blank\" rel=\"noopener noreferrer\">미 상원 위원회 발표</a>",
+        "11월 5일 AI주 투매 뒤 주가 반등과 변동성 하락이 이어졌다. 정책 절차, 유가, 반발 매수가 겹쳤고 9일 미국 10년물은 소폭 상승했다. 프로젝트별 승인·통전 일정과 신용 비용을 확인할 때까지 주가 반등과 투자 회수 전망을 별도로 평가한다."
+      ]
+    },
+    {
+      "no": "06",
+      "title": "중국 교역과 AI 토큰 지출",
+      "paragraphs": [
+        "중국 10월 상품 수출은 달러 표시 명목금액 기준 전년 동월 대비 +35.2%, 수입은 +41.6%였다. 9월 수출 +36.3%, 수입 +31.0%와 비교하면 수출 증가세는 소폭 둔화하고 수입은 가속했다. 무역흑자는 약 1,053억달러로 9월보다 줄었다. 해관총서 인용 보도에서 확인했다. <a href=\"https://www.marketscreener.com/news/china-s-trade-surplus-soars-past-1-trillion-october-exports-jump-35-2-y-y-ce785fd3d080f32c\" target=\"_blank\" rel=\"noopener noreferrer\">Reuters 교역 보도</a>",
+        "Caixin이 인용한 집적회로 수출은 금액 +137.1%와 수량 -2.5%가 함께 나타났다. 품목 가격과 구성의 영향이 클 수 있어 명목 교역 증가율로 실물 수요를 바로 추론하기 어렵다. <a href=\"https://www.caixinglobal.com/2026-11-10/chinas-exports-jump-on-strong-ai-trade-102503130.html\" target=\"_blank\" rel=\"noopener noreferrer\">Caixin 품목별 교역</a>",
+        "Ramp 공개 자료에서 10월 23일 종료 주의 토큰 지출은 한 달 전 같은 주보다 8.9%, 토큰량은 37.1% 늘었다. OpenAI·Anthropic의 혼합 단가는 26.8% 하락했다. 삼성리서치는 가격 경쟁을 배경으로 해석했다. 단가에는 모델 사용 비중과 계약 조건도 반영될 수 있고, 첨부 코멘트의 차트 기간은 확인되지 않았다. <a href=\"https://ramp.com/data/ai-index?detail=model&metric=token-spend&mode=volume\" target=\"_blank\" rel=\"noopener noreferrer\">Ramp AI Index</a>"
+      ]
+    },
+    {
+      "no": "07",
+      "title": "연준 발언과 한국 마감 이후 일정",
+      "paragraphs": [
+        "리치먼드 연은의 바킨은 수요가 견조하고 비용 전가가 이어져 물가 위험이 크다고 평가했다. 동시에 AI 투자 실망이나 고용 대체가 수요를 약하게 할 가능성을 들어 신중한 접근을 강조했다. 굴스비의 서비스 물가와 데이터센터 과열 우려는 제공된 발언 요약으로 구분했다. <a href=\"https://www.richmondfed.org/press_room/speeches/thomas_i_barkin/2026/barkin_speech_20261109\" target=\"_blank\" rel=\"noopener noreferrer\">바킨 연설문</a>",
+        "미국 10월 CPI는 한국시간 10일 22:30 예정으로 국내 정규장 이후다. CoreWeave 실적은 신한 시황 기준 다음 관측 일정이다. 물가에 대한 2년물 반응과 AI 사업자의 가동·차입 비용을 나눠 본다. <a href=\"https://www.bls.gov/schedule/2026/11_sched_list.htm\" target=\"_blank\" rel=\"noopener noreferrer\">BLS 발표 일정</a>"
+      ]
+    }
+  ],
+  "watch": [
+    "외국인 코스피 현물 순매수와 상승 종목 확산의 지속성",
+    "미국 CPI 발표 뒤 2년물·달러 반응",
+    "CoreWeave 실적의 계약 가동률·설비 지출·금융비용",
+    "BAAJA의 심의·수정안과 전력 비용 부담 범위"
+  ]
+});
+window.MARKET_LEDGER.dailyAddenda["2026-11-10"] = {
+  "changes": {
+    "maintained": [
+      "반도체 가격 반등과 프로젝트의 통전·현금 회수는 별도 관측이다."
+    ],
+    "new": [
+      "코스피 외국인 순매수 전환과 양 시장 시장 폭 개선",
+      "BAAJA 상원 절차 표결 73대25",
+      "중국 수입 증가 가속과 Ramp의 토큰량·지출 차이"
+    ]
+  },
+  "assessment": [
+    "9일 한국장과 달리 10일에는 반도체 밖으로 매수가 확산됐다. 미국 변동성과 유가 하락이 위험자산에 우호적인 배경이었지만 미 국채금리는 상승했다. 이번 가격 회복은 기업별 신용과 수익성 전망의 개선을 따로 확인해야 한다."
+  ],
+  "implications": [
+    "외국인 수급, 상승 종목 수, 미국 단기금리가 함께 안정되는지 대조한다.",
+    "AI 서비스의 지출 증가와 인프라 사업자의 투자 회수 판단을 구분한다."
+  ],
+  "conclusion": "코스피가 5,200선을 되찾는 동안 전력기기와 배터리까지 반등했다. 다음 판단은 하루 개선된 시장 폭의 지속성과 CPI·AI 기업 실적 이후 신용 및 금리 반응에 달려 있다."
+};
