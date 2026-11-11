@@ -783,3 +783,101 @@ window.MARKET_LEDGER.dailyAddenda["2026-11-10"] = {
   ],
   "conclusion": "코스피가 5,200선을 되찾는 동안 전력기기와 배터리까지 반등했다. 다음 판단은 하루 개선된 시장 폭의 지속성과 CPI·AI 기업 실적 이후 신용 및 금리 반응에 달려 있다."
 };
+
+/* November 11 report. */
+window.MARKET_LEDGER.daily["2026-11"].push({
+  "date": "2026-11-11",
+  "month": "2026년 11월",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "title": "미국 단기금리 급등 속 코스닥 700선 회복, 반도체 수출과 실적에 매수",
+  "tags": [
+    "미국CPI",
+    "단기금리",
+    "CoreWeave",
+    "앤트로픽",
+    "TFP",
+    "코스닥"
+  ],
+  "lead": [
+    "코스피는 하락 출발 뒤 5,375.36(+2.60%)에 마감했다. 코스닥은 반도체 장비·기판과 2차전지 강세로 705.10(+5.62%)을 기록했고, 이틀 연속 매수 사이드카가 발동됐다.",
+    "미국 10월 CPI가 예상을 웃돌자 2년물 국채금리가 17bp 올랐다. 이후 미국 장후 CoreWeave 실적과 한국 반도체 수출 잠정치가 공개됐다. 국내에서는 코스피 외국인과 코스닥 기관의 순매수가 상승을 뒷받침했다."
+  ],
+  "report": [
+    {
+      "no": "02",
+      "title": "미국 10월 CPI와 인상 폭 재평가",
+      "paragraphs": [
+        "미국 10월 CPI는 전월 대비 +0.4%, 근원은 +0.3%였다. Reuters 조사 예상은 각각 +0.3%, +0.2%였다. 헤드라인은 9월 +0.6%에서 둔화했고 근원은 세 달 연속 +0.3%였다. 주거비 +0.3%가 월간 전체 상승폭의 30% 이상을 설명했고 식품은 +0.5%, 에너지는 +0.7%였다. 2025년 10월 셧다운에 따른 기준값 결측으로 BLS 표의 전년 동월 대비 항목은 비어 있다. <a href=\"https://www.bls.gov/news.release/archives/cpi_11102026.htm\" target=\"_blank\" rel=\"noopener noreferrer\">BLS 발표</a> <a href=\"https://ca.marketscreener.com/news/us-yields-climb-stocks-fall-as-inflation-data-boosts-chances-for-larger-fed-rate-hike-ce785edad18ef224\" target=\"_blank\" rel=\"noopener noreferrer\">Reuters 예상과 반응</a>",
+        "월러는 CPI 발표 전에 근원 물가가 0.3% 안팎이면 12월 50bp 인상도 검토할 수 있다고 말했다. 로건은 당시 전망을 전제로 25bp 인상 최소 두 차례를 제안했다. 보먼은 10월 근원 PCE를 전년 대비 3.3%로 추정하면서 추가 긴축의 효과와 금리 민감 부문의 부담을 함께 평가했다. 세 발언은 연준 인사 각자의 견해다. <a href=\"https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm\" target=\"_blank\" rel=\"noopener noreferrer\">월러 연설</a> <a href=\"https://www.dallasfed.org/news/speeches/logan/2026/lkl261110\" target=\"_blank\" rel=\"noopener noreferrer\">로건 연설</a> <a href=\"https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm\" target=\"_blank\" rel=\"noopener noreferrer\">보먼 연설</a>",
+        "미 재무부 파수익률에서 2년물은 4.73%(+17bp), 10년물은 4.98%(+10bp)였다. 10년-2년 스프레드는 32bp에서 25bp로 좁아졌다. 단기물은 월러 발언 뒤 CPI 발표 전부터 올랐다. 하루 금리 상승에는 연준 발언과 발표 수치의 영향이 함께 들어 있다. 미국 정규장 S&P500은 7,520.28(-0.39%), 나스닥 종합은 25,065.88(-0.74%), 다우는 52,231.89(-0.30%)였다. <a href=\"https://economictimes.indiatimes.com/markets/bonds/us-treasury-yields-rise-as-feds-waller-presses-rate-hike-case/articleshow/135708551.cms\" target=\"_blank\" rel=\"noopener noreferrer\">CPI 발표 전 금리</a> <a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026\" target=\"_blank\" rel=\"noopener noreferrer\">미 재무부 금리</a> <a href=\"https://apnews.com/article/a97eb31c415811065561f2c2ac552cd7\" target=\"_blank\" rel=\"noopener noreferrer\">AP 마감</a>"
+      ]
+    },
+    {
+      "no": "03",
+      "title": "한국 마감과 수급",
+      "paragraphs": [
+        "코스피는 0.56% 내린 채 출발해 장중 5,377.99까지 올랐고 5,375.36(+2.60%)으로 마쳤다. 코스닥은 705.10(+5.62%)을 기록했다. 코스닥에서는 11시 28분경 매수 사이드카가 발동돼 프로그램 매수호가 효력이 일시 정지됐다. <a href=\"https://en.yna.co.kr/view/AEN20261111007152320\" target=\"_blank\" rel=\"noopener noreferrer\">연합뉴스 장마감</a> <a href=\"https://biz.heraldcorp.com/article/10933645\" target=\"_blank\" rel=\"noopener noreferrer\">코스닥 사이드카</a>",
+        "신한 마감표의 외국인·기관·개인 순매수는 코스피 +6,588억·-4,817억·-7,157억원, 코스닥 -1,320억·+3,133억·-1,854억원이었다. 상승·하락 종목은 코스피 575대296, 코스닥 1,278대399였다. 원·달러는 15시 30분 기준 1,333.6원으로 전일 대비 3.9원 내렸다. <a href=\"https://en.yna.co.kr/view/AEN20261111007152320\" target=\"_blank\" rel=\"noopener noreferrer\">정규장과 서울 환율</a>"
+      ]
+    },
+    {
+      "no": "04",
+      "title": "반도체 수출과 국내 업종 차별화",
+      "paragraphs": [
+        "신한 마감에서 삼성전자 +3.6%, SK하이닉스 +5.4%, 삼성전기 +4.7%였다. 코스닥에서는 주성엔지니어링 +17.1%, 심텍 +14.1%, 에코프로 +10.0%였다. 전력기기와 ESS에서도 일진전기 +14.4%, 효성중공업 +2.7%, 삼성SDI +4.9%가 관측됐다. 현대차 -0.9%, HD현대중공업 -1.9%로 일부 대형주는 반등에 동참하지 못했다.",
+        "관세청 잠정치를 인용한 보도에 따르면 11월 1~10일 수출은 전년 동기 대비 111.9% 늘었고 반도체 수출은 331.2% 증가했다. 반도체가 전체 수출의 49.7%를 차지했다. 월초 통관 금액이 큰 만큼 가격·물량과 조업일수를 대조해야 월간 흐름과 국내 이익에 미칠 영향을 가늠할 수 있다. <a href=\"https://en.yna.co.kr/view/AEN20261111002651320?section=economy-finance%2Feconomy\" target=\"_blank\" rel=\"noopener noreferrer\">11월 1~10일 수출</a>"
+      ]
+    },
+    {
+      "no": "05",
+      "title": "AI 실적과 조달 여력",
+      "paragraphs": [
+        "미국 10일 장후 CoreWeave의 3분기 매출은 36.61억달러로 전년 동기 대비 약 168% 늘었다. 순이자비용은 8.46억달러(+173%), 순손실은 7.09억달러였다. 신한이 기록한 장후 주가는 +7.9%였다. 회사는 서비스 제공 조건이 충족될 때 계약 잔고를 매출로 인식한다고 설명했다. 빠른 매출 증가와 높은 금융비용이 동시에 이어지고 있다. <a href=\"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm\" target=\"_blank\" rel=\"noopener noreferrer\">CoreWeave 공시</a>",
+        "앤트로픽 수정신고서의 희망 공모가는 70~78달러, Class A 공모 주식은 8.25억주다. 74달러 가정에서 신주 공모와 260억달러 동시 사모를 합친 순조달 추정액은 846억달러다. 구주 매각 대금은 매도 주주에게 귀속된다. 거래 성사 시 현금 여력이 늘지만 인프라 중심 구매·리스 약정은 총 9,009억달러이고 9월 말 이후 12개월 안에 707억달러가 도래한다. 조달액은 공모가와 거래 완료에 달려 있다. <a href=\"https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm\" target=\"_blank\" rel=\"noopener noreferrer\">앤트로픽 수정신고서</a>"
+      ]
+    },
+    {
+      "no": "06",
+      "title": "미국 생산성과 의료보험 비용",
+      "paragraphs": [
+        "샌프란시스코 연은의 최신 표에서 미국 3분기 TFP는 전기 대비 연율 +2.71%, 가동률 조정 후 +1.30%였다. 같은 공표본의 2분기는 각각 +0.61%, -1.04%였다. 가동률 조정치는 최근 4분기로 보면 -0.22%였다. 삼성리서치가 언급한 1990년대 초와의 유사성은 가설이다. 기술 확산 시점을 가늠하려면 생산성 개선이 여러 분기와 업종으로 이어지는지 확인해야 한다. <a href=\"https://www.frbsf.org/research-and-insights/data-and-indicators/total-factor-productivity-tfp/\" target=\"_blank\" rel=\"noopener noreferrer\">샌프란시스코 연은 TFP</a>",
+        "KFF 조사에서 미국 고용주 제공 가족보험료는 평균 연 28,303달러로 전년 대비 5% 올랐다. 자기 고용주의 보험에 가입한 근로자 비중은 전체 기준 55%로 전년과 같았다. 비용 상승이 가계 부담이나 공적 지출로 얼마나 옮겨가는지는 보험료 분담, 가입 자격과 실제 전환에 달려 있다. <a href=\"https://www.kff.org/health-costs/2026-employer-health-benefits-survey/\" target=\"_blank\" rel=\"noopener noreferrer\">KFF 고용주 보험 조사</a>"
+      ]
+    },
+    {
+      "no": "07",
+      "title": "마감 이후 확인할 변수",
+      "paragraphs": [
+        "한국 증시는 미국 국채금리 상승에도 반도체와 전력기기·ESS를 중심으로 올랐다. 코스피 외국인 매수와 코스닥 기관 매수의 조합이 이어지는지, 후속 AI 실적에서 주문과 가동·현금흐름이 함께 개선되는지가 다음 관측점이다.",
+        "미국 10월 생산자물가는 13일 발표 일정이다. CPI 뒤 커진 단기금리 변동이 PPI와 다음 PCE에서 이어질지, 국내 시장에서는 12일 옵션만기와 반도체 외 업종의 매수 지속성을 확인한다. <a href=\"https://www.bls.gov/schedule/2026/11_sched_list.htm\" target=\"_blank\" rel=\"noopener noreferrer\">BLS 11월 일정</a>"
+      ]
+    }
+  ],
+  "watch": [
+    "미 2년물의 4.73% 부근 반응과 12월 인상 폭 기대",
+    "코스닥 700선과 기관 순매수 지속성",
+    "CoreWeave의 순이자비용과 계약의 매출 전환",
+    "앤트로픽 최종 공모가 및 조달 완료 여부"
+  ]
+});
+window.MARKET_LEDGER.dailyAddenda["2026-11-11"] = {
+  "changes": {
+    "maintained": [
+      "AI 기업의 매출 성장과 외부 조달 비용을 함께 본다."
+    ],
+    "new": [
+      "미 10월 CPI 예상 상회 뒤 2년물 +17bp, 10년물 +10bp.",
+      "코스닥 705.10과 이틀 연속 매수 사이드카.",
+      "3분기 가동률 조정 TFP가 전기 대비 연율 +1.30%로 반등."
+    ]
+  },
+  "assessment": [
+    "미국 물가는 12월 정책금리 인상 폭에 대한 불확실성을 높였고, 국내에서는 메모리·장비 수출과 AI 인프라 실적에 매수세가 모였다. 코스피와 코스닥의 매수 주체가 달라 외국인과 기관의 후속 수급을 각각 볼 필요가 있다."
+  ],
+  "implications": [
+    "달러·미국 단기금리와 국내 주식 수급의 방향을 함께 점검한다.",
+    "인프라 기업은 주문과 조달, 이자비용, 현금 유입의 시점을 대조한다."
+  ],
+  "conclusion": "11일 한국 증시는 미국 물가 경계 속에서도 반도체·장비·2차전지로 매수가 확산됐다. 미국 단기금리와 AI 기업의 금융비용은 반등의 지속성을 판단할 변수다."
+};

@@ -2620,3 +2620,373 @@ if(!window.MARKET_LEDGER.macroEvents.categories.includes('에너지·공급망')
   election.casebook.editedAt = "2026-11-10";
   archive.updatedAt = "2026-11-10";
 }
+
+/* October CPI and the November 11 CoreWeave follow-up. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  archive.events.push({
+  "id": "2026-11-10-us-october-cpi",
+  "eventDate": "2026-11-10",
+  "eventTime": "2026년 11월 10일 08:30 EST / 22:30 KST",
+  "koreaAttributionDate": "2026-11-11",
+  "recordedAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "coverage": "미국 10일 CPI 발표 전부터 정규장·장후와 한국 11일 정규장까지",
+  "category": "물가·통화정책",
+  "phase": "미국 금리와 한국 첫 거래일 확인",
+  "title": "미국 10월 CPI 예상 상회와 2년물 국채금리 17bp 상승",
+  "subtitle": "미국 2년물 +17bp, 10년물 +10bp. 나스닥 -0.74%. 다음 한국 거래일에는 AI 실적과 수출 호조 속 코스닥이 +5.62% 올랐다.",
+  "tags": [
+    "미국 10월 CPI",
+    "CPI",
+    "미 국채 2년물",
+    "월러",
+    "연준 금리 인상",
+    "수익률곡선",
+    "코스닥"
+  ],
+  "summary": [
+    "월러가 CPI 발표 전 50bp 인상 검토 조건을 제시했다. 근원 CPI가 시장 예상 +0.2%를 웃도는 +0.3%로 발표되면서 12월 인상 폭에 대한 기대가 높아졌다.",
+    "미국 2년물 +17bp, 10년물 +10bp. 나스닥 -0.74%. 다음 한국 거래일에는 AI 실적과 수출 호조 속 코스닥이 +5.62% 올랐다."
+  ],
+  "highlights": [
+    {
+      "label": "10월 CPI",
+      "value": "헤드라인 +0.4% · 근원 +0.3% 전월 대비"
+    },
+    {
+      "label": "미 2년물",
+      "value": "4.73%(+17bp)"
+    },
+    {
+      "label": "미 10년물",
+      "value": "4.98%(+10bp)"
+    }
+  ],
+  "background": [
+    "10월 FOMC 이후 정책금리 목표 범위는 3.75~4.00%였다. 11월 10일 CPI 발표에 앞서 월러는 12월 25bp 인상을 기본으로 보면서 근원 CPI가 0.3% 안팎이면 50bp도 고려하겠다고 말했다. Reuters의 런던 거래 호가에서 2년물은 발표 전에 이미 약 6bp 오른 4.61% 부근이었다."
+  ],
+  "trigger": [
+    "미 동부시간 8시 30분에 발표된 10월 CPI는 계절조정 전월 대비 +0.4%, 근원은 +0.3%였다. Reuters 조사 예상은 +0.3%와 +0.2%였다. 헤드라인은 9월 +0.6%에서 둔화했지만 근원은 3개월 연속 +0.3%였다. 2025년 10월 자료 결측으로 전년 동월 대비 수치는 공표되지 않았다."
+  ],
+  "transmission": [
+    "미 재무부 일별 파수익률에서 2년물은 4.56%에서 4.73%로 17bp, 10년물은 4.88%에서 4.98%로 10bp 올랐다. 10년물과 2년물의 차이는 32bp에서 25bp로 축소됐다. 단기물이 더 크게 움직인 점은 가까운 정책금리 경로가 상향 조정됐다는 당시 해석과 부합한다."
+  ],
+  "alternatives": [
+    "미국 정규장에서 S&P500은 0.39%, 나스닥 종합은 0.74% 하락했다. 로건은 당일 연설에서 현 전망을 전제로 최소 두 차례 25bp 인상을 선호했다. 시장의 추가 인상 기대에는 CPI의 예상 상회와 여러 정책 당국자의 발언이 함께 반영됐다. 자료는 각 요인이 금리에 미친 영향을 따로 측정할 수 있는 수준까지 확보되지 않았다."
+  ],
+  "aftermath": [
+    "미국 정규장 이후 CoreWeave가 3분기 실적을 발표했고 신한의 장후 관측에서 주가는 7.9% 상승했다. 한국 11일에는 월초 반도체 수출 호조가 확인됐다. 코스피는 약세 출발 뒤 +2.60%, 코스닥은 +5.62%로 마감했다. 코스피 외국인과 코스닥 기관은 각각 순매수했다."
+  ],
+  "timeline": [
+    {
+      "at": "2026-11-10 CPI 발표 전",
+      "session": "미국·유럽 거래",
+      "title": "월러 발언 이후 단기금리 상승",
+      "paragraphs": [
+        "10월 FOMC 이후 정책금리 목표 범위는 3.75~4.00%였다. 11월 10일 CPI 발표에 앞서 월러는 12월 25bp 인상을 기본으로 보면서 근원 CPI가 0.3% 안팎이면 50bp도 고려하겠다고 말했다. Reuters의 런던 거래 호가에서 2년물은 발표 전에 이미 약 6bp 오른 4.61% 부근이었다."
+      ],
+      "sourceIds": [
+        "nov10-waller-cpi",
+        "nov10-pre-cpi-yields"
+      ]
+    },
+    {
+      "at": "2026-11-10 08:30 EST",
+      "session": "미국 CPI",
+      "title": "근원 +0.3%로 예상 상회",
+      "paragraphs": [
+        "미 동부시간 8시 30분에 발표된 10월 CPI는 계절조정 전월 대비 +0.4%, 근원은 +0.3%였다. Reuters 조사 예상은 +0.3%와 +0.2%였다. 헤드라인은 9월 +0.6%에서 둔화했지만 근원은 3개월 연속 +0.3%였다. 2025년 10월 자료 결측으로 전년 동월 대비 수치는 공표되지 않았다."
+      ],
+      "sourceIds": [
+        "nov10-bls-oct-cpi",
+        "nov10-cpi-reaction"
+      ]
+    },
+    {
+      "at": "2026-11-10 미국 거래일",
+      "session": "일별 금리·종가",
+      "title": "2년물 +17bp, 나스닥 -0.74%",
+      "paragraphs": [
+        "미 재무부 일별 파수익률에서 2년물은 4.56%에서 4.73%로 17bp, 10년물은 4.88%에서 4.98%로 10bp 올랐다. 10년물과 2년물의 차이는 32bp에서 25bp로 축소됐다. 단기물이 더 크게 움직인 점은 가까운 정책금리 경로가 상향 조정됐다는 당시 해석과 부합한다."
+      ],
+      "sourceIds": [
+        "nov10-us-par-yields",
+        "nov10-us-regular-close"
+      ]
+    },
+    {
+      "at": "2026-11-11 한국 정규장",
+      "session": "한국 첫 거래일",
+      "title": "코스피·코스닥 상승",
+      "paragraphs": [
+        "미국 정규장 이후 CoreWeave가 3분기 실적을 발표했고 신한의 장후 관측에서 주가는 7.9% 상승했다. 한국 11일에는 월초 반도체 수출 호조가 확인됐다. 코스피는 약세 출발 뒤 +2.60%, 코스닥은 +5.62%로 마감했다. 코스피 외국인과 코스닥 기관은 각각 순매수했다."
+      ],
+      "sourceIds": [
+        "nov10-coreweave-results",
+        "nov11-korea-early-exports",
+        "nov11-korea-close"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "market": "미 국채",
+      "window": "11/9 대비 11/10 파수익률",
+      "observation": "2년물 4.73%(+17bp), 10년물 4.98%(+10bp)",
+      "interpretation": "가까운 정책금리 경로에 민감한 구간이 더 크게 움직였다.",
+      "sourceIds": [
+        "nov10-us-par-yields"
+      ]
+    },
+    {
+      "market": "미국 주식",
+      "window": "11/10 정규장",
+      "observation": "S&P500 -0.39%, 나스닥 -0.74%",
+      "interpretation": "금리 상승과 주요 주가지수 하락이 함께 나타났다.",
+      "sourceIds": [
+        "nov10-us-regular-close"
+      ]
+    },
+    {
+      "market": "한국 주식·환율",
+      "window": "11/11 정규장과 15시30분 환율",
+      "observation": "코스피 +2.60%, 코스닥 +5.62%, 원·달러 1,333.6원(-3.9원)",
+      "interpretation": "장후 실적과 국내 수출이 미국 CPI 이후 새로 들어온 정보였다.",
+      "sourceIds": [
+        "nov11-korea-close",
+        "nov10-coreweave-results",
+        "nov11-korea-early-exports"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "10월 PCE와 11월 고용 이후 12월 금리 기대",
+    "단기금리 상승이 회사채 조달 비용으로 옮겨가는 정도"
+  ],
+  "relatedIds": [
+    "2026-10-14-us-september-cpi",
+    "2026-10-14-coreweave-credit-shock",
+    "2026-11-05-nasdaq-ai-selloff"
+  ],
+  "updates": [
+    {
+      "date": "2026-11-11",
+      "title": "한국 첫 거래일과 미국 국채 반응 기록",
+      "paragraphs": [
+        "미국의 발표 전 호가, 일별 파수익률과 한국 첫 거래일을 확인했다."
+      ],
+      "sourceIds": [
+        "nov10-pre-cpi-yields",
+        "nov10-us-par-yields",
+        "nov11-korea-close"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "nov10-bls-oct-cpi",
+      "title": "미국 10월 소비자물가",
+      "publisher": "BLS",
+      "publishedAt": "2026-11-10 08:30 EST",
+      "observedAt": "2026년 10월",
+      "verification": "공식 발표 확인",
+      "note": "헤드라인 +0.4%, 근원 +0.3%. 2025년 10월 비교값 결측.",
+      "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm"
+    },
+    {
+      "id": "nov10-waller-cpi",
+      "title": "월러의 12월 인상 폭 관련 발언",
+      "publisher": "미 연준",
+      "publishedAt": "2026-11-10",
+      "observedAt": "미국 CPI 발표 전",
+      "verification": "연설문 확인",
+      "note": "근원 CPI 0.3% 안팎이면 50bp 인상 고려를 제시.",
+      "url": "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm"
+    },
+    {
+      "id": "nov10-logan-rates",
+      "title": "로건의 추가 인상 견해",
+      "publisher": "댈러스 연은",
+      "publishedAt": "2026-11-10",
+      "observedAt": "미국 10일 연설",
+      "verification": "연설문 확인",
+      "note": "현 전망을 전제로 25bp 인상 최소 두 차례를 제시.",
+      "url": "https://www.dallasfed.org/news/speeches/logan/2026/lkl261110"
+    },
+    {
+      "id": "nov10-pre-cpi-yields",
+      "title": "CPI 발표 전 단기금리 상승",
+      "publisher": "Reuters",
+      "publishedAt": "2026-11-10",
+      "observedAt": "런던 거래, 미국 CPI 전",
+      "verification": "관측 시점과 호가 확인",
+      "note": "2년물 4.61% 부근으로 약 6bp 상승한 시점의 시장 호가.",
+      "url": "https://economictimes.indiatimes.com/markets/bonds/us-treasury-yields-rise-as-feds-waller-presses-rate-hike-case/articleshow/135708551.cms"
+    },
+    {
+      "id": "nov10-cpi-reaction",
+      "title": "예상과 미국 금리 반응",
+      "publisher": "Reuters",
+      "publishedAt": "2026-11-10 미국",
+      "observedAt": "미국 10일 금리·정책금리 선물",
+      "verification": "보도에서 예상과 호가 확인",
+      "note": "예상 헤드라인 +0.3%, 근원 +0.2%. 50bp 확률은 시점별 시장가격.",
+      "url": "https://ca.marketscreener.com/news/us-yields-climb-stocks-fall-as-inflation-data-boosts-chances-for-larger-fed-rate-hike-ce785edad18ef224"
+    },
+    {
+      "id": "nov10-us-par-yields",
+      "title": "미 국채 파수익률",
+      "publisher": "미 재무부",
+      "publishedAt": "2026-11-10 미국",
+      "observedAt": "11/9 대비 11/10",
+      "verification": "공식 일별 표 확인",
+      "note": "2년물 4.56→4.73%, 10년물 4.88→4.98%.",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    {
+      "id": "nov10-us-regular-close",
+      "title": "미국 10일 정규장 마감",
+      "publisher": "AP·미래에셋",
+      "publishedAt": "2026-11-10 미국",
+      "observedAt": "미국 10일 정규장",
+      "verification": "마감 자료 대조",
+      "note": "S&P500 -0.39%, 나스닥 종합 -0.74%.",
+      "url": "https://apnews.com/article/a97eb31c415811065561f2c2ac552cd7",
+      "dailyDate": "2026-11-11"
+    },
+    {
+      "id": "nov11-korea-close",
+      "title": "한국 11일 종가와 환율",
+      "publisher": "연합뉴스·신한",
+      "publishedAt": "2026-11-11 한국",
+      "observedAt": "한국 11일 정규장",
+      "verification": "종가 대조·수급 신한 표",
+      "note": "코스피 5,375.36, 코스닥 705.10. 15시30분 원·달러 1,333.6원.",
+      "url": "https://en.yna.co.kr/view/AEN20261111007152320",
+      "dailyDate": "2026-11-11"
+    },
+    {
+      "id": "nov10-coreweave-results",
+      "title": "CoreWeave 3분기 실적",
+      "publisher": "CoreWeave·SEC",
+      "publishedAt": "2026-11-10 미국 장후",
+      "observedAt": "3분기 실적과 장후 관측",
+      "verification": "실적 원문 확인, 가격은 신한 시황",
+      "note": "매출 36.61억달러, 순이자비용 8.46억달러. 장후 +7.9%는 신한 관측.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
+      "dailyDate": "2026-11-11"
+    },
+    {
+      "id": "nov11-korea-early-exports",
+      "title": "11월 1~10일 한국 수출 잠정치",
+      "publisher": "관세청 인용 연합뉴스",
+      "publishedAt": "2026-11-11 한국",
+      "observedAt": "11월 1~10일",
+      "verification": "관세청 인용 보도 확인",
+      "note": "전체 수출 +111.9%, 반도체 +331.2% 전년 동기 대비.",
+      "url": "https://en.yna.co.kr/view/AEN20261111002651320?section=economy-finance%2Feconomy"
+    }
+  ],
+  "casebook": {
+    "title": "미국 10월 CPI 예상 상회와 2년물 국채금리 17bp 상승",
+    "cause": "월러가 CPI 발표 전 50bp 인상 검토 조건을 제시했다. 근원 CPI가 시장 예상 +0.2%를 웃도는 +0.3%로 발표되면서 12월 인상 폭에 대한 기대가 높아졌다.",
+    "impact": "미국 2년물 +17bp, 10년물 +10bp. 나스닥 -0.74%. 다음 한국 거래일에는 AI 실적과 수출 호조 속 코스닥이 +5.62% 올랐다.",
+    "thesis": "발표 전 연준 발언과 예상보다 높은 근원 물가가 단기금리 경로를 재평가하게 한 사례.",
+    "sections": [
+      {
+        "title": "발표 전부터 12월 인상 폭이 쟁점이었다",
+        "paragraphs": [
+          "10월 FOMC 이후 정책금리 목표 범위는 3.75~4.00%였다. 11월 10일 CPI 발표에 앞서 월러는 12월 25bp 인상을 기본으로 보면서 근원 CPI가 0.3% 안팎이면 50bp도 고려하겠다고 말했다. Reuters의 런던 거래 호가에서 2년물은 발표 전에 이미 약 6bp 오른 4.61% 부근이었다.",
+          "시장의 관심은 물가가 9월보다 낮아지는지와 함께 근원 물가가 인상 속도를 바꿀 만큼 높은지에 있었다. 발언이 먼저 단기금리를 움직였기 때문에 하루 수익률에는 CPI 발표 이전의 조정도 포함된다."
+        ],
+        "sourceIds": [
+          "nov10-waller-cpi",
+          "nov10-pre-cpi-yields"
+        ]
+      },
+      {
+        "title": "에너지 상승세가 둔화했지만 근원 물가는 같은 속도였다",
+        "paragraphs": [
+          "미 동부시간 8시 30분에 발표된 10월 CPI는 계절조정 전월 대비 +0.4%, 근원은 +0.3%였다. Reuters 조사 예상은 +0.3%와 +0.2%였다. 헤드라인은 9월 +0.6%에서 둔화했지만 근원은 3개월 연속 +0.3%였다. 2025년 10월 자료 결측으로 전년 동월 대비 수치는 공표되지 않았다.",
+          "주거비는 +0.3%로 전체 월간 상승분의 30% 이상을 설명했다. 에너지는 9월 +5.2%에서 10월 +0.7%로 둔화했다. 에너지 충격 완화와 근원 물가의 지속성이 함께 나타나, 시장이 기대한 만큼 인상 압력이 줄지 않았다."
+        ],
+        "sourceIds": [
+          "nov10-bls-oct-cpi",
+          "nov10-cpi-reaction"
+        ]
+      },
+      {
+        "title": "국채의 단기 구간에서 충격이 컸다",
+        "paragraphs": [
+          "미 재무부 일별 파수익률에서 2년물은 4.56%에서 4.73%로 17bp, 10년물은 4.88%에서 4.98%로 10bp 올랐다. 10년물과 2년물의 차이는 32bp에서 25bp로 축소됐다. 단기물이 더 크게 움직인 점은 가까운 정책금리 경로가 상향 조정됐다는 당시 해석과 부합한다.",
+          "미국 정규장에서 S&P500은 0.39%, 나스닥 종합은 0.74% 하락했다. 로건은 당일 연설에서 현 전망을 전제로 최소 두 차례 25bp 인상을 선호했다. 시장의 추가 인상 기대에는 CPI의 예상 상회와 여러 정책 당국자의 발언이 함께 반영됐다. 자료는 각 요인이 금리에 미친 영향을 따로 측정할 수 있는 수준까지 확보되지 않았다."
+        ],
+        "sourceIds": [
+          "nov10-us-par-yields",
+          "nov10-us-regular-close",
+          "nov10-logan-rates",
+          "nov10-cpi-reaction"
+        ]
+      },
+      {
+        "title": "한국 개장 이후 실적과 수출에 매수세가 유입됐다",
+        "paragraphs": [
+          "미국 정규장 이후 CoreWeave가 3분기 실적을 발표했고 신한의 장후 관측에서 주가는 7.9% 상승했다. 한국 11일에는 월초 반도체 수출 호조가 확인됐다. 코스피는 약세 출발 뒤 +2.60%, 코스닥은 +5.62%로 마감했다. 코스피 외국인과 코스닥 기관은 각각 순매수했다.",
+          "미국 단기금리 상승과 한국 주가 반등이 이어진 순서는 주식시장에 실적·수출·수급 요인이 함께 작용했음을 보여준다. 이후 금리 경로는 PCE와 고용, AI 관련 위험자산은 기업별 조달과 매출 인식에서 추가 근거를 확인할 수 있다."
+        ],
+        "sourceIds": [
+          "nov10-coreweave-results",
+          "nov11-korea-early-exports",
+          "nov11-korea-close"
+        ]
+      }
+    ],
+    "editedAt": "2026-11-11",
+    "editorialNote": "발표 전 호가, 일별 파수익률과 다음 한국 거래일을 각각 기록했다."
+  }
+});
+  const core = archive.events.find(record => record.id === "2026-10-14-coreweave-credit-shock");
+  core.relatedIds.push("2026-11-10-us-october-cpi");
+  core.sources.push(...[
+  {
+    "id": "nov11-korea-close",
+    "title": "한국 11일 종가와 환율",
+    "publisher": "연합뉴스·신한",
+    "publishedAt": "2026-11-11 한국",
+    "observedAt": "한국 11일 정규장",
+    "verification": "종가 대조·수급 신한 표",
+    "note": "코스피 5,375.36, 코스닥 705.10. 15시30분 원·달러 1,333.6원.",
+    "url": "https://en.yna.co.kr/view/AEN20261111007152320",
+    "dailyDate": "2026-11-11"
+  },
+  {
+    "id": "nov10-coreweave-results",
+    "title": "CoreWeave 3분기 실적",
+    "publisher": "CoreWeave·SEC",
+    "publishedAt": "2026-11-10 미국 장후",
+    "observedAt": "3분기 실적과 장후 관측",
+    "verification": "실적 원문 확인, 가격은 신한 시황",
+    "note": "매출 36.61억달러, 순이자비용 8.46억달러. 장후 +7.9%는 신한 관측.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
+    "dailyDate": "2026-11-11"
+  }
+]);
+  const chapter = {
+  "title": "11월 11일 후속 — CoreWeave 매출 성장과 금융비용",
+  "paragraphs": [
+    "CoreWeave가 미국 10일 정규장 이후 3분기 실적을 발표했다. 매출은 36.61억달러로 전년 동기 대비 약 168% 늘었고 순이자비용은 8.46억달러(+173%)였다. 영업이익은 2.07억달러, 순손실은 7.09억달러였다. 매출 성장과 절대 이자비용 증가가 동시에 확인됐다.",
+    "신한이 관측한 장후 주가는 +7.9%였다. 계약 갱신 가격과 가중 차입비용에 대한 경영진의 설명이 투자심리를 지지했다는 것이 신한의 해석이다. 회사는 계약 잔고의 매출 인식에 설비 인도와 서비스 가용 조건이 따른다고 공시했다. 이후 신용 판단에는 계약의 매출 전환과 이자 지출을 감당할 현금흐름이 중요하다.",
+    "한국 11일에는 반도체 장비와 기판이 강세였고 코스닥은 +5.62%였다. 월초 수출과 기관 수급도 같은 거래일에 작용했으므로 종가 상승폭을 한 기업의 실적 효과로 추정하기는 어렵다."
+  ],
+  "sourceIds": [
+    "nov11-korea-close",
+    "nov10-coreweave-results"
+  ]
+};
+  core.casebook.sections.push(chapter);
+  core.updates.push({date:"2026-11-11", ...chapter});
+  core.updatedAt = "2026-11-11";
+  core.casebook.editedAt = "2026-11-11";
+  archive.updatedAt = "2026-11-11";
+}
