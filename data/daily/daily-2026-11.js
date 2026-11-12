@@ -881,3 +881,100 @@ window.MARKET_LEDGER.dailyAddenda["2026-11-11"] = {
   ],
   "conclusion": "11일 한국 증시는 미국 물가 경계 속에서도 반도체·장비·2차전지로 매수가 확산됐다. 미국 단기금리와 AI 기업의 금융비용은 반등의 지속성을 판단할 변수다."
 };
+
+/* November 12 report. */
+window.MARKET_LEDGER.daily["2026-11"].push({
+  "date": "2026-11-12",
+  "month": "2026년 11월",
+  "createdAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "title": "엔비디아 CEO 교체 보도에 국내 증시 반락, 코스닥 700선 하회",
+  "tags": [
+    "엔비디아",
+    "CEO교체",
+    "반도체",
+    "옵션만기",
+    "미국중간선거",
+    "연준"
+  ],
+  "lead": [
+    "코스피는 장중 5,458.84까지 올랐으나 5,342.73(-0.61%)에 마감했다. 코스닥은 696.53(-1.22%)으로 700선을 내줬다. 엔비디아 CEO 거취 보도와 옵션 만기, 대형주의 실적 반응이 겹쳤다.",
+    "미국 11일 정규장에서는 반도체지수가 5.66% 올랐고, 장후 엔비디아는 8.6% 하락했다. 한국장 마감 뒤 엔비디아는 젠슨 황 사임과 콜레트 크레스 임시 CEO 선임을 공식 발표했다."
+  ],
+  "report": [
+    {
+      "no": "02",
+      "title": "미국 정규장 반등과 엔비디아 장후 하락",
+      "paragraphs": [
+        "미국 11일 정규장에서 S&P500은 7,619.38(+1.31%), 나스닥 종합은 25,466.19(+1.60%), 다우는 52,486.49(+0.49%)였다. 미래에셋 브리핑의 필라델피아 반도체지수는 10,564.11(+5.66%), VIX는 17.49였다. 미 국채 현물시장은 재향군인의 날로 휴장했다. <a href=\"https://apnews.com/article/027cd5f4583d1a11c1795150bf065afb\" target=\"_blank\" rel=\"noopener noreferrer\">AP 미국 정규장</a>",
+        "신한 시황에서 CoreWeave는 실적 발표 다음 정규장에 +24.7%, 엔비디아는 +2.9%였다. 이후 이사회가 젠슨 황의 거취를 논의한다는 보도가 나왔고 AP의 장후 관측에서 엔비디아는 8.6% 하락했다. 정규장 AI주 매수 뒤 장후 엔비디아에 매도가 집중된 순서다. <a href=\"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm\" target=\"_blank\" rel=\"noopener noreferrer\">CoreWeave 실적</a> <a href=\"https://www.marketscreener.com/news/instant-view-nvidia-is-preparing-to-oust-ceo-jensen-huang-wsj-reports-ce785edbd089f125\" target=\"_blank\" rel=\"noopener noreferrer\">Reuters 이사회 보도</a> <a href=\"https://apnews.com/article/8bf08407eafe1655ed73112f7494029a\" target=\"_blank\" rel=\"noopener noreferrer\">AP 장후 가격</a>"
+      ]
+    },
+    {
+      "no": "03",
+      "title": "한국 정규장과 옵션 만기 수급",
+      "paragraphs": [
+        "코스피는 상승 출발했지만 종가 5,342.73(-0.61%)로 이틀 연속 상승이 끝났다. 코스닥은 696.53(-1.22%)이었다. 상승·하락 종목은 신한 마감표에서 코스피 271대595, 코스닥 571대1,097이었다. <a href=\"https://en.yna.co.kr/view/AEN20261112008000320\" target=\"_blank\" rel=\"noopener noreferrer\">연합뉴스 국내 마감</a>",
+        "신한 마감표에서 외국인·기관·개인 순매수는 코스피 +3,707억·-6,891억·-2,062억원, 코스닥 -3,535억·+435억·+3,077억원이었다. 다른 마감 자료의 순매수 금액에는 집계 차이가 있어 종목과 수급 서술은 신한 표를 기준으로 삼았다. 코스피는 기관, 코스닥은 외국인의 순매도가 컸다. 원·달러 환율은 15시 30분 기준 1,330.7원(-2.9원)이었다. <a href=\"https://files.newsis.com/view/NISI20261112_0021530847\" target=\"_blank\" rel=\"noopener noreferrer\">서울 외환시장 주간 마감</a>"
+      ]
+    },
+    {
+      "no": "04",
+      "title": "메모리 종목 차별화와 개별 실적",
+      "paragraphs": [
+        "신한 마감표에서 삼성전자는 +0.7%, SK하이닉스는 -1.8%, 주성엔지니어링은 -3.6%였다. 신한은 양대 메모리 업체의 고객 구성 차이를 상대 수익률의 한 설명으로 제시했다. 옵션 만기일 수급도 겹쳤으며 당일 주가로 실제 발주 변화를 추정하기는 어렵다.",
+        "메리츠금융지주 -13.1%, 삼성화재 -7.2%, NAVER -6.4%에는 개별 실적도 작용했다는 신한의 평가가 있었다. JYP Ent. +16.5%, 지니언스 +21.0%로 전체 시장 약세 속에서도 업종·실적에 따라 매수가 유입됐다."
+      ]
+    },
+    {
+      "no": "05",
+      "title": "엔비디아의 공식 승계 발표와 공급망 확인 사항",
+      "paragraphs": [
+        "한국 정규장 종료 뒤 엔비디아는 젠슨 황이 CEO와 이사에서 물러나고, 콜레트 크레스 CFO가 임시 CEO를 맡으며 하비 존스가 이사회 의장에 선임됐다고 발표했다. 회사는 고객 약속과 제품 일정의 연속성을 예상했다. AP는 공식 발표 이후 미국 개장 전 엔비디아가 약 10% 하락했다고 보도했다. <a href=\"https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 승계 발표</a> <a href=\"https://apnews.com/article/5403f152a601cf82ce939f1d24fffa0f\" target=\"_blank\" rel=\"noopener noreferrer\">AP 발표 이후 가격</a>",
+        "기존 계약이 예정대로 이행되는지는 실적과 고객 공시에서 확인할 수 있다. 2025년 10월 종료 분기 10-Q에는 엔비디아가 지역 매출의 기준을 고객 청구지에서 고객 본사 소재지로 바꿨다고 명시돼 있다. 지역 매출 자료로 최종 고객이나 배송지를 추적하는 데에는 한계가 있다. <a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581025000230/nvda-20251026.htm\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 지역별 매출 공시</a>"
+      ]
+    },
+    {
+      "no": "06",
+      "title": "미국 의회 구도와 연준 인사 발언",
+      "paragraphs": [
+        "AP는 미국 11일 저녁 미시시피 상원 선거에서 스콧 콜롬의 승리를 판정했다. 민주당 측 상원 55석에 알래스카 결과가 남아 있다. 하원 255대168은 미판정 12석이 남은 시점의 집계다. 루이지애나의 12월 12일 일반선거는 해당 주의 일정이다. <a href=\"https://apnews.com/article/7f098b8834f598c923ba73572ea2223f\" target=\"_blank\" rel=\"noopener noreferrer\">AP 미시시피 판정</a> <a href=\"https://spectrumlocalnews.com/us/snplus/politics/election-results\" target=\"_blank\" rel=\"noopener noreferrer\">하원 집계</a> <a href=\"https://www.sos.la.gov/elections-voting/types-of-elections\" target=\"_blank\" rel=\"noopener noreferrer\">루이지애나 선거 일정</a>",
+        "애나 폴슨은 현지 10일 연설에서 기조 물가를 2.5~3.0%로 평가하고 점진적 추가 긴축을 선호했다. 기대인플레이션과 임금, 기조 물가가 더 오르면 속도를 높일 수 있다고 말했다. 같은 날 PBS 인터뷰에서 오스탄 굴스비는 서비스 물가와 데이터센터 투자 수요의 파급을 우려했다. 발언은 향후 정책 선택에 대한 각자의 견해다. <a href=\"https://www.philadelphiafed.org/the-economy/monetary-policy/261110-81st-annual-field-meeting-capstone-speech\" target=\"_blank\" rel=\"noopener noreferrer\">폴슨 연설</a> <a href=\"https://pr.pbs.org/video/november-10-2026-pbs-news-hour-full-episode-1794286802/\" target=\"_blank\" rel=\"noopener noreferrer\">굴스비 인터뷰</a>"
+      ]
+    },
+    {
+      "no": "07",
+      "title": "반도체 호황이 국내 소비로 이어지는 시차",
+      "paragraphs": [
+        "KDI는 과거 파급관계를 바탕으로 반도체 가격 상승 충격이 2027년 민간소비 증가율을 약 0.6%p 높이고, 유가 상승 충격이 약 0.2%p 낮출 것으로 추정했다. 반도체 호황은 임금·성과급·배당을 통해 시간이 지나 소비에 반영되는 반면, 유가는 가계의 실질구매력에 더 빠르게 영향을 준다는 분석이다. <a href=\"https://www.kdi.re.kr/research/analysisView?art_no=3829\" target=\"_blank\" rel=\"noopener noreferrer\">KDI 현안분석</a>",
+        "미국 10월 PPI는 13일 발표 예정이다. 엔비디아 공식 발표 이후 첫 미국 정규장 가격과 국내 다음 거래일의 반도체·수급 반응이 이번 사건의 범위를 판단할 후속 자료다. <a href=\"https://www.bls.gov/schedule/2026/11_sched_list.htm\" target=\"_blank\" rel=\"noopener noreferrer\">BLS 11월 일정</a>"
+      ]
+    }
+  ],
+  "watch": [
+    "엔비디아 CEO 교체 발표 이후 미국 정규장과 국내 메모리의 다음 거래일 반응",
+    "코스닥 700선 부근에서 외국인 매도와 상승 종목 수의 변화",
+    "미국 PPI 이후 단기금리와 달러",
+    "엔비디아 실적 발표의 제품 일정·고객 계약 관련 설명"
+  ]
+});
+window.MARKET_LEDGER.dailyAddenda["2026-11-12"] = {
+  "changes": {
+    "maintained": [
+      "AI 공급망은 주문과 투자 집행, 현금 회수의 흐름을 함께 본다."
+    ],
+    "new": [
+      "미국 반도체지수 상승 뒤 엔비디아 장후 주가 -8.6%.",
+      "한국장 마감 뒤 엔비디아가 임시 CEO를 공식 발표.",
+      "코스피와 코스닥 모두 하락 종목이 상승 종목보다 많았다."
+    ]
+  },
+  "assessment": [
+    "미국 정규장에 나타난 AI주 반등이 한국 종가까지 이어지지 않았다. 옵션 만기일 기관 매도와 기업 실적 반응 속에 엔비디아의 리더십 불확실성이 커졌다. 공식 승계 발표는 한국장 마감 이후의 정보다."
+  ],
+  "implications": [
+    "정규장과 장후의 가격을 각 발표 시점에 맞춰 대조한다.",
+    "AI 공급망의 단기 주가 반응과 고객 계약·제품 일정의 변화를 각각 확인한다."
+  ],
+  "conclusion": "12일 국내 증시는 엔비디아 거취 보도와 옵션 만기 수급이 겹치면서 장중 상승분을 반납했다. 임시 CEO 체제에서 제품 일정과 고객 약속이 어떻게 집행되는지가 다음 관측점이다."
+};

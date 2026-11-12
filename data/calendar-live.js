@@ -1,7 +1,7 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.calendarLive={
-  "checkedAt": "2026-11-11T14:54:47.506515+00:00",
-  "today": "2026-11-11",
+  "checkedAt": "2026-11-12T14:38:55.366633+00:00",
+  "today": "2026-11-12",
   "status": "partial",
   "sources": {
     "bea": {
@@ -15,16 +15,12 @@ window.MARKET_LEDGER.calendarLive={
     },
     "fed": {
       "status": "success",
-      "sha256": "5a59302f0d52ae62835a451433569606e3a5408ac631503c949dc10a366de27c",
+      "sha256": "2a3da97ebabf038639e4c37d3e9bb993be5a56d6be1e113880ad1b93f6fb59a5",
       "events": 2
     },
     "te": {
-      "status": "success",
-      "sha256": "86fcc7bbd32cd6fc3a1ea357f1b8b42e63d42230ba4c4aa615c4bb9b7df2ffe1",
-      "events": 19,
-      "checkedAt": "2026-11-11T14:54:47.506515+00:00",
-      "windowStart": "2026-11-10",
-      "windowEnd": "2026-12-05"
+      "status": "failed",
+      "error": "Calendar table missing"
     }
   },
   "events": [
@@ -3434,7 +3430,8 @@ window.MARKET_LEDGER.calendarLive={
     }
   ],
   "warnings": [
-    "BLS: 일정 수집 실패 · 기존 일정 유지 (HTTP Error 403: Forbidden)"
+    "BLS: 일정 수집 실패 · 기존 일정 유지 (HTTP Error 403: Forbidden)",
+    "Trading Economics: 일정·발표값 수집 실패 · 기존값 유지 (Calendar table missing)"
   ],
   "coverage": "Trading Economics 미국 중요도 3 일정·실제치·시장 예상치·이전값 + BEA·BLS/FOMC 공식 일정. Investing.com 등급과 별개이며 공개 페이지 제공 기간만 수집합니다. 기존 리서치 일정은 별도 보존합니다."
 };

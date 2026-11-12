@@ -2990,3 +2990,419 @@ if(!window.MARKET_LEDGER.macroEvents.categories.includes('에너지·공급망')
   core.casebook.editedAt = "2026-11-11";
   archive.updatedAt = "2026-11-11";
 }
+
+/* NVIDIA transition and November 12 follow-up observations. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  archive.events.push({
+  "id": "2026-11-12-nvidia-ceo-transition",
+  "eventDate": "2026-11-12",
+  "eventTime": "미국 11일 정규장 이후 거취 논의 보도 · 12일 한국 정규장 이후 공식 승계 발표",
+  "koreaAttributionDate": "2026-11-12",
+  "recordedAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "coverage": "미국 11일 정규장·장후, 한국 12일 정규장, 공식 발표 후 미국 12일 개장 전 관측",
+  "category": "시장구조·유동성",
+  "phase": "공식 승계 발표와 개장 전 반응 확인",
+  "title": "엔비디아 젠슨 황 사임과 임시 CEO 선임",
+  "subtitle": "엔비디아는 미국 11일 장후 -8.6%, 공식 발표 후 12일 개장 전 약 -10%였다. 한국 12일 코스피 -0.61%, 코스닥 -1.22%.",
+  "tags": [
+    "엔비디아",
+    "젠슨 황",
+    "콜레트 크레스",
+    "CEO 교체",
+    "반도체",
+    "수출 통제"
+  ],
+  "summary": [
+    "이사회가 창업자 CEO의 거취를 논의한다는 보도가 나온 뒤 엔비디아가 젠슨 황의 사임과 콜레트 크레스 임시 CEO 선임을 발표했다.",
+    "엔비디아는 미국 11일 장후 -8.6%, 공식 발표 후 12일 개장 전 약 -10%였다. 한국 12일 코스피 -0.61%, 코스닥 -1.22%."
+  ],
+  "highlights": [
+    {
+      "label": "엔비디아 11일 장후",
+      "value": "-8.6%"
+    },
+    {
+      "label": "한국 12일 정규장",
+      "value": "코스피 -0.61% · 코스닥 -1.22%"
+    },
+    {
+      "label": "공식 발표 후 개장 전",
+      "value": "엔비디아 약 -10%"
+    }
+  ],
+  "background": [
+    "미국 11일 정규장에서 나스닥 종합은 1.60%, 필라델피아 반도체지수는 5.66% 상승했다. 신한 브리핑에서 CoreWeave는 전날 장후 발표한 실적을 반영하며 24.7%, 엔비디아는 2.9% 올랐다."
+  ],
+  "trigger": [
+    "엔비디아 독립 이사들은 앞서 10일 외부 변호인에게 조사를 위임했다고 발표했다. 11일 정규장 종료 뒤 Reuters 등은 이사회가 CEO의 거취를 논의한다고 보도했다. AP가 관측한 엔비디아 장후 가격은 정규장 종가보다 8.6% 낮았다."
+  ],
+  "transmission": [
+    "한국 12일 코스피는 장중 5,458.84까지 올랐다가 5,342.73(-0.61%), 코스닥은 696.53(-1.22%)으로 마쳤다. 신한 마감에서 삼성전자는 상승했고 SK하이닉스는 1.8% 하락했다. 고객 구성이 다른 두 종목에 엔비디아 거취 보도의 영향이 다르게 나타났다는 해석이 나왔다."
+  ],
+  "alternatives": [
+    "같은 날 코스피 기관 순매도와 코스닥 외국인 순매도가 나타났고 옵션 만기와 국내 대형주의 실적 반응도 겹쳤다. 양 시장 하락분 중 거취 보도의 기여도를 따로 확인할 수 있는 자료는 확보되지 않았다."
+  ],
+  "aftermath": [
+    "한국장 마감 뒤 엔비디아는 젠슨 황이 사장·CEO·이사직에서 물러났고, 콜레트 크레스 CFO가 임시 CEO를 맡는다고 발표했다. 이사회 의장에는 하비 존스를 선임했다. 회사는 고객 약속과 제품 일정이 이어질 것으로 내다봤다."
+  ],
+  "timeline": [
+    {
+      "at": "2026-11-10 미국",
+      "session": "독립 조사",
+      "title": "이사회 외부 변호인 선임",
+      "paragraphs": [
+        "엔비디아 독립 이사들은 외부 변호인에게 독립 조사를 위임했다고 발표했다."
+      ],
+      "sourceIds": [
+        "nov10-nvda-board"
+      ]
+    },
+    {
+      "at": "2026-11-11 미국 정규장",
+      "session": "반도체 상승",
+      "title": "SOX +5.66%, 엔비디아 +2.9%",
+      "paragraphs": [
+        "미국 11일 정규장에서 나스닥 종합은 1.60%, 필라델피아 반도체지수는 5.66% 상승했다. 신한 브리핑에서 CoreWeave는 전날 장후 발표한 실적을 반영하며 24.7%, 엔비디아는 2.9% 올랐다."
+      ],
+      "sourceIds": [
+        "nov11-us-ai-close"
+      ]
+    },
+    {
+      "at": "2026-11-11 미국 장후",
+      "session": "거취 보도",
+      "title": "엔비디아 장후 -8.6%",
+      "paragraphs": [
+        "엔비디아 독립 이사들은 앞서 10일 외부 변호인에게 조사를 위임했다고 발표했다. 11일 정규장 종료 뒤 Reuters 등은 이사회가 CEO의 거취를 논의한다고 보도했다. AP가 관측한 엔비디아 장후 가격은 정규장 종가보다 8.6% 낮았다."
+      ],
+      "sourceIds": [
+        "nov11-nvda-board-report",
+        "nov11-nvda-afterhours"
+      ]
+    },
+    {
+      "at": "2026-11-12 한국 정규장",
+      "session": "한국 반영",
+      "title": "코스피 장중 상승분 반납",
+      "paragraphs": [
+        "한국 12일 코스피는 장중 5,458.84까지 올랐다가 5,342.73(-0.61%), 코스닥은 696.53(-1.22%)으로 마쳤다. 신한 마감에서 삼성전자는 상승했고 SK하이닉스는 1.8% 하락했다. 고객 구성이 다른 두 종목에 엔비디아 거취 보도의 영향이 다르게 나타났다는 해석이 나왔다."
+      ],
+      "sourceIds": [
+        "nov12-krx-close"
+      ]
+    },
+    {
+      "at": "2026-11-12 한국장 마감 뒤",
+      "session": "공식 승계",
+      "title": "크레스 임시 CEO 선임",
+      "paragraphs": [
+        "한국장 마감 뒤 엔비디아는 젠슨 황이 사장·CEO·이사직에서 물러났고, 콜레트 크레스 CFO가 임시 CEO를 맡는다고 발표했다. 이사회 의장에는 하비 존스를 선임했다. 회사는 고객 약속과 제품 일정이 이어질 것으로 내다봤다."
+      ],
+      "sourceIds": [
+        "nov12-nvda-transition",
+        "nov12-nvda-premarket"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "market": "미국 반도체",
+      "window": "11일 정규장",
+      "observation": "나스닥 +1.60% · SOX +5.66%",
+      "interpretation": "CoreWeave 실적 발표 다음 거래일에 반도체가 올랐다.",
+      "sourceIds": [
+        "nov11-us-ai-close"
+      ]
+    },
+    {
+      "market": "엔비디아 주가",
+      "window": "11일 미국 장후",
+      "observation": "-8.6%",
+      "interpretation": "이사회 거취 논의 보도 뒤 장후 매도가 나타났다.",
+      "sourceIds": [
+        "nov11-nvda-board-report",
+        "nov11-nvda-afterhours"
+      ]
+    },
+    {
+      "market": "한국 증시",
+      "window": "12일 정규장",
+      "observation": "코스피 5,342.73(-0.61%) · 코스닥 696.53(-1.22%)",
+      "interpretation": "메모리 종목별 흐름이 엇갈렸고 옵션 만기 수급이 겹쳤다.",
+      "sourceIds": [
+        "nov12-krx-close"
+      ]
+    },
+    {
+      "market": "엔비디아 주가",
+      "window": "12일 미국 개장 전, 공식 발표 이후",
+      "observation": "약 -10%",
+      "interpretation": "AP 보도 시점의 개장 전 관측이다.",
+      "sourceIds": [
+        "nov12-nvda-transition",
+        "nov12-nvda-premarket"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "새 경영진의 제품 일정과 고객 계약 관련 설명",
+    "고객·공급사 공시에서 확인되는 실제 발주 또는 인도 일정 변화",
+    "수출 허가와 판매 경로의 변화"
+  ],
+  "relatedIds": [
+    "2026-11-05-nasdaq-ai-selloff",
+    "2026-10-14-coreweave-credit-shock",
+    "2026-11-03-us-midterms-blue-wave"
+  ],
+  "updates": [
+    {
+      "date": "2026-11-12",
+      "title": "한국 마감 뒤 공식 승계 확인",
+      "paragraphs": [
+        "미국 장후 보도와 한국 첫 거래일, 공식 발표 및 미국 개장 전 주가를 기록했다."
+      ],
+      "sourceIds": [
+        "nov11-nvda-afterhours",
+        "nov12-krx-close",
+        "nov12-nvda-transition",
+        "nov12-nvda-premarket"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "nov10-nvda-board",
+      "title": "독립 이사의 조사 위임",
+      "publisher": "NVIDIA",
+      "publishedAt": "2026-11-10 미국",
+      "observedAt": "11/8 조사 착수 후 변호인 선임",
+      "verification": "회사 발표 확인",
+      "note": "독립 조사 위임이 확인됐다.",
+      "url": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board"
+    },
+    {
+      "id": "nov11-us-ai-close",
+      "title": "미국 11일 기술주 마감",
+      "publisher": "AP·미래에셋·신한",
+      "publishedAt": "2026-11-11 미국 / 11/12 국내",
+      "observedAt": "11/11 미국 정규장",
+      "verification": "AP 종가와 국내 브리핑 대조",
+      "note": "나스닥 +1.60%, SOX +5.66%, CoreWeave +24.7%.",
+      "url": "https://apnews.com/article/027cd5f4583d1a11c1795150bf065afb",
+      "dailyDate": "2026-11-12"
+    },
+    {
+      "id": "nov11-nvda-board-report",
+      "title": "엔비디아 이사회 거취 논의 보도",
+      "publisher": "Reuters",
+      "publishedAt": "2026-11-11 미국",
+      "observedAt": "11/11 미국 정규장 이후",
+      "verification": "당시 보도 확인",
+      "note": "거취 논의 단계의 보도다.",
+      "url": "https://www.marketscreener.com/news/instant-view-nvidia-is-preparing-to-oust-ceo-jensen-huang-wsj-reports-ce785edbd089f125"
+    },
+    {
+      "id": "nov11-nvda-afterhours",
+      "title": "엔비디아 장후 가격과 아시아 반응",
+      "publisher": "AP",
+      "publishedAt": "2026-11-12",
+      "observedAt": "11/11 미국 장후 및 12일 아시아",
+      "verification": "AP 장후 가격 관측 확인",
+      "note": "엔비디아 장후 -8.6%. 아시아 지수의 장중 호가와 한국 정규장 종가는 관측 시점이 다르다.",
+      "url": "https://apnews.com/article/8bf08407eafe1655ed73112f7494029a"
+    },
+    {
+      "id": "nov12-krx-close",
+      "title": "한국 12일 정규장",
+      "publisher": "연합뉴스·신한 마감",
+      "publishedAt": "2026-11-12 한국",
+      "observedAt": "한국 12일 정규장",
+      "verification": "종가 교차 확인, 수급은 신한 표",
+      "note": "코스피 5,342.73, 코스닥 696.53. 종목·수급 수치는 신한 마감 자료 기준.",
+      "url": "https://en.yna.co.kr/view/AEN20261112008000320",
+      "dailyDate": "2026-11-12"
+    },
+    {
+      "id": "nov12-nvda-transition",
+      "title": "CEO 승계 공식 발표",
+      "publisher": "NVIDIA",
+      "publishedAt": "2026-11-12 미국",
+      "observedAt": "한국 정규장 마감 후",
+      "verification": "회사 발표 확인",
+      "note": "젠슨 황 사임, 콜레트 크레스 임시 CEO, 하비 존스 의장 선임.",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+    },
+    {
+      "id": "nov12-nvda-premarket",
+      "title": "공식 발표 후 미국 개장 전 주가",
+      "publisher": "AP",
+      "publishedAt": "2026-11-12",
+      "observedAt": "공식 발표 이후 미국 개장 전",
+      "verification": "보도 시점의 주가 확인",
+      "note": "엔비디아 약 -10%. 개장 전 가격이다.",
+      "url": "https://apnews.com/article/5403f152a601cf82ce939f1d24fffa0f"
+    },
+    {
+      "id": "nvda-fy26-geographic-revenue",
+      "title": "지역 매출의 귀속 기준",
+      "publisher": "NVIDIA 10-Q·SEC",
+      "publishedAt": "2025-11-19 미국",
+      "observedAt": "2025년 10월 종료 분기",
+      "verification": "회사 공시 원문 확인",
+      "note": "청구지에서 고객 본사 소재지로 변경. 최종 고객·배송지와는 다를 수 있다.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000230/nvda-20251026.htm"
+    }
+  ],
+  "casebook": {
+    "title": "엔비디아 젠슨 황 사임과 임시 CEO 선임",
+    "cause": "이사회가 창업자 CEO의 거취를 논의한다는 보도가 나온 뒤 엔비디아가 젠슨 황의 사임과 콜레트 크레스 임시 CEO 선임을 발표했다.",
+    "impact": "엔비디아는 미국 11일 장후 -8.6%, 공식 발표 후 12일 개장 전 약 -10%였다. 한국 12일 코스피 -0.61%, 코스닥 -1.22%.",
+    "thesis": "창업자 CEO 승계 불확실성이 엔비디아 장후 주가와 한국 반도체주에 반영된 순서.",
+    "sections": [
+      {
+        "title": "미국 정규장 반등 뒤 장후에 바뀐 가격",
+        "paragraphs": [
+          "미국 11일 정규장에서 나스닥 종합은 1.60%, 필라델피아 반도체지수는 5.66% 상승했다. 신한 브리핑에서 CoreWeave는 전날 장후 발표한 실적을 반영하며 24.7%, 엔비디아는 2.9% 올랐다.",
+          "엔비디아 독립 이사들은 앞서 10일 외부 변호인에게 조사를 위임했다고 발표했다. 11일 정규장 종료 뒤 Reuters 등은 이사회가 CEO의 거취를 논의한다고 보도했다. AP가 관측한 엔비디아 장후 가격은 정규장 종가보다 8.6% 낮았다."
+        ],
+        "sourceIds": [
+          "nov10-nvda-board",
+          "nov11-us-ai-close",
+          "nov11-nvda-board-report",
+          "nov11-nvda-afterhours"
+        ]
+      },
+      {
+        "title": "한국 정규장에 먼저 반영된 거취 불확실성",
+        "paragraphs": [
+          "한국 12일 코스피는 장중 5,458.84까지 올랐다가 5,342.73(-0.61%), 코스닥은 696.53(-1.22%)으로 마쳤다. 신한 마감에서 삼성전자는 상승했고 SK하이닉스는 1.8% 하락했다. 고객 구성이 다른 두 종목에 엔비디아 거취 보도의 영향이 다르게 나타났다는 해석이 나왔다.",
+          "같은 날 코스피 기관 순매도와 코스닥 외국인 순매도가 나타났고 옵션 만기와 국내 대형주의 실적 반응도 겹쳤다. 양 시장 하락분 중 거취 보도의 기여도를 따로 확인할 수 있는 자료는 확보되지 않았다."
+        ],
+        "sourceIds": [
+          "nov11-nvda-board-report",
+          "nov12-krx-close"
+        ]
+      },
+      {
+        "title": "마감 뒤 공식 승계와 미국 개장 전 반응",
+        "paragraphs": [
+          "한국장 마감 뒤 엔비디아는 젠슨 황이 사장·CEO·이사직에서 물러났고, 콜레트 크레스 CFO가 임시 CEO를 맡는다고 발표했다. 이사회 의장에는 하비 존스를 선임했다. 회사는 고객 약속과 제품 일정이 이어질 것으로 내다봤다.",
+          "AP 보도 시점의 미국 개장 전 엔비디아 주가는 약 10% 하락했다. 앞선 11일 장후 가격과 다음 날 개장 전 가격은 관측 시점이 다르다. 한국 정규장 종가는 공식 발표보다 앞서 형성됐다."
+        ],
+        "sourceIds": [
+          "nov12-nvda-transition",
+          "nov12-nvda-premarket",
+          "nov12-krx-close"
+        ]
+      },
+      {
+        "title": "승계가 공급망으로 전달될 수 있는 경로",
+        "paragraphs": [
+          "엔비디아는 AI 가속기와 소프트웨어 생태계를 공급한다. 경영진 교체가 제품 일정과 대형 고객의 투자 집행 또는 수출 허가 대응에 영향을 주면 메모리·패키징·장비 수요에 파급될 수 있다. 당일 주가만으로 발주가 변경됐는지 확인할 수 없다.",
+          "엔비디아 10-Q에 따르면 2025년 10월 종료 분기부터 지역 매출은 고객 본사 소재지로 귀속된다. 실제 배송지와 최종 고객은 다를 수 있다. 대중국 공급 영향은 지역 매출 표와 함께 수출 허가, 유통 경로 및 고객 공시를 확인해야 판단할 수 있다."
+        ],
+        "sourceIds": [
+          "nov12-nvda-transition",
+          "nvda-fy26-geographic-revenue"
+        ]
+      }
+    ],
+    "editedAt": "2026-11-12",
+    "editorialNote": "사건일은 공식 승계 발표일이다. 전날 미국 장후 보도와 다음 한국 정규장 반응을 포함했다."
+  }
+});
+  {
+    const record = archive.events.find(item => item.id === "2026-11-03-us-midterms-blue-wave");
+    record.sources.push(...[
+  {
+    "id": "nov12-ap-mississippi",
+    "title": "미시시피 상원 승리 판정",
+    "publisher": "AP",
+    "publishedAt": "2026-11-11 미국 / 11/12 한국",
+    "observedAt": "미시시피 개표 중 승리 판정",
+    "verification": "AP 개표 설명 확인",
+    "note": "당시 4,669표 차이, 검토 표가 남아 있었다. 민주당 측 55석.",
+    "url": "https://apnews.com/article/7f098b8834f598c923ba73572ea2223f"
+  },
+  {
+    "id": "nov12-house-count",
+    "title": "하원 의석 집계",
+    "publisher": "Spectrum News",
+    "publishedAt": "2026-11-12 조회",
+    "observedAt": "보도 집계 시점",
+    "verification": "집계 페이지 확인",
+    "note": "민주 255, 공화 168, 미판정 12석.",
+    "url": "https://spectrumlocalnews.com/us/snplus/politics/election-results"
+  },
+  {
+    "id": "nov12-louisiana-runoff",
+    "title": "루이지애나 일반선거 일정",
+    "publisher": "루이지애나 주 국무장관",
+    "publishedAt": "2026-11-12 조회",
+    "observedAt": "2026년 연방하원 선거 일정",
+    "verification": "주 정부 일정 확인",
+    "note": "필요한 경우 12월 12일 공개 일반선거.",
+    "url": "https://www.sos.la.gov/elections-voting/types-of-elections"
+  }
+]);
+    const chapter = {
+  "title": "11월 12일 후속 — 미시시피 상원 판정",
+  "paragraphs": [
+    "AP는 미국 11일 저녁 스콧 콜롬의 승리를 판정했다. 당시 4,669표 차이였고 카운티가 검토할 표가 남아 있었다. 민주당 측 상원은 55석으로 집계됐고 알래스카는 미결이었다.",
+    "하원은 민주 255석·공화 168석에 12석이 미판정인 집계가 보도됐다. 루이지애나의 일반선거는 12월 12일 일정이다. 새 의회의 정책 추진력은 남은 선거 결과와 법안별 표결 구도에 달려 있다."
+  ],
+  "sourceIds": [
+    "nov12-ap-mississippi",
+    "nov12-house-count",
+    "nov12-louisiana-runoff"
+  ]
+};
+    record.casebook.sections.push(chapter);
+    record.updates.push({date:"2026-11-12", ...chapter});
+    record.updatedAt = "2026-11-12";
+    record.casebook.editedAt = "2026-11-12";
+  }
+  {
+    const record = archive.events.find(item => item.id === "2026-11-10-us-october-cpi");
+    record.sources.push(...[
+  {
+    "id": "nov12-paulson-cpi",
+    "title": "폴슨의 점진적 긴축 견해",
+    "publisher": "필라델피아 연은",
+    "publishedAt": "2026-11-10 미국",
+    "observedAt": "10일 현지 연설",
+    "verification": "공식 연설문 확인",
+    "note": "기조 물가 2.5~3.0% 평가. 여건에 따른 긴축 속도.",
+    "url": "https://www.philadelphiafed.org/the-economy/monetary-policy/261110-81st-annual-field-meeting-capstone-speech"
+  },
+  {
+    "id": "nov12-goolsbee-cpi",
+    "title": "굴스비의 CPI 평가",
+    "publisher": "PBS NewsHour",
+    "publishedAt": "2026-11-10 미국",
+    "observedAt": "10일 인터뷰",
+    "verification": "인터뷰 원문 확인",
+    "note": "서비스 물가와 데이터센터 투자 수요의 가격 파급을 논의했다.",
+    "url": "https://pr.pbs.org/video/november-10-2026-pbs-news-hour-full-episode-1794286802/"
+  }
+]);
+    const chapter = {
+  "title": "11월 12일 보강 — 폴슨과 굴스비의 물가 평가",
+  "paragraphs": [
+    "폴슨은 미국 현지 10일 연설에서 기조 물가를 2.5~3.0%로 평가하고 점진적인 추가 긴축을 선호했다. 기대인플레이션, 임금 압력 또는 기조 물가가 더 오르면 더 빠른 대응을 고려한다고 밝혔다.",
+    "굴스비는 같은 날 PBS 인터뷰에서 서비스 물가와 데이터센터 투자 수요의 파급을 우려했다. 두 발언은 CPI 이후 인상 속도를 두고 제시된 견해이며 12월 결정은 이후 지표와 위원회의 판단에 달려 있다."
+  ],
+  "sourceIds": [
+    "nov12-paulson-cpi",
+    "nov12-goolsbee-cpi"
+  ]
+};
+    record.casebook.sections.push(chapter);
+    record.updates.push({date:"2026-11-12", ...chapter});
+    record.updatedAt = "2026-11-12";
+    record.casebook.editedAt = "2026-11-12";
+  }
+  archive.updatedAt = "2026-11-12";
+}
