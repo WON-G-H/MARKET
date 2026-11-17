@@ -1,7 +1,7 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.calendarLive={
-  "checkedAt": "2026-11-12T14:38:55.366633+00:00",
-  "today": "2026-11-12",
+  "checkedAt": "2026-11-17T14:08:16.802592+00:00",
+  "today": "2026-11-17",
   "status": "partial",
   "sources": {
     "bea": {
@@ -15,7 +15,7 @@ window.MARKET_LEDGER.calendarLive={
     },
     "fed": {
       "status": "success",
-      "sha256": "2a3da97ebabf038639e4c37d3e9bb993be5a56d6be1e113880ad1b93f6fb59a5",
+      "sha256": "70c828a63cd2b6c6e41408667056be5d41a3baa1c310c3bb2aaeee7bb2f7dbc7",
       "events": 2
     },
     "te": {
@@ -2451,7 +2451,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-12",
       "scheduledAt": "2026-11-12T15:00:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "3.99M",
       "consensus": "3.85M",
@@ -2485,7 +2485,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-13",
       "scheduledAt": "2026-11-13T13:30:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "1.3%",
       "consensus": "0.4%",
@@ -2519,7 +2519,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-17",
       "scheduledAt": "2026-11-17T13:30:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "0.8%",
       "consensus": "확인 필요",

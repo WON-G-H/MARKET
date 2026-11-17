@@ -10,6 +10,7 @@ const data={
  macro:ledger.macro?.current||[],
  macroReports:[...(ledger.macroReports?.items||[]),...(ledger.macroReports?.topicReports||[]).map(r=>({...r,tags:[r.category],institution:'Market Ledger',type:'파트별 보고서'}))],
  macroEvents:ledger.macroEvents?.events||[],
+ macroTrader:ledger.macroTrader?.items||[],
  korea:ledger.korea?.current,
  ideas:ledger.ideas?.items||[],
  calendar:{today:ledger.calendarLive?.today||ledger.core?.dashboardDate||new Date().toISOString().slice(0,10),events:ledger.calendarLive?.events||flatten(ledger.calendar)},
@@ -46,6 +47,91 @@ function dashboardHead(){
 function dashboard(){const d=data.dashboard;return dashboardHead()+dashboardDataStatus()+`<section class="primary-strip"><div class="strip-title"><b>핵심 시장지표</b><span>확인되지 않은 값은 임의로 채우지 않습니다.</span></div><div class="primary-metrics">${d.primaryMetrics.map(m=>`<div class="primary-metric"><div class="metric-label">${m.label}</div><div class="metric-value ${m.current?'':'missing'}">${m.current||'확인 필요'}</div><div class="metric-unit">${m.unit}</div><div class="metric-previous">${m.previous?`${esc(m.previousLabel||'전일')} ${esc(m.previous)}${m.previousAsOf?' · '+esc(m.previousAsOf):''}`:(m.note||'전일 값 확인 필요')}</div><div class="metric-change ${m.direction}">${m.change||'—'} ${m.changePct?`<small>(${m.changePct})</small>`:''}</div><div class="metric-asof">${m.asOf}</div>${m.collectionNote?`<div class="metric-collection ${esc(m.collectionState)}">${esc(m.collectionNote)}</div>`:""}<a class="metric-source" href="${m.sourceUrl}" target="_blank" rel="noreferrer">${m.source} ↗</a></div>`).join('')}</div></section><div class="dashboard-report"><section class="report-summary"><div class="report-kicker">시장 판단 · ${esc(d.judgmentAsOf||ledger.core.dashboardDate)}</div><p>${d.thesis}</p><div class="regime-line"><span>종합 유동성 판단</span><strong>${d.regime}</strong><small>신뢰도 ${d.confidence}</small></div></section>${d.marketBlocks.map(x=>`<section class="brief-section"><h2>${x.title}</h2><p>${x.body}</p></section>`).join('')}</div><div class="section-label"><h2>최근 Daily Research</h2><button class="text-link" data-jump="daily">전체 아카이브 →</button></div>${dailyArchive(data.daily.slice().reverse(),true)}`}
 function dailyArchive(items,compact=false){const groups={};items.forEach(x=>(groups[x.month]??=[]).push(x));return `<div class="archive">${Object.entries(groups).map(([month,logs])=>`<section class="archive-month"><div class="archive-month-title">${month}</div><div>${logs.map(x=>`<button class="archive-row" data-log="${x.date}"><time>${x.date.slice(5).replace('-','.')}</time><span><b>${x.title}</b>${compact?'':`<small>${x.lead[0]}</small>`}</span><i>보고서 보기 →</i></button>`).join('')}</div></section>`).join('')}</div>`}
 function daily(){return head('DAILY RESEARCH ARCHIVE','Daily Research','날짜별 사건을 데이터 → 원인 → 전달경로 → 시장반응 → 투자판단의 순서로 기록합니다.',`${data.daily.length} REPORTS`)+dailyArchive(data.daily.slice().reverse())}
+
+function macroTraderRows(items){
+ const months=new Map();
+ for(const entry of items.slice().sort((a,b)=>b.date.localeCompare(a.date)||(b.time||'').localeCompare(a.time||''))){
+  const month=entry.date.slice(0,7);
+  if(!months.has(month))months.set(month,[]);
+  months.get(month).push(entry);
+ }
+ return [...months].map(([month,entries])=>{
+  const [year,number]=month.split('-');
+  const rows=entries.map(entry=>`<a class="archive-row mt-row" href="#macro-trader/${encodeURIComponent(entry.id)}">
+   <time datetime="${esc(entry.date)}">${esc(entry.date.slice(5).replace('-','.'))}</time>
+   <span><b>${esc(entry.title)}</b><small>${esc(entry.summary)}</small></span>
+   <span class="mt-topic">${esc(entry.topic)}</span>
+  </a>`).join('');
+  return `<section class="archive-month"><div class="archive-month-title">${esc(year)}년 ${Number(number)}월</div><div>${rows}</div></section>`;
+ }).join('');
+}
+
+let macroTraderArchiveHash='#macro-trader';
+const matchMacroTrader=(entry,query)=>[
+ entry.title,entry.originalTitle,entry.topic,entry.date,entry.summary,entry.source,entry.original,...entry.tags
+].some(value=>value.toLowerCase().includes(query));
+
+function macroTraderResults(query,topic){
+ const matches=data.macroTrader.filter(entry=>(!topic||entry.topic===topic)&&matchMacroTrader(entry,query.trim().toLowerCase()));
+ return matches.length?macroTraderRows(matches):'<div class="empty">일치하는 글이 없습니다.</div>';
+}
+
+function macroTraderArchive(query=''){
+ const params=new URLSearchParams(query);
+ const q=params.get('q')||'';
+ const topics=[...new Set(data.macroTrader.map(entry=>entry.topic))].sort((a,b)=>a.localeCompare(b,'ko'));
+ const topic=topics.includes(params.get('topic'))?params.get('topic'):'';
+ macroTraderArchiveHash='#macro-trader'+(query?'?'+query:'');
+ return head('텔레그램 리서치','Macro Trader','날짜별 핵심 요약과 텔레그램 원문을 읽을 수 있습니다.')+`
+  <form class="mt-filters" id="macroTraderFilters" role="search" aria-label="Macro Trader 글 찾기">
+   <div class="mt-field"><label for="macroTraderSearch">키워드</label><input id="macroTraderSearch" type="search" name="q" value="${esc(q)}" placeholder="제목, 키워드, 원문 검색"></div>
+   <div class="mt-field"><label for="macroTraderTopic">주제</label><select id="macroTraderTopic" name="topic"><option value="">전체 주제</option>${topics.map(item=>`<option value="${esc(item)}"${item===topic?' selected':''}>${esc(item)}</option>`).join('')}</select></div>
+  </form>
+  <div id="macroTraderResults" class="archive">${macroTraderResults(q,topic)}</div>`;
+}
+
+function bindMacroTraderFilters(){
+ const form=content.querySelector?.('#macroTraderFilters');
+ if(!form)return;
+ const query=form.elements.namedItem('q'),topic=form.elements.namedItem('topic');
+ const results=content.querySelector('#macroTraderResults');
+ const update=()=>{
+  const params=new URLSearchParams();
+  if(query.value.trim())params.set('q',query.value.trim());
+  if(topic.value)params.set('topic',topic.value);
+  macroTraderArchiveHash='#macro-trader'+(params.size?'?'+params:'');
+  window.history.replaceState(null,'',macroTraderArchiveHash);
+  results.innerHTML=macroTraderResults(query.value,topic.value);
+ };
+ form.onsubmit=event=>{event.preventDefault();update()};
+ query.oninput=update;
+ topic.onchange=update;
+}
+
+function macroTraderDetail(id){
+ const back=`<a class="text-link back-link" href="${esc(macroTraderArchiveHash)}">← Macro Trader</a>`;
+ const entry=data.macroTrader.find(item=>item.id===id);
+ if(!entry)return back+'<div class="empty">글을 찾을 수 없습니다.</div>';
+ const raw=entry.original.split(/\r?\n(?:[ \t\u2800]*\r?\n)+/).map(text=>
+  `<p>${esc(text).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')}</p>`
+ ).join('');
+ return back+`<article class="research-paper mt-paper">
+  <header class="paper-head">
+   <div class="paper-series">Macro Trader · ${esc(entry.topic)}</div>
+   <h1>${esc(entry.title)}</h1>
+   <p class="mt-metadata">${entry.dateBasis?esc(entry.dateBasis)+' ':''}<time datetime="${esc(entry.date+(entry.time?'T'+entry.time+'+09:00':''))}">${esc(entry.date)}${entry.time?' '+esc(entry.time)+' KST':''}</time> · ${esc(entry.source)}</p>
+   ${tags(entry.tags)}
+  </header>
+  <section class="paper-section lead-section"><div><h2>핵심 요약</h2><p>${esc(entry.summary)}</p>
+   ${entry.points.map(point=>`<h3>${esc(point.title)}</h3><p>${esc(point.text)}</p>`).join('')}
+  </div></section>
+  <section class="paper-section"><div><h2>해석할 때 볼 점</h2><p>${esc(entry.limits)}</p></div></section>
+  <section class="paper-section"><div><h2>텔레그램 원문</h2><details class="mt-original">
+   <summary>전문 펼치기</summary><div><h3>${esc(entry.originalTitle)}</h3>${raw}<p class="mt-metadata">• ${esc(entry.source)}.</p></div>
+  </details></div></section>
+ </article>`;
+}
+
 function reportNav(date){const idx=data.daily.findIndex(x=>x.date===date),prev=data.daily[idx-1],next=data.daily[idx+1];return `<div class="report-nav">${prev?`<button data-log="${prev.date}">← ${prev.date.slice(5).replace('-','월 ')}일</button>`:'<span></span>'}<b>${date}</b>${next?`<button data-log="${next.date}">${next.date.slice(5).replace('-','월 ')}일 →</button>`:'<span></span>'}</div>`}
 function dailyDetail(date){const x=data.daily.find(v=>v.date===date),a=data.dailyAddenda[date];return `<button class="text-link back-link" data-jump="daily">← Daily Research</button><article class="research-paper">${reportNav(date)}<header class="paper-head"><div class="paper-series">DAILY PORTFOLIO RESEARCH REPORT</div><h1>${x.date.replaceAll('-','.')}<br>${x.title}</h1>${tags(x.tags)}</header><section class="paper-section lead-section"><div class="section-number">01</div><div><h2>당일 핵심 시황</h2>${x.lead.map(p=>`<p>${p}</p>`).join('')}</div></section>${x.report.map(s=>`<section class="paper-section"><div class="section-number">${s.no}</div><div><h2>${s.title}</h2>${s.paragraphs.map(p=>`<p>${p}</p>`).join('')}</div></section>`).join('')}<section class="paper-section"><div class="section-number">08</div><div><h2>오늘 무엇이 달라졌는가</h2><h3>유지된 판단</h3>${bullets(a.changes.maintained)}<h3 class="subhead">새롭게 확인된 변화</h3>${bullets(a.changes.new)}</div></section><section class="paper-section"><div class="section-number">09</div><div><h2>현재 시장 판단</h2>${paragraphs(a.assessment)}</div></section><section class="paper-section"><div class="section-number">10</div><div><h2>운용 함의</h2>${bullets(a.implications)}</div></section><section class="paper-section watch-section"><div class="section-number">11</div><div><h2>다음 거래일 체크포인트</h2><ol>${x.watch.map(v=>`<li>${v}</li>`).join('')}</ol></div></section><section class="paper-section conclusion-section"><div class="section-number">12</div><div><h2>최종 결론</h2><p>${a.conclusion}</p></div></section>${reportNav(date)}</article>`}
 
@@ -95,7 +181,18 @@ function liveMarketStamp(){
  const stamp=new Date(live.checkedAt).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',hour12:false});
  return `<div class="dashboard-data-status"><span>자동 수집 데이터 · 확인 ${esc(stamp)} KST</span><span>각 지표의 관측일·공표 주기는 서로 다릅니다.</span>${(live.warnings||[]).map(w=>`<span>${esc(w)}</span>`).join('')}</div>`;
 }
-function macro(){return head('MACRO MONITOR','Macro','개별 수치보다 금융여건과 자금 이동 경로를 우선합니다.',ledger.macro?.asOf||'')+liveMarketStamp()+`<div class="grid">${liveMarketTable('금리·환율·변동성 · 자동 갱신',['us_treasury_2y','us_treasury_10y','fx','jpykrw_reference','eurkrw_reference','cnykrw_reference','vix','vkospi','wti'])}${liveMarketTable('유동성 · 자동 갱신',['walcl','wtregen','rrpontsyd','m2sl','credit','deposit'])}${liveMarketTable('경제지표 · 자동 갱신',['cpiaucsl','unrate','kr_inflation_annual','kr_gdp_growth_annual'])}</div><div class="section-label"><h2>리서치 판단과 당시 수치 · ${esc(ledger.macro?.asOf||'')}</h2></div><p class="snapshot-note">아래 수치와 해석은 작성 당시 기록입니다. 자동 수집 범위 밖의 수출·GDP·정책 이벤트 등은 새 리서치가 필요합니다.</p><div class="grid">${data.macro.map(g=>`<section class="card table-card"><h3 class="table-title">${g.group}</h3><table><thead><tr><th>지표</th><th>작성 당시</th><th>당시 비교</th><th>해석</th></tr></thead><tbody>${g.rows.map(r=>`<tr>${r.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></section>`).join('')}</div>`}
+function macroCasebookNav(current){
+ const sections=[['#macro-events','사건 분석'],['#macro-events/indicators','시장 지표']];
+ const links=sections.map(([href,label])=>{
+  const active=href===current?' class="active" aria-current="page"':'';
+  return '<a href="'+href+'"'+active+'>'+label+'</a>';
+ }).join('');
+ return '<nav class="mr-mode" aria-label="Macro Casebook 보기">'+links+'</nav>';
+}
+function macroCasebook(filters={}){
+ return window.MacroEvents.render(filters,macroCasebookNav('#macro-events'));
+}
+function macroIndicators(){return head('매크로 지표','Macro Casebook','금리·환율·유동성 등 시장 지표와 당시 리서치 판단을 확인합니다.')+macroCasebookNav('#macro-events/indicators')+liveMarketStamp()+`<div class="grid">${liveMarketTable('금리·환율·변동성 · 자동 갱신',['us_treasury_2y','us_treasury_10y','fx','jpykrw_reference','eurkrw_reference','cnykrw_reference','vix','vkospi','wti'])}${liveMarketTable('유동성 · 자동 갱신',['walcl','wtregen','rrpontsyd','m2sl','credit','deposit'])}${liveMarketTable('경제지표 · 자동 갱신',['cpiaucsl','unrate','kr_inflation_annual','kr_gdp_growth_annual'])}</div><div class="section-label"><h2>리서치 판단과 당시 수치 · ${esc(ledger.macro?.asOf||'')}</h2></div><p class="snapshot-note">아래 수치와 해석은 작성 당시 기록입니다. 자동 수집 범위 밖의 수출·GDP·정책 이벤트 등은 새 리서치가 필요합니다.</p><div class="grid">${data.macro.map(g=>`<section class="card table-card"><h3 class="table-title">${g.group}</h3><table><thead><tr><th>지표</th><th>작성 당시</th><th>당시 비교</th><th>해석</th></tr></thead><tbody>${g.rows.map(r=>`<tr>${r.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></section>`).join('')}</div>`}
 function korea(){const k=data.korea;const live=ledger.marketLive?.cards||{};return head('KOREA FLOW MAP','Korea Market','국내시장의 자금 이동과 수급 전달경로를 중심으로 봅니다.',k.asOf)+liveMarketStamp()+window.MarketHeatmap.koreaSummary()+`<div class="grid korea-grid">${k.indices.map(x=>{const m=live[x.label.toLowerCase()];return `<div class="card index-card"><div class="eyebrow">${esc(x.label)}</div><strong>${esc(m?.current||x.value)}</strong><span>${m?esc((m.change||'')+' '+(m.changePct||'')+' · '+m.observationDate):esc(x.sub)}</span>${m?`<span class="metric-collection ${esc(m.collectionState)}">${esc(m.collectionNote)}</span>`:''}</div>`}).join('')}</div><div class="grid">${liveMarketTable('국내 지수·변동성·유동성 · 자동 갱신',['kospi200','vkospi','disparity','credit','deposit','fx'])}${liveMarketTable('투자자별 순매수 · 자동 갱신',['foreign','kospi_institution_net','kospi_individual_net','kosdaq_foreign_net','kosdaq_institution_net','kosdaq_individual_net'])}</div><section class="narrative-block"><h2>국내시장 해석 · ${esc(k.asOf)}</h2><p class="snapshot-note">이하 해석·수급·섹터 수치는 작성 당시 기록입니다.</p><p>${k.narrative}</p></section><div class="grid dashboard-main"><section class="card"><h3>당시 수급 해석 · ${esc(k.asOf)}</h3>${k.flows.map(x=>`<div class="flow-row"><b>${x.actor}</b><span>${x.focus}</span><span>${x.reading}</span></div>`).join('')}</section><section class="card"><h3>당시 섹터 판단 · ${esc(k.asOf)}</h3>${k.sectors.map(x=>`<div class="sector-row"><b>${x.name}</b><span>${x.state}</span><span>${x.detail}</span></div>`).join('')}</section></div>`}
 
 function ideaStatus(x){if(x.status==='종료'){const styles={'확인':['green','●'],'조건부 확인':['yellow','◐'],'오류 / 기각':['red','×']};const [tone,icon]=styles[x.outcome]||['yellow','●'];return `<span class="status-chip ${tone}">${icon} 종료 · ${esc(x.outcome||'결과 미등록')}</span>`}return `<span class="status-chip yellow">● 검증 중</span>`}
@@ -159,8 +256,8 @@ function cardNews(){
   `<div class="cn-stage"><div class="cn-export"><span class="cn-export-status" role="status" aria-live="polite"></span><button type="button" data-cn-download data-cn-count="${news.cards.length}" ${cardNewsExporting?'disabled':''} aria-label="선택한 ${unit} 카드 전체 ZIP 다운로드">${cardNewsExporting?'이미지 생성 중…':`전체 이미지 다운로드 (${news.cards.length}장) ↓`}</button></div><article class="cn-card cn-kind-${esc(card.kind)}" aria-label="${number} / ${total}"><div class="cn-top"><span class="cn-mark">${esc(card.eyebrow)}</span><span>${number} / ${total}</span></div><h2>${esc(card.title)}</h2>${card.summary?`<section class="cn-summary"><span>핵심</span><p>${esc(card.summary)}</p></section>`:''}${rows?`<div class="cn-evidence"><div class="cn-evidence-head"><span>항목</span><span>내용</span></div>${rows}</div>`:''}<div class="cn-foot"><span>${esc(card.source)} · ${esc(card.sourceDate)}</span><button ${source}>원문 보기 ↗</button></div></article>`+
   `<div class="cn-controls"><button data-cn-page="${cardNewsPage-1}" ${cardNewsPage===0?'disabled':''}>← 이전 장</button><span>${number} / ${total}</span><button data-cn-page="${cardNewsPage+1}" ${cardNewsPage===news.cards.length-1?'disabled':''}>다음 장 →</button></div></div></div>`;
 }
-const renders={heatmap:()=>window.MarketHeatmap.render(),dashboard:()=>dashboard().replace('<div class="dashboard-report">',weeklySummary()+'<div class="dashboard-report">'),daily,weekly,macro,'macro-reports':()=>window.MacroReports.render(),'macro-events':()=>window.MacroEvents.render(),korea,ideas,portfolio,calendar:macroCalendar,cardnews:cardNews};
-function show(view,push=true){nav.forEach(n=>n.classList.toggle('active',n.dataset.view===(view==='macro-reports'?'macro-events':view)));content.innerHTML=renders[view]();content.dataset.view=view;bind();window.scrollTo(0,0);if(push)location.hash=view}
+const renders={heatmap:()=>window.MarketHeatmap.render(),dashboard:()=>dashboard().replace('<div class="dashboard-report">',weeklySummary()+'<div class="dashboard-report">'),daily,weekly,'macro-events':macroCasebook,'macro-trader':()=>macroTraderArchive(),korea,ideas,portfolio,calendar:macroCalendar,cardnews:cardNews};
+function show(view,push=true,render=renders[view]){nav.forEach(n=>n.classList.toggle('active',n.dataset.view===(view==='macro-reports'?'macro-events':view)));content.innerHTML=render();content.dataset.view=view;bind();window.scrollTo(0,0);if(push)location.hash=view}
 
 function setCardNewsPage(page){
  if(!Number.isInteger(page)||page<0||page>=selectedCardNews().cards.length)return;
@@ -217,7 +314,7 @@ function bindReader(){
  });
  bindCardNews();
 }
-function bind(){bindReader();if(content.querySelectorAll("[data-hm-market]").length)window.MarketHeatmap.bind(content);content.querySelectorAll("[data-week]").forEach(b=>b.onclick=()=>showWeek(b.dataset.week));content.querySelectorAll("[data-hypothesis]").forEach(b=>b.onclick=e=>{e.preventDefault();document.getElementById(b.dataset.hypothesis)?.scrollIntoView({behavior:"smooth"})});content.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>show(b.dataset.jump));content.querySelectorAll('[data-log]').forEach(b=>b.onclick=()=>{content.innerHTML=dailyDetail(b.dataset.log);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-idea]').forEach(b=>b.onclick=()=>{content.innerHTML=ideaDetail(b.dataset.idea);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{content.innerHTML=ideas(b.dataset.filter);bind()});content.querySelectorAll('[data-event]').forEach(b=>b.onclick=()=>{const dialog=document.getElementById('eventDialog'),detail=document.getElementById('eventDetail');detail.innerHTML=eventDetail(b.dataset.event);dialog.showModal()});content.querySelectorAll('[data-dialog-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());content.querySelectorAll('[data-cal-shift]').forEach(b=>b.onclick=()=>{const [y,m]=calendarMonth.split('-').map(Number),d=new Date(y,m-1+Number(b.dataset.calShift),1);calendarMonth=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;content.innerHTML=macroCalendar();bind()});content.querySelectorAll('[data-cal-today]').forEach(b=>b.onclick=()=>{calendarMonth=data.calendar.today.slice(0,7);content.innerHTML=macroCalendar();bind()})}
+function bind(){bindReader();bindMacroTraderFilters();if(content.querySelectorAll("[data-hm-market]").length)window.MarketHeatmap.bind(content);content.querySelectorAll("[data-week]").forEach(b=>b.onclick=()=>showWeek(b.dataset.week));content.querySelectorAll("[data-hypothesis]").forEach(b=>b.onclick=e=>{e.preventDefault();document.getElementById(b.dataset.hypothesis)?.scrollIntoView({behavior:"smooth"})});content.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>show(b.dataset.jump));content.querySelectorAll('[data-log]').forEach(b=>b.onclick=()=>{content.innerHTML=dailyDetail(b.dataset.log);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-idea]').forEach(b=>b.onclick=()=>{content.innerHTML=ideaDetail(b.dataset.idea);bind();window.scrollTo(0,0)});content.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{content.innerHTML=ideas(b.dataset.filter);bind()});content.querySelectorAll('[data-event]').forEach(b=>b.onclick=()=>{const dialog=document.getElementById('eventDialog'),detail=document.getElementById('eventDetail');detail.innerHTML=eventDetail(b.dataset.event);dialog.showModal()});content.querySelectorAll('[data-dialog-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());content.querySelectorAll('[data-cal-shift]').forEach(b=>b.onclick=()=>{const [y,m]=calendarMonth.split('-').map(Number),d=new Date(y,m-1+Number(b.dataset.calShift),1);calendarMonth=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;content.innerHTML=macroCalendar();bind()});content.querySelectorAll('[data-cal-today]').forEach(b=>b.onclick=()=>{calendarMonth=data.calendar.today.slice(0,7);content.innerHTML=macroCalendar();bind()})}
 
 const viewPicker=document.getElementById('viewMode');
 let viewMode='auto';try{viewMode=localStorage.getItem('market-ledger-view')||'auto';}catch{}
@@ -233,8 +330,74 @@ window.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementByI
 nav.forEach(n=>n.onclick=()=>{show(n.dataset.view);document.getElementById('sidebar').classList.remove('open')});document.getElementById('menuButton').onclick=()=>document.getElementById('sidebar').classList.toggle('open');document.getElementById('themeButton').onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('market-ledger-theme',document.body.classList.contains('light')?'light':'dark')};if(localStorage.getItem('market-ledger-theme')==='light')document.body.classList.add('light');
 
 function showWeek(id,push=true){nav.forEach(n=>n.classList.toggle('active',n.dataset.view==='weekly'));content.innerHTML=weeklyDetail(id);content.dataset.view='weekly';content.dataset.week=id;bind();window.scrollTo(0,0);if(push)location.hash='weekly/'+id}
-function route(){const hash=location.hash.slice(1);if(hash==='macro-events'||hash.startsWith('macro-events?')||hash.startsWith('macro-events/')){nav.forEach(n=>n.classList.toggle('active',n.dataset.view==='macro-events'));if(hash.startsWith('macro-events/')){let id;try{id=decodeURIComponent(hash.slice(13));}catch{id='';}content.innerHTML=window.MacroEvents.detail(id);}else{content.innerHTML=window.MacroEvents.render(window.MacroEvents.readFilters(hash.split('?')[1]||''));}content.dataset.view='macro-events';bind();window.scrollTo(0,0);}else if(hash.startsWith('macro-reports/')){nav.forEach(n=>n.classList.toggle('active',n.dataset.view==='macro-events'));let id;try{id=decodeURIComponent(hash.slice(14));}catch{id='';}content.innerHTML=window.MacroReports.detail(id);content.dataset.view='macro-reports';bind();window.scrollTo(0,0);}else if(hash.startsWith('weekly/'))showWeek(decodeURIComponent(hash.slice(7)),false);else show(hash in renders?hash:'dashboard',false)}
-document.getElementById('globalSearch').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();if(!q){route();return}const match=x=>JSON.stringify(x).toLowerCase().includes(q),weeklyMatch=x=>JSON.stringify(x,(k,v)=>['ideaUpdates','ideaIds','validation','comparison','migrationNote'].includes(k)?undefined:v).toLowerCase().includes(q),logs=data.daily.filter(match),weeks=data.weekly.filter(weeklyMatch),mrs=data.macroReports.filter(match),mes=data.macroEvents.filter(match),is=data.ideas.filter(match),ds=data.decisions.filter(match),es=data.calendar.events.filter(match),count=logs.length+weeks.length+mrs.length+mes.length+is.length+ds.length+es.length;content.innerHTML=head('SEARCH','검색 결과','“'+esc(e.target.value)+'”와 관련된 기록입니다.',count+' RESULTS')+(mes.length?'<h2>Macro Casebook</h2>'+window.MacroEvents.rows(mes):'')+(logs.length?'<h2>Daily</h2>'+dailyArchive(logs):'')+(weeks.length?'<h2>Weekly</h2>'+weeklyArchive(weeks):'')+(mrs.length?'<h2>이전 매크로 리포트·자료</h2>'+window.MacroReports.rows(mrs):'')+(is.length?'<h2>Idea Lab</h2>'+ideaList(is):'')+(ds.length?'<h2>Portfolio</h2>'+ds.map(d=>'<div class="weekly-note">'+weeklyFields(d,{date:'날짜',title:'제목',reason:'근거',action:'결정',rationale:'판단'})+'<button data-jump="portfolio">Decision Log →</button></div>').join(''):'')+(es.length?'<h2>Calendar</h2>'+es.map(calendarEventButton).join('')+'<dialog class="event-dialog" id="eventDialog"><button data-dialog-close>닫기</button><div id="eventDetail"></div></dialog>':'')+(!count?'<div class="empty">일치하는 기록이 없습니다.</div>':'');bind()});
+function route(){
+ const hash=location.hash.slice(1);
+ if(hash.startsWith('macro-trader/')){
+  let id;
+  try{id=decodeURIComponent(hash.slice('macro-trader/'.length))}catch{id=''}
+  show('macro-trader',false,()=>macroTraderDetail(id));
+  return;
+ }
+ if(hash.startsWith('macro-trader?')){
+  show('macro-trader',false,()=>macroTraderArchive(hash.slice('macro-trader?'.length)));
+  return;
+ }
+ if(hash==='macro'||hash==='macro-events/indicators'){
+  show('macro-events',false,macroIndicators);
+  return;
+ }
+ if(hash==='macro-reports'){
+  show('macro-events',false);
+  return;
+ }
+ if(hash.startsWith('macro-events?')){
+  const filters=window.MacroEvents.readFilters(hash.slice('macro-events?'.length));
+  show('macro-events',false,()=>macroCasebook(filters));
+  return;
+ }
+ if(hash.startsWith('macro-events/')){
+  let id;
+  try{id=decodeURIComponent(hash.slice('macro-events/'.length))}catch{id=''}
+  show('macro-events',false,()=>window.MacroEvents.detail(id));
+  return;
+ }
+ if(hash.startsWith('macro-reports/')){
+  let id;
+  try{id=decodeURIComponent(hash.slice('macro-reports/'.length))}catch{id=''}
+  show('macro-reports',false,()=>window.MacroReports.detail(id));
+  return;
+ }
+ if(hash.startsWith('weekly/'))showWeek(decodeURIComponent(hash.slice(7)),false);
+ else show(hash in renders?hash:'dashboard',false);
+}
+const globalSearch=document.getElementById('globalSearch');
+globalSearch.addEventListener('input',event=>{
+ const q=event.target.value.trim().toLowerCase();
+ if(!q){route();return}
+ const match=item=>JSON.stringify(item).toLowerCase().includes(q);
+ const empty='<div class="empty">일치하는 기록이 없습니다.</div>';
+ const description='“'+event.target.value+'”와 관련된 기록입니다.';
+ if(location.hash==='#ideas'){
+  const items=data.ideas.filter(match);
+  content.innerHTML=head('보관함 검색','Idea Lab',description)+(items.length?ideaList(items):empty);
+  bind();
+  return;
+ }
+ const weeklyMatch=item=>JSON.stringify(item,(key,value)=>['ideaUpdates','ideaIds','validation','comparison','migrationNote'].includes(key)?undefined:value).toLowerCase().includes(q);
+ const logs=data.daily.filter(match),weeks=data.weekly.filter(weeklyMatch),mrs=data.macroReports.filter(match),mes=data.macroEvents.filter(match);
+ const posts=data.macroTrader.filter(entry=>matchMacroTrader(entry,q)),ds=data.decisions.filter(match),es=data.calendar.events.filter(match);
+ const count=logs.length+weeks.length+mrs.length+mes.length+posts.length+ds.length+es.length;
+ content.innerHTML=head('SEARCH','검색 결과',description,count+' RESULTS')
+  +(mes.length?'<h2>Macro Casebook</h2>'+window.MacroEvents.rows(mes):'')
+  +(posts.length?'<h2>Macro Trader</h2><div class="archive">'+macroTraderRows(posts)+'</div>':'')
+  +(logs.length?'<h2>Daily</h2>'+dailyArchive(logs):'')
+  +(weeks.length?'<h2>Weekly</h2>'+weeklyArchive(weeks):'')
+  +(mrs.length?'<h2>이전 매크로 리포트·자료</h2>'+window.MacroReports.rows(mrs):'')
+  +(ds.length?'<h2>Portfolio</h2>'+ds.map(d=>'<div class="weekly-note">'+weeklyFields(d,{date:'날짜',title:'제목',reason:'근거',action:'결정',rationale:'판단'})+'<button data-jump="portfolio">Decision Log →</button></div>').join(''):'')
+  +(es.length?'<h2>Calendar</h2>'+es.map(calendarEventButton).join('')+'<dialog class="event-dialog" id="eventDialog"><button data-dialog-close>닫기</button><div id="eventDetail"></div></dialog>':'')
+  +(!count?empty:'');
+ bind();
+});
 window.addEventListener('hashchange',route);
 route();
 })();

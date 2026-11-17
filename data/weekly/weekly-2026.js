@@ -5011,3 +5011,733 @@ window.MARKET_LEDGER.weekly["2026"].push({
   "rateDecomposition": "명목 파수익률의 변화는 실질금리와 기대인플레이션, 또는 기대 단기금리와 기간 프리미엄이라는 별개의 틀로 본다. 이번 주 표는 명목 계열을 대조했다.",
   "verificationNote": "한국은 신한 마감표와 장중 자료, 미국은 미래에셋 및 AP 정규장, 금리는 재무부 파수익률이다. H.4.1은 11/4 종료 주평균이다. 미국 금요일과 주말 의견은 한국 금요일 이후 정보로 기록했다."
 });
+
+/* 2026-W46 weekly snapshot. */
+window.MARKET_LEDGER.weekly["2026"].push({
+  "week": "2026-W46",
+  "period": "2026.11.09–11.13",
+  "periodStart": "2026-11-09",
+  "periodEnd": "2026-11-13",
+  "createdAt": "2026-11-15",
+  "updatedAt": "2026-11-15",
+  "schemaVersion": 2,
+  "previousWeek": "2026-W45",
+  "title": "급락 뒤 주간 반등, 5%대 미국채와 엔비디아 승계가 남긴 경계",
+  "headline": "국내 주가는 전주 급락을 일부 되돌렸다. 단기금리 상승과 AI 공급망의 기업별 차이는 반등의 조건을 좁혔다.",
+  "coverage": "한국·미국 11월 9~13일 정규장. 주간 가격은 각 시장 11월 6일 종가 대비 13일 종가다. 미국 13일 PPI·마감은 한국 13일 장 이후다. 연준 준비금은 11일 종료 주평균, 회사채 스프레드는 12일 최신 관측이다.",
+  "sourceDates": [
+    "2026-11-06",
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12",
+    "2026-11-13"
+  ],
+  "themes": [
+    "엔비디아 경영진 교체",
+    "미국 물가와 금리",
+    "한국 수급",
+    "원유·경유 가격차",
+    "AI 현금흐름"
+  ],
+  "executiveSummary": {
+    "oneLine": "코스피 +4.56%, 코스닥 +8.60%, S&P500 +2.51%. 주간 반등 속 미국 2년물은 +37bp, 10년물은 +29bp였다.",
+    "changes": [
+      "10~11일 국내 반등은 반도체에서 장비·2차전지로 넓어졌고, 13일 코스피 외국인은 순매도로 돌아섰다.",
+      "미 10월 근원 CPI는 전월비 0.3%를 유지했다. 2년물은 CPI 발표일 17bp 올랐고 금요일에는 4.88%였다.",
+      "엔비디아의 창업자 교체는 개별 종목과 공급망에 충격을 주었다. 원유 공급 우위 전망 속 유럽 경유는 전쟁 전보다 77% 높았다."
+    ],
+    "regime": "급락 이후 주가 회복 · 정책금리 상방 경계 · AI 공급망 차별화",
+    "liquidity": "소폭 완화",
+    "liquidityConfidence": "은행 준비금 기준 중간",
+    "liquidityReason": "11일 종료 주평균 준비금은 2.961조달러로 305.15억달러 증가했고 재무부 일반계정(TGA)은 428.05억달러 감소했다. 같은 주 단기자금시장 전반으로 확산된 정도는 제한적으로 판단한다.",
+    "financialConditions": "할인율 부담 확대 · 미국 회사채 스프레드는 축소",
+    "financialConditionsReason": "미국 HY OAS는 11/6 342bp에서 11/12 320bp, IG OAS는 93bp에서 89bp로 축소됐다. 금리와 신용 경로가 갈렸다.",
+    "stance": "반등 추격에는 신중하게 접근하고, 고객 인수·가동 일정과 자금 집행이 확인되는 노출을 우선 검토한다.",
+    "regimeHold": "외국인 매수가 이어지고 2년물과 신용스프레드가 함께 안정되는지 본다.",
+    "regimeBreak": "단기금리 재급등과 신용스프레드 재확대, 반도체 수급 약화가 겹치면 반등 판단을 낮춘다."
+  },
+  "changeBoard": [
+    {
+      "topic": "장기금리",
+      "before": "미국 10년 4.86%, 안전자산 선호",
+      "after": "5.15%, 2년물 상승폭이 더 큼",
+      "cause": "CPI 서프라이즈와 추가 인상 경계",
+      "marketImpact": "할인율 상방, 신용스프레드 일부 축소",
+      "assessment": "금리와 신용의 각 방향을 추적",
+      "state": "반전",
+      "confidence": "높음"
+    },
+    {
+      "topic": "시스템 유동성",
+      "before": "준비금 증가, TGA 감소",
+      "after": "준비금 +305.15억달러, TGA -428.05억달러",
+      "cause": "재무부 계정과 연준 부채 항목 변화",
+      "marketImpact": "준비금 회복과 장기 조달금리 상승 공존",
+      "assessment": "은행 유동성은 소폭 완화",
+      "state": "유지",
+      "confidence": "중간"
+    },
+    {
+      "topic": "한국 수급과 시장 폭",
+      "before": "외국인 대규모 매도와 거래 중단",
+      "after": "10~12일 외국인 순매수, 13일 순매도",
+      "cause": "낙폭 되돌림과 실적, 주 후반 기술주 불확실성",
+      "marketImpact": "주간 지수 반등, 금요일 코스피 반락",
+      "assessment": "3일 회복의 지속성은 유보",
+      "state": "반전",
+      "confidence": "높음"
+    },
+    {
+      "topic": "AI 투자",
+      "before": "통전·계약 이행과 자금 부담",
+      "after": "CoreWeave 반등 뒤 창업자 승계 충격",
+      "cause": "실적의 수요 확인과 주요 공급사 불확실성",
+      "marketImpact": "네오클라우드와 메모리의 민감도 차이",
+      "assessment": "가동과 지급 능력에 따라 판단",
+      "state": "유지",
+      "confidence": "중간"
+    },
+    {
+      "topic": "에너지·제품",
+      "before": "협상 기대에 원유 급락, 경유 제약",
+      "after": "4분기 공급 우위 전망, 육상 재고 감소",
+      "cause": "걸프 원유 수출 회복과 정제품 병목",
+      "marketImpact": "운송 비용 완화가 늦을 가능성",
+      "assessment": "배럴당 원유와 경유의 가격차 지속 추적",
+      "state": "강화",
+      "confidence": "높음"
+    },
+    {
+      "topic": "미국 위험자산",
+      "before": "성장주 투매와 변동성 급등",
+      "after": "주간 반등 뒤 주 후반 나스닥 약세",
+      "cause": "주초 위험선호 회복, 금리와 반도체 이슈 재부각",
+      "marketImpact": "지수 반등 속 엔비디아 추가 하락",
+      "assessment": "반등의 업종 확산과 지속성을 구분",
+      "state": "반전",
+      "confidence": "높음"
+    }
+  ],
+  "coreNarrativeLong": [
+    "지난주는 선거 안도 랠리가 AI 프로젝트 위험과 외국인 매도에 막혔다. 이번 주 국내 시장은 월요일부터 지속적으로 오르지는 않았다. 9일 코스피는 미국 금요일 반도체 반등을 반영해 장중 2.24% 올랐지만 5,018.85로 마쳤다. 국내 신용 담보비율 의무 면제는 증권사가 일률적인 담보 요건을 적용해야 하는 부담을 덜었지만 그 효과를 당일이나 한 주의 지수로 따로 측정하기는 어렵다.",
+    "10~11일에는 장비와 2차전지로 매수가 넓어졌다. 반도체 수출 잠정치와 AI 실적은 실물 수요를 뒷받침했고 외국인은 코스피 현물 순매수로 전환했다. 동시에 미국에서는 CPI의 근원 둔화가 멈춘 채 단기금리가 올랐다. 준비금 증가가 자금시장에 완충을 제공해도, 더 높은 예상 정책금리는 주식의 할인율과 새 차입 비용을 높일 수 있다.",
+    "주 후반 엔비디아 창업자 사임으로 가까운 실적과 공급 일정을 둘러싼 평가가 다시 갈렸다. 금요일 한국은 대형 메모리 하락과 금융·일부 기판주 상승이 공존했다. 외국인 매도가 돌아온 만큼, 주간 지수 상승보다 누가 사는지와 실제 주문·가동 일정이 함께 개선되는지를 다음 판단 기준으로 삼는다."
+  ],
+  "ratesTable": [
+    {
+      "item": "미국 1년",
+      "previous": "4.33%",
+      "current": "4.65%",
+      "change": "+32bp",
+      "read": "재무부 11/6→11/13"
+    },
+    {
+      "item": "미국 2년",
+      "previous": "4.51%",
+      "current": "4.88%",
+      "change": "+37bp",
+      "read": "재무부 11/6→11/13"
+    },
+    {
+      "item": "미국 10년",
+      "previous": "4.86%",
+      "current": "5.15%",
+      "change": "+29bp",
+      "read": "재무부 11/6→11/13"
+    },
+    {
+      "item": "미국 30년",
+      "previous": "5.26%",
+      "current": "5.47%",
+      "change": "+21bp",
+      "read": "재무부 11/6→11/13"
+    },
+    {
+      "item": "10년−2년",
+      "previous": "+35bp",
+      "current": "+27bp",
+      "change": "-8bp",
+      "read": "명목 파수익률 차"
+    },
+    {
+      "item": "10년−1년",
+      "previous": "+53bp",
+      "current": "+50bp",
+      "change": "-3bp",
+      "read": "명목 파수익률 차"
+    },
+    {
+      "item": "미국 IG OAS",
+      "previous": "93bp",
+      "current": "89bp",
+      "change": "-4bp",
+      "read": "ICE/FRED 11/6→11/12"
+    },
+    {
+      "item": "미국 HY OAS",
+      "previous": "342bp",
+      "current": "320bp",
+      "change": "-22bp",
+      "read": "ICE/FRED 11/6→11/12"
+    }
+  ],
+  "ratesDollar": [
+    "2년물이 10년물보다 많이 올라 곡선이 평탄해졌다. 10일 CPI 발표일의 2년물 +17bp는 12월 인상 폭에 관한 기대가 민감하게 반응한 관측이다. 12일 미국장까지 상승이 이어졌고 미래에셋의 달러지수 관측치는 103.172였다. 13일 PPI 전부터 10년물은 5.10%였다.",
+    "고용 수치는 6일 미국 발표로 직전 주 마감에 반영됐다. 이번 주 금리 상승에는 견조한 수요 위에 새 물가 정보와 연준 인사 발언이 더해졌다. 발표 직후 움직임과 금요일 종가를 구분한다. 장단기 금리차만으로 실질금리·기대물가·기간 프리미엄의 변화 몫을 추정하지 않았다.",
+    "BIS 연구에서 1990년대 이후 10개 선진국의 장기금리 하락은 FOMC 발표 창에 집중됐고 미래 단기금리 기대가 주된 경로였다. 이번 주에도 정책 경로를 살펴볼 이유를 주지만 과거 하락의 분해 결과로 현재의 장기금리 반응을 정량화할 수는 없다."
+  ],
+  "marketShocks": [
+    {
+      "title": "엔비디아 젠슨 황 사임과 임시 CEO 선임",
+      "eventDate": "2026-11-12",
+      "koreaAttributionDate": "2026-11-12",
+      "window": "미국 11일 장후 첫 보도, 12일 공식 발표와 정규장, 한국 13일 공식 발표 후 첫 거래",
+      "casebookId": "2026-11-12-nvidia-ceo-transition",
+      "paragraphs": [
+        "11일 미국 정규장에는 CoreWeave 실적에 반도체지수가 5.66% 올랐다. 이어 창업자 거취 보도가 나오면서 엔비디아는 장후 8.6% 하락했다. 이미 높아진 국채금리와 데이터센터 조달 경계 속에서, 핵심 공급사의 의사결정이 달라질 가능성이 제품 출시와 고객 투자 일정에 대한 불확실성을 키웠다.",
+        "12일 한국 장에서는 거취 보도가 반영됐고 공식 사임 발표는 한국 마감 이후였다. 회사는 콜레트 크레스를 임시 CEO로 선임하고 제품 일정과 고객 약속의 연속성을 예상했다. 미국 정규장 엔비디아는 장중 약 14% 하락했다가 -4.34%로 마쳤고 나스닥은 -0.39%였다. 13일 국내 SK하이닉스는 -3.03%, 이수페타시스는 +5.23%로 상대 흐름이 갈렸다. 해외 금리와 외국인 매도, 국내 실적도 같은 거래일에 작용했다.",
+        "두 미국 정규장 연속 엔비디아 종가는 낮아졌다. 실적 발표에서 차세대 제품과 고객 인도 일정이 유지되는지, 경영진 변화가 장비·메모리의 실제 주문에 연결되는지가 이번 충격의 지속성을 가른다."
+      ]
+    },
+    {
+      "title": "미국 10월 CPI 예상 상회와 2년물 금리 상승",
+      "eventDate": "2026-11-10",
+      "koreaAttributionDate": "2026-11-11",
+      "window": "10일 미국 발표와 종가, 한국 11일, 미국 13일 PPI 후속",
+      "casebookId": "2026-11-10-us-october-cpi",
+      "paragraphs": [
+        "9월 이후 에너지의 월간 물가 기여가 둔화했지만 근원 CPI는 0.3%를 유지했다. 직전 주 고용이 견조하던 상황에서 근원 둔화가 나타나지 않으면서 추가 긴축의 시기와 폭이 가격에 다시 반영됐다. 미 2년물이 4.73%로 17bp, 10년물이 4.98%로 10bp 올랐다. 성장주의 미래 이익에 적용할 할인율이 높아졌지만 한국 11일에는 수출 잠정치와 반도체 매수에 코스피와 코스닥이 올랐다.",
+        "13일 PPI 헤드라인이 전월비 0.3%로 둔화해도 식품·에너지·유통 서비스 제외 지수는 0.5%였다. 미국 13일 주간 마감 금리는 2년 4.88%, 10년 5.15%였다. 이는 당시 정책 위험의 후속 관측이며 CPI 하나의 누적 효과를 보여주는 수치는 아니다."
+      ]
+    }
+  ],
+  "growthInflation": [
+    "미국 10월 CPI 월간 상승률은 0.6%에서 0.4%로 낮아졌고 에너지는 5.2%에서 0.7%로 둔화했다. 근원 CPI는 8~10월 모두 0.3%였다. 전년 10월 조사 공백으로 대부분 지수의 전년동월비가 발표되지 않았다. PPI는 전년비 +6.5%, 전월비 +0.3%였고 운송·창고는 전월비 +2.0%였다.",
+    "직전 주 10월 비농업 고용은 16.5만명 증가, 실업률은 4.1%였다. 11일 공개된 샌프란시스코 연은 생산성 자료에서는 3분기 가동률 조정 총요소생산성이 전기 대비 연율 1.30% 반등했다. 한 분기의 반등으로 AI의 장기 생산성 효과를 추정하기에는 이르다. 성장과 물가가 동시에 견조하면 실적 지지와 할인율 부담이 함께 남는다."
+  ],
+  "commodities": [
+    "IEA는 4분기 세계 석유 공급 전망을 하루 330만 배럴 상향하며 공급 우위를 예상했다. 10월 관측 재고는 5,200만 배럴 늘었지만 해상 재고 증가가 8,600만 배럴이었다. 육상 재고가 감소한 상황에서 걸프산 경유 등 정제품 수출 회복은 원유보다 느리다.",
+    "10월 고점 136달러에서 IEA 보고서 작성 시 약 93달러로 낮아진 북해산 현물과, 약 180달러에 거래된 유럽 경유의 간극이 크다. ECB는 10월 말까지의 가격을 바탕으로 경유 정제 마진이 분쟁 전의 약 세 배라고 추정했다. 일부 정유사의 제품 마진은 높게 유지될 수 있고 운송비와 소비자가격의 완화는 지연될 수 있다. 지표별 현물과 선물, 가격 관측일을 구분한다."
+  ],
+  "riskAssetTable": [
+    {
+      "item": "코스피",
+      "previous": "5,059.69",
+      "current": "5,290.53",
+      "change": "+4.56%",
+      "read": "한국 종가"
+    },
+    {
+      "item": "코스닥",
+      "previous": "644.27",
+      "current": "699.66",
+      "change": "+8.60%",
+      "read": "한국 종가"
+    },
+    {
+      "item": "원·달러",
+      "previous": "1,356.6",
+      "current": "1,336.7",
+      "change": "-19.9원",
+      "read": "서울 15:30"
+    },
+    {
+      "item": "S&P500",
+      "previous": "7,376.86",
+      "current": "7,561.67",
+      "change": "+2.51%",
+      "read": "미국 종가"
+    },
+    {
+      "item": "나스닥 종합",
+      "previous": "24,579.42",
+      "current": "25,136.27",
+      "change": "+2.27%",
+      "read": "미국 종가"
+    },
+    {
+      "item": "다우",
+      "previous": "51,285.73",
+      "current": "52,347.55",
+      "change": "+2.07%",
+      "read": "미국 종가"
+    },
+    {
+      "item": "러셀2000",
+      "previous": "2,754.11",
+      "current": "2,790.49",
+      "change": "+1.32%",
+      "read": "미국 종가"
+    }
+  ],
+  "globalRiskAssets": [
+    "미국 주가는 직전 주 급락 후 반등했으나 주 후반에는 대형 기술주에 다시 하락 압력이 나타났다. 금요일 나스닥 종합 -0.91%, 다우 +0.10%였다. S&P500도 -0.40%였지만 주간으로 +2.51%를 남겼다.",
+    "12일까지 미국 HY·IG 스프레드는 전주 말보다 좁아졌다. 이 수치와 장기 국채금리 상승이 공존하므로 개별 AI 종목 매도를 광범위한 신용 경색으로 읽기 어렵다. 13일 종가와 비교할 동일 날짜 스프레드는 이후 공표가 필요하다."
+  ],
+  "globalVariables": [
+    "일본은행 10월 기업물가지수는 전월비 +0.7%, 전년비 +7.1%였다. 9월 전년비 +6.8%에서 상승했고 기업 구매 비용에 부담이 남았다. 소비자물가와 임금의 경로가 BOJ 정책에 중요하다.",
+    "중국의 성장과 기업 이익의 괴리는 제공된 골드만삭스·Macro Trader 분석의 쟁점이다. 보고서는 2021년 이후 지수 EPS 연평균 6%, 기업 중앙값 3%를 제시하고 증설 경쟁이 자본수익률을 낮출 수 있다고 해석한다. 향후 이익·정상 ROE와 위험프리미엄은 모형 가정이다. 실물 발표에서 내수와 부동산 수요, 실제 이익과 현금이 함께 개선되는지가 이 해석을 검증할 지점이다."
+  ],
+  "koreaMarket": [
+    "코스피는 9일 5,018.85에서 10일 5,239.13, 11일 5,375.36으로 반등했다. 이틀 연속 코스닥 매수 사이드카가 발동해 프로그램 매수호가 효력이 일시 정지됐다. 12~13일 코스피는 연속으로 밀렸고 13일에는 장중 5,500을 넘은 뒤 5,290.53으로 마쳤다.",
+    "신한 일별 집계 합산으로 코스피 외국인은 약 1,627억원 순매수, 코스닥 외국인은 약 7,839억원 순매도, 코스닥 기관은 약 8,054억원 순매수였다. 같은 기관의 일별 마감표를 합산한 값이다. 코스피 외국인이 13일 다시 5,475억원 순매도한 점에서 주간 순매수와 금요일 흐름은 다르다.",
+    "15시 30분 원·달러는 11/6 1,356.6원에서 11/13 1,336.7원으로 낮아졌지만 금요일 하루는 6.0원 올랐다. 원화의 주간 반등과 금요일 달러 강세를 각각 자금 흐름과 대조한다."
+  ],
+  "industries": [
+    "11월 1~10일 반도체 통관 수출액은 전년 동기보다 331.2% 늘었다. 월초 통관 잠정치라 HBM과 범용 D램의 출하, 가격, 조업일수의 기여를 분리할 필요가 있다. HBM은 가속기 플랫폼별 인증과 장기 공급계약, 범용은 서버·PC 제품 믹스와 현물·계약 가격이 손익에 다르게 반영된다.",
+    "CoreWeave의 매출 36.61억달러와 순이자비용 8.46억달러는 고객 수요와 차입 비용이 동시에 증가한 사례다. Nebius는 신규 4개 사이트에서 매출이 발생했다고 밝혔지만 3분기 계속사업 영업현금흐름은 -2.73억달러였다. 공사 진척과 고객 인수가 이어져도 차입·리스 비용과 매출 회수의 시차에 따라 자금 부담은 달라진다."
+  ],
+  "validationNarrative": [
+    "ECB의 유럽 기업 분석에서 실적콜로 식별한 AI 노출 기업은 분기 주식수익률이 약 1.3%p 높고, 비금융 발행사 회사채 스프레드는 약 5bp 좁았다. 업종과 기업 특성을 통제한 연관성이며 제품 생산성이나 자금조달 성공의 인과효과를 식별한 결과는 아니다. 이번 주 시장 전체 신용과 일부 AI 기업의 주가를 함께 볼 근거다.",
+    "Macro Trader가 전달한 성장투자 논평은 레버리지, 거래량, 발행이 동시에 커질 때 기대가 가격에 앞설 가능성을 제기한다. 미국 외의 고성장 후보 비중과 지수의 후행 P/E 격차는 서로 다른 표본이다. 예상 이익 성장률, 실제 현금 창출과 포트폴리오 비중을 구분해 읽는다."
+  ],
+  "portfolio": {
+    "review": "기록된 주간 거래·비중이 없어 직전 판단 기준을 복기한다.",
+    "correct": "주초 수요 회복과 가동 일정의 가시성이 좋아져도 발표 후 수익률과 금융비용이 서로 다를 수 있다는 판단을 유지한다.",
+    "incorrect": "주초 국내 매수 확산만으로 외국인 현물 수급의 기조 전환을 판단하기에는 금요일 재매도가 컸다.",
+    "risks": [
+      "미 단기금리 상승과 차환 비용",
+      "엔비디아 고객·제품 일정 및 메모리 포지션 집중",
+      "경유·운송 비용이 근원 가격으로 번지는 시차"
+    ],
+    "stance": [
+      "현금 선택권 유지",
+      "통전·계약·조달 조건이 구체화된 자산 중심으로 선별"
+    ],
+    "changeCondition": "미 2년물과 신용이 안정되고 코스피 외국인 매수와 시장 폭이 함께 개선될 때 반등의 지속 가능성을 높게 본다."
+  },
+  "nextWeekHypotheses": [
+    {
+      "id": "2026-W46-h1",
+      "priority": "Primary",
+      "title": "실적이 AI 공급망의 가시성을 회복하는가",
+      "claim": "엔비디아의 공급 일정과 고객 주문이 구체화되면 승계 충격의 일부가 되돌려질 수 있다.",
+      "evidence": "엔비디아 첫 정규장 장중 낙폭 축소와 메모리·기판 상대 흐름.",
+      "confirmation": "주요 고객의 제품·인도 일정 유지와 반도체 시장 폭 개선.",
+      "falsification": "출시나 인도 지연 또는 뚜렷한 고객 집행 축소.",
+      "path": "제품·고객 설명 → 출하 기대 → 반도체 이익과 수급",
+      "assets": "엔비디아·SOX·SK하이닉스",
+      "reviewWindow": "2026-11-16~11-20"
+    },
+    {
+      "id": "2026-W46-h2",
+      "priority": "Primary",
+      "title": "소비와 정책 경계가 단기금리를 밀어 올리는가",
+      "claim": "견조한 기초 수요와 인상 경계가 이어지면 2년물이 높은 수준을 유지할 수 있다.",
+      "evidence": "근원 CPI 월간 0.3%, PPI 일부 항목과 10년물 상승.",
+      "confirmation": "소매판매의 기초 항목이 견조하고 2년물·달러가 함께 강세.",
+      "falsification": "가격 효과를 제외한 수요가 둔화하고 2년물·달러가 동반 하락.",
+      "path": "소비와 정책 기대 → 단기금리·달러 → 성장주 할인율",
+      "assets": "미 2년·10년·달러·나스닥",
+      "reviewWindow": "2026-11-16~11-20"
+    },
+    {
+      "id": "2026-W46-h3",
+      "priority": "Secondary",
+      "title": "국내 외국인 매수가 코스닥 매수와 동행하는가",
+      "claim": "코스피 외국인 매수와 양 시장 종목 폭이 함께 개선돼야 반등이 넓어진다.",
+      "evidence": "13일에 코스피 외국인 순매도와 코스닥 기관 순매수가 공존.",
+      "confirmation": "두 거래일 이상 코스피 외국인 순매수와 양 시장 상승 종목 우세.",
+      "falsification": "대형 메모리 집중 매도와 코스닥 기관 매수 약화가 동반.",
+      "path": "해외 기술주·환율 → 외국인 현물 → 국내 시장 폭",
+      "assets": "코스피·코스닥·원·달러",
+      "reviewWindow": "2026-11-16~11-20"
+    },
+    {
+      "id": "2026-W46-h4",
+      "priority": "Secondary",
+      "title": "원유 완화가 경유와 운송 비용으로 전이되는가",
+      "claim": "육상 중간유분 재고와 크랙이 안정돼야 제품 가격 부담이 실질적으로 완화된다.",
+      "evidence": "IEA 공급 상향과 해상 재고 증가, 유럽 경유 고가.",
+      "confirmation": "육상 경유 재고 회복과 제품 크랙·운임 하락.",
+      "falsification": "원유 약세에도 경유 크랙과 운송비 상승.",
+      "path": "해상 선적·정제 가동 → 육상 중간유분 → 운송단가",
+      "assets": "북해산 원유·유럽 경유·운송주",
+      "reviewWindow": "2026-11-16~11-20"
+    }
+  ],
+  "hypothesisReview": {
+    "previousWeek": "2026-W45",
+    "items": [
+      {
+        "hypothesisId": "2026-W45-h1",
+        "verdict": "부분 적중",
+        "evidence": "10~11일 양 시장 매수 확대와 외국인 코스피 순매수. 금요일 -5,475억원.",
+        "reason": "주중 매수 확산은 관측됐지만 금요일 지속성이 꺾였다.",
+        "missedVariables": "미국 기술주 주 후반 반락과 엔비디아 승계."
+      },
+      {
+        "hypothesisId": "2026-W45-h2",
+        "verdict": "실패",
+        "evidence": "CPI 0.4% MoM, 근원 0.3%. 10일 2년물 +17bp, 13일 4.88%.",
+        "reason": "헤드라인 둔화에도 근원 및 정책 기대가 안정 조건을 충족하지 못했다.",
+        "missedVariables": "휘발유 둔화와 근원 서비스, 정책 인사 발언의 차이."
+      },
+      {
+        "hypothesisId": "2026-W45-h3",
+        "verdict": "부분 적중",
+        "evidence": "CoreWeave 매출·이자비용 동반 증가. Nebius 신규 사이트 매출과 분기 영업현금 유출.",
+        "reason": "일부 서비스 인도와 매출은 확인됐지만 차입·현금과 주가의 공동 안정 근거는 부족했다.",
+        "missedVariables": "제품 공급사 경영진 불확실성과 회사별 지급 구조."
+      },
+      {
+        "hypothesisId": "2026-W45-h4",
+        "verdict": "미확인",
+        "evidence": "IEA 10월 해상 재고 증가, 육상 재고 하락, 유럽 경유 180달러 안팎.",
+        "reason": "동일 기간 경유는 원유보다 작은 폭으로 하락했다. 주간 육상 재고와 운임의 지속 개선 조건은 확인되지 않았다.",
+        "missedVariables": "해상 재고와 사용 가능한 육상 물량의 괴리."
+      }
+    ]
+  },
+  "scenarioMap": {
+    "note": "성장과 물가 조합에 대한 조건부 경로. 개별 AI 실적 충격은 각 경우의 별도 변수다.",
+    "scenarios": [
+      {
+        "name": "완만한 성장",
+        "growth": "성장 견조",
+        "inflation": "물가 둔화",
+        "rates": "단기금리 안정",
+        "dollar": "금리차 압력 완화",
+        "equities": "상승 종목 폭 확대 가능",
+        "korea": "원화·외국인 순매수 확인",
+        "portfolio": "현금 회수와 수급 개선이 겹치는 곳 검토"
+      },
+      {
+        "name": "높은 수요와 비용",
+        "growth": "성장 견조",
+        "inflation": "물가 고착",
+        "rates": "추가 인상 경계",
+        "dollar": "달러 상방 위험",
+        "equities": "가격 전가력과 할인율에 따라 차별화",
+        "korea": "원화 약세·수입비용 부담",
+        "portfolio": "차입이 많은 기업과 원가 민감도 점검"
+      },
+      {
+        "name": "수요 약화",
+        "growth": "성장 둔화",
+        "inflation": "물가 둔화",
+        "rates": "국채금리 하향",
+        "dollar": "위험회피 시 혼조",
+        "equities": "방어주 상대 우위 가능",
+        "korea": "수출 이익 하향 우려",
+        "portfolio": "실적 눈높이와 현금 비중 검토"
+      },
+      {
+        "name": "공급 비용 재상승",
+        "growth": "성장 둔화",
+        "inflation": "물가 고착",
+        "rates": "장단기 변동 확대",
+        "dollar": "안전자산 수요 지지",
+        "equities": "마진·밸류에이션 부담",
+        "korea": "연료비와 환율 동시 압력",
+        "portfolio": "현금과 조달 여력 우선"
+      }
+    ]
+  },
+  "nextWeekEvents": [
+    {
+      "id": "2026-W46-e1",
+      "date": "2026-11-16",
+      "kst": "11:00",
+      "title": "중국 10월 산업생산·소매판매·투자",
+      "importance": 2,
+      "consensus": "—",
+      "previous": "9월 발표치",
+      "checkpoints": [
+        "수출 관련 제조와 내수의 차이"
+      ],
+      "hypothesisIds": [
+        "2026-W46-h3"
+      ],
+      "path": "중국 내수와 생산 → 아시아 위험선호",
+      "source": "중국 국가통계국",
+      "sourceUrl": "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202512/t20251226_1962154.html",
+      "koreaAttributionDate": "2026-11-16"
+    },
+    {
+      "id": "2026-W46-e2",
+      "date": "2026-11-17",
+      "kst": "22:30",
+      "title": "미국 10월 소매판매",
+      "importance": 3,
+      "consensus": "+0.2% MoM · TD 집계",
+      "previous": "9월 +0.8% MoM",
+      "checkpoints": [
+        "주유소 제외 판매와 기초 수요"
+      ],
+      "hypothesisIds": [
+        "2026-W46-h2"
+      ],
+      "path": "소비와 정책 기대 → 금리·달러",
+      "source": "미 인구조사국",
+      "sourceUrl": "https://www.census.gov/retail/release_schedule.html",
+      "koreaAttributionDate": "2026-11-18"
+    },
+    {
+      "id": "2026-W46-e3",
+      "date": "2026-11-18",
+      "kst": "06:20 전후 · 콜 07:00",
+      "title": "엔비디아 FY27 3분기 실적",
+      "importance": 3,
+      "consensus": "—",
+      "previous": "직전 분기 매출 962억달러",
+      "checkpoints": [
+        "차세대 제품·고객 인도 일정·공급 제약"
+      ],
+      "hypothesisIds": [
+        "2026-W46-h1"
+      ],
+      "path": "가속기 주문 → 메모리·기판·장비",
+      "source": "엔비디아 IR",
+      "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/",
+      "koreaAttributionDate": "2026-11-18"
+    },
+    {
+      "id": "2026-W46-e4",
+      "date": "2026-11-19",
+      "kst": "04:00",
+      "title": "10월 FOMC 의사록",
+      "importance": 3,
+      "consensus": "—",
+      "previous": "3.75~4.00% 동결 · 25bp 인상 선호 2명",
+      "checkpoints": [
+        "추가 인상 폭 논의와 물가 판단의 기준"
+      ],
+      "hypothesisIds": [
+        "2026-W46-h2"
+      ],
+      "path": "정책 경로 기대 → 2년물·달러",
+      "source": "미 연준",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+      "koreaAttributionDate": "2026-11-19"
+    },
+    {
+      "id": "2026-W46-e5",
+      "date": "2026-11-19",
+      "kst": "미국 현지 거래 개시 예정",
+      "title": "앤트로픽 나스닥 거래 개시 예정",
+      "importance": 2,
+      "consensus": "공모 예비 범위 70~78달러",
+      "previous": "최종 공모가 미확정",
+      "checkpoints": [
+        "최종 가격·조달 규모·장기 컴퓨팅 지급 의무"
+      ],
+      "hypothesisIds": [
+        "2026-W46-h1"
+      ],
+      "path": "공모 자금과 사업 현금 → AI 투자 기대",
+      "source": "SEC 제출 예비 문서",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072953/anthropicpbc-fwpauswrapcap.htm",
+      "koreaAttributionDate": "2026-11-20"
+    }
+  ],
+  "nextWeekEventNarrative": [
+    "소매판매는 명목 지출의 가격 효과를 함께 읽는다. 10월 FOMC 의사록은 이번 주 CPI와 PPI 발표 이전 회의의 기록이다. 엔비디아는 미국 17일 장후, 한국 18일 개장 전에 실적이 전해진다. 앤트로픽 공모 일정은 예비 문서 기준이며 최종 가격과 거래 개시는 변경될 수 있다."
+  ],
+  "conclusion": {
+    "environment": "주식은 투매의 일부를 되돌렸고 미 국채금리는 단기구간을 중심으로 상승했다.",
+    "bullCase": "실적과 공급 일정이 주문을 뒷받침하고 외국인 현물과 시장 폭이 동반 개선된다.",
+    "bearCase": "AI 집행 지연과 단기금리 상승이 겹쳐 국내 매도가 재확대된다.",
+    "mainRisk": "고객별 투자 여력과 통전 지연, 정제제품 고가의 서비스 물가 전이.",
+    "keyVariable": "미 2년물·회사채 스프레드, 엔비디아 제품 일정, 국내 외국인 현물.",
+    "stance": "현금 선택권을 유지하며 실제 인도·회수 근거를 갖춘 자산을 우선 검토한다.",
+    "principle": "주간 반등의 크기보다 자금 흐름과 이익·현금의 회복이 함께 이어지는지를 본다."
+  },
+  "changeBoardReview": {
+    "previousWeek": "2026-W45",
+    "items": [
+      {
+        "topic": "장기금리",
+        "state": "반전",
+        "evidence": "5.15%, 2년물 상승폭이 더 큼",
+        "assessment": "금리와 신용의 각 방향을 추적"
+      },
+      {
+        "topic": "시스템 유동성",
+        "state": "유지",
+        "evidence": "준비금 +305.15억달러, TGA -428.05억달러",
+        "assessment": "은행 유동성은 소폭 완화"
+      },
+      {
+        "topic": "한국 수급과 시장 폭",
+        "state": "반전",
+        "evidence": "10~12일 외국인 순매수, 13일 순매도",
+        "assessment": "3일 회복의 지속성은 유보"
+      },
+      {
+        "topic": "AI 투자",
+        "state": "유지",
+        "evidence": "CoreWeave 반등 뒤 창업자 승계 충격",
+        "assessment": "가동과 지급 능력에 따라 판단"
+      },
+      {
+        "topic": "에너지·제품",
+        "state": "강화",
+        "evidence": "4분기 공급 우위 전망, 육상 재고 감소",
+        "assessment": "배럴당 원유와 경유의 가격차 지속 추적"
+      },
+      {
+        "topic": "미국 위험자산",
+        "state": "반전",
+        "evidence": "주간 반등 뒤 주 후반 나스닥 약세",
+        "assessment": "반등의 업종 확산과 지속성을 구분"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "11/9 한국",
+      "text": "코스피 장중 반등 반납, 5,018.85."
+    },
+    {
+      "date": "11/10 한국·미국",
+      "text": "한국 양 시장 매수 사이드카. 미국 CPI 발표 뒤 2년물 4.73%."
+    },
+    {
+      "date": "11/11 한국·미국",
+      "text": "코스닥 705.10. 미국 정규장 SOX 반등 뒤 엔비디아 장후 하락."
+    },
+    {
+      "date": "11/12 미국",
+      "text": "엔비디아 공식 승계 발표, 첫 정규장 -4.34%."
+    },
+    {
+      "date": "11/13 한국·미국",
+      "text": "외국인 코스피 순매도 전환. 한국 마감 뒤 미국 PPI, 10년물 5.15%."
+    }
+  ],
+  "rateDecomposition": "명목 파수익률은 11/6과 11/13을 대조했다. 명목은 실질금리·물가 기대의 관점, 또는 기대 단기금리와 기간 프리미엄의 관점에서 서로 다른 방식으로 해석할 수 있다.",
+  "verificationNote": "한국은 제출 신한 마감표와 KB·삼성증권·연합뉴스, 미국은 AP, 국채는 미 재무부 기준. 장중 자료와 금요일 오전 작성 기관 자료의 주간 잠정 수익률은 종가 비교에 사용하지 않았다. 수급은 신한 일별 표 합산이다.",
+  "sources": [
+    {
+      "title": "미국 국채 파수익률",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    {
+      "title": "미국 13일 주간 지수 마감",
+      "url": "https://apnews.com/article/12c1e8155fb85c3c7b09e058ed6d3c74"
+    },
+    {
+      "title": "미국 12일 지수 마감",
+      "url": "https://apnews.com/article/3f3668a937a11535103e3a5c8d82c9fc"
+    },
+    {
+      "title": "엔비디아 CEO 교체 공식 발표",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx"
+    },
+    {
+      "title": "엔비디아 일별 주가",
+      "url": "https://finance.yahoo.com/quote/NVDA/history/"
+    },
+    {
+      "title": "삼성증권 국내 마감",
+      "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111316113363K_02_01.pdf&inlineYn=Y&saveKey=research.pdf"
+    },
+    {
+      "title": "KB증권 국내 주간 수익률",
+      "url": "https://rdata.kbsec.com/pdf_data/20261113165600877K.pdf"
+    },
+    {
+      "title": "11월 6일 서울 외환 주간장",
+      "url": "https://en.yna.co.kr/view/AEN20261106007851320"
+    },
+    {
+      "title": "11월 13일 서울 외환 주간장",
+      "url": "https://en.yna.co.kr/view/AEN20261113005600320"
+    },
+    {
+      "title": "미 10월 CPI",
+      "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm"
+    },
+    {
+      "title": "미 10월 PPI",
+      "url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm"
+    },
+    {
+      "title": "미 10월 고용",
+      "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm"
+    },
+    {
+      "title": "연준 H.4.1",
+      "url": "https://www.federalreserve.gov/releases/h41/20261112/"
+    },
+    {
+      "title": "미국 HY OAS",
+      "url": "https://fred.stlouisfed.org/data/BAMLH0A0HYM2"
+    },
+    {
+      "title": "미국 IG OAS",
+      "url": "https://fred.stlouisfed.org/data/BAMLC0A0CM"
+    },
+    {
+      "title": "IEA 11월 석유시장 보고서",
+      "url": "https://www.iea.org/reports/oil-market-report-november-2026"
+    },
+    {
+      "title": "ECB 정제 마진 분석",
+      "url": "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202607_05~d82730508f.en.html"
+    },
+    {
+      "title": "ECB AI 노출과 기업 조달",
+      "url": "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202607_06~a36e367caf.en.html"
+    },
+    {
+      "title": "BIS Working Paper 1393",
+      "url": "https://www.bis.org/publications/working-paper-1393-us-monetary-policy-macroeconomic-news-and-global-secular-decline-interest-rates"
+    },
+    {
+      "title": "CoreWeave 실적 공시",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm"
+    },
+    {
+      "title": "Nebius 실적과 주주 서한",
+      "url": "https://nebius.com/newsroom/nebius-reports-third-quarter-2026-financial-results"
+    },
+    {
+      "title": "일본은행 10월 기업물가지수",
+      "url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2610.pdf"
+    },
+    {
+      "title": "한국 11월 1~10일 수출",
+      "url": "https://en.yna.co.kr/view/AEN20261111002651320"
+    },
+    {
+      "title": "금융당국 신용융자 조치",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148975208"
+    },
+    {
+      "title": "앤트로픽 예비 가격 범위",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026073045/anthropicpbc-fwpjapanamend.htm"
+    },
+    {
+      "title": "앤트로픽 예비 일정",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072953/anthropicpbc-fwpauswrapcap.htm"
+    },
+    {
+      "title": "엔비디아 실적 공식 일정",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/"
+    },
+    {
+      "title": "미국 소매판매 공식 일정",
+      "url": "https://www.census.gov/retail/release_schedule.html"
+    },
+    {
+      "title": "FOMC 의사록 공식 일정",
+      "url": "https://www.federalreserve.gov/newsevents/2026-November.htm"
+    },
+    {
+      "title": "중국 국가통계국 발표 일정",
+      "url": "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202512/t20251226_1962154.html"
+    },
+    {
+      "title": "소매판매 전망치 · TD Economics",
+      "url": "https://economics.td.com/domains/economics.td.com/documents/reports/bottom-line/USBottomLine_20261113.pdf"
+    },
+    {
+      "title": "샌프란시스코 연은 가동률 조정 TFP",
+      "url": "https://www.frbsf.org/research-and-insights/data-and-indicators/total-factor-productivity-tfp/"
+    }
+  ]
+});
+

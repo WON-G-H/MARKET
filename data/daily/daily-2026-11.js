@@ -978,3 +978,274 @@ window.MARKET_LEDGER.dailyAddenda["2026-11-12"] = {
   ],
   "conclusion": "12일 국내 증시는 엔비디아 거취 보도와 옵션 만기 수급이 겹치면서 장중 상승분을 반납했다. 임시 CEO 체제에서 제품 일정과 고객 약속이 어떻게 집행되는지가 다음 관측점이다."
 };
+
+/* November 13 report. */
+window.MARKET_LEDGER.daily["2026-11"].push({
+  "date": "2026-11-13",
+  "month": "2026년 11월",
+  "createdAt": "2026-11-15",
+  "updatedAt": "2026-11-15",
+  "title": "미 10년물 5.10%와 엔비디아 승계 여진에 코스피 5,300선 하회",
+  "tags": [
+    "엔비디아",
+    "미국채",
+    "반도체",
+    "외국인",
+    "PPI",
+    "경유"
+  ],
+  "lead": [
+    "코스피는 5,504.44까지 올랐다가 5,290.53(-0.98%)으로 마쳤다. 외국인은 코스피에서 5,475억원을 순매도했다. 코스닥은 기관 순매수에 699.66(+0.45%)을 지켰다.",
+    "젠슨 황 사임 발표 이후 첫 미국 정규장에서 엔비디아가 장중 약 14% 하락한 뒤 낙폭을 4.34%로 줄였다. 미국 10년물은 12일 5.10%로 올랐고, 한국 13일 원·달러 주간 종가는 1,336.7원이었다."
+  ],
+  "report": [
+    {
+      "no": "02",
+      "title": "미국 12일 정규장과 엔비디아 승계",
+      "paragraphs": [
+        "사임 발표가 나온 12일 미국 정규장에서 엔비디아는 166.19달러(-4.34%)에 마감했다. S&P500 7,592.40(-0.35%), 나스닥 종합 25,366.09(-0.39%), 다우 52,297.09(-0.36%)였다. 초기 매도가 엔비디아에 집중됐고, 지수 낙폭은 개별 종목보다 작았다. <a href=\"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 승계 공시</a> <a href=\"https://apnews.com/article/3f3668a937a11535103e3a5c8d82c9fc\" target=\"_blank\" rel=\"noopener noreferrer\">AP 미국 정규장</a> <a href=\"https://finance.yahoo.com/quote/NVDA/history/\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 거래 이력</a>",
+        "미 재무부의 12일 2년물과 10년물 파수익률은 4.86%, 5.10%다. 11일 현물 휴장으로 직전 공표일 10일 대비 각각 13bp와 12bp 올랐다. 미래에셋 시황의 달러지수 103.172는 같은 미국장 브리핑의 관측이다. <a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026\" target=\"_blank\" rel=\"noopener noreferrer\">미 재무부 일별 금리</a>"
+      ]
+    },
+    {
+      "no": "03",
+      "title": "한국 정규장과 투자자별 수급",
+      "paragraphs": [
+        "코스피는 5,452.41에 출발해 5,504.44까지 올랐지만 오후에 상승분을 반납했고, 저점은 5,259.09였다. 코스닥도 상승폭을 줄여 700선 바로 아래에서 마쳤다. 상승·하락 종목은 신한 기준 코스피 451·420, 코스닥 850·806이다. <a href=\"https://www.ajupress.com/view/20261113172142523\" target=\"_blank\" rel=\"noopener noreferrer\">코스피 장중 경로</a> <a href=\"https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111316113363K_02_01.pdf&inlineYn=Y&saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 마감 시황</a>",
+        "신한 마감표에서 코스피 외국인·기관·개인은 -5,475억·+20억·+175억원, 코스닥은 -752억·+1,262억·-563억원이다. 원·달러 환율은 15시 30분에 1,336.7원(+6.0원)이었다. 고금리·달러 강세와 외국인 매도 속에서 대형주가 밀렸고 코스닥 기관 매수는 지수를 지지했다. <a href=\"https://en.yna.co.kr/view/AEN20261113005600320\" target=\"_blank\" rel=\"noopener noreferrer\">연합뉴스 외환시장 마감</a>"
+      ]
+    },
+    {
+      "no": "04",
+      "title": "메모리 약세 속 금융·기판의 차별화",
+      "paragraphs": [
+        "삼성전자 약 -1.0%, SK하이닉스 -3.03%였다. 신한은 삼성전기 -3.5%와 함께 기존 AI 공급망 약세를 짚었다. 한편 이수페타시스 +5.23%, 신한지주 +5.65%, 키움증권 +4.62%였다. 공급망 재편 기대와 금융주 매수로 지수와 다른 종목 흐름이 나타났다. <a href=\"https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111316113363K_02_01.pdf&inlineYn=Y&saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 종목별 등락</a>",
+        "한국전력 -9.79%는 실적과 에너지 비용이 겹친 개별 사례다. 오후 코스피 약세에는 자본시장 간담회 세부안에 대한 기대 조정도 작용했다는 신한의 해석이 있다. 대형 메모리와 지수의 낙폭을 승계 뉴스만으로 설명하기는 어렵다."
+      ]
+    },
+    {
+      "no": "05",
+      "title": "원유 수급 반전과 남은 경유 비용",
+      "paragraphs": [
+        "IEA는 걸프 수출 회복을 반영해 4분기 세계 석유 공급 전망을 하루 330만 배럴 올렸고 4분기 수급을 공급 우위로 예상했다. 10월 관측 재고는 5,200만 배럴 늘었지만 해상 재고가 8,600만 배럴 증가한 결과며 육상 재고는 계속 줄었다. 보고서 작성 시점 북해산 현물은 배럴당 약 93달러, 유럽 경유는 약 180달러였다. <a href=\"https://www.iea.org/reports/oil-market-report-november-2026\" target=\"_blank\" rel=\"noopener noreferrer\">IEA 11월 석유시장 보고서</a>",
+        "경유는 전쟁 전보다 77% 높았다. 원유가 먼저 안정돼도 정제제품 수출과 육상 재고가 회복되기까지 운송비 경감에는 시차가 생길 수 있다. ECB는 10월 28일까지의 주요 가격을 반영한 분석에서 유럽 경유 정제 마진이 전쟁 전의 약 세 배로 높아졌다고 설명했다. <a href=\"https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202607_05~d82730508f.en.html\" target=\"_blank\" rel=\"noopener noreferrer\">ECB 정제 마진 분석</a>"
+      ]
+    },
+    {
+      "no": "06",
+      "title": "한국 마감 이후 미국 10월 PPI와 금요일 마감",
+      "paragraphs": [
+        "한국시간 13일 22시 30분 발표된 미국 10월 최종수요 PPI는 전월비 +0.3%, 전년비 +6.5%였다. 식품·에너지·유통 서비스 제외 지수는 전월비 +0.5%로 9월과 같았고 운송·창고 서비스는 +2.0%였다. 이 발표는 16일 한국장의 선행 정보다. <a href=\"https://www.bls.gov/news.release/archives/ppi_11132026.htm\" target=\"_blank\" rel=\"noopener noreferrer\">미 노동통계국 10월 PPI</a>",
+        "13일 미국장에서 10년물은 5.15%로 올랐고 S&P500 -0.40%, 나스닥 -0.91%, 다우 +0.10%로 마감했다. 엔비디아는 162.85달러(-2.01%)로 이틀 연속 하락했다. <a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026\" target=\"_blank\" rel=\"noopener noreferrer\">미 재무부 일별 금리</a> <a href=\"https://apnews.com/article/12c1e8155fb85c3c7b09e058ed6d3c74\" target=\"_blank\" rel=\"noopener noreferrer\">AP 금요일 마감</a> <a href=\"https://finance.yahoo.com/quote/NVDA/history/\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 거래 이력</a>"
+      ]
+    }
+  ],
+  "watch": [
+    "미 2년물과 달러의 PPI 이후 흐름",
+    "엔비디아 18일 06시 20분 전후(KST) 실적과 제품·공급 일정",
+    "코스피 외국인 현물과 코스닥 기관 순매수의 지속성",
+    "유럽 경유 가격·육상 재고와 중동 해상운송"
+  ]
+});
+window.MARKET_LEDGER.dailyAddenda["2026-11-13"] = {
+  "changes": {
+    "maintained": [
+      "AI 주문과 조달·가동 일정을 함께 본다."
+    ],
+    "new": [
+      "엔비디아 정규장 급락 후 부분 회복, 금요일 추가 하락.",
+      "미 10년물 12일 5.10%, 13일 5.15%.",
+      "코스피 외국인 5,475억원 순매도, 코스닥 기관 1,262억원 순매수."
+    ]
+  },
+  "assessment": [
+    "장중 반등을 지탱할 외국인 매수가 이어지지 않았다. 양대 메모리의 약세와 금융·기판 종목의 강세가 동시에 나타났다."
+  ],
+  "implications": [
+    "AI 공급망은 승계 이후 실제 발주·인도 일정에 변화가 있는지 확인한다.",
+    "원유와 경유 가격을 따로 추적해 운송비와 물가에 전달되는 시차를 본다."
+  ],
+  "conclusion": "13일 코스피는 5,500선을 넘었다가 5,300선 아래로 마쳤다. 16일에는 미국 금요일 PPI와 기술주 하락이 추가로 반영될 수 있다."
+};
+
+
+/* November 16 report. */
+window.MARKET_LEDGER.daily["2026-11"].push({
+  "date": "2026-11-16",
+  "month": "2026년 11월",
+  "createdAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "title": "반도체 매도에 코스피 5,100선, 중국 10월 내수 둔화",
+  "tags": [
+    "반도체",
+    "엔비디아",
+    "외국인",
+    "중국 내수",
+    "미국채",
+    "AI 금융"
+  ],
+  "lead": [
+    "코스피는 5,100.50(-3.59%), 코스닥은 665.65(-4.86%)에 마감했다. 지난 금요일 미국 반도체 약세와 높은 미국채 금리 속에서 외국인과 기관이 양 시장에서 순매도했다.",
+    "삼성전자 -4.47%, SK하이닉스 -7.89%로 국내 메모리의 낙폭이 컸다. 중국 10월 소매판매는 전년보다 0.4% 증가하는 데 그쳤고, 1~10월 고정자산투자는 8.1% 감소했다."
+  ],
+  "report": [
+    {
+      "no": "02",
+      "title": "직전 미국장과 국내 개장 전 변수",
+      "paragraphs": [
+        "미국 13일 정규장에서는 S&P500 -0.40%, 나스닥 -0.91%, 다우 +0.10%였다. 필라델피아 반도체지수는 -3.43%였고, 신한 자료에서 AMD와 브로드컴도 각각 약 8.8%, 4.8% 하락했다. 엔비디아에서 경쟁사로 이동하던 매수가 주 후반에는 반도체 업종 전반의 매도로 바뀌었다. <a href=\"https://apnews.com/article/12c1e8155fb85c3c7b09e058ed6d3c74\" target=\"_blank\" rel=\"noopener noreferrer\">AP 미국 13일 종가</a> <a href=\"https://ph.investing.com/indices/phlx-semiconductor-historical-data\" target=\"_blank\" rel=\"noopener noreferrer\">필라델피아 반도체지수 이력</a>",
+        "미 재무부 13일 공표 기준 2년물은 4.88%, 10년물은 5.15%였다. 같은 날 발표한 미국 10월 PPI는 전월비 +0.3%, 전년비 +6.5%였다. 월간 헤드라인은 둔화했으나 식품·에너지·유통 서비스 제외 지수는 전월비 0.5% 올랐다. 높은 금리는 AI 실적을 앞둔 성장주의 할인율 부담을 키웠다. <a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026\" target=\"_blank\" rel=\"noopener noreferrer\">미 재무부 일별 금리</a> <a href=\"https://www.bls.gov/news.release/archives/ppi_11132026.htm\" target=\"_blank\" rel=\"noopener noreferrer\">미 노동통계국 PPI</a>"
+      ]
+    },
+    {
+      "no": "03",
+      "title": "한국 16일 종가와 투자자별 수급",
+      "paragraphs": [
+        "양 지수는 상승 출발한 뒤 하락으로 돌아섰다. 삼성증권 마감 자료에서 거래대금은 코스피 약 15.8조원, 코스닥 약 4.6조원이었다. 신한 마감표의 외국인·기관·개인은 코스피 -1조3,838억·-4,518억·+1조3,403억원, 코스닥 -2,112억·-1,541억·+3,768억원이다. 미래에셋 집계와 차이가 있어 수급은 신한 마감표를 기준으로 통일했다. <a href=\"https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111616305082K_02_02.pdf&inlineYn=Y&saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 마감 시황</a> <a href=\"https://news.sbs.co.kr/english/article.do?news_id=N1008848198\" target=\"_blank\" rel=\"noopener noreferrer\">SBS 국내 종가</a>",
+        "신한 마감표에서 코스피 상승·하락 종목은 263·615개, 코스닥은 282·1,399개였다. 원·달러는 15시 30분 1,335.7원(-1.0원)으로 마감했다. 매도는 주식 전반에 퍼졌지만 원화는 소폭 강세였다. 수출기업의 달러 매도가 이를 완충했다는 시장 해석이 나왔다. <a href=\"https://nwww.newsis.com/view/NISX20261116_0003870079\" target=\"_blank\" rel=\"noopener noreferrer\">뉴시스 서울 외환시장 마감</a>"
+      ]
+    },
+    {
+      "no": "04",
+      "title": "메모리·전력기기 매도와 소비재 순환매",
+      "paragraphs": [
+        "SK하이닉스 -7.89%, 삼성전자 -4.47%, 삼성전기 -8.19%였다. 코스닥에서도 장비주가 밀렸고, 전력기기도 동반 약세였다. 젠슨 황이 복귀 가능성을 논의했다는 FT 인용 보도는 경영진 불확실성이 이어졌음을 보여준다. 회사가 공식 발표한 콜레트 크레스 임시 CEO 체제가 당시 확인된 상태였다. <a href=\"https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111616305082K_02_02.pdf&inlineYn=Y&saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 주요 종목</a> <a href=\"https://www.investing.com/news/stock-market-news/jensen-huang-discusses-comeback-as-nvidia-ceo-with-allies-ft-reports-5028065\" target=\"_blank\" rel=\"noopener noreferrer\">Reuters의 FT 인용 보도</a> <a href=\"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 승계 발표</a>",
+        "미국 연방법원은 14일(현지) 삼성전자·SK하이닉스·마이크론이 제기한 D램 반독점 소송 기각 신청을 받아들이지 않았다. 소송이 계속된다는 절차 결정으로, 책임 여부와 손해액 판단은 남아 있다. 반도체 시장 전반의 매도와 별도로 메모리 기업에 영향을 줄 수 있는 변수다. <a href=\"https://docs.justia.com/cases/federal/district-courts/california/candce/5%3A2026cv06345/472931/68\" target=\"_blank\" rel=\"noopener noreferrer\">미 연방법원 결정문</a>",
+        "소비재와 보험 일부가 강세였다. 삼성증권 기준 삼양식품 +6.20%, 현대백화점 +4.94%, DB손해보험 +7.33%였다. 삼성SDI는 미국 주피터파워에 2029년부터 3년간 ESS용 LFP 배터리 16GWh를 공급한다고 발표했지만, 신한 마감표에서 주가는 약 3.2% 하락했다. 계약은 중장기 매출 근거이며, 당일 2차전지 매도 흐름은 이어졌다. <a href=\"https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111616305082K_02_02.pdf&inlineYn=Y&saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 종목별 등락</a> <a href=\"https://news.samsungsdi.com/ko/click?seq=521\" target=\"_blank\" rel=\"noopener noreferrer\">삼성SDI 공급계약 발표</a>"
+      ]
+    },
+    {
+      "no": "05",
+      "title": "중국 10월 생산과 내수의 격차",
+      "paragraphs": [
+        "중국 국가통계국에 따르면 10월 산업생산은 전년 대비 4.8%, 첨단기술 제조업은 17.6% 증가했다. 소매판매 증가율은 0.4%였다. 1~10월 고정자산투자는 전년 동기 대비 -8.1%, 부동산 개발투자는 -21.6%였다. 부동산을 제외한 민간투자도 7.8% 줄었다. 첨단 생산의 성장세가 소비와 민간 투자 전반으로 이어지는지는 여전히 과제다. <a href=\"https://english.www.gov.cn/archive/statistics/202611/16/content_WS6afa6dccc6d00ca5f9a0e4b3.html\" target=\"_blank\" rel=\"noopener noreferrer\">중국 국가통계국 10월 지표</a>",
+        "상하이종합 -0.87%, 선전성분 -2.53%, 과창판50 -5.16%였다. 대만 가권도 6.03% 하락했다. 중국 실물 발표 뒤 내수 우려가 부각됐고, 아시아 기술주에는 미국 반도체 약세도 함께 작용했다. 일본 3분기 실질 GDP 속보치는 전기 대비 거의 보합, 연율 -0.1%였다. <a href=\"https://gmteight.com/content/detail/452354\" target=\"_blank\" rel=\"noopener noreferrer\">중국 지수 마감</a> <a href=\"https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261116&response=html&type=IND\" target=\"_blank\" rel=\"noopener noreferrer\">대만거래소 마감</a> <a href=\"https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2026/qe263/pdf/gaiyou2631_e.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">일본 내각부 GDP 속보</a>"
+      ]
+    },
+    {
+      "no": "06",
+      "title": "AI 투자 가정과 다음 실적 관측점",
+      "paragraphs": [
+        "연준 금융안정보고서는 13일 높은 주식 평가배수와 AI 인프라의 차입·보증·기업 간 자금 연결을 취약 요인으로 살폈다. 하워드 막스의 11일 메모도 인프라 수익률과 조달 비용이 미래 가정에 민감하다고 지적했다. 두 자료는 이미 집행된 투자와 향후 투자 계획의 현금 회수 조건을 점검할 근거다. <a href=\"https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">연준 금융안정보고서</a> <a href=\"https://www.oaktreecapital.com/insights/memo/a-layman-thinks-about-ai\" target=\"_blank\" rel=\"noopener noreferrer\">하워드 막스 AI 메모</a>",
+        "엔비디아의 실적은 한국시간 18일 06시 20분 전후, 컨퍼런스콜은 07시로 예정됐다. 차세대 제품 인도 일정과 고객의 실제 투자 집행을 본다. 앤트로픽은 예비 공모 문서의 가격 범위와 조달 구조를 실제 공모 결과와 대조할 필요가 있다. <a href=\"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 실적 일정</a> <a href=\"https://www.sec.gov/Archives/edgar/data/2130357/000162828026072953/anthropicpbc-fwpauswrapcap.htm\" target=\"_blank\" rel=\"noopener noreferrer\">앤트로픽 예비 공모 문서</a>"
+      ]
+    }
+  ],
+  "watch": [
+    "외국인 코스피 현물 매도와 메모리 종목별 낙폭",
+    "엔비디아 실적의 인도 일정과 고객 투자",
+    "미국 단기금리와 국내 주식·외환 흐름",
+    "중국 소비 회복과 부동산 제외 민간투자"
+  ]
+});
+window.MARKET_LEDGER.dailyAddenda["2026-11-16"] = {
+  "changes": {
+    "maintained": [
+      "공급사의 발주와 고객의 투자 집행·현금 회수를 함께 본다."
+    ],
+    "new": [
+      "삼성전자 -4.47%, SK하이닉스 -7.89%.",
+      "코스피 외국인 1조3,838억원 순매도. 원·달러는 1.0원 하락.",
+      "중국 부동산을 제외한 민간 고정자산투자도 7.8% 감소."
+    ]
+  },
+  "assessment": [
+    "높은 미국채 금리와 AI 공급망 불확실성이 겹치는 가운데 반도체 대형주와 장비로 매도가 퍼졌다. 외국인·기관의 양 시장 동반 매도와 방어주 일부의 상승이 함께 나타났다."
+  ],
+  "implications": [
+    "16일 반도체 주가 낙폭을 공급계약 변경으로 해석하려면 고객 발주와 인도 일정의 확인이 필요하다.",
+    "중국 생산 호조의 파급을 볼 때 내수 소비와 민간투자의 회복 여부를 따로 확인한다."
+  ],
+  "conclusion": "코스피는 외국인 매도 속 5,100선으로 밀렸고 코스닥에서는 하락 종목이 크게 늘었다. 반도체 공급 일정과 외국인 수급이 동시에 안정되는지가 다음 관측점이다."
+};
+
+
+/* November 17 report. */
+window.MARKET_LEDGER.daily["2026-11"].push({
+  "date": "2026-11-17",
+  "month": "2026년 11월",
+  "createdAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "title": "코스피 5,000선 하회, AI 칩 수출통제와 엔비디아 실적 경계",
+  "tags": [
+    "엔비디아",
+    "수출통제",
+    "반도체",
+    "외국인",
+    "코스피",
+    "CAPE"
+  ],
+  "lead": [
+    "코스피는 4,968.48(-2.59%), 코스닥은 650.06(-2.34%)에 마감했다. 미국 반도체주 급락이 이어진 가운데 외국인은 코스피에서 1조4,430억원을 순매도했다.",
+    "미 상무부가 제3국 데이터센터를 통한 원격 연산 접근을 겨냥한 수출통제 규칙을 공개했다. 엔비디아 이사회는 한국장 마감 이후 별도의 국가안보·수출통제 감독위원회 설치를 발표했다."
+  ],
+  "report": [
+    {
+      "no": "02",
+      "title": "미국 16일 정규장과 반도체 매도",
+      "paragraphs": [
+        "S&P500은 7,416.59(-1.92%), 나스닥 종합은 24,509.76(-2.49%), 다우는 51,608.17(-1.41%)이었다. 필라델피아 반도체지수는 5.28% 하락했고 엔비디아는 156.14달러(-4.12%)에 마감했다. 엔비디아 주가의 직전 주간 등락은 11월 6일 186.64달러에서 13일 162.85달러로 약 -12.7%였다. <a href=\"https://apnews.com/article/2e6a9c41b6336e9240c1b01585d20cd4\" target=\"_blank\" rel=\"noopener noreferrer\">AP 미국 16일 종가</a> <a href=\"https://ph.investing.com/indices/phlx-semiconductor-historical-data\" target=\"_blank\" rel=\"noopener noreferrer\">SOX 이력</a> <a href=\"https://stockanalysis.com/stocks/nvda/history/\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 일별 주가</a>",
+        "같은 날 미 재무부 공표 금리는 2년물 4.83%, 10년물 5.12%로 직전 거래일보다 각각 5bp, 3bp 낮아졌다. SAVE의 10년물 5.129%는 시장 스냅샷이다. 뉴욕 연은 11월 제조업 경기지수는 7.8로 둔화했다. 금리가 내려도 납품·규제·수익성 우려가 큰 성장주에는 위험 프리미엄이 더 높아질 수 있다. <a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve\" target=\"_blank\" rel=\"noopener noreferrer\">미 재무부 공표 금리</a> <a href=\"https://www.newyorkfed.org/medialibrary/media/survey/empire/empire2026/2026_11_empire-state-manufacturing-survey.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">뉴욕 연은 제조업 조사</a>"
+      ]
+    },
+    {
+      "no": "03",
+      "title": "한국 17일 마감과 투자 주체",
+      "paragraphs": [
+        "코스피는 장중 5,084.06까지 올랐으나 저점 4,957.00에 가까운 4,968.48로 마쳤다. 신한 마감표 기준 외국인·기관·개인은 코스피 -1조4,430억·+5,436억·+4,218억원, 코스닥 -896억·-249억·+1,152억원이었다. 코스피 기관은 순매수로 전환했지만 외국인의 매도는 이어졌다. <a href=\"https://markets.ft.markitdigital.com/data/indices/tearsheet/historical?s=KSPI%3AKSC\" target=\"_blank\" rel=\"noopener noreferrer\">코스피 장중·종가 이력</a> <a href=\"https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111715441649K_02_04.pdf&inlineYn=Y&saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 마감 시황</a>",
+        "신한의 상승·하락 종목은 코스피 185·709개, 코스닥 360·1,319개였다. 삼성전자 -3.30%, SK하이닉스 -1.96%, 삼성전기 -3.95%였고 전력·산업재도 약했다. 현대백화점 +7.95%, 신세계 +5.58%, 유한양행 +2.59%처럼 소비·헬스케어 일부에는 매수가 들어왔다. 원·달러 주간 종가는 1,338.2원(+2.5원)이었다. <a href=\"https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111715441649K_02_04.pdf&inlineYn=Y&saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 종목별 등락</a> <a href=\"https://www.lcnews.co.kr/news/articleView.html?idxno=211547\" target=\"_blank\" rel=\"noopener noreferrer\">백화점 종목 마감</a> <a href=\"https://www.newspim.com/news/view/20261117001170\" target=\"_blank\" rel=\"noopener noreferrer\">뉴스핌 외환 주간 마감</a>"
+      ]
+    },
+    {
+      "no": "04",
+      "title": "제3국 데이터센터 원격 연산 규칙",
+      "paragraphs": [
+        "미 상무부 산업안보국은 현지 16일 첨단 반도체 원격 접근에 관한 잠정 최종 규칙을 공개했다. 규칙은 중국 등 해당 국가군이나 마카오에 본사를 둔 기업에 일정 규모 이상의 원격 연산을 제공하는 데이터센터로의 특정 칩 수출·재수출·현지 이전에 허가를 요구한다. 별도로 싱가포르 등 5개국의 일부 거래에 추가 허가 요건을 두며 예외와 신고 조건이 있다. 연방 관보 사전공개 문서는 19일 게재 예정이고 문안은 게재일 발효를 명시한다. <a href=\"https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology\" target=\"_blank\" rel=\"noopener noreferrer\">미 상무부 발표</a> <a href=\"https://public-inspection.federalregister.gov/2026-23529.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">연방 관보 사전공개 문안</a>",
+        "실사와 허가 확인에 시간이 걸리면 영향을 받는 고객의 주문·인도 일정이 달라질 수 있다. 계약과 제품별 적용 범위에 따라 영향이 달라 전 세계 AI 수요 감소로 바로 환산하기 어렵다. 신한이 인용한 2028년 가속기 투자·HBM 전망 하향은 기관 추정으로, 이미 확인된 출하 감소와 구분한다."
+      ]
+    },
+    {
+      "no": "05",
+      "title": "한국장 마감 뒤 엔비디아 이사회 조치",
+      "paragraphs": [
+        "베선트 미 재무장관은 외부 출신 후임과 준법 관련 설명을 요구했다. 회사는 17일 19시(KST) 국가안보·수출통제 감독위원회를 신설하고 외부 독립 전문가의 도움을 받겠다고 발표했다. 시장 마감 뒤 확인된 지배구조 조치다. 조사 결론이나 판매 제한·손실액의 공표는 포함되지 않았다. <a href=\"https://news.bloomberglaw.com/private-equity/nvidias-ceo-search-draws-fire-with-bessents-shakeup-call-3\" target=\"_blank\" rel=\"noopener noreferrer\">Bloomberg 인선 보도</a> <a href=\"https://www.globenewswire.com/news-release/2026/11/17/3404362/0/en/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee.html\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 이사회 발표</a>",
+        "콜레트 크레스 임시 CEO 체제의 분기 실적은 국내 시각 18일 06:20 전후, 컨퍼런스콜은 07:00 예정이다. 실제 제품 인도, 고객의 주문 유지, 가이던스에 반영한 판매 조건을 각각 본다. 앤트로픽은 예비 공모 문서의 일정과 최종 조달 조건을 대조할 시점이다. <a href=\"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 실적 공식 일정</a> <a href=\"https://www.sec.gov/Archives/edgar/data/2130357/000162828026072953/anthropicpbc-fwpauswrapcap.htm\" target=\"_blank\" rel=\"noopener noreferrer\">앤트로픽 예비 공모 문서</a>"
+      ]
+    },
+    {
+      "no": "06",
+      "title": "미국 주식 평가와 AI 성장 추정",
+      "paragraphs": [
+        "샌프란시스코 연은의 16일 자료는 3분기 CAPE 40.5와 최근 상승을 잠재성장률, 중립 실질금리, 장기 자연실업률과 거시 불확실성으로 분석했다. 네 변수 모형의 설명력은 과거 표본에 대한 결과이며 현재 배수의 지속성을 보장하는 것은 아니다. <a href=\"https://www.frbsf.org/research-and-insights/publications/economic-letter/2026/11/connecting-stock-market-to-labor-market-during-ai-boom/\" target=\"_blank\" rel=\"noopener noreferrer\">샌프란시스코 연은 CAPE 분석</a>",
+        "삼성리서치가 제시한 미국 AI 투자의 성장 기여는 직접 약 0.5%p, 부의 효과 포함 약 0.5~0.8%p라는 해석이다. 산식과 비교 기간이 첨부에 제시되지 않아 성장률 전망에 더하지 않았다. 기업 투자 지출 가운데 미국에서 창출되는 부가가치와 자산가격이 소비에 미치는 영향을 따로 봐야 한다."
+      ]
+    }
+  ],
+  "watch": [
+    "18일 엔비디아 실적의 제품 인도·수출허가·고객 실사 설명",
+    "제3국 데이터센터 관련 허가 범위와 주문 일정",
+    "코스피 현물 외국인 매도와 기관 순매수의 지속성",
+    "미국 10월 소매판매 이후 단기금리와 달러"
+  ]
+});
+window.MARKET_LEDGER.dailyAddenda["2026-11-17"] = {
+  "changes": {
+    "maintained": [
+      "AI 인프라 기업의 매출과 실제 인도·현금 회수를 함께 본다."
+    ],
+    "new": [
+      "코스피 5,000선 하회, 외국인 1조4,430억원 순매도.",
+      "미 상무부가 제3국 데이터센터의 첨단 칩 원격 접근을 겨냥한 허가 규칙 공개.",
+      "엔비디아 이사회가 한국장 마감 뒤 국가안보·수출통제 감독위원회 설치 발표."
+    ]
+  },
+  "assessment": [
+    "미국 장기금리가 소폭 내려도 반도체를 중심으로 미국 주가가 하락했고, 한국은 외국인 매도에 5,000선을 내줬다. 실적을 앞두고 후속 제품과 규제 적용의 불확실성이 겹쳤다."
+  ],
+  "implications": [
+    "수출통제는 칩의 물리적 도착지에 더해 원격 사용자의 소재·통제 관계와 실제 용도를 보게 한다.",
+    "감독위원회 설치와 고객별 출하 및 허가 영향은 서로 다른 시점에 확인될 수 있다."
+  ],
+  "conclusion": "코스피는 기관 순매수에도 5,000선 아래로 밀렸다. 다음 관측점은 엔비디아 가이던스와 대형 메모리 외국인 매도 진정 여부다."
+};
+

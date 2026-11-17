@@ -3406,3 +3406,601 @@ if(!window.MARKET_LEDGER.macroEvents.categories.includes('에너지·공급망')
   }
   archive.updatedAt = "2026-11-12";
 }
+
+/* November 13 follow-up observations for existing cases. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  const followups = [
+  {
+    "id": "2026-11-12-nvidia-ceo-transition",
+    "sources": [
+      {
+        "id": "nov13-first-us-close",
+        "title": "승계 발표 이후 첫 정규장",
+        "publisher": "AP",
+        "publishedAt": "2026-11-12 미국",
+        "observedAt": "11/12 미국 정규장",
+        "url": "https://apnews.com/article/3f3668a937a11535103e3a5c8d82c9fc",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "주요 지수 종가. 엔비디아 가격은 개별 주가 이력과 대조."
+      },
+      {
+        "id": "nov13-nvda-prices",
+        "title": "엔비디아 일별 거래 이력",
+        "publisher": "Yahoo Finance",
+        "publishedAt": "2026-11-15 조회",
+        "observedAt": "11/11~13 미국 정규장",
+        "url": "https://finance.yahoo.com/quote/NVDA/history/",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "12일 166.19달러, 13일 162.85달러."
+      },
+      {
+        "id": "nov13-korea-close",
+        "title": "공식 승계 발표 이후 한국 첫 종가",
+        "publisher": "신한·삼성증권",
+        "publishedAt": "2026-11-13",
+        "observedAt": "11/13 한국 정규장",
+        "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111316113363K_02_01.pdf&inlineYn=Y&saveKey=research.pdf",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "신한은 수급, 삼성증권은 지수와 종목 등락을 대조.",
+        "dailyDate": "2026-11-13"
+      },
+      {
+        "id": "nov13-us-close",
+        "title": "금요일 미국 종가",
+        "publisher": "AP",
+        "publishedAt": "2026-11-13 미국",
+        "observedAt": "11/13 미국 정규장",
+        "url": "https://apnews.com/article/12c1e8155fb85c3c7b09e058ed6d3c74",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "다우 +0.10%, S&P500 -0.40%, 나스닥 -0.91%."
+      },
+      {
+        "id": "nov13-nvda-results-date",
+        "title": "3분기 실적 발표 일정",
+        "publisher": "엔비디아",
+        "publishedAt": "2026-10-28",
+        "observedAt": "11/17 미국 장후 발표 예정",
+        "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "한국시간 18일 오전 06:20 전후 실적, 07:00 콘퍼런스콜."
+      }
+    ],
+    "chapter": {
+      "title": "11월 13일 후속 — 첫 미국 종가와 한국 메모리의 반응",
+      "paragraphs": [
+        "승계 발표로 경영진 공백의 범위는 좁혀졌지만, 시장은 창업자 교체가 제품 출시와 고객 의사결정에 미칠 영향을 다시 평가했다. 미국 12일 첫 정규장에서 엔비디아는 장중 약 14% 하락한 뒤 166.19달러(-4.34%)로 마쳤다. 나스닥 종합은 -0.39%였다. 충격 초기에 쏠렸던 엔비디아 매도가 장중 일부 되돌려졌고, 지수 낙폭은 상대적으로 작았다. 13일 엔비디아는 162.85달러(-2.01%), 나스닥은 -0.91%를 기록했다.",
+        "한국 13일은 공식 발표와 첫 미국 종가를 함께 반영할 수 있었던 거래일이다. 코스피는 5,500선을 넘어섰다가 5,290.53(-0.98%)으로 마쳤다. SK하이닉스 -3.03%와 삼성전자 약 -1.0%에 비해 이수페타시스는 +5.23%였다. 고객과 가속기 생태계에 대한 노출이 상대 성과의 한 설명이지만, 같은 날 외국인 현물 매도와 미국 10년물 5.10%, 국내 실적과 정책 기대 변화가 겹쳤다.",
+        "과거 장중 낙폭과 현재 사업 위험을 연결할 때는 고객의 실제 발주와 계약, 차세대 제품의 일정이 기준이다. 17일 미국 장후 실적에서 임시 경영진이 제품·공급 일정을 어떻게 설명하는지가 다음 관측점이다."
+      ],
+      "sourceIds": [
+        "nov13-first-us-close",
+        "nov13-nvda-prices",
+        "nov13-korea-close",
+        "nov13-us-close",
+        "nov13-nvda-results-date"
+      ]
+    },
+    "timeline": [
+      {
+        "at": "2026-11-12 미국 정규장",
+        "session": "발표 뒤 첫 정규장",
+        "title": "엔비디아 낙폭 일부 회복",
+        "paragraphs": [
+          "승계 발표로 경영진 공백의 범위는 좁혀졌지만, 시장은 창업자 교체가 제품 출시와 고객 의사결정에 미칠 영향을 다시 평가했다. 미국 12일 첫 정규장에서 엔비디아는 장중 약 14% 하락한 뒤 166.19달러(-4.34%)로 마쳤다. 나스닥 종합은 -0.39%였다. 충격 초기에 쏠렸던 엔비디아 매도가 장중 일부 되돌려졌고, 지수 낙폭은 상대적으로 작았다."
+        ],
+        "sourceIds": [
+          "nov13-first-us-close",
+          "nov13-nvda-prices"
+        ]
+      },
+      {
+        "at": "2026-11-13 한국 정규장",
+        "session": "한국 반영",
+        "title": "외국인 순매도와 메모리 차별화",
+        "paragraphs": [
+          "한국 13일은 공식 발표와 첫 미국 종가를 함께 반영할 수 있었던 거래일이다. 코스피는 5,500선을 넘어섰다가 5,290.53(-0.98%)으로 마쳤다. SK하이닉스 -3.03%와 삼성전자 약 -1.0%에 비해 이수페타시스는 +5.23%였다. 고객과 가속기 생태계에 대한 노출이 상대 성과의 한 설명이지만, 같은 날 외국인 현물 매도와 미국 10년물 5.10%, 국내 실적과 정책 기대 변화가 겹쳤다."
+        ],
+        "sourceIds": [
+          "nov13-korea-close"
+        ]
+      },
+      {
+        "at": "2026-11-13 미국 정규장",
+        "session": "후속 종가",
+        "title": "엔비디아 추가 하락",
+        "paragraphs": [
+          "엔비디아는 162.85달러(-2.01%), 나스닥 종합은 -0.91%로 마쳤다."
+        ],
+        "sourceIds": [
+          "nov13-us-close",
+          "nov13-nvda-prices"
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "market": "엔비디아 주가",
+        "window": "12일 첫 미국 정규장",
+        "observation": "장중 약 -14% · 종가 166.19달러(-4.34%)",
+        "interpretation": "개장 후 깊어진 낙폭을 장중 일부 되돌렸다.",
+        "sourceIds": [
+          "nov13-first-us-close",
+          "nov13-nvda-prices"
+        ]
+      },
+      {
+        "market": "한국 반도체",
+        "window": "13일 정규장",
+        "observation": "삼성전자 약 -1.0% · SK하이닉스 -3.03% · 이수페타시스 +5.23%",
+        "interpretation": "외국인 순매도와 금리 상승이 겹치는 가운데 공급망별 반응이 갈렸다.",
+        "sourceIds": [
+          "nov13-korea-close"
+        ]
+      }
+    ],
+    "impact": "미국 11일 장후 -8.6%, 공식 발표 후 첫 정규장 장중 약 -14%·종가 -4.34%. 13일 한국에서는 SK하이닉스 -3.03%, 코스피 -0.98%."
+  },
+  {
+    "id": "2026-11-10-us-october-cpi",
+    "sources": [
+      {
+        "id": "nov13-oct-ppi",
+        "title": "미국 10월 생산자물가지수",
+        "publisher": "미 노동통계국",
+        "publishedAt": "2026-11-13 08:30 ET",
+        "observedAt": "2026년 10월",
+        "url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "최종수요 +0.3% MoM, +6.5% YoY. 식품·에너지·유통서비스 제외 +0.5% MoM."
+      },
+      {
+        "id": "nov13-ust-followup",
+        "title": "미국채 2년·10년 후속",
+        "publisher": "미 재무부",
+        "publishedAt": "2026-11-13",
+        "observedAt": "11/10·12·13 미국 일별",
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "2년 4.73→4.86→4.88%, 10년 4.98→5.10→5.15%. 11일 현물 휴장."
+      }
+    ],
+    "chapter": {
+      "title": "11월 13일 후속 — PPI 헤드라인 둔화와 높은 기조 비용",
+      "paragraphs": [
+        "미국 13일 발표된 최종수요 PPI는 전월비 0.3%로 9월 수정치 1.4%에서 둔화했다. 식품·에너지·유통 서비스를 제외하면 전월비 0.5%로 9월과 같았고, 운송·창고 서비스는 2.0% 올랐다. CPI에서 에너지의 월간 기여가 작아진 흐름과 함께 볼 수 있지만, 생산 단계의 운송비와 소비 물가 사이에는 품목과 반영 시차의 차이가 있다.",
+        "재무부 기준 2년·10년물은 12일 이미 4.86%·5.10%였고, 13일에는 4.88%·5.15%로 올랐다. 첫 상승이 PPI 전에 일어났으므로 주간 금리 움직임은 기존 CPI와 연준 경계, 에너지 등 동시 변수와 함께 해석한다. PPI는 한국시간 13일 22시 30분에 발표돼 다음 국내 거래일의 선행 정보였다."
+      ],
+      "sourceIds": [
+        "nov13-oct-ppi",
+        "nov13-ust-followup"
+      ]
+    },
+    "timeline": [
+      {
+        "at": "2026-11-13 08:30 ET / 22:30 KST",
+        "session": "후속 물가",
+        "title": "10월 PPI와 금요일 국채",
+        "paragraphs": [
+          "미국 13일 발표된 최종수요 PPI는 전월비 0.3%로 9월 수정치 1.4%에서 둔화했다. 식품·에너지·유통 서비스를 제외하면 전월비 0.5%로 9월과 같았고, 운송·창고 서비스는 2.0% 올랐다. CPI에서 에너지의 월간 기여가 작아진 흐름과 함께 볼 수 있지만, 생산 단계의 운송비와 소비 물가 사이에는 품목과 반영 시차의 차이가 있다.",
+          "재무부 기준 2년·10년물은 12일 이미 4.86%·5.10%였고, 13일에는 4.88%·5.15%로 올랐다. 첫 상승이 PPI 전에 일어났으므로 주간 금리 움직임은 기존 CPI와 연준 경계, 에너지 등 동시 변수와 함께 해석한다. PPI는 한국시간 13일 22시 30분에 발표돼 다음 국내 거래일의 선행 정보였다."
+        ],
+        "sourceIds": [
+          "nov13-oct-ppi",
+          "nov13-ust-followup"
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "market": "미국 국채",
+        "window": "11/12→11/13 재무부 공표",
+        "observation": "2년물 4.86→4.88% · 10년물 5.10→5.15%",
+        "interpretation": "13일 변화는 관측값이며 PPI의 독립 효과는 분리하지 않았다.",
+        "sourceIds": [
+          "nov13-ust-followup"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2026-11-02-us-iran-talks-oil-selloff",
+    "sources": [
+      {
+        "id": "nov13-iea-omr",
+        "title": "11월 석유시장 보고서",
+        "publisher": "IEA",
+        "publishedAt": "2026-11-13",
+        "observedAt": "10월 재고·4분기 전망",
+        "url": "https://www.iea.org/reports/oil-market-report-november-2026",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "4분기 공급 전망 +330만 b/d, 관측 재고 +5,200만 배럴, 해상 +8,600만 배럴."
+      },
+      {
+        "id": "nov13-ecb-refining",
+        "title": "유로 지역 경유 정제 마진 분석",
+        "publisher": "ECB",
+        "publishedAt": "2026-11-11",
+        "observedAt": "핵심 가격 관측 10/28까지",
+        "url": "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202607_05~d82730508f.en.html",
+        "verification": "원문 또는 마감 자료 대조",
+        "note": "경유 크랙 스프레드가 분쟁 전의 약 3배."
+      }
+    ],
+    "chapter": {
+      "title": "11월 13일 후속 — 공급 우위 전망과 경유 부족의 공존",
+      "paragraphs": [
+        "11월 초 원유 선물 급락이 협상 기대를 반영했다면, 13일 IEA가 제시한 추가 근거는 실제 걸프 수출과 10월 관측 재고다. IEA는 4분기 세계 석유 공급 전망을 하루 330만 배럴 상향하며 수급이 공급 우위로 돌아설 것으로 봤다. 10월 관측 재고가 5,200만 배럴 늘었지만 해상 재고가 8,600만 배럴 증가했고 육상 재고는 계속 줄었다. 선적 증가가 항만 도착과 정제제품 공급으로 이어지기까지는 시간이 걸린다.",
+        "북해산 현물은 10월 고점 배럴당 136달러에서 보고서 작성 시 약 93달러로 낮아졌으나 유럽 경유는 약 180달러로 전쟁 전보다 77% 높았다. 유럽 경유 크랙을 분석한 ECB 자료는 10월 28일까지의 가격을 주로 반영한다. 정제 및 운송 제약이 풀릴 때까지 원유 하락의 물가 완화 효과는 제품별로 달라질 수 있다."
+      ],
+      "sourceIds": [
+        "nov13-iea-omr",
+        "nov13-ecb-refining"
+      ]
+    },
+    "timeline": [
+      {
+        "at": "2026-11-13 IEA 공표",
+        "session": "후속 수급",
+        "title": "세계 석유 공급 상향과 높은 경유 가격",
+        "paragraphs": [
+          "11월 초 원유 선물 급락이 협상 기대를 반영했다면, 13일 IEA가 제시한 추가 근거는 실제 걸프 수출과 10월 관측 재고다. IEA는 4분기 세계 석유 공급 전망을 하루 330만 배럴 상향하며 수급이 공급 우위로 돌아설 것으로 봤다. 10월 관측 재고가 5,200만 배럴 늘었지만 해상 재고가 8,600만 배럴 증가했고 육상 재고는 계속 줄었다. 선적 증가가 항만 도착과 정제제품 공급으로 이어지기까지는 시간이 걸린다.",
+          "북해산 현물은 10월 고점 배럴당 136달러에서 보고서 작성 시 약 93달러로 낮아졌으나 유럽 경유는 약 180달러로 전쟁 전보다 77% 높았다. 유럽 경유 크랙을 분석한 ECB 자료는 10월 28일까지의 가격을 주로 반영한다. 정제 및 운송 제약이 풀릴 때까지 원유 하락의 물가 완화 효과는 제품별로 달라질 수 있다."
+        ],
+        "sourceIds": [
+          "nov13-iea-omr",
+          "nov13-ecb-refining"
+        ]
+      }
+    ],
+    "reactions": []
+  }
+];
+  for (const followup of followups) {
+    const record = archive.events.find(event => event.id === followup.id);
+    record.sources.push(...followup.sources);
+    record.timeline.push(...followup.timeline);
+    record.reactions.push(...followup.reactions);
+    record.casebook.sections.push(followup.chapter);
+    record.updates.push({ date: "2026-11-13", ...followup.chapter });
+    if (followup.impact) record.casebook.impact = followup.impact;
+    record.updatedAt = "2026-11-15";
+    record.casebook.editedAt = "2026-11-15";
+  }
+  archive.updatedAt = "2026-11-15";
+}
+
+
+/* November 16 Asia-market follow-up to the NVIDIA CEO transition. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  const record = archive.events.find(event => event.id === "2026-11-12-nvidia-ceo-transition");
+  record.sources.push(...[
+  {
+    "id": "nov16-krx-close",
+    "title": "한국 16일 주식시장 마감",
+    "publisher": "신한투자증권·삼성증권·미래에셋증권",
+    "publishedAt": "2026-11-16 한국",
+    "observedAt": "11/16 한국 정규장",
+    "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111616305082K_02_02.pdf&inlineYn=Y&saveKey=research.pdf",
+    "verification": "원문 또는 마감 자료 대조",
+    "note": "신한은 수급·시장 폭, 삼성증권은 종목 종가, 미래에셋은 업종·ETF를 대조했다.",
+    "dailyDate": "2026-11-16"
+  },
+  {
+    "id": "nov16-taiex-close",
+    "title": "대만 16일 가권지수 마감",
+    "publisher": "대만거래소",
+    "publishedAt": "2026-11-16 대만",
+    "observedAt": "11/16 대만 정규장",
+    "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261116&response=html&type=IND",
+    "verification": "원문 또는 마감 자료 대조",
+    "note": "41,040.08(-6.03%)."
+  },
+  {
+    "id": "nov16-huang-return-report",
+    "title": "젠슨 황 복귀 논의 보도",
+    "publisher": "Reuters·Financial Times",
+    "publishedAt": "2026-11-15 미국 / 11/16 한국",
+    "observedAt": "16일 한국 개장 전 복귀 논의 보도",
+    "url": "https://www.investing.com/news/stock-market-news/jensen-huang-discusses-comeback-as-nvidia-ceo-with-allies-ft-reports-5028065",
+    "verification": "원문 또는 마감 자료 대조",
+    "note": "측근과 논의했다는 보도. 회사의 공식 인선 공시와 구분."
+  },
+  {
+    "id": "nov16-dram-dismissal",
+    "title": "미국 D램 반독점 소송 기각 신청 판단",
+    "publisher": "미 캘리포니아 북부 연방법원",
+    "publishedAt": "2026-11-14 미국",
+    "observedAt": "기각 신청을 받아들이지 않은 법원 명령",
+    "url": "https://docs.justia.com/cases/federal/district-courts/california/candce/5%3A2026cv06345/472931/68",
+    "verification": "원문 또는 마감 자료 대조",
+    "note": "사건번호 5:26-cv-06345-NW, 문서 68. 책임에 관한 최종 판결은 남아 있다."
+  },
+  {
+    "id": "nov16-prior-sox",
+    "title": "직전 미국 반도체지수 마감",
+    "publisher": "Investing.com",
+    "publishedAt": "2026-11-17 조회",
+    "observedAt": "11/13 미국 정규장",
+    "url": "https://ph.investing.com/indices/phlx-semiconductor-historical-data",
+    "verification": "원문 또는 마감 자료 대조",
+    "note": "필라델피아 반도체지수 -3.43%."
+  },
+  {
+    "id": "nov16-krw-close",
+    "title": "16일 원·달러 주간 마감",
+    "publisher": "뉴시스",
+    "publishedAt": "2026-11-16 한국",
+    "observedAt": "11/16 서울 외환시장 15:30",
+    "url": "https://nwww.newsis.com/view/NISX20261116_0003870079",
+    "verification": "원문 또는 마감 자료 대조",
+    "note": "1,335.7원(-1.0원)."
+  },
+  {
+    "id": "nov16-nbs-october",
+    "title": "중국 10월 실물 지표",
+    "publisher": "중국 국가통계국",
+    "publishedAt": "2026-11-16 중국",
+    "observedAt": "2026년 10월, 투자는 1~10월 누적",
+    "url": "https://english.www.gov.cn/archive/statistics/202611/16/content_WS6afa6dccc6d00ca5f9a0e4b3.html",
+    "verification": "원문 또는 마감 자료 대조",
+    "note": "산업생산 +4.8%, 소매 +0.4%, 누적 고정자산투자 -8.1%."
+  },
+  {
+    "id": "nov16-ust-and-risk",
+    "title": "한국 개장 전 미국채 공식 금리",
+    "publisher": "미 재무부",
+    "publishedAt": "2026-11-13 미국",
+    "observedAt": "11/13 미국 재무부 파수익률",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+    "verification": "공식 시계열 확인",
+    "note": "2년 4.88%, 10년 5.15%."
+  }
+]);
+  const chapter = {
+  "title": "11월 16일 후속 — 국내 메모리와 대만 기술주로 이어진 매도",
+  "paragraphs": [
+    "직전 미국 13일 엔비디아가 2.01% 더 하락하는 동안 필라델피아 반도체지수도 3.43% 밀렸다. 한국 개장 전에는 젠슨 황이 측근과 복귀 가능성을 논의했다는 보도가 전해졌다. 후속 인선이 유동적인 가운데 임시 CEO 체제와 공식 실적 일정이 유지됐고, 시장에는 제품 출시와 고객 인도 계획의 가시성이 중요해졌다.",
+    "한국 16일 코스피는 5,100.50(-3.59%), 코스닥은 665.65(-4.86%)에 마감했다. 외국인이 코스피에서 1조3,838억원 순매도했고, SK하이닉스는 7.89%, 삼성전자는 4.47% 하락했다. 대만 가권지수도 6.03% 내렸다. 반도체 노출이 높은 시장의 하락이 컸지만, 원·달러 주간 마감은 1,335.7원으로 1.0원 하락했다.",
+    "미국 D램 소송의 기각 신청을 받아들이지 않은 결정, 미국채 금리 상승과 AI 조달 우려, 중국 실물 지표 둔화가 동시에 알려졌다. 당일 아시아 낙폭에서 경영진 보도의 기여만 분리하기는 어렵다. 고객이 발주와 인도 일정을 변경했는지는 공급사 실적과 고객 공시로 판단할 사안이다."
+  ],
+  "sourceIds": [
+    "nov16-krx-close",
+    "nov16-taiex-close",
+    "nov16-huang-return-report",
+    "nov16-dram-dismissal",
+    "nov16-prior-sox",
+    "nov16-krw-close",
+    "nov16-nbs-october",
+    "nov16-ust-and-risk",
+    "nov13-nvda-prices",
+    "nov13-nvda-results-date"
+  ]
+};
+  record.timeline.push({
+    at: "2026-11-16 한국·대만 정규장",
+    session: "아시아 후속 반응",
+    title: "반도체 공급망과 코스닥 매도 확산",
+    paragraphs: [chapter.paragraphs[1]],
+    sourceIds: ["nov16-krx-close", "nov16-taiex-close", "nov16-krw-close"]
+  });
+  record.reactions.push({
+  "market": "한국·대만 주식, 원·달러",
+  "window": "11/16 아시아 정규장 · 서울 외환 주간 마감",
+  "observation": "코스피 -3.59% · 코스닥 -4.86% · SK하이닉스 -7.89% · 대만 가권 -6.03% · 원·달러 1,335.7원(-1.0원)",
+  "interpretation": "대형 메모리 중심의 주식 약세가 나타났다. 높은 금리와 D램 소송 소식이 같은 거래일의 변수였다.",
+  "sourceIds": [
+    "nov16-krx-close",
+    "nov16-taiex-close",
+    "nov16-dram-dismissal",
+    "nov16-krw-close"
+  ]
+});
+  record.casebook.sections.push(chapter);
+  record.updates.push({ date: "2026-11-16", ...chapter });
+  record.updatedAt = "2026-11-17";
+  record.casebook.editedAt = "2026-11-17";
+  record.casebook.impact = "공식 발표 후 첫 미국 정규장 엔비디아 장중 약 -14%·종가 -4.34%. 16일 한국 코스피 -3.59%, 대만 가권 -6.03%로 반도체 매도가 확대됐다.";
+  archive.updatedAt = "2026-11-17";
+}
+
+
+/* November 17 export-control and board-oversight follow-up. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  const record = archive.events.find(event => event.id === "2026-11-12-nvidia-ceo-transition");
+  record.sources.push(...[
+  {
+    "id": "nov17-bis",
+    "title": "미 상무부의 반도체 원격 접근 잠정 최종 규칙",
+    "publisher": "미 상무부 산업안보국",
+    "publishedAt": "2026-11-16 미국",
+    "observedAt": "규칙 공개",
+    "url": "https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology",
+    "note": "일정 범위의 원격 연산 제공과 관련한 수출허가·고객 실사 조건.",
+    "verification": "원문 또는 마감 자료 대조"
+  },
+  {
+    "id": "nov17-register",
+    "title": "첨단 반도체 원격 접근 통제 문안, RIN 0694-AK50",
+    "publisher": "Federal Register 사전공개",
+    "publishedAt": "2026-11-16 미국",
+    "observedAt": "공개 문안 및 11/19 게재 예정",
+    "url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
+    "note": "발효는 관보 게재일로 규정. 특정 경로·국가·용도에 조건과 예외가 있다.",
+    "verification": "원문 또는 마감 자료 대조"
+  },
+  {
+    "id": "nov17-nvda-board",
+    "title": "국가안보·수출통제 감독위원회 설치",
+    "publisher": "엔비디아 이사회",
+    "publishedAt": "2026-11-17 05:00 ET / 19:00 KST",
+    "observedAt": "한국장 마감 뒤 공식 발표",
+    "url": "https://www.globenewswire.com/news-release/2026/11/17/3404362/0/en/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee.html",
+    "note": "독립 외부 전문가 활용과 이사회 차원의 준법 감독. 조사 결론에 관한 공표는 없다.",
+    "verification": "원문 또는 마감 자료 대조"
+  },
+  {
+    "id": "nov17-bessent",
+    "title": "베선트 발언과 후임 인선 논의",
+    "publisher": "Bloomberg",
+    "publishedAt": "2026-11-15~16 미국",
+    "observedAt": "후임 인선 및 준법 관련 설명 요구",
+    "url": "https://news.bloomberglaw.com/private-equity/nvidias-ceo-search-draws-fire-with-bessents-shakeup-call-3",
+    "note": "외부 CEO 영입과 설명을 공개 요구. 개별 조사 결과와 구분.",
+    "verification": "원문 또는 마감 자료 대조"
+  },
+  {
+    "id": "nov17-us-equities",
+    "title": "미 16일 주식시장 마감",
+    "publisher": "AP",
+    "publishedAt": "2026-11-16 미국",
+    "observedAt": "16일 미국 정규장",
+    "url": "https://apnews.com/article/2e6a9c41b6336e9240c1b01585d20cd4",
+    "note": "S&P500 -1.92%, 나스닥 종합 -2.49%.",
+    "verification": "원문 또는 마감 자료 대조"
+  },
+  {
+    "id": "nov17-us-nvda",
+    "title": "엔비디아 정규장 종가",
+    "publisher": "Stock Analysis",
+    "publishedAt": "2026-11-17 조회",
+    "observedAt": "16일 미국 정규장",
+    "url": "https://stockanalysis.com/stocks/nvda/history/",
+    "note": "156.14달러(-4.12%). 11/6–11/13 약 -12.7%.",
+    "verification": "원문 또는 마감 자료 대조"
+  },
+  {
+    "id": "nov17-us-sox",
+    "title": "미 반도체지수 정규장 종가",
+    "publisher": "Investing.com",
+    "publishedAt": "2026-11-17 조회",
+    "observedAt": "16일 미국 정규장",
+    "url": "https://ph.investing.com/indices/phlx-semiconductor-historical-data",
+    "note": "SOX 9,610.7(-5.28%).",
+    "verification": "원문 또는 마감 자료 대조"
+  },
+  {
+    "id": "nov17-kr-equities",
+    "title": "한국 17일 정규장 마감",
+    "publisher": "삼성증권·신한투자증권",
+    "publishedAt": "2026-11-17 한국",
+    "observedAt": "17일 한국 정규장",
+    "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111715441649K_02_04.pdf&inlineYn=Y&saveKey=research.pdf",
+    "note": "지수·종목은 삼성증권 대조. 외국인 현물 수급은 첨부 신한 마감표.",
+    "verification": "원문 또는 마감 자료 대조",
+    "dailyDate": "2026-11-17"
+  },
+  {
+    "id": "nov17-us-ust",
+    "title": "미 재무부 16일 파수익률",
+    "publisher": "미 재무부",
+    "publishedAt": "2026-11-16 미국",
+    "observedAt": "16일 미국 재무부 파수익률",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "note": "2년물 4.83%, 10년물 5.12%.",
+    "verification": "원문 또는 마감 자료 대조"
+  }
+]);
+  record.timeline.push(...[
+  {
+    "at": "2026-11-16 미국 / 17일 한국 개장 전",
+    "session": "규제 공개",
+    "title": "첨단 반도체 원격 접근 관련 잠정 최종 규칙",
+    "paragraphs": [
+      "특정 해외 데이터센터로 장비가 넘어갈 때 원격 연산을 쓰는 고객의 소재·소유 관계와 용도에 따라 추가 허가가 필요해질 수 있다. 공개 문안은 관보 게재일 발효를 명시했고 19일 게재 예정이었다."
+    ],
+    "sourceIds": [
+      "nov17-bis",
+      "nov17-register"
+    ]
+  },
+  {
+    "at": "2026-11-16 미국 정규장",
+    "session": "미국 시장",
+    "title": "엔비디아와 반도체지수 하락",
+    "paragraphs": [
+      "엔비디아 156.14달러(-4.12%), SOX -5.28%, 나스닥 종합 -2.49%. 미 재무부 10년물 공표 금리는 5.12%로 3bp 내려갔다."
+    ],
+    "sourceIds": [
+      "nov17-us-equities",
+      "nov17-us-nvda",
+      "nov17-us-sox",
+      "nov17-us-ust"
+    ]
+  },
+  {
+    "at": "2026-11-17 한국 정규장",
+    "session": "한국 반영",
+    "title": "코스피 5,000선 하회",
+    "paragraphs": [
+      "코스피 4,968.48(-2.59%), 코스닥 650.06(-2.34%). 신한 기준 외국인 코스피 순매도 1조4,430억원. 삼성전자 -3.30%, SK하이닉스 -1.96%."
+    ],
+    "sourceIds": [
+      "nov17-kr-equities"
+    ]
+  },
+  {
+    "at": "2026-11-17 19:00 KST",
+    "session": "한국장 마감 뒤",
+    "title": "엔비디아 이사회 감독위원회 설치 발표",
+    "paragraphs": [
+      "국가안보와 수출통제를 상시 감독하는 위원회가 설치됐다. 회사는 기존 조직의 보고 체계와 외부 전문가 활용을 공개했다. 후임 인선이나 사안별 조사 결론은 발표에 포함되지 않았다."
+    ],
+    "sourceIds": [
+      "nov17-nvda-board"
+    ]
+  }
+]);
+  record.reactions.push(...[
+  {
+    "market": "미국 엔비디아·반도체·나스닥",
+    "window": "16일 미국 정규장",
+    "observation": "엔비디아 -4.12% · SOX -5.28% · 나스닥 종합 -2.49%",
+    "interpretation": "후임 인선과 규제 불확실성, 실적 경계가 겹쳤다. 업종 하락으로 새 규칙만의 가격 효과를 계산할 수 없다.",
+    "sourceIds": [
+      "nov17-us-equities",
+      "nov17-us-nvda",
+      "nov17-us-sox",
+      "nov17-us-ust"
+    ]
+  },
+  {
+    "market": "한국 주식",
+    "window": "17일 정규장",
+    "observation": "코스피 -2.59% · 코스닥 -2.34% · 코스피 외국인 -1조4,430억원",
+    "interpretation": "외국인 현물 매도와 업종 전반 약세가 이어졌다. 이사회 공시는 마감 뒤에 나왔다.",
+    "sourceIds": [
+      "nov17-kr-equities",
+      "nov17-nvda-board"
+    ]
+  }
+]);
+  const chapter = {
+  "title": "11월 17일 후속 — 원격 접근 통제와 이사회 감독 강화",
+  "paragraphs": [
+    "후임을 둘러싼 논의에는 기존 고객·제품 계획의 연속성과 거래·수출통제의 감독이라는 두 문제가 겹쳤다. 베선트는 외부 인사와 준법 관련 설명을 요구했다. 이어 미 상무부가 16일 공개한 규칙은 일정 범위의 원격 컴퓨팅을 제공하는 제3국 데이터센터로 장비가 공급될 때 적용되는 허가와 실사 요건을 제시했다. 회사가 선적한 지역 외에 최종 연산 이용 주체를 확인해야 하므로, 영향을 받는 거래에서는 허가·인도 일정이 달라질 수 있다. 공개 문안은 관보 게재일 발효를 명시했고 19일 게재 예정이었다.",
+    "16일 미국 정규장에서 엔비디아 -4.12%, SOX -5.28%, 나스닥 종합 -2.49%였다. 10년물은 5.12%로 3bp 낮아졌다. 17일 한국 코스피는 외국인 순매도 속 4,968.48(-2.59%)로 마감했다. 실적 경계와 AI 투자 전망의 하향 논의도 겹쳐 규칙 발표의 독립적인 가격 효과는 식별할 수 없다.",
+    "회사의 공식 소식은 한국장 마감 뒤에 나왔다. 17일 19시 엔비디아는 국가안보·수출통제 감독위원회 설치를 발표했다. 감독 구조의 변경을 통해 확인해야 할 변수는 이후 허가와 고객 실사, 제품 인도·가이던스다. 조사 결과나 손실액은 별도 공표가 필요한 사안이다."
+  ],
+  "sourceIds": [
+    "nov17-bis",
+    "nov17-register",
+    "nov17-nvda-board",
+    "nov17-bessent",
+    "nov17-us-equities",
+    "nov17-us-nvda",
+    "nov17-us-sox",
+    "nov17-kr-equities",
+    "nov17-us-ust"
+  ]
+};
+  record.casebook.sections.push(chapter);
+  record.updates.push({ date: "2026-11-17", ...chapter });
+  record.updatedAt = "2026-11-17";
+  record.casebook.editedAt = "2026-11-17";
+  record.casebook.impact = "공식 발표 뒤 첫 미국 정규장 엔비디아 종가 -4.34%. 16일 미국 SOX -5.28%, 17일 한국 코스피 -2.59%로 약세가 이어졌다.";
+  archive.updatedAt = "2026-11-17";
+}
+
