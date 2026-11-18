@@ -1249,3 +1249,101 @@ window.MARKET_LEDGER.dailyAddenda["2026-11-17"] = {
   "conclusion": "코스피는 기관 순매수에도 5,000선 아래로 밀렸다. 다음 관측점은 엔비디아 가이던스와 대형 메모리 외국인 매도 진정 여부다."
 };
 
+
+/* November 18 report. */
+window.MARKET_LEDGER.daily["2026-11"].push({
+  "date": "2026-11-18",
+  "month": "2026년 11월",
+  "createdAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "title": "엔비디아 실적에 코스피 5,000선 회복, 외국인 매도는 지속",
+  "tags": [
+    "엔비디아",
+    "반도체",
+    "외국인 수급",
+    "앤트로픽",
+    "KDI",
+    "VIX"
+  ],
+  "lead": [
+    "코스피는 5,067.44(+1.99%), 코스닥은 662.81(+1.96%)에 마감했다. 엔비디아가 미국 정규장 종료 후 강한 실적을 발표하자 국내 대형 반도체와 기판주가 반등했다. 코스피 외국인 순매도는 전날 1조 4,430억 원에서 3,274억 원으로 줄었고 기관은 양 시장에서 순매수했다.",
+    "미국 17일 정규장에서는 S&P500이 1.03% 하락했고 VIX가 25.46으로 올랐다. 다음 확인점은 엔비디아 실적 이후 미국 정규장의 시장 폭과 앤트로픽 공모 조건이다."
+  ],
+  "report": [
+    {
+      "no": "02",
+      "title": "미국 17일 정규장과 금리",
+      "paragraphs": [
+        "S&P500은 7,340.53(-1.03%), 나스닥 종합은 24,328.38(-0.74%), 다우는 50,759.42(-1.64%)에 마감했다. 미래에셋 집계에서 S&P500 전 업종이 하락한 가운데 필라델피아 반도체지수는 0.34% 올랐다. VIX는 25.46(+11.13%)으로 마감했다. 이 가격들은 엔비디아 실적을 공개하기 전의 반응이다. <a href=\"https://apnews.com/article/ff6caef4d9289cf7f1e6ee48a706eddc\" target=\"_blank\" rel=\"noopener noreferrer\">AP 미국 17일 마감</a> <a href=\"https://www.cboe.com/tradable-products/vix/\" target=\"_blank\" rel=\"noopener noreferrer\">Cboe VIX</a>",
+        "미 재무부 공표 금리는 2년물 4.80%(-3bp), 10년물 5.10%(-2bp)였다. 미국 10월 명목 소매판매는 전월 대비 0.2% 증가했으며 추정 오차 범위에 0이 포함됐다. 산업생산은 전월 대비 0.4% 감소했다. 주가와 국채금리가 함께 내려갔고 업종별 낙폭도 달라, 금리 변화만으로 주식의 위험 선호를 설명하기 어려웠다. <a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve\" target=\"_blank\" rel=\"noopener noreferrer\">미 재무부 공표 금리</a> <a href=\"https://www.census.gov/retail/marts/www/marts_current.pdf?release=20261117\" target=\"_blank\" rel=\"noopener noreferrer\">미 인구조사국 소매판매</a> <a href=\"https://www.federalreserve.gov/releases/g17/20261117/g17.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">연준 산업생산</a>"
+      ]
+    },
+    {
+      "no": "03",
+      "title": "한국장 반등의 폭과 수급",
+      "paragraphs": [
+        "코스피는 장중 5,000선 아래로 밀린 뒤 5,067.44에 마감했다. 신한 정규장 마감표 기준 코스피 외국인 3,274억 원·개인 6,377억 원 순매도, 기관 5,112억 원 순매수였다. 코스닥에서도 외국인 449억 원·개인 1,233억 원이 순매도했고 기관은 1,767억 원 순매수했다. 상승·하락 종목은 코스피 485·383개, 코스닥 967·696개로, 전날 하락 우세에서 돌아섰다. 원·달러는 서울 외환시장 15시 30분 기준 1,333.0원(-5.2원)이었다. <a href=\"https://www.samsungpop.com/common.do?cmd=down&amp;contentType=application%2Fpdf&amp;fileName=4020%2F2026111816124993K_02_03.pdf&amp;inlineYn=Y&amp;saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 국내 마감</a> <a href=\"https://www.yna.co.kr/view/AKR20261118134300002\" target=\"_blank\" rel=\"noopener noreferrer\">서울 외환시장 주간 종가</a>",
+        "삼성전자 +2.31%, SK하이닉스 +4.19%, 삼성전기 +7.43%였다. 삼성전기는 10월 패키지기판 공급 협력에 이어 생산 인프라와 적층세라믹콘덴서(MLCC) 협력을 확대한다고 밝혔다. 레인보우로보틱스(+20.06%)와 하이브(+7.62%) 등에서도 상승이 나타났고, 삼천당제약(-14.56%)과 삼성바이오로직스(-3.39%)는 약세였다. 기관 매수와 외국인 매도 축소가 지수 회복을 뒷받침했고, 종목별 반응에는 개별 재료도 작용했다. <a href=\"https://www.samsungpop.com/common.do?cmd=down&amp;contentType=application%2Fpdf&amp;fileName=4020%2F2026111816124993K_02_03.pdf&amp;inlineYn=Y&amp;saveKey=research.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">삼성증권 국내 마감</a> <a href=\"https://m.samsungsem.com/kr/newsroom/news/view.do?id=10702\" target=\"_blank\" rel=\"noopener noreferrer\">삼성전기 협력 발표</a>"
+      ]
+    },
+    {
+      "no": "04",
+      "title": "엔비디아 실적이 바꾼 수요 기대",
+      "paragraphs": [
+        "미국 17일 장 마감 뒤 공개된 FY27 3분기 매출은 1,158억 달러(+103% YoY), 데이터센터 매출은 1,076억 달러(+110%), GAAP 희석 EPS는 2.70달러였다. 다음 분기 매출 가이던스는 1,300억 달러(±3%)다. 신한·미래에셋 콜 요약에 따르면 회사는 FY28 매출 성장률 전망을 70%에서 75%로 높였다. 1,500억 달러 자사주 매입 한도 증액은 실적 자료에 함께 제시된 9월 이사회 승인이다. <a href=\"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">엔비디아 분기 실적</a>",
+        "미국 16일에 반도체지수가 5.28% 하락했던 만큼, 강한 실적과 다음 분기 가이던스는 공급망 주문에 대한 우려를 일부 덜어줬다. 그 영향은 국내 메모리·기판주 반등과 일치한다. 발표 전 경계가 컸던 데 따른 되돌림도 가능한 설명이다. 장비 공급사의 매출은 현시점의 구매 수요를 보여주며 최종 고객의 서비스 수익성, 데이터센터 가동 일정과 차환 여건은 별도로 확인해야 한다."
+      ]
+    },
+    {
+      "no": "05",
+      "title": "앤트로픽 공모와 AI 자금조달",
+      "paragraphs": [
+        "17일 제출한 S-1/A-3의 희망 공모가는 70~78달러다. 기본 공모 총 8억 2,500만 주의 상단 가정 매각액은 약 643.5억 달러다. 여기에는 기존 주주 몫이 포함된다. 병행 사모배정 약정 260억 달러를 더한 903.5억 달러는 총 매각액 기준이다. 신고서의 주당 74달러 가정에서 회사 순유입 추정치는 사모 포함 846억 달러다. 한국장 마감 기준으로는 희망 범위와 예상치가 공개돼 있었다. <a href=\"https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm\" target=\"_blank\" rel=\"noopener noreferrer\">앤트로픽 SEC 수정 신고서</a>",
+        "공모 결과는 AI 개발사의 자본시장 접근성을 평가할 수 있는 자료다. 조달 후 장기 컴퓨팅 약정을 감당할 수 있는지는 지급 일정과 영업현금흐름에 달려 있다. 사모 투자자 비중과 IPO 첫 거래의 수요도 각각 확인할 필요가 있다."
+      ]
+    },
+    {
+      "no": "06",
+      "title": "KDI 성장률 상향의 전제",
+      "paragraphs": [
+        "KDI는 2026년 실질 성장률 전망을 3.2%에서 3.8%, 2027년을 2.2%에서 3.9%로 올렸다. 한국 수출과 설비투자를 견인하는 글로벌 AI 인프라 투자 호조가 이어진다는 전제다. 내년 근원물가 상승률 전망은 2.5%다. <a href=\"https://eiec.kdi.re.kr/policy/domesticView.do?ac=0000206993&amp;issus=O&amp;pg=1&amp;pp=20\" target=\"_blank\" rel=\"noopener noreferrer\">KDI 8월 전망</a> <a href=\"https://www.kdi.re.kr/research/economy?pub_no=19321\" target=\"_blank\" rel=\"noopener noreferrer\">KDI 11월 전망</a>",
+        "반도체 주도로 성장률이 오르면 수출과 투자에 먼저 반영되고, 가계소득·소비로 파급되는 데에는 시간이 걸릴 수 있다. 반도체 생산 비중과 물량 증가율을 단순 곱한 민감도는 연쇄가중 실질 GDP의 공식 기여도와 구분해 읽는다."
+      ]
+    },
+    {
+      "no": "07",
+      "title": "설문으로 본 기술주 포지션과 조달 우려",
+      "paragraphs": [
+        "BofA 11월 글로벌 펀드매니저 설문을 인용한 Macro Trader 자료에서 기술주 비중확대 순응답은 37%에서 12%로 줄었고, 평균 현금 비중도 3.9%에서 3.6%로 낮아졌다. 향후 6개월 내 하이퍼스케일러가 설비투자 축소를 발표할 것으로 본 응답은 52%였다. 순응답은 비중확대와 비중축소 응답의 차이이며, 설비투자 축소 수치는 참가자의 예상이다. <a href=\"https://qz.com/bofa-survey-fund-managers-cut-tech-exposure-111726\" target=\"_blank\" rel=\"noopener noreferrer\">BofA 설문 교차 보도</a>",
+        "기술주에 대한 경계가 커진 가운데 주식 전체의 비중확대 응답은 우세했다. 향후 설비투자를 줄이는 기업은 현금 유출 부담을 낮출 수 있고, 주문을 받는 공급사는 매출 전망이 나빠질 수 있다. 시장 반응을 볼 때 조달비용이 안정되는 경우와 고객이 실제 발주를 줄이는 경우를 구분한다."
+      ]
+    }
+  ],
+  "watch": [
+    "앤트로픽 공모가 확정, 회사 순유입액과 첫 거래의 수요",
+    "엔비디아 실적을 반영한 미국 정규장 반도체·시장 폭·VIX",
+    "19일 새벽 공개 예정인 10월 FOMC 의사록과 미국 단기금리 반응",
+    "코스피 현물 외국인 매도의 추가 둔화 및 반도체·기판주 반등의 지속 여부"
+  ]
+});
+window.MARKET_LEDGER.dailyAddenda["2026-11-18"] = {
+  "changes": {
+    "maintained": [
+      "공급사의 주문과 최종 고객의 투자 회수·조달 여건을 함께 확인한다."
+    ],
+    "new": [
+      "코스피 5,000선 회복, 외국인 순매도 3,274억 원으로 축소.",
+      "엔비디아 데이터센터 매출 +110% YoY, 다음 분기 매출 가이던스 1,300억 달러.",
+      "KDI 2027년 성장률 전망 2.2%에서 3.9%로 상향."
+    ]
+  },
+  "assessment": [
+    "대형 반도체 반등과 기관의 양 시장 순매수, 상승 종목 수 개선이 함께 나타났다. 미국 실적 발표 전 거래에서는 변동성이 높았고 국내 외국인 현물 매도도 이어졌다. 반등이 지속되는지는 미국 정규장 반응과 다음 거래일의 매수 주체를 봐야 판단할 수 있다."
+  ],
+  "implications": [
+    "엔비디아의 주문 가시성 개선이 공급사 실적에 반영되는지 고객 발주·출하 일정으로 확인한다.",
+    "앤트로픽 공모의 총 매각액, 회사 순유입액, 상장 뒤 거래 반응을 각각 추적한다. 10월 FOMC 의사록도 한국장 마감 뒤의 변수다. <a href=\"https://www.federalreserve.gov/newsevents/2026-November.htm\" target=\"_blank\" rel=\"noopener noreferrer\">연준 11월 일정</a>"
+  ],
+  "conclusion": "엔비디아 실적이 국내 반도체 반등의 계기가 됐고 기관 매수가 코스피의 5,000선 회복을 뒷받침했다. 미국 정규장의 매수 확산과 국내 외국인 순매도 완화가 이어지는지가 다음 확인점이다."
+};
+
