@@ -4004,3 +4004,544 @@ if(!window.MARKET_LEDGER.macroEvents.categories.includes('에너지·공급망')
   archive.updatedAt = "2026-11-17";
 }
 
+
+/* November 19 Casebook follow-ups and service-market opening. */
+{
+  const archive = window.MARKET_LEDGER.macroEvents;
+  const nvidia = archive.events.find(event => event.id === "2026-11-12-nvidia-ceo-transition");
+  const cpi = archive.events.find(event => event.id === "2026-11-10-us-october-cpi");
+  const nvidiaSources = [
+  {
+    "id": "nov18-nvda-results",
+    "title": "엔비디아 FY27 3분기 실적",
+    "publisher": "NVIDIA",
+    "publishedAt": "2026-11-17 미국 정규장 뒤",
+    "observedAt": "2026-10-25 종료 분기·다음 분기 전망",
+    "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+    "verification": "공식 보도자료 확인",
+    "note": "매출 1,158억 달러, 데이터센터 1,076억 달러, 다음 분기 매출 1,300억 달러(±3%). 매입 한도 증액은 9월 승인."
+  },
+  {
+    "id": "nov18-kr-followup",
+    "title": "엔비디아 실적 직후 한국 18일 마감",
+    "publisher": "신한투자증권·삼성증권",
+    "publishedAt": "2026-11-18 한국",
+    "observedAt": "18일 한국 정규장",
+    "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111816124993K_02_03.pdf&inlineYn=Y&saveKey=research.pdf",
+    "verification": "제공 신한 마감과 삼성증권 종목·지수 대조",
+    "note": "코스피 +1.99%, 외국인 -3,274억 원, 기관 +5,112억 원. 이전 Daily 검토 기록 포함.",
+    "dailyDate": "2026-11-18"
+  },
+  {
+    "id": "nov19-us-followup",
+    "title": "실적 발표 다음 미국 정규장",
+    "publisher": "AP·제공 미래에셋 시황",
+    "publishedAt": "2026-11-18 미국",
+    "observedAt": "18일 미국 정규장",
+    "url": "https://apnews.com/article/990749d3d269f7ef05b9f6c089713a58",
+    "verification": "AP 지수·가격 반전 확인, 종목 등락은 제공 시황",
+    "note": "엔비디아 -2.89%, AMD +5.31%, 브로드컴 +3.64%. S&P500 -0.23%, 나스닥 +0.42%."
+  },
+  {
+    "id": "nov19-ant-pricing",
+    "title": "앤트로픽 최종 가격·물량",
+    "publisher": "SEC / Anthropic",
+    "publishedAt": "2026-11-18 미국",
+    "observedAt": "공모 조건 확정·19일 거래·20일 결제 예정",
+    "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm",
+    "verification": "공식 가격 문서·회사 발표 확인",
+    "note": "83달러, 9억8,000만 주. 공모 총액 813.4억 달러와 사모 260억 달러. 구주와 비용 포함 총액."
+  },
+  {
+    "id": "nov19-ant-final-prospectus",
+    "title": "앤트로픽 최종 투자설명서의 현금·약정",
+    "publisher": "SEC / Anthropic",
+    "publishedAt": "2026-11-18 미국",
+    "observedAt": "공모 순유입 추정·약정 지급 일정",
+    "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+    "verification": "최종 문서 관련 항목 확인",
+    "note": "공모·사모 순유입 추정 1,048억 달러. 20일 결제 예정. 공모 주문과 실제 결제 구분."
+  },
+  {
+    "id": "nov19-kr-followup",
+    "title": "한국 19일 마감",
+    "publisher": "신한투자증권·삼성증권",
+    "publishedAt": "2026-11-19 한국",
+    "observedAt": "수능일 16시 30분 주식 정규장 마감",
+    "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111916460203K_02_02.pdf&inlineYn=Y&saveKey=research.pdf",
+    "verification": "제공 신한 마감표·삼성증권 및 아시아경제 대조",
+    "note": "코스피 +1.39%, 코스닥 +3.32%. 삼성전자 +1.13%, SK하이닉스 +3.41%, 삼성전기 +9.26%.",
+    "dailyDate": "2026-11-19"
+  }
+];
+  const nvidiaChapters = [
+  {
+    "date": "2026-11-18",
+    "title": "11월 18일 후속 — 임시 CEO 체제의 실적이 한국 공급망을 반등시켰다",
+    "paragraphs": [
+      "미국 17일 정규장 종료 뒤 엔비디아는 FY27 3분기 매출 1,158억 달러(+103% YoY), 데이터센터 매출 1,076억 달러(+110%)를 발표했다. 다음 분기 매출 전망은 1,300억 달러(±3%)였다. 임시 경영진이 밝힌 수요 가시성은 직전까지 확산됐던 공급망 주문 우려를 일부 완화할 근거가 됐다. 1,500억 달러 자사주 매입 한도 증액은 실적 자료에 기재된 9월 이사회 승인이다.",
+      "한국 18일 코스피는 5,067.44(+1.99%), 코스닥은 662.81(+1.96%)로 반등했다. 삼성전자 +2.31%, SK하이닉스 +4.19%, 삼성전기 +7.43%였다. 코스피 기관은 5,112억 원을 순매수했고 외국인은 3,274억 원을 순매도했다. 제품 수요의 확인과 직전 급락에 따른 되돌림, 개별 공급 협력 발표가 함께 작용했을 수 있다.",
+      "공급사의 매출과 가이던스는 주문 수요에 대한 근거를 늘렸지만, 고객의 장기 투자 회수와 경영·규제 불확실성은 이후 공시와 거래에서 확인할 사안으로 남았다. 이 구분은 다음 미국 정규장의 가격 반응을 읽는 데 중요했다."
+    ],
+    "sourceIds": [
+      "nov18-nvda-results",
+      "nov18-kr-followup"
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "title": "11월 19일 후속 — 실적 뒤 주가 반전과 앤트로픽 자본조달",
+    "paragraphs": [
+      "미국 18일 정규장에서 엔비디아는 처음 올랐다가 2.89% 하락했다. 같은 날 AMD +5.31%, 브로드컴 +3.64%, 아마존 +3.82%였고 나스닥 종합은 0.42% 상승했다. 강한 실적 이후에도 엔비디아의 승계와 수출통제, 생태계 금융지원에 대한 평가가 남았다는 것이 미래에셋의 당시 해석이다. 종목별 차이는 AI 전체 수요와 특정 기업의 위험 프리미엄을 함께 봐야 하는 이유를 보여줬다.",
+      "미국 18일 밤 앤트로픽은 공모가 83달러와 기본 공모 물량 9억8,000만 주를 확정했다. 기본 총매각액은 813.4억 달러, 사모 260억 달러를 더하면 1,073.4억 달러이며 회사 순유입 추정은 1,048억 달러다. 예비 8억2,500만 주 기준의 약 680억 달러 보도 뒤 물량이 확대된 것이다. 20일 예정 결제와 첫 거래의 투자자 반응은 별도 단계다.",
+      "자본조달의 접근성은 AI 개발사가 컴퓨팅 약정을 유지하는 데 필요한 재무 여력을 뒷받침한다. 생태계의 신용불안을 판단할 때에는 그 여력과 실제 고객 사용료 수입, 인프라 가동 시점을 연결해야 한다. 한 기업의 공모 수요만으로 네오클라우드의 차환 비용이나 공급망 전체의 주문 유지가 확인되지는 않는다.",
+      "한국 19일 코스피 +1.39%, 코스닥 +3.32%였고 삼성전자 +1.13%, SK하이닉스 +3.41%, 삼성전기 +9.26%로 반등이 이어졌다. 코스피 외국인은 4,036억 원 순매도했고, 콘텐츠·여행주에는 한중 FTA 실질타결이라는 별도 정책 재료가 작용했다. 이날 국내 가격은 앤트로픽 미국 첫 거래 전의 관측이다."
+    ],
+    "sourceIds": [
+      "nov19-us-followup",
+      "nov19-ant-pricing",
+      "nov19-ant-final-prospectus",
+      "nov19-kr-followup"
+    ]
+  }
+];
+  nvidia.sources.push(...nvidiaSources);
+  for (const chapter of nvidiaChapters) {
+    const { date, ...section } = chapter;
+    nvidia.casebook.sections.push(section);
+    nvidia.updates.push(chapter);
+  }
+  nvidia.timeline.push(
+    {
+      at: "2026-11-17 미국 장후 / 18일 한국 개장 전",
+      session: "실적 발표",
+      title: "임시 CEO 체제 첫 실적과 다음 분기 전망",
+      paragraphs: [nvidiaChapters[0].paragraphs[0]],
+      sourceIds: ["nov18-nvda-results"]
+    },
+    {
+      at: "2026-11-18 한국 정규장",
+      session: "실적 첫 국내 반응",
+      title: "메모리·기판과 지수 반등",
+      paragraphs: [nvidiaChapters[0].paragraphs[1]],
+      sourceIds: ["nov18-kr-followup"]
+    },
+    {
+      at: "2026-11-18 미국 정규장",
+      session: "실적 후 미국 첫 정규장",
+      title: "엔비디아 상승 출발 뒤 하락 전환",
+      paragraphs: [nvidiaChapters[1].paragraphs[0]],
+      sourceIds: ["nov19-us-followup"]
+    },
+    {
+      at: "2026-11-18 미국 밤 / 19일 한국 개장 전",
+      session: "후속 자본조달",
+      title: "앤트로픽 최종 공모가·물량 확정",
+      paragraphs: [nvidiaChapters[1].paragraphs[1]],
+      sourceIds: ["nov19-ant-pricing", "nov19-ant-final-prospectus"]
+    },
+    {
+      at: "2026-11-19 16:30 KST",
+      session: "한국 마감",
+      title: "반도체 반등과 별도의 FTA 정책 반응",
+      paragraphs: [nvidiaChapters[1].paragraphs[3]],
+      sourceIds: ["nov19-kr-followup"]
+    }
+  );
+  nvidia.reactions.push(
+    {
+      market: "한국 메모리·기판",
+      window: "18일 한국 정규장",
+      observation: "삼성전자 +2.31%, SK하이닉스 +4.19%, 삼성전기 +7.43%, 코스피 +1.99%",
+      interpretation: "미국 17일 장후 실적을 반영한 첫 국내 가격이다. 공급 협력 발표와 직전 급락 후 되돌림도 겹쳤다.",
+      sourceIds: ["nov18-nvda-results", "nov18-kr-followup"]
+    },
+    {
+      market: "미국 AI 기업",
+      window: "18일 미국 정규장",
+      observation: "엔비디아 -2.89%, AMD +5.31%, 브로드컴 +3.64%, 아마존 +3.82%",
+      interpretation: "실적·기업별 위험·투자 지분 기대가 엇갈린 관측이다. 엔비디아 하루 수익률에서 인선의 독립 효과를 추정하지 않았다.",
+      sourceIds: ["nov19-us-followup"]
+    },
+    {
+      market: "한국 반도체·지수",
+      window: "19일 16시 30분 정규장",
+      observation: "삼성전자 +1.13%, SK하이닉스 +3.41%, 삼성전기 +9.26%. 코스피 +1.39%, 외국인 -4,036억 원.",
+      interpretation: "앤트로픽 첫 미국 거래 전 가격이며 FTA와 보안 등 동시 재료가 있었다.",
+      sourceIds: ["nov19-kr-followup", "nov19-ant-pricing"]
+    }
+  );
+  nvidia.updatedAt = "2026-11-19";
+  nvidia.coverage += " · 후속 미국 17일 장후 실적·18일 종가, 한국 18~19일 마감과 앤트로픽 공모 조건까지";
+  nvidia.casebook.editedAt = "2026-11-19";
+  nvidia.casebook.impact = "최초 공식 발표 뒤 미국 엔비디아 -4.34%. 18일 한국 메모리가 반등한 뒤 미국 엔비디아는 -2.89%로 하락 전환했고 경쟁 반도체는 상승했다.";
+  nvidia.relatedIds.push("2026-11-18-korea-china-fta-content-rally");
+
+  const cpiChapter = {
+  "title": "11월 19일 후속 — 의사록의 추가 인상 논의와 만기별 금리 반응",
+  "paragraphs": [
+    "19일 새벽 한국에 공개된 10월 FOMC 의사록에서 거의 모든 참가자는 당시 기본 전망 아래 추가 인상이 적절하다고 평가했다. 두 참가자는 향후 물가 지표가 불리하면 다음 회의에서 25bp를 넘는 인상을 검토할 수 있다고 언급했다. 이 회의는 11월 10일 CPI 발표보다 앞서 열렸으므로, 해당 문구를 10월 CPI 결과에 대한 위원회의 사후 판단으로 소급할 수는 없다. 시장은 기존 긴축 경로의 배경과 새 물가 자료를 함께 읽을 수 있게 됐다.",
+    "미국 18일 재무부 공표 금리에서 2년물은 4.80%로 전날과 같았고 10년물은 5.10%에서 5.07%, 30년물은 5.46%에서 5.41%로 내려갔다. 유가 하락과 주식시장 경계도 같은 날 작용했다. 추가 인상 논의가 남은 가운데 장기물이 강세였다는 관측은 단기 정책금리 기대와 장기 성장·물가·기간 프리미엄이 서로 다른 힘을 받을 수 있음을 보여준다.",
+    "이번 일별 자료는 의사록 공개 직전·직후의 수익률을 분리하지 않는다. 따라서 장기금리 하락을 긴축 우려 해소의 증거로 계산하기는 어렵다. 이후 물가·고용과 단기금리, 장기 기대인플레이션을 함께 확인해야 10일 CPI 충격 이후 정책 경로가 어떻게 바뀌었는지 판단할 수 있다."
+  ],
+  "sourceIds": [
+    "nov19-oct-fomc-minutes",
+    "nov19-ust-followup",
+    "nov19-market-context"
+  ]
+};
+  cpi.sources.push(...[
+  {
+    "id": "nov19-oct-fomc-minutes",
+    "title": "10월 FOMC 의사록 공개",
+    "publisher": "미 연방준비제도",
+    "publishedAt": "2026-11-18 14:00 ET / 11월 19일 04:00 KST",
+    "observedAt": "10월 27~28일 회의",
+    "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20261028.pdf",
+    "verification": "공식 의사록 확인",
+    "note": "기본 전망 아래 거의 모든 참가자가 추가 인상을 적절하게 평가. 두 참가자의 25bp 초과 인상 검토는 불리한 추가 물가 자료라는 조건."
+  },
+  {
+    "id": "nov19-ust-followup",
+    "title": "의사록 공개일 미국채 금리",
+    "publisher": "미 재무부",
+    "publishedAt": "2026-11-18 미국",
+    "observedAt": "11월 17일→18일 일별 파수익률",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "verification": "공식 일별 표 확인",
+    "note": "2년 4.80→4.80%, 10년 5.10→5.07%, 30년 5.46→5.41%. 순간 반응을 분리한 자료가 아님."
+  },
+  {
+    "id": "nov19-market-context",
+    "title": "의사록 전후 시장 맥락",
+    "publisher": "AP·제공 미래에셋 시황",
+    "publishedAt": "2026-11-18 미국",
+    "observedAt": "18일 정규장·유가 결제 관측",
+    "url": "https://apnews.com/article/990749d3d269f7ef05b9f6c089713a58",
+    "verification": "AP 정규장·유가와 금리 방향 대조",
+    "note": "S&P500 -0.23%, 나스닥 +0.42%. 유가 하락과 국채금리 하락 동시 관측."
+  }
+]);
+  cpi.casebook.sections.push(cpiChapter);
+  cpi.updates.push({ date: "2026-11-19", ...cpiChapter });
+  cpi.timeline.push({
+    at: "2026-11-18 14:00 ET / 19일 04:00 KST",
+    session: "정책 논의 공개",
+    title: "10월 FOMC의 추가 인상 논의 확인",
+    paragraphs: [cpiChapter.paragraphs[0]],
+    sourceIds: ["nov19-oct-fomc-minutes"]
+  });
+  cpi.reactions.push({
+    market: "미국 국채",
+    window: "17일→18일 재무부 일별 공표",
+    observation: "2년 4.80→4.80%, 10년 5.10→5.07%, 30년 5.46→5.41%",
+    interpretation: "유가·주식시장 등 동시 변수가 있다. 일별 금리로 의사록의 순간적 효과를 분리할 수 없다.",
+    sourceIds: ["nov19-ust-followup", "nov19-market-context"]
+  });
+  cpi.updatedAt = "2026-11-19";
+  cpi.casebook.editedAt = "2026-11-19";
+  cpi.coverage += " · 후속 11월 18일 의사록 공개와 미국 일별 금리까지";
+
+  const fta = {
+  "id": "2026-11-18-korea-china-fta-content-rally",
+  "eventDate": "2026-11-18",
+  "eventTime": "한국 11월 18일 정상회담 계기 발표 · 정확한 공표 시각 미확인",
+  "koreaAttributionDate": "2026-11-19",
+  "recordedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "coverage": "한국 18일 실질타결 발표와 19일 16시 30분 정규장까지. 18일 발표 전 기대와 19일 사후 반응을 구분한다.",
+  "category": "통상정책",
+  "phase": "시장 반응 기록 · 후속 이행 확인 중",
+  "title": "한중 FTA 서비스·투자 실질타결과 K콘텐츠주 급등",
+  "subtitle": "중국 시장 접근 기대가 콘텐츠·관광·소비재로 확산되며 코스닥 매수 범위가 넓어졌다.",
+  "tags": [
+    "한중 FTA",
+    "한한령",
+    "콘텐츠",
+    "중국 시장개방",
+    "여행",
+    "엔터테인먼트",
+    "게임",
+    "코스닥",
+    "기관 수급"
+  ],
+  "summary": [
+    "18일 한중 FTA 서비스·투자 후속협상 실질타결이 발표됐다. 콘텐츠 유통·공동제작과 현지 여행업 경로의 확대가 주요 기대였다.",
+    "19일 스튜디오드래곤 +29.96%, CJ ENM 약 +28.1%로 급등했고 관광·소비재로 반응이 확산됐다. 코스닥은 +3.32%였으며 기관이 2,134억 원 순매수했다."
+  ],
+  "highlights": [
+    {
+      "label": "스튜디오드래곤 19일",
+      "value": "+29.96%"
+    },
+    {
+      "label": "CJ ENM 19일",
+      "value": "약 +28.1%"
+    },
+    {
+      "label": "코스닥 19일",
+      "value": "+3.32%"
+    }
+  ],
+  "background": [
+    "한국 증시는 미국 AI 투자와 반도체 규제의 영향을 크게 받는 가운데 17일 코스피 5,000선이 무너졌다가 18일 엔비디아 실적으로 반등했다. 중국 관련 소비·콘텐츠 기업에는 이와 다른 경로의 매출 기대를 바꿀 정책 재료가 등장했다. 18일 한중 정상회담에서 서비스·투자 후속협상의 실질타결이 발표된 것이다.",
+    "신한의 업종 분석은 기존 중국향 앨범 판매와 공연 수익의 차이, 제작물의 유통 경로, 여행사의 현지 고객 모집을 각각 짚었다. 투자자가 재평가할 대상은 이미 팔리는 상품의 수요뿐 아니라 지금까지 활용이 어려웠던 판매·유통·영업 경로였다. 이 차이가 기대 변화에 대한 업종별 주가 민감도를 높였을 가능성이 있다."
+  ],
+  "trigger": [
+    "2018년 시작한 후속협상은 약 8년 8개월 만에 실질타결에 이르렀다. 발표에는 영화·게임의 최혜국대우와 비차별 사전심사, 시청각 공동제작 대상 확대, 일부 지역 한국 여행사의 중국 거주 고객 대상 아웃바운드 영업이 담겼다. 매출이 발생하기 전 단계인 시장 접근의 불확실성을 줄이는 내용이었다.",
+    "당시 시장은 이 내용을 한국 콘텐츠와 관광사업의 성장 여지가 넓어진다는 신호로 읽었다. 정책 발표가 기업 가치에 전달되는 경로는 규제·시장 접근 기대의 변화, 신규 계약 확률과 향후 매출 추정의 변화, 다시 현재 주가의 재평가로 이어진다. 계약이 생기기 전에 확률과 할인율이 먼저 움직일 수 있다."
+  ],
+  "transmission": [
+    "신한은 미디어에서 기존 작품 판매와 공동제작이 수익 경로가 될 수 있다고 봤다. 공연사업은 현지 대형 공연 승인과 개최가, 게임은 심사와 출시 준비가 중요하다. 여행사는 영업 범위가 넓어져도 실제 상품 판매와 고객 모집, 운항 공급과 비용이 수익성을 결정한다. 주가가 함께 올라도 확인해야 할 사업 단계는 각기 다르다.",
+    "공식 발표 후에는 문안 마무리·법률검토·서명·발효 절차가 이어진다. 당일 높은 주가 상승률은 사업 정상화에 대한 기대가 커졌음을 보여주며, 향후 작품별 승인·계약과 현지 매출이 그 기대를 뒷받침하는지 확인할 필요가 있다. 엔터테인먼트 기업에는 공연 개최라는 추가 관측이 특히 중요했다."
+  ],
+  "alternatives": [
+    "19일에는 삼성전자와 SK하이닉스의 반등, 앤트로픽 공모 흥행 기대, 보안주 상승도 겹쳤다. 따라서 코스닥의 하루 수익률 전체를 FTA 발표의 효과로 계산하기 어렵다. 이전 조정으로 낮아진 주가에서의 매수와 숏커버가 정책 기대를 증폭했을 수 있으나, 실제 공매도 포지션 감소를 확인한 자료는 확보하지 못했다.",
+    "이 사건을 이후 시장에 참고하려면 제도 변화가 해당 기업의 구체적인 판매 제약을 얼마나 완화하는지, 가격에 반영된 기대를 계약과 현금흐름이 따라오는지 확인해야 한다. 발표 당일의 재평가와 사업 집행 이후의 실적을 날짜별로 쌓으면 정책 기대가 지속적인 이익 변화로 이어졌는지 검토할 수 있다."
+  ],
+  "aftermath": [
+    "19일 콘텐츠·관광·소비재의 가격 재평가와 코스닥 시장 폭 개선이 관측됐다. 이후 계약·승인·현지 매출은 후속 날짜에 기록할 대상이다.",
+    "정책 집행에 걸리는 시간과 기업별 사업 경로가 다르므로 당시 기대와 이후 확인되는 실적을 각각 보존한다."
+  ],
+  "timeline": [
+    {
+      "at": "2026-11-18 한국",
+      "session": "정책 발표",
+      "title": "서비스·투자 후속협상 실질타결 선언",
+      "paragraphs": [
+        "산업통상부가 정상회담 계기의 실질타결을 발표했다. 구체적인 공표 시각은 확인하지 못해 18일 장중 가격에 즉시 귀속하지 않았다."
+      ],
+      "sourceIds": [
+        "fta18-motir"
+      ]
+    },
+    {
+      "at": "2026-11-19 11:27 KST",
+      "session": "한국 장중",
+      "title": "지수 약세 속 중국 교류 관련주 강세",
+      "paragraphs": [
+        "미래에셋 장중 시황에서 코스피는 약 0.96% 하락하는 가운데 화장품·여행·엔터·게임 관련주가 강세였다. 시장 전체 방향과 정책 노출 업종의 반응이 달랐다."
+      ],
+      "sourceIds": [
+        "fta19-mirae"
+      ]
+    },
+    {
+      "at": "2026-11-19 16:30 KST",
+      "session": "한국 정규장 마감",
+      "title": "콘텐츠 급등과 코스닥 시장 폭 개선",
+      "paragraphs": [
+        "19일 스튜디오드래곤은 29.96%, CJ ENM은 약 28.1%, 에스엠은 약 8.2% 상승했다. 호텔신라 +10.30%, 달바글로벌 +12.70%, 롯데관광개발 약 +8.5%로 소비·관광 관련 종목까지 강세가 확산됐다. 미래에셋 마감 시황에서 미디어컨텐츠 ETF는 13.47%, 여행레저 ETF는 6.65% 올랐다. 이는 정책 수혜 기대가 여러 업종과 관련 ETF의 가격에 반영된 관측이다.",
+        "코스닥은 684.81(+3.32%)로 마쳤고 상승·하락 종목은 1,170·499개였다. 기관은 코스닥에서 2,134억 원을 순매수했다. 코스피도 5,137.89(+1.39%)로 올랐지만 외국인은 두 시장에서 순매도했다. 정책 관련 업종과 국내 매수 주체가 지수 회복에 기여한 흐름을 확인할 수 있다."
+      ],
+      "sourceIds": [
+        "fta19-shinhan-close",
+        "fta19-samsung-close",
+        "fta19-asiae-close",
+        "fta19-mirae"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "market": "콘텐츠·엔터",
+      "window": "11월 19일 한국 정규장",
+      "observation": "스튜디오드래곤 +29.96%, CJ ENM 약 +28.1%, 에스엠 약 +8.2%",
+      "interpretation": "중국 유통·공동제작과 개별 승인에 대한 기대가 먼저 주가에 반영됐다.",
+      "sourceIds": [
+        "fta19-samsung-close",
+        "fta19-shinhan-close"
+      ]
+    },
+    {
+      "market": "여행·소비재",
+      "window": "11월 19일 한국 정규장",
+      "observation": "호텔신라 +10.30%, 달바글로벌 +12.70%, 롯데관광개발 약 +8.5%",
+      "interpretation": "영업 경로 확대와 관광 수요 기대가 관련 업종으로 퍼졌다. 실적 효과는 집행과 판매에 달려 있다.",
+      "sourceIds": [
+        "fta19-samsung-close",
+        "fta19-shinhan-close"
+      ]
+    },
+    {
+      "market": "한국 지수·수급",
+      "window": "11월 19일 16시 30분 종가",
+      "observation": "코스닥 +3.32%, 기관 +2,134억 원. 코스피 +1.39%, 외국인 -4,036억 원.",
+      "interpretation": "주요 업종의 정책 재평가와 반도체·보안 반등이 함께 나타났다. 지수의 독립적 FTA 효과를 추정하지 않았다.",
+      "sourceIds": [
+        "fta19-shinhan-close",
+        "fta19-asiae-close"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "정식서명·발효와 분야별 시행은 어떤 일정으로 진행되는가",
+    "드라마 동시방영·대규모 공연·게임 승인이 실제 계약과 매출로 연결되는가",
+    "관광상품 직접 판매가 고객 수와 이익률을 늘리는가",
+    "정책 기대에 따른 초기 주가 재평가를 이익 추정치와 실적이 뒷받침하는가"
+  ],
+  "relatedIds": [
+    "2026-11-12-nvidia-ceo-transition"
+  ],
+  "updates": [
+    {
+      "date": "2026-11-19",
+      "title": "정책 발표와 업종 급등을 독립 사례로 기록",
+      "paragraphs": [
+        "콘텐츠의 20~30%대 급등과 관광·소비재·관련 ETF 반응, 코스닥 매수 확산이 관측돼 주요 사건으로 편입했다. 발표 시각이 확인되지 않은 18일 가격과 19일 후속 반응은 구분했다."
+      ],
+      "sourceIds": [
+        "fta18-motir",
+        "fta19-shinhan-close",
+        "fta19-mirae"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "fta18-motir",
+      "title": "한중 FTA 서비스·투자 실질타결 선언",
+      "publisher": "산업통상부",
+      "publishedAt": "2026-11-18 한국",
+      "observedAt": "18일 정상회담 계기 발표·시각 미확인",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172421/view",
+      "verification": "공식 발표·세부 내용 확인",
+      "note": "후속 기술 문안·법률검토·정식서명·발효 절차. 영화·게임 비차별 대우와 공동제작, 여행업 경로 확대."
+    },
+    {
+      "id": "fta19-industry",
+      "title": "중국 시장 개방의 업종별 전달 경로",
+      "publisher": "신한투자증권 / 사용자 제공",
+      "publishedAt": "2026-11-19 한국",
+      "observedAt": "제공 bbs_1795045165157.pdf 7쪽",
+      "url": "",
+      "verification": "제공 전문 확인",
+      "note": "조상훈·박현진·지인해·고준혁. 동시방영·대형 공연 승인, 신규 계약·매출로 이어지는 조건을 제시.",
+      "route": "#daily",
+      "dailyDate": "2026-11-19"
+    },
+    {
+      "id": "fta19-shinhan-close",
+      "title": "한국 19일 콘텐츠·여행주와 수급",
+      "publisher": "신한투자증권 / 사용자 제공",
+      "publishedAt": "2026-11-19 한국",
+      "observedAt": "수능일 16시 30분 정규장",
+      "url": "",
+      "verification": "제공 마감표 확인",
+      "note": "bbs_1795077925438.pdf. CJ ENM 약 +28.1%, 에스엠 약 +8.2%, 롯데관광개발 약 +8.5%. 코스닥 기관 +2,134억 원.",
+      "route": "#daily",
+      "dailyDate": "2026-11-19"
+    },
+    {
+      "id": "fta19-samsung-close",
+      "title": "콘텐츠·소비재 급등 종목 대조",
+      "publisher": "삼성증권",
+      "publishedAt": "2026-11-19 한국",
+      "observedAt": "19일 정규장 마감",
+      "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2026111916460203K_02_02.pdf&inlineYn=Y&saveKey=research.pdf",
+      "verification": "당일 Daily 검토 시 마감 자료 대조",
+      "note": "스튜디오드래곤 +29.96%, 호텔신라 +10.30%, 달바글로벌 +12.70%. 이번 조회의 파일 접근은 실패해 기존 검토와 제공 자료를 사용."
+    },
+    {
+      "id": "fta19-asiae-close",
+      "title": "19일 지수·투자자별 마감",
+      "publisher": "아시아경제",
+      "publishedAt": "2026-11-19 한국",
+      "observedAt": "19일 정규장 마감",
+      "url": "https://view.asiae.co.kr/article/2026111916492474833",
+      "verification": "당일 Daily 검토 시 보도 확인",
+      "note": "코스피 +1.39%, 코스닥 +3.32%, 코스피 외국인 -4,036억·기관 +194억 원."
+    },
+    {
+      "id": "fta19-mirae",
+      "title": "한중 교류 업종의 장중·마감 반응",
+      "publisher": "미래에셋증권 / 사용자 제공 텔레그램",
+      "publishedAt": "2026-11-19 11:27·17:36 KST",
+      "observedAt": "19일 장중 및 정규장 마감",
+      "url": "",
+      "verification": "원본 텍스트 보존·시각 확인",
+      "note": "TIGER 미디어컨텐츠 +13.47%, TIGER 여행레저 +6.65%. ETF 수익률은 해당 제공 자료 기준.",
+      "route": "#daily",
+      "dailyDate": "2026-11-19"
+    }
+  ],
+  "casebook": {
+    "title": "한중 FTA 서비스·투자 실질타결과 K콘텐츠주 급등",
+    "cause": "중국 내 콘텐츠 유통·공동제작과 현지 여행업에 접근할 조건이 넓어지면서, 관련 기업의 신규 매출과 사업 정상화 기대가 재평가됐다.",
+    "impact": "19일 스튜디오드래곤 +29.96%, CJ ENM 약 +28.1%, 호텔신라 +10.30%. 코스닥 +3.32%와 기관 순매수가 동반됐다.",
+    "thesis": "서비스 시장 접근을 바꾸는 정책 발표가 향후 이익 기대를 거쳐 여러 소비·콘텐츠 업종의 주가로 전달된 사례.",
+    "sections": [
+      {
+        "title": "반도체로 쏠렸던 시장에 서비스업 개방이라는 재료가 들어왔다",
+        "paragraphs": [
+          "한국 증시는 미국 AI 투자와 반도체 규제의 영향을 크게 받는 가운데 17일 코스피 5,000선이 무너졌다가 18일 엔비디아 실적으로 반등했다. 중국 관련 소비·콘텐츠 기업에는 이와 다른 경로의 매출 기대를 바꿀 정책 재료가 등장했다. 18일 한중 정상회담에서 서비스·투자 후속협상의 실질타결이 발표된 것이다.",
+          "신한의 업종 분석은 기존 중국향 앨범 판매와 공연 수익의 차이, 제작물의 유통 경로, 여행사의 현지 고객 모집을 각각 짚었다. 투자자가 재평가할 대상은 이미 팔리는 상품의 수요뿐 아니라 지금까지 활용이 어려웠던 판매·유통·영업 경로였다. 이 차이가 기대 변화에 대한 업종별 주가 민감도를 높였을 가능성이 있다."
+        ],
+        "sourceIds": [
+          "fta19-industry",
+          "fta19-shinhan-close",
+          "fta18-motir"
+        ]
+      },
+      {
+        "title": "실질타결이 바꾼 것은 현지 사업에 접근할 조건이었다",
+        "paragraphs": [
+          "2018년 시작한 후속협상은 약 8년 8개월 만에 실질타결에 이르렀다. 발표에는 영화·게임의 최혜국대우와 비차별 사전심사, 시청각 공동제작 대상 확대, 일부 지역 한국 여행사의 중국 거주 고객 대상 아웃바운드 영업이 담겼다. 매출이 발생하기 전 단계인 시장 접근의 불확실성을 줄이는 내용이었다.",
+          "당시 시장은 이 내용을 한국 콘텐츠와 관광사업의 성장 여지가 넓어진다는 신호로 읽었다. 정책 발표가 기업 가치에 전달되는 경로는 규제·시장 접근 기대의 변화, 신규 계약 확률과 향후 매출 추정의 변화, 다시 현재 주가의 재평가로 이어진다. 계약이 생기기 전에 확률과 할인율이 먼저 움직일 수 있다."
+        ],
+        "sourceIds": [
+          "fta18-motir",
+          "fta19-industry"
+        ]
+      },
+      {
+        "title": "19일 콘텐츠·여행주의 급등이 실제 시장 반응으로 나타났다",
+        "paragraphs": [
+          "19일 스튜디오드래곤은 29.96%, CJ ENM은 약 28.1%, 에스엠은 약 8.2% 상승했다. 호텔신라 +10.30%, 달바글로벌 +12.70%, 롯데관광개발 약 +8.5%로 소비·관광 관련 종목까지 강세가 확산됐다. 미래에셋 마감 시황에서 미디어컨텐츠 ETF는 13.47%, 여행레저 ETF는 6.65% 올랐다. 이는 정책 수혜 기대가 여러 업종과 관련 ETF의 가격에 반영된 관측이다.",
+          "코스닥은 684.81(+3.32%)로 마쳤고 상승·하락 종목은 1,170·499개였다. 기관은 코스닥에서 2,134억 원을 순매수했다. 코스피도 5,137.89(+1.39%)로 올랐지만 외국인은 두 시장에서 순매도했다. 정책 관련 업종과 국내 매수 주체가 지수 회복에 기여한 흐름을 확인할 수 있다."
+        ],
+        "sourceIds": [
+          "fta19-shinhan-close",
+          "fta19-samsung-close",
+          "fta19-asiae-close",
+          "fta19-mirae"
+        ]
+      },
+      {
+        "title": "같은 개방 기대도 업종마다 현금으로 바뀌는 속도가 달랐다",
+        "paragraphs": [
+          "신한은 미디어에서 기존 작품 판매와 공동제작이 수익 경로가 될 수 있다고 봤다. 공연사업은 현지 대형 공연 승인과 개최가, 게임은 심사와 출시 준비가 중요하다. 여행사는 영업 범위가 넓어져도 실제 상품 판매와 고객 모집, 운항 공급과 비용이 수익성을 결정한다. 주가가 함께 올라도 확인해야 할 사업 단계는 각기 다르다.",
+          "공식 발표 후에는 문안 마무리·법률검토·서명·발효 절차가 이어진다. 당일 높은 주가 상승률은 사업 정상화에 대한 기대가 커졌음을 보여주며, 향후 작품별 승인·계약과 현지 매출이 그 기대를 뒷받침하는지 확인할 필요가 있다. 엔터테인먼트 기업에는 공연 개최라는 추가 관측이 특히 중요했다."
+        ],
+        "sourceIds": [
+          "fta19-industry",
+          "fta18-motir"
+        ]
+      },
+      {
+        "title": "정책 재평가와 동시 반등을 함께 읽어야 한다",
+        "paragraphs": [
+          "19일에는 삼성전자와 SK하이닉스의 반등, 앤트로픽 공모 흥행 기대, 보안주 상승도 겹쳤다. 따라서 코스닥의 하루 수익률 전체를 FTA 발표의 효과로 계산하기 어렵다. 이전 조정으로 낮아진 주가에서의 매수와 숏커버가 정책 기대를 증폭했을 수 있으나, 실제 공매도 포지션 감소를 확인한 자료는 확보하지 못했다.",
+          "이 사건을 이후 시장에 참고하려면 제도 변화가 해당 기업의 구체적인 판매 제약을 얼마나 완화하는지, 가격에 반영된 기대를 계약과 현금흐름이 따라오는지 확인해야 한다. 발표 당일의 재평가와 사업 집행 이후의 실적을 날짜별로 쌓으면 정책 기대가 지속적인 이익 변화로 이어졌는지 검토할 수 있다."
+        ],
+        "sourceIds": [
+          "fta19-shinhan-close",
+          "fta19-industry"
+        ]
+      }
+    ],
+    "editedAt": "2026-11-19",
+    "editorialNote": "사건일은 공식 실질타결 발표일, 첫 온전한 한국 후속 거래일은 19일로 기록했다. 개별 승인과 사업 실적은 후속 관측 대상으로 남겼다."
+  }
+};
+  archive.events.push(fta);
+  if (!archive.categories.includes(fta.category)) archive.categories.push(fta.category);
+  archive.selectionLog.push({
+    date: "2026-11-19",
+    eventId: fta.id,
+    action: "주요 사건 편입",
+    reason: "18일 공식 통상정책 발표 뒤 19일 콘텐츠 20~30%대 급등과 여행·소비재·ETF 반응, 코스닥 매수 확산을 확인했다. 전면 개방·지수 수익률의 단독 인과는 채택하지 않았다."
+  });
+  archive.updatedAt = "2026-11-19";
+}
+
