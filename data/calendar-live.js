@@ -1,7 +1,7 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.calendarLive={
-  "checkedAt": "2026-11-23T15:32:43.657242+00:00",
-  "today": "2026-11-24",
+  "checkedAt": "2026-11-24T15:11:40.224133+00:00",
+  "today": "2026-11-25",
   "status": "partial",
   "sources": {
     "bea": {
@@ -15,7 +15,7 @@ window.MARKET_LEDGER.calendarLive={
     },
     "fed": {
       "status": "success",
-      "sha256": "d9af500c2a0559385f558fccd9a6d3d422cc0317c31eacab26e4201c99fbacdf",
+      "sha256": "c64b9657a4b8e5030c933c7cc9523b8245f3ece0ce926a99f44572e4cab81876",
       "events": 2
     },
     "te": {
