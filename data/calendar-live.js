@@ -1,7 +1,7 @@
 window.MARKET_LEDGER=window.MARKET_LEDGER||{};
 window.MARKET_LEDGER.calendarLive={
-  "checkedAt": "2026-11-24T15:11:40.224133+00:00",
-  "today": "2026-11-25",
+  "checkedAt": "2026-11-25T15:30:04.100768+00:00",
+  "today": "2026-11-26",
   "status": "partial",
   "sources": {
     "bea": {
@@ -15,7 +15,7 @@ window.MARKET_LEDGER.calendarLive={
     },
     "fed": {
       "status": "success",
-      "sha256": "c64b9657a4b8e5030c933c7cc9523b8245f3ece0ce926a99f44572e4cab81876",
+      "sha256": "ce7bbd57dbad7ab4ca5d3e5f00dbeeab0160a394cb370e8bf7e120738a5579fe",
       "events": 2
     },
     "te": {
@@ -2652,7 +2652,7 @@ window.MARKET_LEDGER.calendarLive={
       "category": "물가",
       "importance": 2,
       "country": "미국",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "previous": "확인 필요",
       "consensus": "확인 필요",
       "actual": "확인 필요",
@@ -2684,7 +2684,7 @@ window.MARKET_LEDGER.calendarLive={
       "category": "경기",
       "importance": 2,
       "country": "미국",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "previous": "확인 필요",
       "consensus": "확인 필요",
       "actual": "확인 필요",
@@ -2719,7 +2719,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-25",
       "scheduledAt": "2026-11-25T13:30:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "2.2%",
       "consensus": "3.4%",
@@ -2753,7 +2753,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-25",
       "scheduledAt": "2026-11-25T13:30:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "0.5%",
       "consensus": "확인 필요",
@@ -2787,7 +2787,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-25",
       "scheduledAt": "2026-11-25T13:30:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "0.2%",
       "consensus": "확인 필요",
@@ -2821,7 +2821,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-25",
       "scheduledAt": "2026-11-25T13:30:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "0.3%",
       "consensus": "확인 필요",
@@ -2855,7 +2855,7 @@ window.MARKET_LEDGER.calendarLive={
       "dateBasis": "KST",
       "sourceLocalDate": "2026-11-25",
       "scheduledAt": "2026-11-25T13:30:00+00:00",
-      "status": "발표 예정",
+      "status": "예정시각 경과 · 발표 여부 확인 필요",
       "actual": "확인 필요",
       "previous": "1.8%",
       "consensus": "확인 필요",
